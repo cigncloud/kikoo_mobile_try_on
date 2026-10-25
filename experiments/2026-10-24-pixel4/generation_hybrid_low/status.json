@@ -1,0 +1,13 @@
+{
+  "status": "completed",
+  "full_generation_completed_on_phone": true,
+  "online_cold_wall_seconds": 2081,
+  "process_peak_rss_bytes": 1721602048,
+  "selection": "rejected_for_practical_pixel4_latency",
+  "comparison": "comparison.json",
+  "image": "pixel4_result.png",
+  "reference_completed": true,
+  "steps": 28,
+  "cfg_forwards": 56,
+  "garment_feature_cache_bytes": 1849688064
+}

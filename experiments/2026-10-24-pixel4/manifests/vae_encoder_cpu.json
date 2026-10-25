@@ -1,0 +1,18 @@
+{
+  "model": "/data/local/tmp/mobile_tryon_20261024/vae_encoder_fp16.mnn",
+  "backend": 0,
+  "runs": 3,
+  "inputs": [
+    {
+      "name": "image",
+      "file": "/data/local/tmp/mobile_tryon_20261024/vae_encoder_input_image.f32"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output_0",
+      "file": "/data/local/tmp/mobile_tryon_20261024/vae_encoder_cpu_output.f32"
+    }
+  ],
+  "metrics": "/data/local/tmp/mobile_tryon_20261024/vae_encoder_cpu_metrics.json"
+}

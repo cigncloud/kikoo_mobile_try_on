@@ -1,0 +1,30 @@
+{
+  "source_metrics": "experiments/2026-10-23-mobile_vton/outputs_compute_profile/metrics.json",
+  "method": "Forward pre/post hooks record cumulative CUDA highs without resetting counters inside a generation. Nested spans identify modules, not individual operator allocation identities.",
+  "profiling_used_for_timing_comparison": false,
+  "events_count": 68,
+  "components": {
+    "denoiser": {
+      "cumulative_peak_bytes": 1347126784,
+      "narrowest_observed_span": {
+        "module": "denoiser.up_blocks.2.resnets.0.conv2.pw_conv",
+        "type": "Conv2d",
+        "allocated_before_bytes": 1321960960,
+        "allocated_after_bytes": 1347126784,
+        "peak_before_bytes": 1321986560,
+        "peak_after_bytes": 1347126784
+      }
+    },
+    "vae_decoder": {
+      "cumulative_peak_bytes": 1356541952,
+      "narrowest_observed_span": {
+        "module": "vae_decoder.up_blocks.2.upsamplers.0.conv",
+        "type": "Conv2d",
+        "allocated_before_bytes": 953740800,
+        "allocated_after_bytes": 1054404096,
+        "peak_before_bytes": 1347126784,
+        "peak_after_bytes": 1356541952
+      }
+    }
+  }
+}

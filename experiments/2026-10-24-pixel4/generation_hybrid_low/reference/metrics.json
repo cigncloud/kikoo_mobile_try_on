@@ -1,0 +1,10 @@
+{
+  "status": "completed",
+  "seconds": 52.035465450026095,
+  "dtype": "FP32",
+  "tf32": false,
+  "garment_features": "same FP16 precomputed features as phone",
+  "steps": 28,
+  "guidance_scale": 2.5,
+  "rng": "Explicit CPU FP32 torch seed-42 noise artifacts, shared across phone and reference; not bitwise RNG-equivalent to prior BF16/CUDA runs."
+}

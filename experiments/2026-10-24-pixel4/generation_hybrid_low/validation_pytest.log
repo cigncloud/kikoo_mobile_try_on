@@ -1,0 +1,8 @@
+.................................                                        [100%]
+=============================== warnings summary ===============================
+../../miniconda3/envs/comfyui/lib/python3.12/site-packages/torch/cuda/__init__.py:789
+  /home/michaelk/miniconda3/envs/comfyui/lib/python3.12/site-packages/torch/cuda/__init__.py:789: UserWarning: Can't initialize NVML
+    warnings.warn("Can't initialize NVML")
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+33 passed, 1 warning in 7.82s

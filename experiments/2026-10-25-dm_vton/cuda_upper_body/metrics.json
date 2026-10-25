@@ -1,0 +1,31 @@
+{
+  "status": "completed",
+  "model": "DM-VTON PF student",
+  "upstream_revision": "5dcd04ee3f5b1fb392df1184c887c1a7e910c72e",
+  "device_requested": "cuda",
+  "device_selected": "cuda",
+  "hardware": "NVIDIA GeForce RTX 3080 Laptop GPU",
+  "torch_cuda_peak_allocated_bytes": 168295936,
+  "torch_cuda_peak_reserved_bytes": 201326592,
+  "resolution": [
+    256,
+    192
+  ],
+  "warmup": 1,
+  "runs": [
+    0.016977953957393765,
+    0.017577877966687083,
+    0.016530365915969014
+  ],
+  "mean_seconds": 0.017028732613349955,
+  "fps": 58.72427635724537,
+  "parameters": 9350124,
+  "model_storage_bytes": 37570848,
+  "weights": {
+    "warp_bytes": 86485495,
+    "generator_bytes": 26406925
+  },
+  "input_note": "Garment foreground mask derived from near-white background for this sample; this is not the official VITON edge annotation.",
+  "fixture_directory": "experiments/2026-10-25-dm_vton/upper_body_inputs",
+  "scope": "Single person/garment pair; functional speed and output smoke test, not FID/LPIPS evaluation."
+}

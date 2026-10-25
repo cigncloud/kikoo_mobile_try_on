@@ -1,0 +1,17 @@
+{
+  "source": "https://ar5iv.labs.arxiv.org/html/2603.00947",
+  "checked_date": "2026-10-23",
+  "status": "Author-reported; not independently reproduced on a phone",
+  "paper_parameters": 415000000,
+  "paper_table_1_memory_gb": 2.84,
+  "supplement_A_mobile_latency_seconds": 80,
+  "supplement_A_mobile_device_as_written": "Xiaomi 17 Pro Max, Snapdragon 8 Gen 5, Qualcomm Hexagon NPU",
+  "supplement_A_precision": "INT8",
+  "supplement_A_resolution": [768, 1024],
+  "limitations": [
+    "The public PyTorch checkpoint includes multiple encoders and two denoisers; 415M is not its complete tensor count.",
+    "The public repository does not include the mobile export, quantized weights, or phone runtime described in the paper.",
+    "The supplement hardware specification is transcribed from the paper and has not been verified separately.",
+    "The supplement measurement is tens of seconds per image, not realtime camera video."
+  ]
+}

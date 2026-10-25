@@ -1,0 +1,138 @@
+{
+  "recorded_utc": "2026-10-24T08:36:38.479433+00:00",
+  "experiment_id": "2026-10-25-dm_vton",
+  "upstream_revision": "5dcd04ee3f5b1fb392df1184c887c1a7e910c72e",
+  "upstream_release": "1.0.0",
+  "checkpoint_assets": [
+    "dmvton_pf_warp.pt",
+    "dmvton_pf_gen.pt"
+  ],
+  "device": {
+    "model": "Pixel 4",
+    "serial": "98211FFAZ004ME",
+    "android": "13",
+    "soc": "Snapdragon 855",
+    "gpu": "Adreno 640",
+    "ram_total_kib": 5596604,
+    "battery_temperature_c_observed_after_runs": 29.7
+  },
+  "mnn_version": "3.6.1",
+  "mnn_revision": "d407447ed56c4121a11ccbd266dc184ca1ead0c2",
+  "mnn_patch": "experiments/2026-10-24-pixel4/mnn_disable_buffer_winograd.patch",
+  "ndk": "27.1.12297006",
+  "android_api_level": 26,
+  "opencl_gpu_mode": 80,
+  "opencl_memory_mode": "buffer",
+  "mnn_memory_mode": "Low",
+  "precision_modes": {
+    "1": "High/FP32",
+    "2": "Low/FP16"
+  },
+  "cuda_image": "vllm/vllm-openai@sha256:04563c302537a91aa49ebdfbceda96111c5712275999b7e8804fa598f0b5641d",
+  "cuda_gpu": "NVIDIA GeForce RTX 3080 Laptop GPU",
+  "host": "Linux-6.17.9-76061709-generic-x86_64-with-glibc2.35",
+  "input_note": "Full-body sample reused from Mobile-VTON; threshold mask, plus manual upper-body crop. Original CUDA uses the exact saved tensors for comparisons.",
+  "artifacts": {
+    "AGENTS.md": {
+      "bytes": 2936,
+      "sha256": "4bca3eda27f9dde0a3b4a336f1c75cefb92cfb5bfdfa597fc6732485e1a0e258"
+    },
+    "scripts/run_dm_vton_sample.py": {
+      "bytes": 6886,
+      "sha256": "371266763b50f248fe88e365eecd11be8fb3a8462025061980468987342b055a"
+    },
+    "scripts/export_dm_vton_mnn.py": {
+      "bytes": 7368,
+      "sha256": "034f56c736d03c9726c1bbbfbafc97951c6ffebcbaed5a3b8e212e73a3ae1d49"
+    },
+    "scripts/analyze_dm_vton_mnn.py": {
+      "bytes": 5635,
+      "sha256": "60e4c6df545bb0645edbdf54f222e23e4aebd02bd049afe78cadbcf48d19b472"
+    },
+    "tests/test_dm_vton.py": {
+      "bytes": 1442,
+      "sha256": "9ff16e4de8113835cb769cba4176e474d446838991d03f9d53bdbb3c23b6c376"
+    },
+    "experiments/2026-10-25-dm_vton/mnn_dm_vton_bench.cpp": {
+      "bytes": 9781,
+      "sha256": "3b00bfeec95d35701c9e62c31d29dd25e32c8731ce540a533f1935694e3535d8"
+    },
+    "experiments/2026-10-25-dm_vton/mnn_dm_vton_bench": {
+      "bytes": 794856,
+      "sha256": "eeb0e03e849230ecf137271beff88950a18fbf4743c2a523eb33c6d28b415733"
+    },
+    "experiments/2026-10-25-dm_vton/mnn_dm_vton_bench_cached": {
+      "bytes": 797240,
+      "sha256": "40e46d11217bd73fa87be9af2620db9be3e64ea2037fb07fc297025faa9a45ce"
+    },
+    "experiments/2026-10-25-dm_vton/dmvton_warp.onnx": {
+      "bytes": 29177531,
+      "sha256": "447a533c625f88a765a90e1be591483196f1fb9a4d67857e114b02f90a9e0b21"
+    },
+    "experiments/2026-10-25-dm_vton/dmvton_generator.onnx": {
+      "bytes": 8704797,
+      "sha256": "4d607cb0b8066e2310e138dbfa2ee1dc298659aa7007a0142b5dd59ab1d20eae"
+    },
+    "experiments/2026-10-25-dm_vton/dmvton_warp.mnn": {
+      "bytes": 29029556,
+      "sha256": "de166377e1db7ac00143ea86ff194e4d891912d0581b187af8d74c2f781ba2f5"
+    },
+    "experiments/2026-10-25-dm_vton/dmvton_generator.mnn": {
+      "bytes": 8691376,
+      "sha256": "aa7702da11dd078960e474886369fe16c4aec052122ab6c0e5f98a72b3e6aa1b"
+    },
+    "/tmp/dmvton_pf_warp.pt": {
+      "bytes": 86485495,
+      "sha256": "0e2fb5220f0e6829a17de8894c56b09463e08f279aa4ac410bf808bc6287b74e"
+    },
+    "/tmp/dmvton_pf_gen.1.pt": {
+      "bytes": 26406925,
+      "sha256": "3147a3731e5fc18c473f563a4d896a5ddf620f0a7f293b8fbda3069a76e8e6f7"
+    },
+    "/tmp/mobile_tryon_mnn_host/MNNConvert": {
+      "bytes": 16416,
+      "sha256": "ff957bf9141862980436a844cba0c32aaeef2f7e10b67de9a6f25f32a2de74b1"
+    },
+    "/tmp/mobile_tryon_mnn_android/OFF/arm64-v8a/libMNN.so": {
+      "bytes": 139247912,
+      "sha256": "d6cf7cba8c9df49044a0171f7ef5eb4eee21716ab61da2dd4e823ad60230ce1b"
+    },
+    "experiments/2026-10-25-dm_vton/dmvton_input_clothes.f32": {
+      "bytes": 589824,
+      "sha256": "70eb50670477a177a4b8e450e834333c4f747debc7b890bb4b4bd365d0b2c32a"
+    },
+    "experiments/2026-10-25-dm_vton/dmvton_input_edge.f32": {
+      "bytes": 196608,
+      "sha256": "d7595558f0d41d94be9b5bb379e833bf4c7703e9bce03bffd0ef0bd482cf206c"
+    },
+    "experiments/2026-10-25-dm_vton/dmvton_input_person.f32": {
+      "bytes": 589824,
+      "sha256": "49855fc7f478e6fb188b38b6d7cdba87352826e88e59be2cd7e57760bbbc9fd1"
+    },
+    "experiments/2026-10-25-dm_vton/upper_body_inputs/clothes.npy": {
+      "bytes": 589952,
+      "sha256": "46dd4b66cd1f864f71b5a2e0e7833c1ece662232aaf5948118a755c20f63548d"
+    },
+    "experiments/2026-10-25-dm_vton/upper_body_inputs/edge.npy": {
+      "bytes": 196736,
+      "sha256": "40e0af0c6ad92622cdef3751a4c36288fa56261aeea53e8c5e840a8cc9cf43cc"
+    },
+    "experiments/2026-10-25-dm_vton/upper_body_inputs/person.npy": {
+      "bytes": 589952,
+      "sha256": "819779059257291b96add4ed9441d212ba950dc6b8cdb37d89ca7f78dba0fd29"
+    },
+    "experiments/2026-10-25-dm_vton/kernel_cache/generator_p1.cache": {
+      "bytes": 644888,
+      "sha256": "a55d439b87619c5770ee6feeaefbdfad66acd84500ab1f4f6c17589ba034ce0d"
+    },
+    "experiments/2026-10-25-dm_vton/kernel_cache/warp_p1.cache": {
+      "bytes": 865344,
+      "sha256": "06e05f85a9ffb41770e433500f52374b2ad49bd14ebc1222853fccda6a8267d2"
+    }
+  },
+  "validation": {
+    "pytest": "36 passed",
+    "ruff": "passed for DM-VTON scripts and tests",
+    "finite_outputs": true
+  }
+}

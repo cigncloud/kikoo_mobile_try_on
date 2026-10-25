@@ -1,0 +1,42 @@
+{
+  "gpu": "NVIDIA GeForce RTX 3080 Laptop GPU",
+  "comparisons": {
+    "baseline": {
+      "latent_sha256_fp32": "dce79c212efd676ddf38675d9eae41672096adaff94bd0c0336560a8909f9378",
+      "replay_matches_pipeline": true,
+      "raw_decoder_mae": 7.064085849606272e-08,
+      "image_identical": false,
+      "image_mae_0_to_1": 3.8230083987400576e-08,
+      "image_psnr_db": 98.24134979079335,
+      "image_max_absolute_difference_0_to_1": 0.003921568859368563
+    },
+    "spatial32": {
+      "latent_sha256_fp32": "3ee594f9be6e93154cfe4622a5d77d3895769e8d85c7fa902059183cbb63df65",
+      "replay_matches_pipeline": true,
+      "raw_decoder_mae": 6.40696597997703e-08,
+      "image_identical": false,
+      "image_mae_0_to_1": 4.820314813969162e-08,
+      "image_psnr_db": 97.2346483383297,
+      "image_max_absolute_difference_0_to_1": 0.003921568859368563
+    },
+    "spatial32_cfg": {
+      "latent_sha256_fp32": "4a705884932400fbfdbd26d446894d679a50ae553f068efa808609a221d94b6c",
+      "replay_matches_pipeline": true,
+      "raw_decoder_mae": 6.77056135600651e-08,
+      "image_identical": false,
+      "image_mae_0_to_1": 3.4905728085732335e-08,
+      "image_psnr_db": 98.63643512705629,
+      "image_max_absolute_difference_0_to_1": 0.003921568859368563
+    },
+    "decoder32_cfg": {
+      "latent_sha256_fp32": "4a705884932400fbfdbd26d446894d679a50ae553f068efa808609a221d94b6c",
+      "replay_matches_pipeline": true,
+      "raw_decoder_mae": 6.77056135600651e-08,
+      "image_identical": false,
+      "image_mae_0_to_1": 3.4905728085732335e-08,
+      "image_psnr_db": 98.63643512705629,
+      "image_max_absolute_difference_0_to_1": 0.003921568859368563
+    }
+  },
+  "meaning": "Identical latent and FP16 weights. Only local convolution evaluation is tiled; GroupNorm sees the full image. Not ground-truth try-on accuracy."
+}

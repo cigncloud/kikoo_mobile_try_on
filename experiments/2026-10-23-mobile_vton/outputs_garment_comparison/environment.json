@@ -1,0 +1,63 @@
+{
+  "verified_utc": "2026-10-24T00:35:48.357208+00:00",
+  "benchmark_started_utc": "2026-10-24T00:23:44Z",
+  "container_image": "vllm/vllm-openai@sha256:04563c302537a91aa49ebdfbceda96111c5712275999b7e8804fa598f0b5641d",
+  "runtime": "PyTorch in existing CUDA/vLLM image; no vLLM server",
+  "gpu": "NVIDIA GeForce RTX 3080 Laptop GPU",
+  "gpu_total_bytes": 16723148800,
+  "python": "3.12.2 | packaged by Anaconda, Inc. | (main, Feb 27 2024, 17:35:02) [GCC 11.2.0]",
+  "platform": "Linux-6.17.9-76061709-generic-x86_64-with-glibc2.35",
+  "packages": {
+    "torch": "2.7.1",
+    "torchvision": "0.22.1",
+    "diffusers": "0.34.0",
+    "transformers": "4.53.0",
+    "accelerate": "1.11.0",
+    "safetensors": "0.5.3",
+    "numpy": "1.26.4",
+    "pillow": "11.2.1",
+    "torchao": "0.10.0"
+  },
+  "source_revision": "57410f20ac0e1703af795702e10473565feaa711",
+  "model_revision": "0063147c171518b391fff5e44d04555c12370c35",
+  "cuda_allocator_config": "expandable_segments:True",
+  "shared_gpu": true,
+  "variant_jobs_sequential": true,
+  "phone_inference_tested": false,
+  "selected_config": "experiments/2026-10-23-mobile_vton/config_garment_resident_cached.json",
+  "notes": [
+    "All required online model parameters/buffers and garment cache tensors stay on CUDA; no phase reload or CPU model offload.",
+    "Both variants use one-step warmup and three full 768x1024/28-step generations in separate processes.",
+    "Offline garment cache contains VAE posterior parameters and projected DINO embeddings; garment denoiser still runs every step.",
+    "CPU file IO, image preparation, final image transfer, and host runtime memory remain.",
+    "CUDA allocated and reserved peaks include model loading and warmup; driver/context memory is excluded.",
+    "Pipeline latency excludes model loading, initial input preparation/cache verification, warmup and PNG saving.",
+    "Output PNGs match each other and the previous phase-release result exactly.",
+    "27 tests, Ruff, Black, compilation and existing compute/lifetimes comparisons passed."
+  ],
+  "final_scripts_and_configs_sha256": {
+    "scripts/run_mobile_vton.py": "834781e78ad92f74ad4cfc4b764941777cb1f8abfbfee7c88332d55e3e87449d",
+    "scripts/run_mobile_vton_in_vllm.sh": "92004f5824c549ae8d2ec54bceb0f6514e84696504943fc9f96fa70e98ddb483",
+    "scripts/compare_mobile_vton_garment_cache.py": "026f356a4cb5593b9a33678d6a029e9835ce7f7ad73e1d9409baf8c264ecfcb3",
+    "tests/test_mobile_vton_garment_cache.py": "c22f2d4d6d0b9f512b31051b350d8c774dd1a8b710d6cf3fce56ad573303aa79",
+    "tests/test_mobile_vton_decoder.py": "1f5dabf7dc2391465c201892fd30bbaff86e478a2957e575874900d0a0f4820d",
+    "scripts/mobile_vton_compute.py": "5487423272d656d04faec0f445693f5f020992bb9a78851b7b6265919b2207b8",
+    "scripts/mobile_vton_decoder.py": "449dd64b9b214f595b9cdb57cb5bc8d8c4947496cd029b31894b86f9e02ba691",
+    "scripts/mobile_vton_garment_cache.py": "180914f996e6880bfb6f932006a136963ad235ebb1f60b38302560ee5021e963",
+    "scripts/mobile_vton_lifetimes.py": "2166190942a26b7d88ed238add1dcbf03cc8102c79aaa4a4a19c7b05e4e9c28a",
+    "scripts/mobile_vton_memory.py": "8c1a59eb2d1789cefdbd1d05b2f20d6733aaff47e855edc5ea2d636a99fdb3f2",
+    "scripts/mobile_vton_quantization.py": "91a72bd3daac523506c8f7d8fe2024d4e5e0224bd3ed666a762ea5497535288f",
+    "scripts/mobile_vton_spatial.py": "1d77f7d4d967e6b4ae51c9ffca5bd143b980d0473b47bfa2780afa4e72748dcb",
+    "scripts/mobile_vton_vae.py": "9b3ebcce69a37916a4e733c50fee9695d622392f983bbb8e308fd9ccb525c9b4",
+    "experiments/2026-10-23-mobile_vton/config_garment_precompute.json": "406611e40eef4405a608fefea8164d2dd47022285d1dd4a8a790608a4604f8a5",
+    "experiments/2026-10-23-mobile_vton/config_garment_resident_cached.json": "56b21579a7caaefa0fb9c0e7dd4e8aa8a3b0d7ffadb41a24474c235a0691aa98",
+    "experiments/2026-10-23-mobile_vton/config_garment_resident_uncached.json": "03d703a56f661378e3f229e7312754c4699419543d7592a79e95de9debf13937"
+  },
+  "visual_comparison": {
+    "path": "experiments/2026-10-23-mobile_vton/outputs_garment_comparison/garment_cache_before_after.png",
+    "sha256": "9506f657c51cd8f87f748d59bed44d6e87a3dc82b4fba56d35369766044a2390",
+    "left": "experiments/2026-10-23-mobile_vton/outputs_garment_resident_uncached/result_01.png",
+    "right": "experiments/2026-10-23-mobile_vton/outputs_garment_resident_cached/result_01.png",
+    "source_pixels_identical": true
+  }
+}

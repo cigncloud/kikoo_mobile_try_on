@@ -1,0 +1,41 @@
+{
+  "verified_utc": "2026-10-23T23:27:49.784602+00:00",
+  "container_image": "vllm/vllm-openai@sha256:04563c302537a91aa49ebdfbceda96111c5712275999b7e8804fa598f0b5641d",
+  "runtime": "PyTorch in existing CUDA/vLLM image, no vLLM server",
+  "gpu": "NVIDIA GeForce RTX 3080 Laptop GPU",
+  "gpu_total_bytes": 16723148800,
+  "packages": {
+    "torch": "2.7.1",
+    "torchvision": "0.22.1",
+    "diffusers": "0.34.0",
+    "transformers": "4.53.0",
+    "accelerate": "1.11.0",
+    "safetensors": "0.5.3",
+    "numpy": "1.26.4",
+    "pillow": "11.2.1",
+    "torchao": "0.10.0"
+  },
+  "source_revision": "57410f20ac0e1703af795702e10473565feaa711",
+  "shared_gpu": true,
+  "variant_jobs_sequential": true,
+  "phone_inference_tested": false,
+  "notes": [
+    "Baseline reuses the completed lowload experiment; same settings, inputs, cache and checkpoint states are validated by the comparison.",
+    "The allocator metadata field was added after the standard-release run; allocator settings are default unless explicitly supplied to Docker.",
+    "Type annotations and the comparison/wrapper updates were finalized after the release run. The tensor deletion logic is unchanged.",
+    "CUDA allocated and reserved exclude driver/context allocations; host RSS is separate. Reserved peaks listed in the comparison cover measured generations."
+  ],
+  "final_scripts_and_configs_sha256": {
+    "scripts/run_mobile_vton.py": "6009af123fec7b68b4e73a03663b5929fcd4f33423d62a6163941051aef84001",
+    "scripts/mobile_vton_lifetimes.py": "13b6074e97c8d8ca70d490cf94f17ed6d5c6667c634b2ea65e62fa0994192003",
+    "scripts/mobile_vton_decoder.py": "9892019b0d73d20f07a5798cce6fb147f7da2eb6d3c9c16948f699febb86253a",
+    "scripts/mobile_vton_memory.py": "8c1a59eb2d1789cefdbd1d05b2f20d6733aaff47e855edc5ea2d636a99fdb3f2",
+    "scripts/mobile_vton_vae.py": "9b3ebcce69a37916a4e733c50fee9695d622392f983bbb8e308fd9ccb525c9b4",
+    "scripts/mobile_vton_quantization.py": "91a72bd3daac523506c8f7d8fe2024d4e5e0224bd3ed666a762ea5497535288f",
+    "scripts/compare_mobile_vton_memory.py": "14ca947a8bd619a9b7212963f7b28385dc88f499415b75740628ca0f55661cdb",
+    "scripts/run_mobile_vton_in_vllm.sh": "92004f5824c549ae8d2ec54bceb0f6514e84696504943fc9f96fa70e98ddb483",
+    "tests/test_mobile_vton_lifetimes.py": "aa4033e395b6f8ea6cb9adddfb84cdbeab9a86dbc1c7c48c86a3afa70e81191e",
+    "experiments/2026-10-23-mobile_vton/config_lifetimes_release.json": "b284fa27224aac5b9d9304918640f1fee4028b43043cd1a9f4303f8cbe794795",
+    "experiments/2026-10-23-mobile_vton/config_lifetimes_release_expandable.json": "901fdd41f4fc20bdc9f4a4196898993d73d3fc01be5224d494cd4ac289f4f786"
+  }
+}

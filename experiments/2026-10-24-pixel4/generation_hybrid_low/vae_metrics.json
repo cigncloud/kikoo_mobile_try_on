@@ -1,0 +1,76 @@
+{
+    "status": "completed",
+    "phase": "vae",
+    "pid": 23469,
+    "wall_seconds": 292.353386832,
+    "process_peak_rss_bytes": 1046396928,
+    "release_model_buffer_after_first_forward": true,
+    "inputs_refreshed_each_forward": true,
+    "models": [
+        {
+            "path": "../vae_encoder_fp32.mnn",
+            "precision": 1,
+            "setup_seconds": 50.012111181,
+            "first_forward_output_backend_counts": {
+                "3": 209
+            }
+        },
+        {
+            "path": "models/vae_512_384.mnn",
+            "precision": 1,
+            "setup_seconds": 63.196369838,
+            "first_forward_output_backend_counts": {
+                "3": 209
+            }
+        },
+        {
+            "path": "models/vae_256_512.mnn",
+            "precision": 1,
+            "setup_seconds": 43.166308311,
+            "first_forward_output_backend_counts": {
+                "3": 209
+            }
+        },
+        {
+            "path": "models/vae_256_384.mnn",
+            "precision": 1,
+            "setup_seconds": 59.144849381,
+            "first_forward_output_backend_counts": {
+                "3": 209
+            }
+        }
+    ],
+    "runs": [
+        {
+            "label": "vae_tile_0_0",
+            "forward_download_seconds": 16.979780233,
+            "post_forward_rss_bytes": 908206080
+        },
+        {
+            "label": "vae_tile_1_0",
+            "forward_download_seconds": 16.914952466,
+            "post_forward_rss_bytes": 908419072
+        },
+        {
+            "label": "vae_tile_0_1",
+            "forward_download_seconds": 13.21495741,
+            "post_forward_rss_bytes": 737218560
+        },
+        {
+            "label": "vae_tile_1_1",
+            "forward_download_seconds": 13.118545525,
+            "post_forward_rss_bytes": 737452032
+        },
+        {
+            "label": "vae_tile_2_0",
+            "forward_download_seconds": 8.513652619,
+            "post_forward_rss_bytes": 565841920
+        },
+        {
+            "label": "vae_tile_2_1",
+            "forward_download_seconds": 6.599472845,
+            "post_forward_rss_bytes": 479772672
+        }
+    ],
+    "scope": "On-phone neural component stages; CFG, Euler scheduler, tile blending and posterior arithmetic use CPU float32. Tensor placement audit is not kernel-level proof of GPU-only execution. Offline garment precomputation excluded."
+}

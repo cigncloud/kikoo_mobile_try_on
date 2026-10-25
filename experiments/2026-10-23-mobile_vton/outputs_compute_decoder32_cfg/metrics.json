@@ -1,0 +1,1664 @@
+{
+  "status": "passed",
+  "config": {
+    "upstream": "models/mobile_vton/upstream",
+    "upstream_revision": "57410f20ac0e1703af795702e10473565feaa711",
+    "model_id": "FlashStight/Mobile-VTON",
+    "model_revision": "0063147c171518b391fff5e44d04555c12370c35",
+    "checkpoint": "/tmp/mobile_tryon/weights/mobile_vton/checkpoint",
+    "person": "experiments/2026-10-23-mobile_vton/inputs/person.jpg",
+    "garment": "experiments/2026-10-23-mobile_vton/inputs/garment.jpg",
+    "garment_description": "a grey long sleeved knitted cardigan with mint green V-neck trim, front buttons, and a Snoopy graphic",
+    "output_dir": "experiments/2026-10-23-mobile_vton/outputs_compute_decoder32_cfg",
+    "device": "cuda",
+    "dtype": "bf16",
+    "width": 768,
+    "height": 1024,
+    "steps": 28,
+    "guidance_scale": 2.5,
+    "scheduler_shift": 3.0,
+    "seed": 42,
+    "warmup_steps": 1,
+    "runs": 2,
+    "threads": 4,
+    "embedding_cache": "experiments/2026-10-23-mobile_vton/outputs_bf16_cached/embeddings.pt",
+    "quantization": "int4",
+    "group_size": 128,
+    "save_quantized_states": false,
+    "memory_mode": "combined",
+    "quantized_state_dir": "experiments/2026-10-23-mobile_vton/outputs_vllm_int4_native",
+    "vae_encoder_only": true,
+    "vae_tile_size": 512,
+    "decoder_dtype": "fp16",
+    "defer_quantized_transfer": true,
+    "release_working_tensors": true,
+    "spatial_conv_rows": 32,
+    "spatial_decoder_only": true
+  },
+  "python": "3.12.2 | packaged by Anaconda, Inc. | (main, Feb 27 2024, 17:35:02) [GCC 11.2.0]",
+  "platform": "Linux-6.17.9-76061709-generic-x86_64-with-glibc2.35",
+  "started_utc": "2026-10-23T23:58:11Z",
+  "upstream_revision_check": "git_head_files",
+  "upstream_revision_actual": "57410f20ac0e1703af795702e10473565feaa711",
+  "cuda_allocator_config": "expandable_segments:True",
+  "gpu": "NVIDIA GeForce RTX 3080 Laptop GPU",
+  "gpu_total_bytes": 16723148800,
+  "packages": {
+    "torch": "2.7.1",
+    "torchvision": "0.22.1",
+    "diffusers": "0.34.0",
+    "transformers": "4.53.0",
+    "accelerate": "1.11.0",
+    "safetensors": "0.5.3",
+    "numpy": "1.26.4",
+    "pillow": "11.2.1",
+    "torchao": "0.10.0"
+  },
+  "checkpoint_file_bytes": 3755403203,
+  "inputs": {
+    "person": {
+      "path": "experiments/2026-10-23-mobile_vton/inputs/person.jpg",
+      "sha256": "1f0cd62f675f27b290cbe518a1531b23246bc065bd11f9858f9c4e7d4f7b1717",
+      "size": [
+        768,
+        1024
+      ]
+    },
+    "garment": {
+      "path": "experiments/2026-10-23-mobile_vton/inputs/garment.jpg",
+      "sha256": "fd74b6db0fea913db3a18e4a154d4035c0149c9250f7e1335dbd6077c0318064",
+      "size": [
+        1000,
+        1334
+      ]
+    }
+  },
+  "module_memory_profile": {
+    "enabled": false,
+    "events": []
+  },
+  "compute_optimization": {
+    "ffn_chunk_size": 0,
+    "native_gqa": false,
+    "spatial_conv_rows": 32,
+    "spatial_decoder_only": true,
+    "modules": {
+      "denoiser": {},
+      "denoiser_garment": {},
+      "vae_decoder_spatial": [
+        "conv_in",
+        "up_blocks.0.resnets.0.conv1.dw_conv",
+        "up_blocks.0.resnets.0.conv1.pw_conv",
+        "up_blocks.0.resnets.0.conv2.dw_conv",
+        "up_blocks.0.resnets.0.conv2.pw_conv",
+        "up_blocks.0.resnets.1.conv1.dw_conv",
+        "up_blocks.0.resnets.1.conv1.pw_conv",
+        "up_blocks.0.resnets.1.conv2.dw_conv",
+        "up_blocks.0.resnets.1.conv2.pw_conv",
+        "up_blocks.0.resnets.2.conv1.dw_conv",
+        "up_blocks.0.resnets.2.conv1.pw_conv",
+        "up_blocks.0.resnets.2.conv2.dw_conv",
+        "up_blocks.0.resnets.2.conv2.pw_conv",
+        "up_blocks.0.upsamplers.0.conv",
+        "up_blocks.1.resnets.0.conv1.dw_conv",
+        "up_blocks.1.resnets.0.conv1.pw_conv",
+        "up_blocks.1.resnets.0.conv2.dw_conv",
+        "up_blocks.1.resnets.0.conv2.pw_conv",
+        "up_blocks.1.resnets.1.conv1.dw_conv",
+        "up_blocks.1.resnets.1.conv1.pw_conv",
+        "up_blocks.1.resnets.1.conv2.dw_conv",
+        "up_blocks.1.resnets.1.conv2.pw_conv",
+        "up_blocks.1.resnets.2.conv1.dw_conv",
+        "up_blocks.1.resnets.2.conv1.pw_conv",
+        "up_blocks.1.resnets.2.conv2.dw_conv",
+        "up_blocks.1.resnets.2.conv2.pw_conv",
+        "up_blocks.1.upsamplers.0.conv",
+        "up_blocks.2.resnets.0.conv1.dw_conv",
+        "up_blocks.2.resnets.0.conv1.pw_conv",
+        "up_blocks.2.resnets.0.conv2.dw_conv",
+        "up_blocks.2.resnets.0.conv2.pw_conv",
+        "up_blocks.2.resnets.1.conv1.dw_conv",
+        "up_blocks.2.resnets.1.conv1.pw_conv",
+        "up_blocks.2.resnets.1.conv2.dw_conv",
+        "up_blocks.2.resnets.1.conv2.pw_conv",
+        "up_blocks.2.upsamplers.0.conv",
+        "up_blocks.3.resnets.0.conv1.dw_conv",
+        "up_blocks.3.resnets.0.conv1.pw_conv",
+        "up_blocks.3.resnets.0.conv2.dw_conv",
+        "up_blocks.3.resnets.0.conv2.pw_conv",
+        "conv_out"
+      ]
+    }
+  },
+  "memory_optimization": {
+    "mode": "combined",
+    "events": [
+      {
+        "component": "vae",
+        "action": "load",
+        "seconds": 0.2279422739520669,
+        "parameters": 34274208,
+        "model_tensor_storage_bytes": 68548416,
+        "cuda_allocated_bytes": 717759488,
+        "cuda_reserved_bytes": 734003200,
+        "cuda_peak_allocated_so_far_bytes": 717759488
+      },
+      {
+        "component": "vae",
+        "action": "call",
+        "call": 1,
+        "cuda_allocated_bytes": 728245248,
+        "cuda_reserved_bytes": 1155530752,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "component": "vae",
+        "action": "call",
+        "call": 2,
+        "cuda_allocated_bytes": 723919872,
+        "cuda_reserved_bytes": 1155530752,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "component": "vae",
+        "action": "release",
+        "cuda_allocated_bytes": 655366656,
+        "cuda_reserved_bytes": 692060160,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "component": "image_encoder",
+        "action": "load",
+        "seconds": 0.5887268729275092,
+        "parameters": 86580480,
+        "model_tensor_storage_bytes": 173160960,
+        "cuda_allocated_bytes": 828134400,
+        "cuda_reserved_bytes": 838860800,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "component": "image_encoder",
+        "action": "call",
+        "call": 1,
+        "cuda_allocated_bytes": 833660928,
+        "cuda_reserved_bytes": 843055104,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "component": "image_encoder",
+        "action": "call",
+        "call": 2,
+        "cuda_allocated_bytes": 834356736,
+        "cuda_reserved_bytes": 845152256,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "component": "image_encoder",
+        "action": "release",
+        "cuda_allocated_bytes": 661195776,
+        "cuda_reserved_bytes": 696254464,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "component": "vae_decoder",
+        "action": "load",
+        "seconds": 0.032800471992231905,
+        "parameters": 1902595,
+        "model_tensor_storage_bytes": 3805190,
+        "cuda_allocated_bytes": 651357696,
+        "cuda_reserved_bytes": 1220542464,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "component": "vae_decoder",
+        "action": "call",
+        "call": 1,
+        "cuda_allocated_bytes": 660794880,
+        "cuda_reserved_bytes": 1220542464,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "component": "vae_decoder",
+        "action": "release",
+        "cuda_allocated_bytes": 656980480,
+        "cuda_reserved_bytes": 687865856,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "component": "vae",
+        "action": "load",
+        "seconds": 0.22610369289759547,
+        "parameters": 34274208,
+        "model_tensor_storage_bytes": 68548416,
+        "cuda_allocated_bytes": 726279168,
+        "cuda_reserved_bytes": 734003200,
+        "cuda_peak_allocated_so_far_bytes": 726279168
+      },
+      {
+        "component": "vae",
+        "action": "call",
+        "call": 1,
+        "cuda_allocated_bytes": 728245248,
+        "cuda_reserved_bytes": 1155530752,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "component": "vae",
+        "action": "call",
+        "call": 2,
+        "cuda_allocated_bytes": 723919872,
+        "cuda_reserved_bytes": 1155530752,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "component": "vae",
+        "action": "release",
+        "cuda_allocated_bytes": 655366656,
+        "cuda_reserved_bytes": 692060160,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "component": "image_encoder",
+        "action": "load",
+        "seconds": 0.12398834095802158,
+        "parameters": 86580480,
+        "model_tensor_storage_bytes": 173160960,
+        "cuda_allocated_bytes": 828134400,
+        "cuda_reserved_bytes": 838860800,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "component": "image_encoder",
+        "action": "call",
+        "call": 1,
+        "cuda_allocated_bytes": 833660928,
+        "cuda_reserved_bytes": 843055104,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "component": "image_encoder",
+        "action": "call",
+        "call": 2,
+        "cuda_allocated_bytes": 834356736,
+        "cuda_reserved_bytes": 845152256,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "component": "image_encoder",
+        "action": "release",
+        "cuda_allocated_bytes": 661195776,
+        "cuda_reserved_bytes": 696254464,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "component": "vae_decoder",
+        "action": "load",
+        "seconds": 0.2074869100470096,
+        "parameters": 1902595,
+        "model_tensor_storage_bytes": 3805190,
+        "cuda_allocated_bytes": 651357696,
+        "cuda_reserved_bytes": 1220542464,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "component": "vae_decoder",
+        "action": "call",
+        "call": 1,
+        "cuda_allocated_bytes": 660794880,
+        "cuda_reserved_bytes": 1220542464,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "component": "vae_decoder",
+        "action": "release",
+        "cuda_allocated_bytes": 656980480,
+        "cuda_reserved_bytes": 687865856,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "component": "vae",
+        "action": "load",
+        "seconds": 0.25471166300121695,
+        "parameters": 34274208,
+        "model_tensor_storage_bytes": 68548416,
+        "cuda_allocated_bytes": 726279168,
+        "cuda_reserved_bytes": 734003200,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "component": "vae",
+        "action": "call",
+        "call": 1,
+        "cuda_allocated_bytes": 728245248,
+        "cuda_reserved_bytes": 1155530752,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "component": "vae",
+        "action": "call",
+        "call": 2,
+        "cuda_allocated_bytes": 723919872,
+        "cuda_reserved_bytes": 1155530752,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "component": "vae",
+        "action": "release",
+        "cuda_allocated_bytes": 655366656,
+        "cuda_reserved_bytes": 692060160,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "component": "image_encoder",
+        "action": "load",
+        "seconds": 0.13492188905365765,
+        "parameters": 86580480,
+        "model_tensor_storage_bytes": 173160960,
+        "cuda_allocated_bytes": 828134400,
+        "cuda_reserved_bytes": 838860800,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "component": "image_encoder",
+        "action": "call",
+        "call": 1,
+        "cuda_allocated_bytes": 833660928,
+        "cuda_reserved_bytes": 843055104,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "component": "image_encoder",
+        "action": "call",
+        "call": 2,
+        "cuda_allocated_bytes": 834356736,
+        "cuda_reserved_bytes": 845152256,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "component": "image_encoder",
+        "action": "release",
+        "cuda_allocated_bytes": 661195776,
+        "cuda_reserved_bytes": 696254464,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "component": "vae_decoder",
+        "action": "load",
+        "seconds": 0.2212385559687391,
+        "parameters": 1902595,
+        "model_tensor_storage_bytes": 3805190,
+        "cuda_allocated_bytes": 651357696,
+        "cuda_reserved_bytes": 1220542464,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "component": "vae_decoder",
+        "action": "call",
+        "call": 1,
+        "cuda_allocated_bytes": 660794880,
+        "cuda_reserved_bytes": 1220542464,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "component": "vae_decoder",
+        "action": "release",
+        "cuda_allocated_bytes": 656980480,
+        "cuda_reserved_bytes": 689963008,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      }
+    ],
+    "phase_release": true,
+    "sequential_cfg": true,
+    "defer_quantized_transfer": true,
+    "last_generation_event_range": [
+      22,
+      33
+    ]
+  },
+  "vae_optimization": {
+    "encoder_only": true,
+    "tile_size": 512,
+    "tile_overlap_factor": 0.25,
+    "events": [
+      {
+        "input_shape": [
+          1,
+          3,
+          1024,
+          768
+        ],
+        "tile_shapes": [
+          [
+            1,
+            3,
+            512,
+            512
+          ],
+          [
+            1,
+            3,
+            512,
+            384
+          ],
+          [
+            1,
+            3,
+            512,
+            512
+          ],
+          [
+            1,
+            3,
+            512,
+            384
+          ],
+          [
+            1,
+            3,
+            256,
+            512
+          ],
+          [
+            1,
+            3,
+            256,
+            384
+          ]
+        ],
+        "encoder_forward_count": 6,
+        "latent_mean_shape": [
+          1,
+          16,
+          128,
+          96
+        ],
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "input_shape": [
+          1,
+          3,
+          1024,
+          768
+        ],
+        "tile_shapes": [
+          [
+            1,
+            3,
+            512,
+            512
+          ],
+          [
+            1,
+            3,
+            512,
+            384
+          ],
+          [
+            1,
+            3,
+            512,
+            512
+          ],
+          [
+            1,
+            3,
+            512,
+            384
+          ],
+          [
+            1,
+            3,
+            256,
+            512
+          ],
+          [
+            1,
+            3,
+            256,
+            384
+          ]
+        ],
+        "encoder_forward_count": 6,
+        "latent_mean_shape": [
+          1,
+          16,
+          128,
+          96
+        ],
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "input_shape": [
+          1,
+          3,
+          1024,
+          768
+        ],
+        "tile_shapes": [
+          [
+            1,
+            3,
+            512,
+            512
+          ],
+          [
+            1,
+            3,
+            512,
+            384
+          ],
+          [
+            1,
+            3,
+            512,
+            512
+          ],
+          [
+            1,
+            3,
+            512,
+            384
+          ],
+          [
+            1,
+            3,
+            256,
+            512
+          ],
+          [
+            1,
+            3,
+            256,
+            384
+          ]
+        ],
+        "encoder_forward_count": 6,
+        "latent_mean_shape": [
+          1,
+          16,
+          128,
+          96
+        ],
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "input_shape": [
+          1,
+          3,
+          1024,
+          768
+        ],
+        "tile_shapes": [
+          [
+            1,
+            3,
+            512,
+            512
+          ],
+          [
+            1,
+            3,
+            512,
+            384
+          ],
+          [
+            1,
+            3,
+            512,
+            512
+          ],
+          [
+            1,
+            3,
+            512,
+            384
+          ],
+          [
+            1,
+            3,
+            256,
+            512
+          ],
+          [
+            1,
+            3,
+            256,
+            384
+          ]
+        ],
+        "encoder_forward_count": 6,
+        "latent_mean_shape": [
+          1,
+          16,
+          128,
+          96
+        ],
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "input_shape": [
+          1,
+          3,
+          1024,
+          768
+        ],
+        "tile_shapes": [
+          [
+            1,
+            3,
+            512,
+            512
+          ],
+          [
+            1,
+            3,
+            512,
+            384
+          ],
+          [
+            1,
+            3,
+            512,
+            512
+          ],
+          [
+            1,
+            3,
+            512,
+            384
+          ],
+          [
+            1,
+            3,
+            256,
+            512
+          ],
+          [
+            1,
+            3,
+            256,
+            384
+          ]
+        ],
+        "encoder_forward_count": 6,
+        "latent_mean_shape": [
+          1,
+          16,
+          128,
+          96
+        ],
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "input_shape": [
+          1,
+          3,
+          1024,
+          768
+        ],
+        "tile_shapes": [
+          [
+            1,
+            3,
+            512,
+            512
+          ],
+          [
+            1,
+            3,
+            512,
+            384
+          ],
+          [
+            1,
+            3,
+            512,
+            512
+          ],
+          [
+            1,
+            3,
+            512,
+            384
+          ],
+          [
+            1,
+            3,
+            256,
+            512
+          ],
+          [
+            1,
+            3,
+            256,
+            384
+          ]
+        ],
+        "encoder_forward_count": 6,
+        "latent_mean_shape": [
+          1,
+          16,
+          128,
+          96
+        ],
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      }
+    ],
+    "last_generation_event_range": [
+      4,
+      6
+    ]
+  },
+  "decoder_optimization": {
+    "dtype": "fp16",
+    "events": [
+      {
+        "input_shape": [
+          1,
+          16,
+          128,
+          96
+        ],
+        "input_dtype": "torch.float32",
+        "latent_sha256_fp32": "ba3815e68c4f2196aa1af77210ba1820a1103bf9b7ffe11956e691f948f52acb",
+        "model_dtype": "torch.float16",
+        "output_dtype": "torch.float32",
+        "output_shape": [
+          1,
+          3,
+          1024,
+          768
+        ],
+        "finite": true,
+        "decoder_forward_seconds": 0.20288814301602542,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "input_shape": [
+          1,
+          16,
+          128,
+          96
+        ],
+        "input_dtype": "torch.float32",
+        "latent_sha256_fp32": "4a705884932400fbfdbd26d446894d679a50ae553f068efa808609a221d94b6c",
+        "model_dtype": "torch.float16",
+        "output_dtype": "torch.float32",
+        "output_shape": [
+          1,
+          3,
+          1024,
+          768
+        ],
+        "finite": true,
+        "decoder_forward_seconds": 0.08306670596357435,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "input_shape": [
+          1,
+          16,
+          128,
+          96
+        ],
+        "input_dtype": "torch.float32",
+        "latent_sha256_fp32": "4a705884932400fbfdbd26d446894d679a50ae553f068efa808609a221d94b6c",
+        "model_dtype": "torch.float16",
+        "output_dtype": "torch.float32",
+        "output_shape": [
+          1,
+          3,
+          1024,
+          768
+        ],
+        "finite": true,
+        "decoder_forward_seconds": 0.07611761498264968,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      }
+    ],
+    "latent_artifact": "experiments/2026-10-23-mobile_vton/outputs_compute_decoder32_cfg/decoder_latents.pt",
+    "last_generation_event_range": [
+      2,
+      3
+    ]
+  },
+  "working_tensor_release": {
+    "enabled": true,
+    "events": [
+      {
+        "stage": "step_before_release",
+        "step": 0,
+        "cuda_allocated_bytes": 815274496,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_after_release",
+        "step": 0,
+        "cuda_allocated_bytes": 655235584,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "decode_before_release",
+        "step": null,
+        "cuda_allocated_bytes": 655235584,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "decode_after_release",
+        "step": null,
+        "cuda_allocated_bytes": 647543296,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_before_release",
+        "step": 0,
+        "cuda_allocated_bytes": 815274496,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_after_release",
+        "step": 0,
+        "cuda_allocated_bytes": 655235584,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_before_release",
+        "step": 1,
+        "cuda_allocated_bytes": 815274496,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_after_release",
+        "step": 1,
+        "cuda_allocated_bytes": 655235584,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_before_release",
+        "step": 2,
+        "cuda_allocated_bytes": 815274496,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_after_release",
+        "step": 2,
+        "cuda_allocated_bytes": 655235584,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_before_release",
+        "step": 3,
+        "cuda_allocated_bytes": 815274496,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_after_release",
+        "step": 3,
+        "cuda_allocated_bytes": 655235584,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_before_release",
+        "step": 4,
+        "cuda_allocated_bytes": 815274496,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_after_release",
+        "step": 4,
+        "cuda_allocated_bytes": 655235584,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_before_release",
+        "step": 5,
+        "cuda_allocated_bytes": 815274496,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_after_release",
+        "step": 5,
+        "cuda_allocated_bytes": 655235584,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_before_release",
+        "step": 6,
+        "cuda_allocated_bytes": 815274496,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_after_release",
+        "step": 6,
+        "cuda_allocated_bytes": 655235584,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_before_release",
+        "step": 7,
+        "cuda_allocated_bytes": 815274496,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_after_release",
+        "step": 7,
+        "cuda_allocated_bytes": 655235584,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_before_release",
+        "step": 8,
+        "cuda_allocated_bytes": 815274496,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_after_release",
+        "step": 8,
+        "cuda_allocated_bytes": 655235584,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_before_release",
+        "step": 9,
+        "cuda_allocated_bytes": 815274496,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_after_release",
+        "step": 9,
+        "cuda_allocated_bytes": 655235584,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_before_release",
+        "step": 10,
+        "cuda_allocated_bytes": 815274496,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_after_release",
+        "step": 10,
+        "cuda_allocated_bytes": 655235584,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_before_release",
+        "step": 11,
+        "cuda_allocated_bytes": 815274496,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_after_release",
+        "step": 11,
+        "cuda_allocated_bytes": 655235584,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_before_release",
+        "step": 12,
+        "cuda_allocated_bytes": 815274496,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_after_release",
+        "step": 12,
+        "cuda_allocated_bytes": 655235584,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_before_release",
+        "step": 13,
+        "cuda_allocated_bytes": 815274496,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_after_release",
+        "step": 13,
+        "cuda_allocated_bytes": 655235584,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_before_release",
+        "step": 14,
+        "cuda_allocated_bytes": 815274496,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_after_release",
+        "step": 14,
+        "cuda_allocated_bytes": 655235584,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_before_release",
+        "step": 15,
+        "cuda_allocated_bytes": 815274496,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_after_release",
+        "step": 15,
+        "cuda_allocated_bytes": 655235584,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_before_release",
+        "step": 16,
+        "cuda_allocated_bytes": 815274496,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_after_release",
+        "step": 16,
+        "cuda_allocated_bytes": 655235584,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_before_release",
+        "step": 17,
+        "cuda_allocated_bytes": 815274496,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_after_release",
+        "step": 17,
+        "cuda_allocated_bytes": 655235584,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_before_release",
+        "step": 18,
+        "cuda_allocated_bytes": 815274496,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_after_release",
+        "step": 18,
+        "cuda_allocated_bytes": 655235584,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_before_release",
+        "step": 19,
+        "cuda_allocated_bytes": 815274496,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_after_release",
+        "step": 19,
+        "cuda_allocated_bytes": 655235584,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_before_release",
+        "step": 20,
+        "cuda_allocated_bytes": 815274496,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_after_release",
+        "step": 20,
+        "cuda_allocated_bytes": 655235584,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_before_release",
+        "step": 21,
+        "cuda_allocated_bytes": 815274496,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_after_release",
+        "step": 21,
+        "cuda_allocated_bytes": 655235584,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_before_release",
+        "step": 22,
+        "cuda_allocated_bytes": 815274496,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_after_release",
+        "step": 22,
+        "cuda_allocated_bytes": 655235584,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_before_release",
+        "step": 23,
+        "cuda_allocated_bytes": 815274496,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_after_release",
+        "step": 23,
+        "cuda_allocated_bytes": 655235584,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_before_release",
+        "step": 24,
+        "cuda_allocated_bytes": 815274496,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_after_release",
+        "step": 24,
+        "cuda_allocated_bytes": 655235584,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_before_release",
+        "step": 25,
+        "cuda_allocated_bytes": 815274496,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_after_release",
+        "step": 25,
+        "cuda_allocated_bytes": 655235584,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_before_release",
+        "step": 26,
+        "cuda_allocated_bytes": 815274496,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_after_release",
+        "step": 26,
+        "cuda_allocated_bytes": 655235584,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_before_release",
+        "step": 27,
+        "cuda_allocated_bytes": 815274496,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_after_release",
+        "step": 27,
+        "cuda_allocated_bytes": 655235584,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "decode_before_release",
+        "step": null,
+        "cuda_allocated_bytes": 655235584,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "decode_after_release",
+        "step": null,
+        "cuda_allocated_bytes": 647543296,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_before_release",
+        "step": 0,
+        "cuda_allocated_bytes": 815274496,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_after_release",
+        "step": 0,
+        "cuda_allocated_bytes": 655235584,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_before_release",
+        "step": 1,
+        "cuda_allocated_bytes": 815274496,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_after_release",
+        "step": 1,
+        "cuda_allocated_bytes": 655235584,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_before_release",
+        "step": 2,
+        "cuda_allocated_bytes": 815274496,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_after_release",
+        "step": 2,
+        "cuda_allocated_bytes": 655235584,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_before_release",
+        "step": 3,
+        "cuda_allocated_bytes": 815274496,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_after_release",
+        "step": 3,
+        "cuda_allocated_bytes": 655235584,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_before_release",
+        "step": 4,
+        "cuda_allocated_bytes": 815274496,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_after_release",
+        "step": 4,
+        "cuda_allocated_bytes": 655235584,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_before_release",
+        "step": 5,
+        "cuda_allocated_bytes": 815274496,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_after_release",
+        "step": 5,
+        "cuda_allocated_bytes": 655235584,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_before_release",
+        "step": 6,
+        "cuda_allocated_bytes": 815274496,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_after_release",
+        "step": 6,
+        "cuda_allocated_bytes": 655235584,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_before_release",
+        "step": 7,
+        "cuda_allocated_bytes": 815274496,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_after_release",
+        "step": 7,
+        "cuda_allocated_bytes": 655235584,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_before_release",
+        "step": 8,
+        "cuda_allocated_bytes": 815274496,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_after_release",
+        "step": 8,
+        "cuda_allocated_bytes": 655235584,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_before_release",
+        "step": 9,
+        "cuda_allocated_bytes": 815274496,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_after_release",
+        "step": 9,
+        "cuda_allocated_bytes": 655235584,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_before_release",
+        "step": 10,
+        "cuda_allocated_bytes": 815274496,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_after_release",
+        "step": 10,
+        "cuda_allocated_bytes": 655235584,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_before_release",
+        "step": 11,
+        "cuda_allocated_bytes": 815274496,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_after_release",
+        "step": 11,
+        "cuda_allocated_bytes": 655235584,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_before_release",
+        "step": 12,
+        "cuda_allocated_bytes": 815274496,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_after_release",
+        "step": 12,
+        "cuda_allocated_bytes": 655235584,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_before_release",
+        "step": 13,
+        "cuda_allocated_bytes": 815274496,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_after_release",
+        "step": 13,
+        "cuda_allocated_bytes": 655235584,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_before_release",
+        "step": 14,
+        "cuda_allocated_bytes": 815274496,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_after_release",
+        "step": 14,
+        "cuda_allocated_bytes": 655235584,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_before_release",
+        "step": 15,
+        "cuda_allocated_bytes": 815274496,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_after_release",
+        "step": 15,
+        "cuda_allocated_bytes": 655235584,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_before_release",
+        "step": 16,
+        "cuda_allocated_bytes": 815274496,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_after_release",
+        "step": 16,
+        "cuda_allocated_bytes": 655235584,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_before_release",
+        "step": 17,
+        "cuda_allocated_bytes": 815274496,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_after_release",
+        "step": 17,
+        "cuda_allocated_bytes": 655235584,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_before_release",
+        "step": 18,
+        "cuda_allocated_bytes": 815274496,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_after_release",
+        "step": 18,
+        "cuda_allocated_bytes": 655235584,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_before_release",
+        "step": 19,
+        "cuda_allocated_bytes": 815274496,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_after_release",
+        "step": 19,
+        "cuda_allocated_bytes": 655235584,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_before_release",
+        "step": 20,
+        "cuda_allocated_bytes": 815274496,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_after_release",
+        "step": 20,
+        "cuda_allocated_bytes": 655235584,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_before_release",
+        "step": 21,
+        "cuda_allocated_bytes": 815274496,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_after_release",
+        "step": 21,
+        "cuda_allocated_bytes": 655235584,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_before_release",
+        "step": 22,
+        "cuda_allocated_bytes": 815274496,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_after_release",
+        "step": 22,
+        "cuda_allocated_bytes": 655235584,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_before_release",
+        "step": 23,
+        "cuda_allocated_bytes": 815274496,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_after_release",
+        "step": 23,
+        "cuda_allocated_bytes": 655235584,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_before_release",
+        "step": 24,
+        "cuda_allocated_bytes": 815274496,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_after_release",
+        "step": 24,
+        "cuda_allocated_bytes": 655235584,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_before_release",
+        "step": 25,
+        "cuda_allocated_bytes": 815274496,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_after_release",
+        "step": 25,
+        "cuda_allocated_bytes": 655235584,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_before_release",
+        "step": 26,
+        "cuda_allocated_bytes": 815274496,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_after_release",
+        "step": 26,
+        "cuda_allocated_bytes": 655235584,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_before_release",
+        "step": 27,
+        "cuda_allocated_bytes": 815274496,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "step_after_release",
+        "step": 27,
+        "cuda_allocated_bytes": 655235584,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "decode_before_release",
+        "step": null,
+        "cuda_allocated_bytes": 655235584,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      },
+      {
+        "stage": "decode_after_release",
+        "step": null,
+        "cuda_allocated_bytes": 647543296,
+        "cuda_peak_allocated_so_far_bytes": 1129686528
+      }
+    ]
+  },
+  "components": {
+    "image_encoder": {
+      "deferred_load": true,
+      "parameters": 86580480,
+      "model_tensor_storage_bytes": 173160960
+    },
+    "vae": {
+      "deferred_load": true,
+      "parameters": 34274208,
+      "model_tensor_storage_bytes": 68548416
+    },
+    "denoiser": {
+      "parameters": 415878672,
+      "parameter_bytes_in_memory": 831757344
+    },
+    "denoiser_garment": {
+      "parameters": 377459472,
+      "parameter_bytes_in_memory": 754918944
+    },
+    "vae_decoder": {
+      "deferred_load": true,
+      "parameters": 1902595,
+      "model_tensor_storage_bytes": 3805190
+    }
+  },
+  "total_parameters": 916095427,
+  "quantization": {
+    "denoiser": {
+      "loaded_checkpoint": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-23-mobile_vton/outputs_vllm_int4_native/denoiser_int4.pt",
+      "linear_layers_quantized": 378,
+      "linear_weight_parameters_quantized": 377618432,
+      "storage_bytes_before": 840014880,
+      "storage_bytes_after": 327515168,
+      "original_bf16_weights_transferred_to_cuda": false
+    },
+    "denoiser_garment": {
+      "loaded_checkpoint": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-23-mobile_vton/outputs_vllm_int4_native/denoiser_garment_int4.pt",
+      "linear_layers_quantized": 356,
+      "linear_weight_parameters_quantized": 339279872,
+      "storage_bytes_before": 759047712,
+      "storage_bytes_after": 297182752,
+      "original_bf16_weights_transferred_to_cuda": false
+    }
+  },
+  "resolution_adapter": {},
+  "model_tensor_storage_bytes": 624697920,
+  "model_load_seconds": 2.424788334988989,
+  "embedding_cache": {
+    "path": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-23-mobile_vton/outputs_bf16_cached/embeddings.pt",
+    "bytes": 8199289,
+    "sha256": "7ff8ec1f7f1da682d8cffa4fe034b15b7b6cd3ae70c51b480aa47c3efc76f4a1",
+    "loaded": true
+  },
+  "runtime_model_tensor_storage_bytes": 624697920,
+  "preprocess_and_text_encode_seconds": 0.20470435405150056,
+  "runs": [
+    {
+      "pipeline_seconds": 36.91993655299302,
+      "output": "experiments/2026-10-23-mobile_vton/outputs_compute_decoder32_cfg/result_01.png",
+      "sha256": "1f421d9d90b576db84dd19a7033dc403a650ba682d69a553c28f6763ad6b9b99",
+      "pixel_min": 0.0,
+      "pixel_max": 1.0,
+      "pixel_std": 0.15201245248317719,
+      "memory_event_range": [
+        11,
+        22
+      ],
+      "vae_event_range": [
+        2,
+        4
+      ],
+      "decoder_event_range": [
+        1,
+        2
+      ],
+      "cuda_peak_allocated_bytes": 1129686528,
+      "cuda_peak_reserved_bytes": 1220542464
+    },
+    {
+      "pipeline_seconds": 42.45551630400587,
+      "output": "experiments/2026-10-23-mobile_vton/outputs_compute_decoder32_cfg/result_02.png",
+      "sha256": "1f421d9d90b576db84dd19a7033dc403a650ba682d69a553c28f6763ad6b9b99",
+      "pixel_min": 0.0,
+      "pixel_max": 1.0,
+      "pixel_std": 0.15201245248317719,
+      "memory_event_range": [
+        22,
+        33
+      ],
+      "vae_event_range": [
+        4,
+        6
+      ],
+      "decoder_event_range": [
+        2,
+        3
+      ],
+      "repeat_max_absolute_pixel_difference": 0.0,
+      "cuda_peak_allocated_bytes": 1129686528,
+      "cuda_peak_reserved_bytes": 1220542464
+    }
+  ],
+  "warmup_steps": 1,
+  "cuda_peak_allocated_bytes_before_benchmark": 1129686528,
+  "host_peak_rss_bytes_before_benchmark": 2080542720,
+  "cuda_peak_allocated_bytes_all_phases": 1129686528,
+  "host_peak_rss_bytes": 2392780800,
+  "limitations": [
+    "Desktop functional test; no Android/iOS inference or mobile FPS measurement.",
+    "One pair is insufficient to establish model quality or category coverage.",
+    "pipeline_seconds excludes model load, image preprocessing, and text encoding; these are reported separately.",
+    "No reference target image: SSIM/LPIPS/FID are not calculated."
+  ]
+}

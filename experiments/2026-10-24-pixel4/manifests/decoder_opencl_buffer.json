@@ -1,0 +1,19 @@
+{
+  "model": "/data/local/tmp/mobile_tryon_20261024/decoder_fp16.mnn",
+  "backend": 3,
+  "gpu_mode": 80,
+  "runs": 3,
+  "inputs": [
+    {
+      "name": "latent",
+      "file": "/data/local/tmp/mobile_tryon_20261024/decoder_input.f32"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "image",
+      "file": "/data/local/tmp/mobile_tryon_20261024/decoder_opencl_buffer_image.f32"
+    }
+  ],
+  "metrics": "/data/local/tmp/mobile_tryon_20261024/decoder_opencl_buffer_metrics.json"
+}

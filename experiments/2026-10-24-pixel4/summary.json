@@ -1,0 +1,336 @@
+{
+  "status": "completed_single_pair_phone_generation_latency_rejected",
+  "full_generation_completed_on_phone": true,
+  "end_to_end_seconds": 2081,
+  "end_to_end_peak_memory_bytes": 1721602048,
+  "component_tests": {
+    "vae_encoder_fp32": {
+      "status": "matches_fp32_reference_on_fixed_tile",
+      "comparison": "experiments/2026-10-24-pixel4/outputs_vae_encoder_opencl_buffer_fp32_refreshed/comparison.json",
+      "runs": 3,
+      "seconds": 16.904361232,
+      "process_peak_rss_bytes": 1012355072,
+      "process_peak_rss_gib": 0.9428291320800781,
+      "relative_rmse_range": [
+        1.0685182945815882e-06,
+        1.0685182945815882e-06
+      ],
+      "inputs_refreshed_each_run": true,
+      "output_tensor_backends": {
+        "3": 209
+      },
+      "mean_input_refresh_seconds": 0.0029437156666666663
+    },
+    "garment_int4": {
+      "status": "int4_residual_error_confirmed_against_fp32_control",
+      "comparison": "experiments/2026-10-24-pixel4/outputs_garment_opencl_buffer_refreshed/comparison.json",
+      "runs": 3,
+      "seconds": 5.527332391333334,
+      "process_peak_rss_bytes": 781119488,
+      "process_peak_rss_gib": 0.7274742126464844,
+      "relative_rmse_range": [
+        0.10543513002985591,
+        0.3922927311889477
+      ],
+      "inputs_refreshed_each_run": true,
+      "output_tensor_backends": {
+        "3": 2426
+      },
+      "mean_input_refresh_seconds": 0.011744289333333333,
+      "fp32_cpu_control": {
+        "comparison": "experiments/2026-10-24-pixel4/outputs_garment_host_fp32_control/comparison.json",
+        "relative_rmse_range": [
+          6.746293082814239e-05,
+          0.0002811290807095131
+        ],
+        "seconds": 2.88964183,
+        "process_peak_rss_gib": 2.7375144958496094
+      },
+      "int4_cpu_control": {
+        "comparison": "experiments/2026-10-24-pixel4/outputs_garment_host_int4_control/comparison.json",
+        "relative_rmse_range": [
+          0.11064389853673645,
+          0.39084113819929056
+        ],
+        "seconds": 2.925085197,
+        "process_peak_rss_gib": 0.7034072875976562
+      }
+    },
+    "tryon_int4": {
+      "status": "single_forward_completed_not_full_generation",
+      "comparison": "experiments/2026-10-24-pixel4/outputs_tryon_opencl_buffer_streamed/comparison.json",
+      "seconds": 24.057130591,
+      "runs": 3,
+      "process_peak_rss_bytes": 1572610048,
+      "process_peak_rss_gib": 1.4646072387695312,
+      "relative_rmse_range": [
+        0.2965476159233461,
+        0.2965476159233461
+      ],
+      "input_refresh_seconds": [
+        0.60700704,
+        0.543355159,
+        0.843820448
+      ],
+      "output_tensor_backends": {
+        "3": 3507
+      },
+      "full_generation": false
+    },
+    "decoder": {
+      "status": "historical_run_pending_refreshed_rerun",
+      "comparison": "experiments/2026-10-24-pixel4/outputs_decoder_opencl_buffer/comparison.json",
+      "runs": 3,
+      "seconds": 12.157921645,
+      "process_peak_rss_bytes": 956387328,
+      "process_peak_rss_gib": 0.8907051086425781,
+      "relative_rmse_range": [
+        0.0063269098082269545,
+        0.0063269098082269545
+      ],
+      "inputs_refreshed_each_run": false,
+      "output_tensor_backends": {
+        "3": 125
+      },
+      "mean_input_refresh_seconds": 0.0
+    },
+    "tryon_int8_host_control": {
+      "status": "completed_host_control",
+      "comparison": "experiments/2026-10-24-pixel4/outputs_tryon_host_int8_control/comparison.json",
+      "model": "experiments/2026-10-24-pixel4/exports/tryon_int8.mnn",
+      "model_bytes": 410017716,
+      "runs": 1,
+      "seconds": 16.400026563,
+      "process_peak_rss_bytes": 2287300608,
+      "process_peak_rss_gib": 2.1302146911621094,
+      "relative_rmse": 0.02690376341342926,
+      "output_nonfinite_elements": 0,
+      "backend": "host CPU extension (MNN backend 13)",
+      "phone_opencl_run_completed": true
+    },
+    "tryon_fp16_phone_control": {
+      "status": "terminated_for_memory_pressure",
+      "model": "experiments/2026-10-24-pixel4/exports/tryon_fp16.mnn",
+      "model_bytes": 766482756,
+      "process_peak_rss_bytes": 2411769856,
+      "process_peak_rss_gib": 2.246135711669922,
+      "mem_available_kb_at_termination": 30436,
+      "output_produced": false
+    },
+    "tryon_int8_opencl": {
+      "status": "completed_opencl_accuracy_rejected",
+      "comparison": "experiments/2026-10-24-pixel4/outputs_tryon_int8_opencl_streamed/comparison.json",
+      "manifest": "experiments/2026-10-24-pixel4/manifests/tryon_int8_opencl_streamed.json",
+      "runs": 1,
+      "seconds": 25.463216651,
+      "process_peak_rss_bytes": 1948708864,
+      "process_peak_rss_gib": 1.8148765563964844,
+      "relative_rmse": 0.5143530368804932,
+      "input_refresh_seconds": [
+        1.09577438
+      ],
+      "mem_available_min_kb": 180016,
+      "mem_available_min_gib": 0.1716766357421875,
+      "output_nonfinite_elements": 0,
+      "output_tensor_backends": {
+        "3": 3507
+      },
+      "full_generation": false,
+      "selection": "rejected_for_this_opencl_low_configuration",
+      "precision_mode": 2
+    },
+    "tryon_hybrid_top8_skip_q_host": {
+      "status": "completed_preliminary_control",
+      "comparison": "experiments/2026-10-24-pixel4/outputs_tryon_hybrid_top8_skip_q_host/comparison.json",
+      "manifest": "experiments/2026-10-24-pixel4/manifests/tryon_hybrid_top8_skip_q_host.json",
+      "model": "experiments/2026-10-24-pixel4/exports/tryon_hybrid_top8_skip_q.mnn",
+      "model_bytes": 400099232,
+      "runs": 1,
+      "seconds": 16.0765088,
+      "inference_and_output_download_seconds": [
+        16.0765088
+      ],
+      "process_peak_rss_bytes": 2255990784,
+      "process_peak_rss_gib": 2.101055145263672,
+      "relative_rmse": 0.028892775997519493,
+      "precision_mode": 2,
+      "output_nonfinite_elements": 0,
+      "output_tensor_backends": {
+        "0": 136,
+        "13": 3371
+      },
+      "full_generation": false
+    },
+    "tryon_hybrid_top8_skip_q_opencl": {
+      "status": "completed_preliminary_opencl_low_accuracy_rejected",
+      "comparison": "experiments/2026-10-24-pixel4/outputs_tryon_hybrid_top8_skip_q_opencl/comparison.json",
+      "manifest": "experiments/2026-10-24-pixel4/manifests/tryon_hybrid_top8_skip_q_opencl.json",
+      "model": "experiments/2026-10-24-pixel4/exports/tryon_hybrid_top8_skip_q.mnn",
+      "model_bytes": 400099232,
+      "runs": 1,
+      "seconds": 24.348973364,
+      "inference_and_output_download_seconds": [
+        24.348973364
+      ],
+      "process_peak_rss_bytes": 1942831104,
+      "process_peak_rss_gib": 1.8094024658203125,
+      "relative_rmse": 0.534355878829956,
+      "precision_mode": 2,
+      "output_nonfinite_elements": 0,
+      "output_tensor_backends": {
+        "3": 3507
+      },
+      "full_generation": false,
+      "mem_available_min_kb": 305440,
+      "mem_available_min_gib": 0.291290283203125,
+      "exit_code": 0
+    },
+    "tryon_structural_int4_fp16_block32_host": {
+      "status": "completed_host_control",
+      "comparison": "experiments/2026-10-24-pixel4/outputs_tryon_structural_int4_fp16_block32_host/comparison.json",
+      "manifest": "experiments/2026-10-24-pixel4/manifests/tryon_structural_int4_fp16_block32_host.json",
+      "model": "experiments/2026-10-24-pixel4/exports/tryon_structural_int4_fp16_block32.mnn",
+      "model_bytes": 301700316,
+      "runs": 1,
+      "seconds": 16.496122262,
+      "inference_and_output_download_seconds": [
+        16.496122262
+      ],
+      "process_peak_rss_bytes": 2076332032,
+      "process_peak_rss_gib": 1.9337348937988281,
+      "relative_rmse": 0.08111850172281265,
+      "precision_mode": 2,
+      "output_nonfinite_elements": 0,
+      "output_tensor_backends": {
+        "0": 136,
+        "13": 3371
+      },
+      "full_generation": false
+    },
+    "tryon_structural_int4_fp16_block32_opencl": {
+      "status": "completed_three_forwards_image_quality_unverified",
+      "comparison": "experiments/2026-10-24-pixel4/outputs_tryon_structural_int4_fp16_block32_opencl/comparison.json",
+      "manifest": "experiments/2026-10-24-pixel4/manifests/tryon_structural_int4_fp16_block32_opencl.json",
+      "model": "experiments/2026-10-24-pixel4/exports/tryon_structural_int4_fp16_block32.mnn",
+      "model_bytes": 301700316,
+      "runs": 3,
+      "seconds": 24.511448952333335,
+      "inference_and_output_download_seconds": [
+        24.47729822,
+        24.505066608,
+        24.551982029
+      ],
+      "process_peak_rss_bytes": 1706459136,
+      "process_peak_rss_gib": 1.589263916015625,
+      "relative_rmse": 0.08390158414840698,
+      "precision_mode": 2,
+      "output_nonfinite_elements": 0,
+      "output_tensor_backends": {
+        "3": 3507
+      },
+      "full_generation": false,
+      "mem_available_min_kb": 541144,
+      "mem_available_min_gib": 0.5160751342773438,
+      "exit_code": 0
+    },
+    "tryon_structural_int4_fp16_block32_opencl_normal": {
+      "status": "completed_three_forwards_no_advantage_over_low",
+      "comparison": "experiments/2026-10-24-pixel4/outputs_tryon_structural_int4_fp16_block32_opencl_normal/comparison.json",
+      "manifest": "experiments/2026-10-24-pixel4/manifests/tryon_structural_int4_fp16_block32_opencl_normal.json",
+      "model": "experiments/2026-10-24-pixel4/exports/tryon_structural_int4_fp16_block32.mnn",
+      "model_bytes": 301700316,
+      "runs": 3,
+      "seconds": 31.178273452666662,
+      "inference_and_output_download_seconds": [
+        29.697795562,
+        31.609255961,
+        32.227768835
+      ],
+      "process_peak_rss_bytes": 1719783424,
+      "process_peak_rss_gib": 1.6016731262207031,
+      "relative_rmse": 0.08466479927301407,
+      "precision_mode": 0,
+      "output_nonfinite_elements": 0,
+      "output_tensor_backends": {
+        "3": 3507
+      },
+      "mem_available_min_kb": 662688,
+      "mem_available_min_gib": 0.631988525390625,
+      "exit_code": 0,
+      "full_generation": false
+    }
+  },
+  "historical_summary": "experiments/2026-10-24-pixel4/summary_initial_unrefreshed.json",
+  "correction": "Initial VAE conversion-error diagnosis withdrawn. First-forward intermediate tensors agree with ONNX Runtime; refreshing inputs on each forward restores VAE agreement on the host and phone. Internal buffer-lifetime mechanism is not yet isolated.",
+  "latest_streamed_runner": {
+    "source": "experiments/2026-10-24-pixel4/mnn_component_bench.cpp",
+    "android_binary": "experiments/2026-10-24-pixel4/mnn_component_bench_streamed",
+    "host_control_mae": 7.507665941375308e-06,
+    "android_compiled": true,
+    "phone_run_completed": true,
+    "int8_manifest": "experiments/2026-10-24-pixel4/manifests/tryon_int8_opencl_streamed.json",
+    "int8_comparison": "experiments/2026-10-24-pixel4/outputs_tryon_int8_opencl_streamed/comparison.json"
+  },
+  "notes": [
+    "Native Android arm64 CLI: separate historical component tests and one completed 28-step, 56-forward phone generation. No APK/camera integration.",
+    "VAE is one 512x512 person tile; garment uses posterior-mean export fixture; tryon uses a synthetic seeded sample, reference garment features and cached image embeddings.",
+    "Corrected runner refreshes each input by reading one file at a time before every measured forward.",
+    "Tryon streamed-input runner completed 3 phone forwards at about 24.06 s each; output relative RMSE is 0.2965 versus the FP32 PyTorch fixture.",
+    "Nonquantized garment CPU control matches the reference; INT4 CPU and OpenCL controls show similar residual error, attributing the garment error to this MNN INT4 candidate rather than OpenCL alone.",
+    "Latency includes forward and output download, excludes loading, session/kernel creation, input refresh, warmup and file saving.",
+    "Peak RSS can include GPU mappings but not all driver allocations. Do not add component peaks or treat them as full-pipeline memory.",
+    "Backend 3 output placement does not prove every kernel exclusively executes on the GPU.",
+    "Full scheduler, sequential CFG, six-tile person VAE and final decoder completed on phone in 2081 s; initial CFG/Euler and VAE blending math checks are exact.",
+    "Tryon INT8 MNN model is 391MiB; host CPU control completed in 16.40 s with relative RMSE 0.02690 and peak RSS 2.13GiB.",
+    "Tryon FP16 MNN model is 731MiB; Pixel 4 run was terminated at RSS 2.246GiB with 30,436KiB MemAvailable before producing output.",
+    "Tryon INT8 OpenCL completed one Pixel 4 forward in 25.46 s with 1.815GiB peak RSS; MemAvailable reached 180,016KiB and output was finite.",
+    "The preliminary top8 exclusion heuristic used a channel-product proxy that omitted convolution groups; its Pixel 4 relative RMSE 0.53436 is not calibrated sensitivity evidence.",
+    "Structural INT4/FP16 with block32 completed three Pixel 4 OpenCL Low forwards at 24.511 s average, 1.589 GiB peak RSS and relative RMSE 0.08390; block size and preserved layers changed together.",
+    "Zero-input auto-quant fixtures were used only to enumerate layer metadata, not for calibration or accuracy. Their rate=0 is not an evaluation result.",
+    "OpenCL Low precision=2 uses half storage/compute; Normal precision=0 uses half storage/float compute. Weight storage and runtime arithmetic precision are separate.",
+    "The same structural mixed model with OpenCL Normal precision=0 measured 31.178 s over three forwards, 1.602 GiB peak RSS and relative RMSE 0.08466. Low is the follow-up candidate on this fixture; these sequential timing measurements do not isolate thermal/DVFS effects.",
+    "Numerical comparisons use the final saved forward only; three timing repeats do not establish agreement across inputs or timesteps.",
+    "Full-generation cache is 1,849,688,064 bytes per fixed garment/latent/seed/scheduler; this experiment does not establish a practical catalog storage solution.",
+    "Full generation includes model/session setup, neural execution, cache IO, CPU scheduler/CFG/blending and checkpoint writes; excludes offline precompute, ADB transfer, JPEG preparation and host PNG encoding.",
+    "Denoising forward/download alone took 1647.47 seconds; this Pixel 4 OpenCL implementation is rejected for practical latency."
+  ],
+  "structural_mixed_policy": {
+    "method": "structural_heuristic_not_calibrated_sensitivity",
+    "policy": "experiments/2026-10-24-pixel4/policies/tryon_structural_int4_fp16_block32.json",
+    "layer_decisions": "experiments/2026-10-24-pixel4/policies/tryon_structural_int4_fp16_block32_summary.json",
+    "float_inventory": "experiments/2026-10-24-pixel4/tryon_float_weights.tsv",
+    "serialized_storage_audit": "experiments/2026-10-24-pixel4/tryon_structural_int4_fp16_block32_weights.tsv",
+    "verified_fp16_convolution_tensors": 97,
+    "verified_int4_convolution_tensors": 341,
+    "int4_block_size": 32,
+    "asymmetric": true,
+    "conversion": "bits=0 excludes layers, other layers bits=4; a second --fp16 MNN conversion packs excluded weights. bits=16 is clamped to 8.",
+    "normal_precision_comparison_status": "completed_three_forwards_no_advantage_over_low",
+    "followup_candidate": "tryon_structural_int4_fp16_block32_opencl",
+    "full_generation_selection": "rejected_for_practical_pixel4_latency"
+  },
+  "current_tradeoff": {
+    "candidate": "tryon_structural_int4_fp16_block32_opencl",
+    "relative_rmse_reduction_vs_int4_percent": 71.70721339736062,
+    "peak_rss_increase_vs_int4_percent": 8.51127004880996,
+    "latency_increase_vs_int4_percent": 1.888497714283921,
+    "peak_rss_reduction_vs_int8_low_percent": 12.431293995489312,
+    "selection_scope": "Historical component tradeoff; full trial completed and rejected for practical Pixel 4 latency."
+  },
+  "full_generation_trial": {
+    "status": "completed",
+    "directory": "experiments/2026-10-24-pixel4/generation_hybrid_low",
+    "config": "experiments/2026-10-24-pixel4/generation_hybrid_low/generation.json",
+    "steps": 28,
+    "cfg_forwards": 56,
+    "garment_feature_cache_bytes": 1849688064,
+    "reference": "experiments/2026-10-24-pixel4/generation_hybrid_low/reference/metrics.json",
+    "validation": "experiments/2026-10-24-pixel4/generation_hybrid_low/validation.json",
+    "comparison": "experiments/2026-10-24-pixel4/generation_hybrid_low/comparison.json",
+    "image": "experiments/2026-10-24-pixel4/generation_hybrid_low/pixel4_result.png",
+    "online_cold_wall_seconds": 2081,
+    "process_peak_rss_bytes": 1721602048,
+    "mem_available_min_kib": 804336,
+    "selection": "rejected_for_practical_pixel4_latency"
+  }
+}

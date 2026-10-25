@@ -1,0 +1,38 @@
+[
+  {
+    "id": "white_tee",
+    "name": "화이트 프린트 티",
+    "description": "라운드넥 · 반소매",
+    "image": "catalog/white_tee.png",
+    "tensor": "catalog/white_tee.f32",
+    "edge": "catalog/white_tee_edge.f32",
+    "source": "Official VITON-Clean test_color/015095_1.jpg",
+    "mask_source": "Official VITON-Clean test_edge/015095_1.jpg",
+    "mask_method": "Supplied annotation >127; no RGB threshold or inferred segmentation",
+    "annotation_sha256": "617e9d7f3df56dea3556ebe02d4e5e8138df547c11bcf8b005d26ca59a4cba91"
+  },
+  {
+    "id": "black_tee",
+    "name": "블랙 티셔츠",
+    "description": "베이직 · 반소매",
+    "image": "catalog/black_tee.png",
+    "tensor": "catalog/black_tee.f32",
+    "edge": "catalog/black_tee_edge.f32",
+    "source": "Official VITON-Clean test_color/019243_1.jpg",
+    "mask_source": "Official VITON-Clean test_edge/019243_1.jpg",
+    "mask_method": "Supplied annotation >127; no RGB threshold or inferred segmentation",
+    "annotation_sha256": "0bec91f0d159a09cd435ea9d3841b8ff228757d18eaf1808c9e60903589fb4ed"
+  },
+  {
+    "id": "navy_hoodie",
+    "name": "네이비 후드",
+    "description": "단추 · 긴소매",
+    "image": "catalog/navy_hoodie.png",
+    "tensor": "catalog/navy_hoodie.f32",
+    "edge": "catalog/navy_hoodie_edge.f32",
+    "source": "Official VITON-Clean test_color/004727_1.jpg",
+    "mask_source": "Official VITON-Clean test_edge/004727_1.jpg",
+    "mask_method": "Supplied annotation >127; no RGB threshold or inferred segmentation",
+    "annotation_sha256": "f9f2e21b55e79728122a0aab13b651959637260069d46db8dad516fac8c6ec62"
+  }
+]

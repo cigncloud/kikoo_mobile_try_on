@@ -1,0 +1,5 @@
+CPU Group: [ 11  6  2  14  9  10  7  5  3  15  1  13 ], 800000 - 4800000
+CPU Group: [ 8  4  0  12 ], 800000 - 4900000
+The device supports: i8sdot:0, fp16:0, i8mm: 0, sve2: 0, sme2: 0
+session_ready /home/michaelk/work_space/mobile_tryon/experiments/2026-10-24-pixel4/exports/decoder_fp16.mnn setup_seconds=0.0127603
+decoder seconds=2.20753 rss_bytes=842457088

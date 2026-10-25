@@ -1,0 +1,35 @@
+CPU Group: [ 11  6  2  14  9  10  7  5  3  15  1  13 ], 800000 - 4800000
+CPU Group: [ 8  4  0  12 ], 800000 - 4900000
+The device supports: i8sdot:0, fp16:0, i8mm: 0, sve2: 0, sme2: 0
+Start to Convert Other Model Format To MNN Model..., target version: 3.6
+[16:12:21] :46: ONNX Model ir version: 8
+[16:12:21] :47: ONNX Model opset version: 17
+[16:12:21] :149: Check it out ==> /warp/cond_mobile/Resize_output_0 has empty input, the index is 1
+[16:12:21] :149: Check it out ==> /warp/cond_mobile/Resize_output_0 has empty input, the index is 2
+[16:12:21] :149: Check it out ==> /warp/image_mobile/Resize_output_0 has empty input, the index is 1
+[16:12:21] :149: Check it out ==> /warp/image_mobile/Resize_output_0 has empty input, the index is 2
+[16:12:21] :149: Check it out ==> /warp/cond_mobile/Resize_1_output_0 has empty input, the index is 1
+[16:12:21] :149: Check it out ==> /warp/cond_mobile/Resize_1_output_0 has empty input, the index is 2
+[16:12:21] :149: Check it out ==> /warp/image_mobile/Resize_1_output_0 has empty input, the index is 1
+[16:12:21] :149: Check it out ==> /warp/image_mobile/Resize_1_output_0 has empty input, the index is 2
+[16:12:21] :149: Check it out ==> /warp/cond_mobile/Resize_2_output_0 has empty input, the index is 1
+[16:12:21] :149: Check it out ==> /warp/cond_mobile/Resize_2_output_0 has empty input, the index is 2
+[16:12:21] :149: Check it out ==> /warp/image_mobile/Resize_2_output_0 has empty input, the index is 1
+[16:12:21] :149: Check it out ==> /warp/image_mobile/Resize_2_output_0 has empty input, the index is 2
+[16:12:21] :149: Check it out ==> /warp/cond_mobile/Resize_3_output_0 has empty input, the index is 1
+[16:12:21] :149: Check it out ==> /warp/cond_mobile/Resize_3_output_0 has empty input, the index is 2
+[16:12:21] :149: Check it out ==> /warp/image_mobile/Resize_3_output_0 has empty input, the index is 1
+[16:12:21] :149: Check it out ==> /warp/image_mobile/Resize_3_output_0 has empty input, the index is 2
+[16:12:21] :149: Check it out ==> /warp/cond_mobile/Resize_4_output_0 has empty input, the index is 1
+[16:12:21] :149: Check it out ==> /warp/cond_mobile/Resize_4_output_0 has empty input, the index is 2
+[16:12:21] :149: Check it out ==> /warp/image_mobile/Resize_4_output_0 has empty input, the index is 1
+[16:12:21] :149: Check it out ==> /warp/image_mobile/Resize_4_output_0 has empty input, the index is 2
+[16:12:21] :149: Check it out ==> /warp/aflow_net/Resize_output_0 has empty input, the index is 1
+[16:12:21] :149: Check it out ==> /warp/aflow_net/Resize_1_output_0 has empty input, the index is 1
+[16:12:21] :149: Check it out ==> /warp/aflow_net/Resize_2_output_0 has empty input, the index is 1
+[16:12:21] :149: Check it out ==> /warp/aflow_net/Resize_3_output_0 has empty input, the index is 1
+[16:12:21] :149: Check it out ==> /warp/aflow_net/Resize_4_output_0 has empty input, the index is 1
+Start to Optimize the MNN Net...
+inputTensors : [ person, clothes, edge, ]
+outputTensors: [ warped_cloth, warped_edge, ]
+Converted Success!

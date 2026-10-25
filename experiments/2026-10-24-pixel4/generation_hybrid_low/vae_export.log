@@ -1,0 +1,50 @@
+/home/michaelk/miniconda3/envs/comfyui/lib/python3.12/site-packages/torch/cuda/__init__.py:789: UserWarning: Can't initialize NVML
+  warnings.warn("Can't initialize NVML")
+2026-10-24 14:00:01.008820: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-10-24 14:00:01.051580: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:matplotlib:/home/michaelk/.config/matplotlib is not a writable directory
+WARNING:matplotlib:Matplotlib created a temporary cache directory at /tmp/matplotlib-xeksstmj because there was an issue with the default path (/home/michaelk/.config/matplotlib); it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+/home/michaelk/miniconda3/envs/comfyui/lib/python3.12/site-packages/diffusers/models/downsampling.py:136: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  assert hidden_states.shape[1] == self.channels
+/home/michaelk/miniconda3/envs/comfyui/lib/python3.12/site-packages/diffusers/models/downsampling.py:145: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  assert hidden_states.shape[1] == self.channels
+/home/michaelk/miniconda3/envs/comfyui/lib/python3.12/site-packages/torch/onnx/_internal/jit_utils.py:309: UserWarning: Constant folding - Only steps=1 can be constant folded for opset >= 10 onnx::Slice op. Constant folding not applied. (Triggered internally at /pytorch/torch/csrc/jit/passes/onnx/constant_fold.cpp:178.)
+  _C._jit_pass_onnx_node_shape_type_inference(node, params_dict, opset_version)
+/home/michaelk/miniconda3/envs/comfyui/lib/python3.12/site-packages/torch/onnx/utils.py:691: UserWarning: Constant folding - Only steps=1 can be constant folded for opset >= 10 onnx::Slice op. Constant folding not applied. (Triggered internally at /pytorch/torch/csrc/jit/passes/onnx/constant_fold.cpp:178.)
+  _C._jit_pass_onnx_graph_shape_type_inference(
+/home/michaelk/miniconda3/envs/comfyui/lib/python3.12/site-packages/torch/onnx/utils.py:1161: UserWarning: Constant folding - Only steps=1 can be constant folded for opset >= 10 onnx::Slice op. Constant folding not applied. (Triggered internally at /pytorch/torch/csrc/jit/passes/onnx/constant_fold.cpp:178.)
+  _C._jit_pass_onnx_graph_shape_type_inference(
+CPU Group: [ 11  6  2  14  9  10  7  5  3  15  1  13 ], 800000 - 4800000
+CPU Group: [ 8  4  0  12 ], 800000 - 4900000
+The device supports: i8sdot:0, fp16:0, i8mm: 0, sve2: 0, sme2: 0
+Start to Convert Other Model Format To MNN Model..., target version: 3.6
+[14:00:14] :46: ONNX Model ir version: 8
+[14:00:14] :47: ONNX Model opset version: 17
+Start to Optimize the MNN Net...
+inputTensors : [ image, ]
+outputTensors: [ output_0, ]
+Converted Success!
+Exported exact boundary tile 512x384
+CPU Group: [ 11  6  2  14  9  10  7  5  3  15  1  13 ], 800000 - 4800000
+CPU Group: [ 8  4  0  12 ], 800000 - 4900000
+The device supports: i8sdot:0, fp16:0, i8mm: 0, sve2: 0, sme2: 0
+Start to Convert Other Model Format To MNN Model..., target version: 3.6
+[14:00:20] :46: ONNX Model ir version: 8
+[14:00:20] :47: ONNX Model opset version: 17
+Start to Optimize the MNN Net...
+inputTensors : [ image, ]
+outputTensors: [ output_0, ]
+Converted Success!
+Exported exact boundary tile 256x512
+CPU Group: [ 11  6  2  14  9  10  7  5  3  15  1  13 ], 800000 - 4800000
+CPU Group: [ 8  4  0  12 ], 800000 - 4900000
+The device supports: i8sdot:0, fp16:0, i8mm: 0, sve2: 0, sme2: 0
+Start to Convert Other Model Format To MNN Model..., target version: 3.6
+[14:00:24] :46: ONNX Model ir version: 8
+[14:00:24] :47: ONNX Model opset version: 17
+Start to Optimize the MNN Net...
+inputTensors : [ image, ]
+outputTensors: [ output_0, ]
+Converted Success!
+Exported exact boundary tile 256x384

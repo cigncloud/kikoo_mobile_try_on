@@ -1,0 +1,13 @@
+/home/michaelk/miniconda3/envs/comfyui/lib/python3.12/site-packages/torch/cuda/__init__.py:789: UserWarning: Can't initialize NVML
+  warnings.warn("Can't initialize NVML")
+WARNING:Mobile_VTON.models.autoencoders.vae:Working directory (/home/michaelk/work_space/mobile_tryon/models/mobile_vton) is not in sys.path. Adding it.
+WARNING:Mobile_VTON.pipelines.tryon_pipeline_full_cat:Working directory (/home/michaelk/work_space/mobile_tryon/models) is not in sys.path. Adding it.
+WARNING:Mobile_VTON.models.unets.unet_2d_condition_tryon:UNet2DConditionModel::__init__ - when set time_text_embedding_mode to default, the following parameters are ignored: time_text_embedding_module(CombinedTimestepTextProjEmbeddings), time_text_embedding_time_embed_dim(896), time_text_embedding_pooled_projection_dim(2048), time_text_embedding_act_fn(hardswish), context_embedding_text_embedding_dim(4096), context_embedding_caption_projection_dim(2048)
+WARNING:Mobile_VTON.models.unets.unet_2d_condition_garment:UNet2DConditionModel::__init__ - when set time_text_embedding_mode to default, the following parameters are ignored: time_text_embedding_module(CombinedTimestepTextProjEmbeddings), time_text_embedding_time_embed_dim(896), time_text_embedding_pooled_projection_dim(2048), time_text_embedding_act_fn(hardswish), context_embedding_text_embedding_dim(4096), context_embedding_caption_projection_dim(2048)
+2048
+dinov2_base
+Quantizing denoiser linear weights to INT4
+Quantizing denoiser_garment linear weights to INT4
+Loaded 965,640,902 parameters in 4.63s
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+  0%|          | 0/28 [00:00<?, ?it/s]  4%|▎         | 1/28 [00:40<18:01, 40.07s/it]  7%|▋         | 2/28 [01:19<17:14, 39.81s/it]

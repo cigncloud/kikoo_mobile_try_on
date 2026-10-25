@@ -1,0 +1,2644 @@
+{
+  "method": "structural_heuristic_not_calibrated_sensitivity",
+  "int4_block_size": 32,
+  "asymmetric": true,
+  "storage_layer_counts": {
+    "fp16": 97,
+    "int4": 341
+  },
+  "storage_weight_elements": {
+    "fp16": 5087360,
+    "int4": 371834880
+  },
+  "instructions": "Apply policy to float MNN, then convert result with --fp16. bits=16 is clamped to 8 in MNN 3.6.1; bits=0 excludes a layer from weight quantization.",
+  "layers": [
+    {
+      "name": "/denoiser/conv_in/Conv_output_0",
+      "weight_elements": 73728,
+      "storage_target": "fp16",
+      "reason": "spatial_convolution"
+    },
+    {
+      "name": "/denoiser/down_blocks.0/resnets.0/conv1/dw_conv/Conv_output_0",
+      "weight_elements": 2304,
+      "storage_target": "fp16",
+      "reason": "spatial_convolution"
+    },
+    {
+      "name": "/denoiser/down_blocks.0/resnets.0/conv1/pw_conv/Conv_output_0",
+      "weight_elements": 131072,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/time_embedding/linear_1/Gemm_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "fp16",
+      "reason": "time_embedding"
+    },
+    {
+      "name": "/denoiser/time_embedding/linear_2/Gemm_output_0__matmul_converted",
+      "weight_elements": 1048576,
+      "storage_target": "fp16",
+      "reason": "time_embedding"
+    },
+    {
+      "name": "/denoiser/down_blocks.0/resnets.0/time_emb_proj/Gemm_output_0__matmul_converted",
+      "weight_elements": 524288,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.0/resnets.0/conv2/dw_conv/Conv_output_0",
+      "weight_elements": 4608,
+      "storage_target": "fp16",
+      "reason": "spatial_convolution"
+    },
+    {
+      "name": "/denoiser/down_blocks.0/resnets.0/conv2/pw_conv/Conv_output_0",
+      "weight_elements": 131072,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.0/attentions.0/proj_in/Add_output_0__matmul_converted",
+      "weight_elements": 65536,
+      "storage_target": "fp16",
+      "reason": "small_weight_tensor"
+    },
+    {
+      "name": "/denoiser/down_blocks.0/attentions.0/transformer_blocks.0/attn2/to_q/MatMul_output_0__matmul_converted",
+      "weight_elements": 65536,
+      "storage_target": "fp16",
+      "reason": "small_weight_tensor"
+    },
+    {
+      "name": "/denoiser/down_blocks.0/attentions.0/transformer_blocks.0/attn2/to_k/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.0/attentions.0/transformer_blocks.0/attn2/to_v/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.0/attentions.0/transformer_blocks.0/attn2/to_out.0/Add_output_0__matmul_converted",
+      "weight_elements": 65536,
+      "storage_target": "fp16",
+      "reason": "small_weight_tensor"
+    },
+    {
+      "name": "/denoiser/down_blocks.0/attentions.0/transformer_blocks.0/ff/net.0/proj/Add_output_0__matmul_converted",
+      "weight_elements": 393216,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.0/attentions.0/transformer_blocks.0/ff/net.2/Add_output_0__matmul_converted",
+      "weight_elements": 196608,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.0/attentions.0/proj_out/Add_output_0__matmul_converted",
+      "weight_elements": 65536,
+      "storage_target": "fp16",
+      "reason": "small_weight_tensor"
+    },
+    {
+      "name": "/denoiser/down_blocks.0/resnets.1/conv1/dw_conv/Conv_output_0",
+      "weight_elements": 2304,
+      "storage_target": "fp16",
+      "reason": "spatial_convolution"
+    },
+    {
+      "name": "/denoiser/down_blocks.0/resnets.1/conv1/pw_conv/Conv_output_0",
+      "weight_elements": 131072,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.0/resnets.1/time_emb_proj/Gemm_output_0__matmul_converted",
+      "weight_elements": 524288,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.0/resnets.1/conv2/dw_conv/Conv_output_0",
+      "weight_elements": 4608,
+      "storage_target": "fp16",
+      "reason": "spatial_convolution"
+    },
+    {
+      "name": "/denoiser/down_blocks.0/resnets.1/conv2/pw_conv/Conv_output_0",
+      "weight_elements": 131072,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.0/attentions.1/proj_in/Add_output_0__matmul_converted",
+      "weight_elements": 65536,
+      "storage_target": "fp16",
+      "reason": "small_weight_tensor"
+    },
+    {
+      "name": "/denoiser/down_blocks.0/attentions.1/transformer_blocks.0/attn2/to_q/MatMul_output_0__matmul_converted",
+      "weight_elements": 65536,
+      "storage_target": "fp16",
+      "reason": "small_weight_tensor"
+    },
+    {
+      "name": "/denoiser/down_blocks.0/attentions.1/transformer_blocks.0/attn2/to_k/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.0/attentions.1/transformer_blocks.0/attn2/to_v/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.0/attentions.1/transformer_blocks.0/attn2/to_out.0/Add_output_0__matmul_converted",
+      "weight_elements": 65536,
+      "storage_target": "fp16",
+      "reason": "small_weight_tensor"
+    },
+    {
+      "name": "/denoiser/down_blocks.0/attentions.1/transformer_blocks.0/ff/net.0/proj/Add_output_0__matmul_converted",
+      "weight_elements": 393216,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.0/attentions.1/transformer_blocks.0/ff/net.2/Add_output_0__matmul_converted",
+      "weight_elements": 196608,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.0/attentions.1/proj_out/Add_output_0__matmul_converted",
+      "weight_elements": 65536,
+      "storage_target": "fp16",
+      "reason": "small_weight_tensor"
+    },
+    {
+      "name": "/denoiser/down_blocks.0/downsamplers.0/conv/dw_conv/Conv_output_0",
+      "weight_elements": 2304,
+      "storage_target": "fp16",
+      "reason": "spatial_convolution"
+    },
+    {
+      "name": "/denoiser/down_blocks.0/downsamplers.0/conv/pw_conv/Conv_output_0",
+      "weight_elements": 65536,
+      "storage_target": "fp16",
+      "reason": "small_weight_tensor"
+    },
+    {
+      "name": "/denoiser/down_blocks.1/resnets.0/conv_shortcut/Conv_output_0",
+      "weight_elements": 131072,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.1/resnets.0/conv1/dw_conv/Conv_output_0",
+      "weight_elements": 2304,
+      "storage_target": "fp16",
+      "reason": "spatial_convolution"
+    },
+    {
+      "name": "/denoiser/down_blocks.1/resnets.0/conv1/pw_conv/Conv_output_0",
+      "weight_elements": 131072,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.1/resnets.0/time_emb_proj/Gemm_output_0__matmul_converted",
+      "weight_elements": 524288,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.1/resnets.0/conv2/dw_conv/Conv_output_0",
+      "weight_elements": 4608,
+      "storage_target": "fp16",
+      "reason": "spatial_convolution"
+    },
+    {
+      "name": "/denoiser/down_blocks.1/resnets.0/conv2/pw_conv/Conv_output_0",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.1/attentions.0/proj_in/Add_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.1/attentions.0/transformer_blocks.0/attn2/to_q/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.1/attentions.0/transformer_blocks.0/attn2/to_k/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.1/attentions.0/transformer_blocks.0/attn2/to_v/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.1/attentions.0/transformer_blocks.0/attn2/to_out.0/Add_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.1/attentions.0/transformer_blocks.0/ff/net.0/proj/Add_output_0__matmul_converted",
+      "weight_elements": 1572864,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.1/attentions.0/transformer_blocks.0/ff/net.2/Add_output_0__matmul_converted",
+      "weight_elements": 786432,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.1/attentions.0/transformer_blocks.1/attn2/to_q/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.1/attentions.0/transformer_blocks.1/attn2/to_k/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.1/attentions.0/transformer_blocks.1/attn2/to_v/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.1/attentions.0/transformer_blocks.1/attn2/to_out.0/Add_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.1/attentions.0/transformer_blocks.1/ff/net.0/proj/Add_output_0__matmul_converted",
+      "weight_elements": 1572864,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.1/attentions.0/transformer_blocks.1/ff/net.2/Add_output_0__matmul_converted",
+      "weight_elements": 786432,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.1/attentions.0/proj_out/Add_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.1/resnets.1/conv1/dw_conv/Conv_output_0",
+      "weight_elements": 4608,
+      "storage_target": "fp16",
+      "reason": "spatial_convolution"
+    },
+    {
+      "name": "/denoiser/down_blocks.1/resnets.1/conv1/pw_conv/Conv_output_0",
+      "weight_elements": 524288,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.1/resnets.1/time_emb_proj/Gemm_output_0__matmul_converted",
+      "weight_elements": 1048576,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.1/resnets.1/conv2/dw_conv/Conv_output_0",
+      "weight_elements": 9216,
+      "storage_target": "fp16",
+      "reason": "spatial_convolution"
+    },
+    {
+      "name": "/denoiser/down_blocks.1/resnets.1/conv2/pw_conv/Conv_output_0",
+      "weight_elements": 524288,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.1/attentions.1/proj_in/Add_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.1/attentions.1/transformer_blocks.0/attn2/to_q/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.1/attentions.1/transformer_blocks.0/attn2/to_k/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.1/attentions.1/transformer_blocks.0/attn2/to_v/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.1/attentions.1/transformer_blocks.0/attn2/to_out.0/Add_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.1/attentions.1/transformer_blocks.0/ff/net.0/proj/Add_output_0__matmul_converted",
+      "weight_elements": 1572864,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.1/attentions.1/transformer_blocks.0/ff/net.2/Add_output_0__matmul_converted",
+      "weight_elements": 786432,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.1/attentions.1/transformer_blocks.1/attn2/to_q/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.1/attentions.1/transformer_blocks.1/attn2/to_k/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.1/attentions.1/transformer_blocks.1/attn2/to_v/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.1/attentions.1/transformer_blocks.1/attn2/to_out.0/Add_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.1/attentions.1/transformer_blocks.1/ff/net.0/proj/Add_output_0__matmul_converted",
+      "weight_elements": 1572864,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.1/attentions.1/transformer_blocks.1/ff/net.2/Add_output_0__matmul_converted",
+      "weight_elements": 786432,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.1/attentions.1/proj_out/Add_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.1/downsamplers.0/conv/dw_conv/Conv_output_0",
+      "weight_elements": 4608,
+      "storage_target": "fp16",
+      "reason": "spatial_convolution"
+    },
+    {
+      "name": "/denoiser/down_blocks.1/downsamplers.0/conv/pw_conv/Conv_output_0",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/resnets.0/conv_shortcut/Conv_output_0",
+      "weight_elements": 458752,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/resnets.0/conv1/dw_conv/Conv_output_0",
+      "weight_elements": 4608,
+      "storage_target": "fp16",
+      "reason": "spatial_convolution"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/resnets.0/conv1/pw_conv/Conv_output_0",
+      "weight_elements": 524288,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/resnets.0/time_emb_proj/Gemm_output_0__matmul_converted",
+      "weight_elements": 1048576,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/resnets.0/conv2/dw_conv/Conv_output_0",
+      "weight_elements": 9216,
+      "storage_target": "fp16",
+      "reason": "spatial_convolution"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/resnets.0/conv2/pw_conv/Conv_output_0",
+      "weight_elements": 917504,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.0/proj_in/Add_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.0/transformer_blocks.0/attn1/to_q/MatMul_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.0/transformer_blocks.0/attn1/to_k/MatMul_output_0__matmul_converted",
+      "weight_elements": 57344,
+      "storage_target": "fp16",
+      "reason": "small_weight_tensor"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.0/transformer_blocks.0/attn1/to_v/MatMul_output_0__matmul_converted",
+      "weight_elements": 57344,
+      "storage_target": "fp16",
+      "reason": "small_weight_tensor"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.0/transformer_blocks.0/attn1/to_out.0/Add_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.0/transformer_blocks.0/attn2/to_q/MatMul_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.0/transformer_blocks.0/attn2/to_k/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.0/transformer_blocks.0/attn2/to_v/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.0/transformer_blocks.0/attn2/to_out.0/Add_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.0/transformer_blocks.0/ff/net.0/proj/Add_output_0__matmul_converted",
+      "weight_elements": 4816896,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.0/transformer_blocks.0/ff/net.2/Add_output_0__matmul_converted",
+      "weight_elements": 2408448,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.0/transformer_blocks.1/attn1/to_q/MatMul_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.0/transformer_blocks.1/attn1/to_k/MatMul_output_0__matmul_converted",
+      "weight_elements": 57344,
+      "storage_target": "fp16",
+      "reason": "small_weight_tensor"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.0/transformer_blocks.1/attn1/to_v/MatMul_output_0__matmul_converted",
+      "weight_elements": 57344,
+      "storage_target": "fp16",
+      "reason": "small_weight_tensor"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.0/transformer_blocks.1/attn1/to_out.0/Add_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.0/transformer_blocks.1/attn2/to_q/MatMul_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.0/transformer_blocks.1/attn2/to_k/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.0/transformer_blocks.1/attn2/to_v/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.0/transformer_blocks.1/attn2/to_out.0/Add_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.0/transformer_blocks.1/ff/net.0/proj/Add_output_0__matmul_converted",
+      "weight_elements": 4816896,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.0/transformer_blocks.1/ff/net.2/Add_output_0__matmul_converted",
+      "weight_elements": 2408448,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.0/transformer_blocks.2/attn1/to_q/MatMul_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.0/transformer_blocks.2/attn1/to_k/MatMul_output_0__matmul_converted",
+      "weight_elements": 57344,
+      "storage_target": "fp16",
+      "reason": "small_weight_tensor"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.0/transformer_blocks.2/attn1/to_v/MatMul_output_0__matmul_converted",
+      "weight_elements": 57344,
+      "storage_target": "fp16",
+      "reason": "small_weight_tensor"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.0/transformer_blocks.2/attn1/to_out.0/Add_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.0/transformer_blocks.2/attn2/to_q/MatMul_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.0/transformer_blocks.2/attn2/to_k/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.0/transformer_blocks.2/attn2/to_v/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.0/transformer_blocks.2/attn2/to_out.0/Add_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.0/transformer_blocks.2/ff/net.0/proj/Add_output_0__matmul_converted",
+      "weight_elements": 4816896,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.0/transformer_blocks.2/ff/net.2/Add_output_0__matmul_converted",
+      "weight_elements": 2408448,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.0/transformer_blocks.3/attn1/to_q/MatMul_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.0/transformer_blocks.3/attn1/to_k/MatMul_output_0__matmul_converted",
+      "weight_elements": 57344,
+      "storage_target": "fp16",
+      "reason": "small_weight_tensor"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.0/transformer_blocks.3/attn1/to_v/MatMul_output_0__matmul_converted",
+      "weight_elements": 57344,
+      "storage_target": "fp16",
+      "reason": "small_weight_tensor"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.0/transformer_blocks.3/attn1/to_out.0/Add_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.0/transformer_blocks.3/attn2/to_q/MatMul_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.0/transformer_blocks.3/attn2/to_k/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.0/transformer_blocks.3/attn2/to_v/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.0/transformer_blocks.3/attn2/to_out.0/Add_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.0/transformer_blocks.3/ff/net.0/proj/Add_output_0__matmul_converted",
+      "weight_elements": 4816896,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.0/transformer_blocks.3/ff/net.2/Add_output_0__matmul_converted",
+      "weight_elements": 2408448,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.0/proj_out/Add_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/resnets.1/conv1/dw_conv/Conv_output_0",
+      "weight_elements": 8064,
+      "storage_target": "fp16",
+      "reason": "spatial_convolution"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/resnets.1/conv1/pw_conv/Conv_output_0",
+      "weight_elements": 1605632,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/resnets.1/time_emb_proj/Gemm_output_0__matmul_converted",
+      "weight_elements": 1835008,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/resnets.1/conv2/dw_conv/Conv_output_0",
+      "weight_elements": 16128,
+      "storage_target": "fp16",
+      "reason": "spatial_convolution"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/resnets.1/conv2/pw_conv/Conv_output_0",
+      "weight_elements": 1605632,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.1/proj_in/Add_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.1/transformer_blocks.0/attn1/to_q/MatMul_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.1/transformer_blocks.0/attn1/to_k/MatMul_output_0__matmul_converted",
+      "weight_elements": 57344,
+      "storage_target": "fp16",
+      "reason": "small_weight_tensor"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.1/transformer_blocks.0/attn1/to_v/MatMul_output_0__matmul_converted",
+      "weight_elements": 57344,
+      "storage_target": "fp16",
+      "reason": "small_weight_tensor"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.1/transformer_blocks.0/attn1/to_out.0/Add_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.1/transformer_blocks.0/attn2/to_q/MatMul_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.1/transformer_blocks.0/attn2/to_k/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.1/transformer_blocks.0/attn2/to_v/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.1/transformer_blocks.0/attn2/to_out.0/Add_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.1/transformer_blocks.0/ff/net.0/proj/Add_output_0__matmul_converted",
+      "weight_elements": 4816896,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.1/transformer_blocks.0/ff/net.2/Add_output_0__matmul_converted",
+      "weight_elements": 2408448,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.1/transformer_blocks.1/attn1/to_q/MatMul_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.1/transformer_blocks.1/attn1/to_k/MatMul_output_0__matmul_converted",
+      "weight_elements": 57344,
+      "storage_target": "fp16",
+      "reason": "small_weight_tensor"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.1/transformer_blocks.1/attn1/to_v/MatMul_output_0__matmul_converted",
+      "weight_elements": 57344,
+      "storage_target": "fp16",
+      "reason": "small_weight_tensor"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.1/transformer_blocks.1/attn1/to_out.0/Add_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.1/transformer_blocks.1/attn2/to_q/MatMul_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.1/transformer_blocks.1/attn2/to_k/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.1/transformer_blocks.1/attn2/to_v/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.1/transformer_blocks.1/attn2/to_out.0/Add_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.1/transformer_blocks.1/ff/net.0/proj/Add_output_0__matmul_converted",
+      "weight_elements": 4816896,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.1/transformer_blocks.1/ff/net.2/Add_output_0__matmul_converted",
+      "weight_elements": 2408448,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.1/transformer_blocks.2/attn1/to_q/MatMul_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.1/transformer_blocks.2/attn1/to_k/MatMul_output_0__matmul_converted",
+      "weight_elements": 57344,
+      "storage_target": "fp16",
+      "reason": "small_weight_tensor"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.1/transformer_blocks.2/attn1/to_v/MatMul_output_0__matmul_converted",
+      "weight_elements": 57344,
+      "storage_target": "fp16",
+      "reason": "small_weight_tensor"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.1/transformer_blocks.2/attn1/to_out.0/Add_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.1/transformer_blocks.2/attn2/to_q/MatMul_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.1/transformer_blocks.2/attn2/to_k/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.1/transformer_blocks.2/attn2/to_v/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.1/transformer_blocks.2/attn2/to_out.0/Add_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.1/transformer_blocks.2/ff/net.0/proj/Add_output_0__matmul_converted",
+      "weight_elements": 4816896,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.1/transformer_blocks.2/ff/net.2/Add_output_0__matmul_converted",
+      "weight_elements": 2408448,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.1/transformer_blocks.3/attn1/to_q/MatMul_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.1/transformer_blocks.3/attn1/to_k/MatMul_output_0__matmul_converted",
+      "weight_elements": 57344,
+      "storage_target": "fp16",
+      "reason": "small_weight_tensor"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.1/transformer_blocks.3/attn1/to_v/MatMul_output_0__matmul_converted",
+      "weight_elements": 57344,
+      "storage_target": "fp16",
+      "reason": "small_weight_tensor"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.1/transformer_blocks.3/attn1/to_out.0/Add_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.1/transformer_blocks.3/attn2/to_q/MatMul_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.1/transformer_blocks.3/attn2/to_k/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.1/transformer_blocks.3/attn2/to_v/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.1/transformer_blocks.3/attn2/to_out.0/Add_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.1/transformer_blocks.3/ff/net.0/proj/Add_output_0__matmul_converted",
+      "weight_elements": 4816896,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.1/transformer_blocks.3/ff/net.2/Add_output_0__matmul_converted",
+      "weight_elements": 2408448,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/down_blocks.2/attentions.1/proj_out/Add_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/mid_block/resnets.0/conv1/dw_conv/Conv_output_0",
+      "weight_elements": 8064,
+      "storage_target": "fp16",
+      "reason": "spatial_convolution"
+    },
+    {
+      "name": "/denoiser/mid_block/resnets.0/conv1/pw_conv/Conv_output_0",
+      "weight_elements": 1605632,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/mid_block/resnets.0/time_emb_proj/Gemm_output_0__matmul_converted",
+      "weight_elements": 1835008,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/mid_block/resnets.0/conv2/dw_conv/Conv_output_0",
+      "weight_elements": 16128,
+      "storage_target": "fp16",
+      "reason": "spatial_convolution"
+    },
+    {
+      "name": "/denoiser/mid_block/resnets.0/conv2/pw_conv/Conv_output_0",
+      "weight_elements": 1605632,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/mid_block/attentions.0/proj_in/Add_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/mid_block/attentions.0/transformer_blocks.0/attn1/to_q/MatMul_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/mid_block/attentions.0/transformer_blocks.0/attn1/to_k/MatMul_output_0__matmul_converted",
+      "weight_elements": 57344,
+      "storage_target": "fp16",
+      "reason": "small_weight_tensor"
+    },
+    {
+      "name": "/denoiser/mid_block/attentions.0/transformer_blocks.0/attn1/to_v/MatMul_output_0__matmul_converted",
+      "weight_elements": 57344,
+      "storage_target": "fp16",
+      "reason": "small_weight_tensor"
+    },
+    {
+      "name": "/denoiser/mid_block/attentions.0/transformer_blocks.0/attn1/to_out.0/Add_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/mid_block/attentions.0/transformer_blocks.0/attn2/to_q/MatMul_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/mid_block/attentions.0/transformer_blocks.0/attn2/to_k/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/mid_block/attentions.0/transformer_blocks.0/attn2/to_v/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/mid_block/attentions.0/transformer_blocks.0/attn2/to_out.0/Add_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/mid_block/attentions.0/transformer_blocks.0/ff/net.0/proj/Add_output_0__matmul_converted",
+      "weight_elements": 4816896,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/mid_block/attentions.0/transformer_blocks.0/ff/net.2/Add_output_0__matmul_converted",
+      "weight_elements": 2408448,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/mid_block/attentions.0/transformer_blocks.1/attn1/to_q/MatMul_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/mid_block/attentions.0/transformer_blocks.1/attn1/to_k/MatMul_output_0__matmul_converted",
+      "weight_elements": 57344,
+      "storage_target": "fp16",
+      "reason": "small_weight_tensor"
+    },
+    {
+      "name": "/denoiser/mid_block/attentions.0/transformer_blocks.1/attn1/to_v/MatMul_output_0__matmul_converted",
+      "weight_elements": 57344,
+      "storage_target": "fp16",
+      "reason": "small_weight_tensor"
+    },
+    {
+      "name": "/denoiser/mid_block/attentions.0/transformer_blocks.1/attn1/to_out.0/Add_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/mid_block/attentions.0/transformer_blocks.1/attn2/to_q/MatMul_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/mid_block/attentions.0/transformer_blocks.1/attn2/to_k/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/mid_block/attentions.0/transformer_blocks.1/attn2/to_v/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/mid_block/attentions.0/transformer_blocks.1/attn2/to_out.0/Add_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/mid_block/attentions.0/transformer_blocks.1/ff/net.0/proj/Add_output_0__matmul_converted",
+      "weight_elements": 4816896,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/mid_block/attentions.0/transformer_blocks.1/ff/net.2/Add_output_0__matmul_converted",
+      "weight_elements": 2408448,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/mid_block/attentions.0/transformer_blocks.2/attn1/to_q/MatMul_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/mid_block/attentions.0/transformer_blocks.2/attn1/to_k/MatMul_output_0__matmul_converted",
+      "weight_elements": 57344,
+      "storage_target": "fp16",
+      "reason": "small_weight_tensor"
+    },
+    {
+      "name": "/denoiser/mid_block/attentions.0/transformer_blocks.2/attn1/to_v/MatMul_output_0__matmul_converted",
+      "weight_elements": 57344,
+      "storage_target": "fp16",
+      "reason": "small_weight_tensor"
+    },
+    {
+      "name": "/denoiser/mid_block/attentions.0/transformer_blocks.2/attn1/to_out.0/Add_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/mid_block/attentions.0/transformer_blocks.2/attn2/to_q/MatMul_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/mid_block/attentions.0/transformer_blocks.2/attn2/to_k/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/mid_block/attentions.0/transformer_blocks.2/attn2/to_v/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/mid_block/attentions.0/transformer_blocks.2/attn2/to_out.0/Add_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/mid_block/attentions.0/transformer_blocks.2/ff/net.0/proj/Add_output_0__matmul_converted",
+      "weight_elements": 4816896,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/mid_block/attentions.0/transformer_blocks.2/ff/net.2/Add_output_0__matmul_converted",
+      "weight_elements": 2408448,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/mid_block/attentions.0/transformer_blocks.3/attn1/to_q/MatMul_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/mid_block/attentions.0/transformer_blocks.3/attn1/to_k/MatMul_output_0__matmul_converted",
+      "weight_elements": 57344,
+      "storage_target": "fp16",
+      "reason": "small_weight_tensor"
+    },
+    {
+      "name": "/denoiser/mid_block/attentions.0/transformer_blocks.3/attn1/to_v/MatMul_output_0__matmul_converted",
+      "weight_elements": 57344,
+      "storage_target": "fp16",
+      "reason": "small_weight_tensor"
+    },
+    {
+      "name": "/denoiser/mid_block/attentions.0/transformer_blocks.3/attn1/to_out.0/Add_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/mid_block/attentions.0/transformer_blocks.3/attn2/to_q/MatMul_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/mid_block/attentions.0/transformer_blocks.3/attn2/to_k/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/mid_block/attentions.0/transformer_blocks.3/attn2/to_v/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/mid_block/attentions.0/transformer_blocks.3/attn2/to_out.0/Add_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/mid_block/attentions.0/transformer_blocks.3/ff/net.0/proj/Add_output_0__matmul_converted",
+      "weight_elements": 4816896,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/mid_block/attentions.0/transformer_blocks.3/ff/net.2/Add_output_0__matmul_converted",
+      "weight_elements": 2408448,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/mid_block/attentions.0/proj_out/Add_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/resnets.0/conv1/dw_conv/Conv_output_0",
+      "weight_elements": 8064,
+      "storage_target": "fp16",
+      "reason": "spatial_convolution"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/resnets.0/conv1/pw_conv/Conv_output_0",
+      "weight_elements": 1605632,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/resnets.0/time_emb_proj/Gemm_output_0__matmul_converted",
+      "weight_elements": 1835008,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/resnets.0/conv2/dw_conv/Conv_output_0",
+      "weight_elements": 16128,
+      "storage_target": "fp16",
+      "reason": "spatial_convolution"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/resnets.0/conv2/pw_conv/Conv_output_0",
+      "weight_elements": 1605632,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.0/proj_in/Add_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.0/transformer_blocks.0/attn1/to_q/MatMul_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.0/transformer_blocks.0/attn1/to_k/MatMul_output_0__matmul_converted",
+      "weight_elements": 57344,
+      "storage_target": "fp16",
+      "reason": "small_weight_tensor"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.0/transformer_blocks.0/attn1/to_v/MatMul_output_0__matmul_converted",
+      "weight_elements": 57344,
+      "storage_target": "fp16",
+      "reason": "small_weight_tensor"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.0/transformer_blocks.0/attn1/to_out.0/Add_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.0/transformer_blocks.0/attn2/to_q/MatMul_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.0/transformer_blocks.0/attn2/to_k/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.0/transformer_blocks.0/attn2/to_v/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.0/transformer_blocks.0/attn2/to_out.0/Add_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.0/transformer_blocks.0/ff/net.0/proj/Add_output_0__matmul_converted",
+      "weight_elements": 4816896,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.0/transformer_blocks.0/ff/net.2/Add_output_0__matmul_converted",
+      "weight_elements": 2408448,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.0/transformer_blocks.1/attn1/to_q/MatMul_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.0/transformer_blocks.1/attn1/to_k/MatMul_output_0__matmul_converted",
+      "weight_elements": 57344,
+      "storage_target": "fp16",
+      "reason": "small_weight_tensor"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.0/transformer_blocks.1/attn1/to_v/MatMul_output_0__matmul_converted",
+      "weight_elements": 57344,
+      "storage_target": "fp16",
+      "reason": "small_weight_tensor"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.0/transformer_blocks.1/attn1/to_out.0/Add_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.0/transformer_blocks.1/attn2/to_q/MatMul_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.0/transformer_blocks.1/attn2/to_k/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.0/transformer_blocks.1/attn2/to_v/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.0/transformer_blocks.1/attn2/to_out.0/Add_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.0/transformer_blocks.1/ff/net.0/proj/Add_output_0__matmul_converted",
+      "weight_elements": 4816896,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.0/transformer_blocks.1/ff/net.2/Add_output_0__matmul_converted",
+      "weight_elements": 2408448,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.0/transformer_blocks.2/attn1/to_q/MatMul_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.0/transformer_blocks.2/attn1/to_k/MatMul_output_0__matmul_converted",
+      "weight_elements": 57344,
+      "storage_target": "fp16",
+      "reason": "small_weight_tensor"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.0/transformer_blocks.2/attn1/to_v/MatMul_output_0__matmul_converted",
+      "weight_elements": 57344,
+      "storage_target": "fp16",
+      "reason": "small_weight_tensor"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.0/transformer_blocks.2/attn1/to_out.0/Add_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.0/transformer_blocks.2/attn2/to_q/MatMul_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.0/transformer_blocks.2/attn2/to_k/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.0/transformer_blocks.2/attn2/to_v/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.0/transformer_blocks.2/attn2/to_out.0/Add_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.0/transformer_blocks.2/ff/net.0/proj/Add_output_0__matmul_converted",
+      "weight_elements": 4816896,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.0/transformer_blocks.2/ff/net.2/Add_output_0__matmul_converted",
+      "weight_elements": 2408448,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.0/transformer_blocks.3/attn1/to_q/MatMul_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.0/transformer_blocks.3/attn1/to_k/MatMul_output_0__matmul_converted",
+      "weight_elements": 57344,
+      "storage_target": "fp16",
+      "reason": "small_weight_tensor"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.0/transformer_blocks.3/attn1/to_v/MatMul_output_0__matmul_converted",
+      "weight_elements": 57344,
+      "storage_target": "fp16",
+      "reason": "small_weight_tensor"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.0/transformer_blocks.3/attn1/to_out.0/Add_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.0/transformer_blocks.3/attn2/to_q/MatMul_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.0/transformer_blocks.3/attn2/to_k/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.0/transformer_blocks.3/attn2/to_v/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.0/transformer_blocks.3/attn2/to_out.0/Add_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.0/transformer_blocks.3/ff/net.0/proj/Add_output_0__matmul_converted",
+      "weight_elements": 4816896,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.0/transformer_blocks.3/ff/net.2/Add_output_0__matmul_converted",
+      "weight_elements": 2408448,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.0/proj_out/Add_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/resnets.1/conv1/dw_conv/Conv_output_0",
+      "weight_elements": 8064,
+      "storage_target": "fp16",
+      "reason": "spatial_convolution"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/resnets.1/conv1/pw_conv/Conv_output_0",
+      "weight_elements": 1605632,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/resnets.1/time_emb_proj/Gemm_output_0__matmul_converted",
+      "weight_elements": 1835008,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/resnets.1/conv2/dw_conv/Conv_output_0",
+      "weight_elements": 16128,
+      "storage_target": "fp16",
+      "reason": "spatial_convolution"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/resnets.1/conv2/pw_conv/Conv_output_0",
+      "weight_elements": 1605632,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.1/proj_in/Add_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.1/transformer_blocks.0/attn1/to_q/MatMul_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.1/transformer_blocks.0/attn1/to_k/MatMul_output_0__matmul_converted",
+      "weight_elements": 57344,
+      "storage_target": "fp16",
+      "reason": "small_weight_tensor"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.1/transformer_blocks.0/attn1/to_v/MatMul_output_0__matmul_converted",
+      "weight_elements": 57344,
+      "storage_target": "fp16",
+      "reason": "small_weight_tensor"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.1/transformer_blocks.0/attn1/to_out.0/Add_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.1/transformer_blocks.0/attn2/to_q/MatMul_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.1/transformer_blocks.0/attn2/to_k/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.1/transformer_blocks.0/attn2/to_v/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.1/transformer_blocks.0/attn2/to_out.0/Add_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.1/transformer_blocks.0/ff/net.0/proj/Add_output_0__matmul_converted",
+      "weight_elements": 4816896,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.1/transformer_blocks.0/ff/net.2/Add_output_0__matmul_converted",
+      "weight_elements": 2408448,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.1/transformer_blocks.1/attn1/to_q/MatMul_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.1/transformer_blocks.1/attn1/to_k/MatMul_output_0__matmul_converted",
+      "weight_elements": 57344,
+      "storage_target": "fp16",
+      "reason": "small_weight_tensor"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.1/transformer_blocks.1/attn1/to_v/MatMul_output_0__matmul_converted",
+      "weight_elements": 57344,
+      "storage_target": "fp16",
+      "reason": "small_weight_tensor"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.1/transformer_blocks.1/attn1/to_out.0/Add_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.1/transformer_blocks.1/attn2/to_q/MatMul_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.1/transformer_blocks.1/attn2/to_k/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.1/transformer_blocks.1/attn2/to_v/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.1/transformer_blocks.1/attn2/to_out.0/Add_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.1/transformer_blocks.1/ff/net.0/proj/Add_output_0__matmul_converted",
+      "weight_elements": 4816896,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.1/transformer_blocks.1/ff/net.2/Add_output_0__matmul_converted",
+      "weight_elements": 2408448,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.1/transformer_blocks.2/attn1/to_q/MatMul_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.1/transformer_blocks.2/attn1/to_k/MatMul_output_0__matmul_converted",
+      "weight_elements": 57344,
+      "storage_target": "fp16",
+      "reason": "small_weight_tensor"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.1/transformer_blocks.2/attn1/to_v/MatMul_output_0__matmul_converted",
+      "weight_elements": 57344,
+      "storage_target": "fp16",
+      "reason": "small_weight_tensor"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.1/transformer_blocks.2/attn1/to_out.0/Add_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.1/transformer_blocks.2/attn2/to_q/MatMul_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.1/transformer_blocks.2/attn2/to_k/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.1/transformer_blocks.2/attn2/to_v/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.1/transformer_blocks.2/attn2/to_out.0/Add_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.1/transformer_blocks.2/ff/net.0/proj/Add_output_0__matmul_converted",
+      "weight_elements": 4816896,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.1/transformer_blocks.2/ff/net.2/Add_output_0__matmul_converted",
+      "weight_elements": 2408448,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.1/transformer_blocks.3/attn1/to_q/MatMul_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.1/transformer_blocks.3/attn1/to_k/MatMul_output_0__matmul_converted",
+      "weight_elements": 57344,
+      "storage_target": "fp16",
+      "reason": "small_weight_tensor"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.1/transformer_blocks.3/attn1/to_v/MatMul_output_0__matmul_converted",
+      "weight_elements": 57344,
+      "storage_target": "fp16",
+      "reason": "small_weight_tensor"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.1/transformer_blocks.3/attn1/to_out.0/Add_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.1/transformer_blocks.3/attn2/to_q/MatMul_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.1/transformer_blocks.3/attn2/to_k/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.1/transformer_blocks.3/attn2/to_v/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.1/transformer_blocks.3/attn2/to_out.0/Add_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.1/transformer_blocks.3/ff/net.0/proj/Add_output_0__matmul_converted",
+      "weight_elements": 4816896,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.1/transformer_blocks.3/ff/net.2/Add_output_0__matmul_converted",
+      "weight_elements": 2408448,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.1/proj_out/Add_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/resnets.2/conv1/dw_conv/Conv_output_0",
+      "weight_elements": 8064,
+      "storage_target": "fp16",
+      "reason": "spatial_convolution"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/resnets.2/conv1/pw_conv/Conv_output_0",
+      "weight_elements": 1605632,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/resnets.2/time_emb_proj/Gemm_output_0__matmul_converted",
+      "weight_elements": 1835008,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/resnets.2/conv2/dw_conv/Conv_output_0",
+      "weight_elements": 16128,
+      "storage_target": "fp16",
+      "reason": "spatial_convolution"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/resnets.2/conv2/pw_conv/Conv_output_0",
+      "weight_elements": 1605632,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.2/proj_in/Add_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.2/transformer_blocks.0/attn1/to_q/MatMul_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.2/transformer_blocks.0/attn1/to_k/MatMul_output_0__matmul_converted",
+      "weight_elements": 57344,
+      "storage_target": "fp16",
+      "reason": "small_weight_tensor"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.2/transformer_blocks.0/attn1/to_v/MatMul_output_0__matmul_converted",
+      "weight_elements": 57344,
+      "storage_target": "fp16",
+      "reason": "small_weight_tensor"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.2/transformer_blocks.0/attn1/to_out.0/Add_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.2/transformer_blocks.0/attn2/to_q/MatMul_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.2/transformer_blocks.0/attn2/to_k/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.2/transformer_blocks.0/attn2/to_v/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.2/transformer_blocks.0/attn2/to_out.0/Add_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.2/transformer_blocks.0/ff/net.0/proj/Add_output_0__matmul_converted",
+      "weight_elements": 4816896,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.2/transformer_blocks.0/ff/net.2/Add_output_0__matmul_converted",
+      "weight_elements": 2408448,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.2/transformer_blocks.1/attn1/to_q/MatMul_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.2/transformer_blocks.1/attn1/to_k/MatMul_output_0__matmul_converted",
+      "weight_elements": 57344,
+      "storage_target": "fp16",
+      "reason": "small_weight_tensor"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.2/transformer_blocks.1/attn1/to_v/MatMul_output_0__matmul_converted",
+      "weight_elements": 57344,
+      "storage_target": "fp16",
+      "reason": "small_weight_tensor"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.2/transformer_blocks.1/attn1/to_out.0/Add_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.2/transformer_blocks.1/attn2/to_q/MatMul_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.2/transformer_blocks.1/attn2/to_k/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.2/transformer_blocks.1/attn2/to_v/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.2/transformer_blocks.1/attn2/to_out.0/Add_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.2/transformer_blocks.1/ff/net.0/proj/Add_output_0__matmul_converted",
+      "weight_elements": 4816896,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.2/transformer_blocks.1/ff/net.2/Add_output_0__matmul_converted",
+      "weight_elements": 2408448,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.2/transformer_blocks.2/attn1/to_q/MatMul_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.2/transformer_blocks.2/attn1/to_k/MatMul_output_0__matmul_converted",
+      "weight_elements": 57344,
+      "storage_target": "fp16",
+      "reason": "small_weight_tensor"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.2/transformer_blocks.2/attn1/to_v/MatMul_output_0__matmul_converted",
+      "weight_elements": 57344,
+      "storage_target": "fp16",
+      "reason": "small_weight_tensor"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.2/transformer_blocks.2/attn1/to_out.0/Add_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.2/transformer_blocks.2/attn2/to_q/MatMul_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.2/transformer_blocks.2/attn2/to_k/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.2/transformer_blocks.2/attn2/to_v/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.2/transformer_blocks.2/attn2/to_out.0/Add_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.2/transformer_blocks.2/ff/net.0/proj/Add_output_0__matmul_converted",
+      "weight_elements": 4816896,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.2/transformer_blocks.2/ff/net.2/Add_output_0__matmul_converted",
+      "weight_elements": 2408448,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.2/transformer_blocks.3/attn1/to_q/MatMul_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.2/transformer_blocks.3/attn1/to_k/MatMul_output_0__matmul_converted",
+      "weight_elements": 57344,
+      "storage_target": "fp16",
+      "reason": "small_weight_tensor"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.2/transformer_blocks.3/attn1/to_v/MatMul_output_0__matmul_converted",
+      "weight_elements": 57344,
+      "storage_target": "fp16",
+      "reason": "small_weight_tensor"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.2/transformer_blocks.3/attn1/to_out.0/Add_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.2/transformer_blocks.3/attn2/to_q/MatMul_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.2/transformer_blocks.3/attn2/to_k/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.2/transformer_blocks.3/attn2/to_v/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.2/transformer_blocks.3/attn2/to_out.0/Add_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.2/transformer_blocks.3/ff/net.0/proj/Add_output_0__matmul_converted",
+      "weight_elements": 4816896,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.2/transformer_blocks.3/ff/net.2/Add_output_0__matmul_converted",
+      "weight_elements": 2408448,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/attentions.2/proj_out/Add_output_0__matmul_converted",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/upsamplers.0/conv/dw_conv/Conv_output_0",
+      "weight_elements": 8064,
+      "storage_target": "fp16",
+      "reason": "spatial_convolution"
+    },
+    {
+      "name": "/denoiser/up_blocks.0/upsamplers.0/conv/pw_conv/Conv_output_0",
+      "weight_elements": 802816,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.1/resnets.0/conv_shortcut/Conv_output_0",
+      "weight_elements": 720896,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.1/resnets.0/conv1/dw_conv/Conv_output_0",
+      "weight_elements": 12672,
+      "storage_target": "fp16",
+      "reason": "spatial_convolution"
+    },
+    {
+      "name": "/denoiser/up_blocks.1/resnets.0/conv1/pw_conv/Conv_output_0",
+      "weight_elements": 3964928,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.1/resnets.0/time_emb_proj/Gemm_output_0__matmul_converted",
+      "weight_elements": 2883584,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.1/resnets.0/conv2/dw_conv/Conv_output_0",
+      "weight_elements": 25344,
+      "storage_target": "fp16",
+      "reason": "spatial_convolution"
+    },
+    {
+      "name": "/denoiser/up_blocks.1/resnets.0/conv2/pw_conv/Conv_output_0",
+      "weight_elements": 1441792,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.1/attentions.0/proj_in/Add_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.1/attentions.0/transformer_blocks.0/attn2/to_q/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.1/attentions.0/transformer_blocks.0/attn2/to_k/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.1/attentions.0/transformer_blocks.0/attn2/to_v/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.1/attentions.0/transformer_blocks.0/attn2/to_out.0/Add_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.1/attentions.0/transformer_blocks.0/ff/net.0/proj/Add_output_0__matmul_converted",
+      "weight_elements": 1572864,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.1/attentions.0/transformer_blocks.0/ff/net.2/Add_output_0__matmul_converted",
+      "weight_elements": 786432,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.1/attentions.0/transformer_blocks.1/attn2/to_q/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.1/attentions.0/transformer_blocks.1/attn2/to_k/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.1/attentions.0/transformer_blocks.1/attn2/to_v/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.1/attentions.0/transformer_blocks.1/attn2/to_out.0/Add_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.1/attentions.0/transformer_blocks.1/ff/net.0/proj/Add_output_0__matmul_converted",
+      "weight_elements": 1572864,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.1/attentions.0/transformer_blocks.1/ff/net.2/Add_output_0__matmul_converted",
+      "weight_elements": 786432,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.1/attentions.0/proj_out/Add_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.1/resnets.1/conv_shortcut/Conv_output_0",
+      "weight_elements": 524288,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.1/resnets.1/conv1/dw_conv/Conv_output_0",
+      "weight_elements": 9216,
+      "storage_target": "fp16",
+      "reason": "spatial_convolution"
+    },
+    {
+      "name": "/denoiser/up_blocks.1/resnets.1/conv1/pw_conv/Conv_output_0",
+      "weight_elements": 2097152,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.1/resnets.1/time_emb_proj/Gemm_output_0__matmul_converted",
+      "weight_elements": 2097152,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.1/resnets.1/conv2/dw_conv/Conv_output_0",
+      "weight_elements": 18432,
+      "storage_target": "fp16",
+      "reason": "spatial_convolution"
+    },
+    {
+      "name": "/denoiser/up_blocks.1/resnets.1/conv2/pw_conv/Conv_output_0",
+      "weight_elements": 1048576,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.1/attentions.1/proj_in/Add_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.1/attentions.1/transformer_blocks.0/attn2/to_q/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.1/attentions.1/transformer_blocks.0/attn2/to_k/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.1/attentions.1/transformer_blocks.0/attn2/to_v/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.1/attentions.1/transformer_blocks.0/attn2/to_out.0/Add_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.1/attentions.1/transformer_blocks.0/ff/net.0/proj/Add_output_0__matmul_converted",
+      "weight_elements": 1572864,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.1/attentions.1/transformer_blocks.0/ff/net.2/Add_output_0__matmul_converted",
+      "weight_elements": 786432,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.1/attentions.1/transformer_blocks.1/attn2/to_q/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.1/attentions.1/transformer_blocks.1/attn2/to_k/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.1/attentions.1/transformer_blocks.1/attn2/to_v/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.1/attentions.1/transformer_blocks.1/attn2/to_out.0/Add_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.1/attentions.1/transformer_blocks.1/ff/net.0/proj/Add_output_0__matmul_converted",
+      "weight_elements": 1572864,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.1/attentions.1/transformer_blocks.1/ff/net.2/Add_output_0__matmul_converted",
+      "weight_elements": 786432,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.1/attentions.1/proj_out/Add_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.1/resnets.2/conv_shortcut/Conv_output_0",
+      "weight_elements": 393216,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.1/resnets.2/conv1/dw_conv/Conv_output_0",
+      "weight_elements": 6912,
+      "storage_target": "fp16",
+      "reason": "spatial_convolution"
+    },
+    {
+      "name": "/denoiser/up_blocks.1/resnets.2/conv1/pw_conv/Conv_output_0",
+      "weight_elements": 1179648,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.1/resnets.2/time_emb_proj/Gemm_output_0__matmul_converted",
+      "weight_elements": 1572864,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.1/resnets.2/conv2/dw_conv/Conv_output_0",
+      "weight_elements": 13824,
+      "storage_target": "fp16",
+      "reason": "spatial_convolution"
+    },
+    {
+      "name": "/denoiser/up_blocks.1/resnets.2/conv2/pw_conv/Conv_output_0",
+      "weight_elements": 786432,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.1/attentions.2/proj_in/Add_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.1/attentions.2/transformer_blocks.0/attn2/to_q/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.1/attentions.2/transformer_blocks.0/attn2/to_k/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.1/attentions.2/transformer_blocks.0/attn2/to_v/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.1/attentions.2/transformer_blocks.0/attn2/to_out.0/Add_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.1/attentions.2/transformer_blocks.0/ff/net.0/proj/Add_output_0__matmul_converted",
+      "weight_elements": 1572864,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.1/attentions.2/transformer_blocks.0/ff/net.2/Add_output_0__matmul_converted",
+      "weight_elements": 786432,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.1/attentions.2/transformer_blocks.1/attn2/to_q/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.1/attentions.2/transformer_blocks.1/attn2/to_k/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.1/attentions.2/transformer_blocks.1/attn2/to_v/MatMul_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.1/attentions.2/transformer_blocks.1/attn2/to_out.0/Add_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.1/attentions.2/transformer_blocks.1/ff/net.0/proj/Add_output_0__matmul_converted",
+      "weight_elements": 1572864,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.1/attentions.2/transformer_blocks.1/ff/net.2/Add_output_0__matmul_converted",
+      "weight_elements": 786432,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.1/attentions.2/proj_out/Add_output_0__matmul_converted",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.1/upsamplers.0/conv/dw_conv/Conv_output_0",
+      "weight_elements": 4608,
+      "storage_target": "fp16",
+      "reason": "spatial_convolution"
+    },
+    {
+      "name": "/denoiser/up_blocks.1/upsamplers.0/conv/pw_conv/Conv_output_0",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.2/resnets.0/conv_shortcut/Conv_output_0",
+      "weight_elements": 196608,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.2/resnets.0/conv1/dw_conv/Conv_output_0",
+      "weight_elements": 6912,
+      "storage_target": "fp16",
+      "reason": "spatial_convolution"
+    },
+    {
+      "name": "/denoiser/up_blocks.2/resnets.0/conv1/pw_conv/Conv_output_0",
+      "weight_elements": 1179648,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.2/resnets.0/time_emb_proj/Gemm_output_0__matmul_converted",
+      "weight_elements": 1572864,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.2/resnets.0/conv2/dw_conv/Conv_output_0",
+      "weight_elements": 13824,
+      "storage_target": "fp16",
+      "reason": "spatial_convolution"
+    },
+    {
+      "name": "/denoiser/up_blocks.2/resnets.0/conv2/pw_conv/Conv_output_0",
+      "weight_elements": 393216,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.2/resnets.1/conv_shortcut/Conv_output_0",
+      "weight_elements": 131072,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.2/resnets.1/conv1/dw_conv/Conv_output_0",
+      "weight_elements": 4608,
+      "storage_target": "fp16",
+      "reason": "spatial_convolution"
+    },
+    {
+      "name": "/denoiser/up_blocks.2/resnets.1/conv1/pw_conv/Conv_output_0",
+      "weight_elements": 524288,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.2/resnets.1/time_emb_proj/Gemm_output_0__matmul_converted",
+      "weight_elements": 1048576,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.2/resnets.1/conv2/dw_conv/Conv_output_0",
+      "weight_elements": 9216,
+      "storage_target": "fp16",
+      "reason": "spatial_convolution"
+    },
+    {
+      "name": "/denoiser/up_blocks.2/resnets.1/conv2/pw_conv/Conv_output_0",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.2/resnets.2/conv_shortcut/Conv_output_0",
+      "weight_elements": 131072,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.2/resnets.2/conv1/dw_conv/Conv_output_0",
+      "weight_elements": 4608,
+      "storage_target": "fp16",
+      "reason": "spatial_convolution"
+    },
+    {
+      "name": "/denoiser/up_blocks.2/resnets.2/conv1/pw_conv/Conv_output_0",
+      "weight_elements": 524288,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.2/resnets.2/time_emb_proj/Gemm_output_0__matmul_converted",
+      "weight_elements": 1048576,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "/denoiser/up_blocks.2/resnets.2/conv2/dw_conv/Conv_output_0",
+      "weight_elements": 9216,
+      "storage_target": "fp16",
+      "reason": "spatial_convolution"
+    },
+    {
+      "name": "/denoiser/up_blocks.2/resnets.2/conv2/pw_conv/Conv_output_0",
+      "weight_elements": 262144,
+      "storage_target": "int4",
+      "reason": "block32_weight_quantization"
+    },
+    {
+      "name": "output_0",
+      "weight_elements": 36864,
+      "storage_target": "fp16",
+      "reason": "spatial_convolution"
+    }
+  ]
+}

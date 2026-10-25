@@ -1,0 +1,10 @@
+session_ready ../vae_encoder_fp32.mnn setup_seconds=50.0121
+vae_tile_0_0 seconds=16.9798 rss_bytes=908206080
+vae_tile_1_0 seconds=16.915 rss_bytes=908419072
+session_ready models/vae_512_384.mnn setup_seconds=63.1964
+vae_tile_0_1 seconds=13.215 rss_bytes=737218560
+vae_tile_1_1 seconds=13.1185 rss_bytes=737452032
+session_ready models/vae_256_512.mnn setup_seconds=43.1663
+vae_tile_2_0 seconds=8.51365 rss_bytes=565841920
+session_ready models/vae_256_384.mnn setup_seconds=59.1448
+vae_tile_2_1 seconds=6.59947 rss_bytes=479772672

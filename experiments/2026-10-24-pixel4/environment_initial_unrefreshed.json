@@ -1,0 +1,79 @@
+{
+  "recorded_utc": "2026-10-24T02:06:22.432787+00:00",
+  "device_serial": "98211FFAZ004ME",
+  "device": "Pixel 4",
+  "android": "13",
+  "abi": "arm64-v8a",
+  "soc": "SM8150",
+  "gpu": "Adreno 640",
+  "mnn_version": "3.6.1",
+  "mnn_revision": "d407447ed56c4121a11ccbd266dc184ca1ead0c2",
+  "mnn_source_archive_sha256": "4b6065c4e2674318f5bf1dc75836ce4d30c17bfe598c4a1b11b7d0b2092b06e6",
+  "mnn_source_url": "https://github.com/alibaba/MNN/tree/3.6.1",
+  "mnn_local_modification": "mnn_disable_buffer_winograd.patch; WINOGRAD_MEMORY_LEVEL=0 skips buffer Winograd selection",
+  "ndk": "27.1.12297006",
+  "android_api_level_binary": 26,
+  "build_flags": {
+    "MNN_OPENCL": true,
+    "MNN_ARM82": true,
+    "MNN_LOW_MEMORY": true,
+    "MNN_SUPPORT_TRANSFORMER_FUSE": true,
+    "MNN_SEP_BUILD": false,
+    "ANDROID_STL": "c++_static"
+  },
+  "upstream_revision": "57410f20ac0e1703af795702e10473565feaa711",
+  "model_revision": "0063147c171518b391fff5e44d04555c12370c35",
+  "models": {
+    "decoder_fp16.mnn": {
+      "bytes": 3859244,
+      "sha256": "f45c6ba44193fb43ae7cab4ac398a6d6551979bf196d7865b9aff400fe70184a"
+    },
+    "garment_int4.mnn": {
+      "bytes": 179572000,
+      "sha256": "b4bd1c12b17bb56489a6064c13a12bdf1a07f9050279289ece359367f1af62c8"
+    },
+    "tryon_int4.mnn": {
+      "bytes": 221451476,
+      "sha256": "8f1301ee7b87c522cf9bb79e7a4ce40dcab02743c60d9f7e5d7bb7b7c1432ee0"
+    },
+    "vae_encoder_fp16.mnn": {
+      "bytes": 68653144,
+      "sha256": "88afd3cbbbbf108fe07588faec996f9e37d2948c0f383967a5c76d120504d4a1"
+    },
+    "vae_encoder_fp32.mnn": {
+      "bytes": 137177052,
+      "sha256": "233bf8611ae7b270db03abdc35ec4a1e319e98ea6af166d93e70466e7357acb2"
+    },
+    "vae_encoder_portable_fp32.mnn": {
+      "bytes": 137286368,
+      "sha256": "a383017d846e73faa4e1e1e17cf415baea93a9fd1cbea17679e371159b7777eb"
+    }
+  },
+  "scripts_and_manifests_sha256": {
+    "scripts/export_mobile_vton_android.py": "89294a9ce00886b7ddf22329c2adc7753edcda6e98e31b94392b56deaf8acde9",
+    "scripts/analyze_pixel4_component.py": "c40f5aa95a4ad4de2061b1f3962cdb01bc9eef37186b4495f6ce7b268d385094",
+    "experiments/2026-10-24-pixel4/mnn_component_bench.cpp": "a910467ec90f31f5acd44f39deef9fc54c170fbd8800a8b81acf84358a2bf105",
+    "experiments/2026-10-24-pixel4/mnn_component_bench": "fe635254c21b7b339e762441d43b4a13e673535d2f3576940edde1f374fb898f",
+    "experiments/2026-10-24-pixel4/run_component.sh": "a1043aa7ff335c733029e46a4dff902d215ce6bdf08f6422480a083110d6415c",
+    "experiments/2026-10-24-pixel4/mnn_disable_buffer_winograd.patch": "1ff2a67cf27ab404671d31d3a1db107219c82fce3f376747c8414e44d3657f7c",
+    "experiments/2026-10-24-pixel4/manifests/decoder_cpu.json": "f15837b763d80a4c7ee0ec2a3a75b488cddadf3f97e187ae009845d8b6668c4c",
+    "experiments/2026-10-24-pixel4/manifests/decoder_opencl.json": "02b82989592202da1cbb8ae88c5a9daf67ba69bcc090b68483c7045c05c3dd25",
+    "experiments/2026-10-24-pixel4/manifests/decoder_opencl_buffer.json": "2b8c931b6788159908013b9e4b45deb1f0df2ff1d46239eb48e5d4d9c3442406",
+    "experiments/2026-10-24-pixel4/manifests/garment_opencl_buffer.json": "d1b2c206c4adee0a4bb1589edc4cbd012a35ab0393986290471f93e99621932c",
+    "experiments/2026-10-24-pixel4/manifests/tryon_opencl_buffer.json": "a05d19396e81f3fd6b1164c1537123a3fb380ea01cc20aa65c87dbc4fee55398",
+    "experiments/2026-10-24-pixel4/manifests/vae_encoder_cpu.json": "05de31009168460e8809957891ebb3d7f6e4f44b6248be4eb197487d06d77cdc",
+    "experiments/2026-10-24-pixel4/manifests/vae_encoder_cpu_fp32.json": "90179b253aec95171cfb0c68b2a48ee5daf94ac70f2331b1432d83ff3c56e44b",
+    "experiments/2026-10-24-pixel4/manifests/vae_encoder_opencl.json": "78b4a6599e488a985222e5b43c0ac81ecd094589881f3f3751a348abf116de3b",
+    "experiments/2026-10-24-pixel4/manifests/vae_encoder_opencl_buffer.json": "ed3bc3a763cfd0d2a45fa7e65a28474968a0e39cf03cf2b610a23a09a976bb00",
+    "experiments/2026-10-24-pixel4/manifests/vae_encoder_opencl_buffer_fp32.json": "cad48cd03362d88c8b818773a211a680cd60da7b225cd196686338fde068994a",
+    "experiments/2026-10-24-pixel4/manifests/vae_encoder_portable_opencl_buffer_fp32.json": "1c4305867fe025e83f2e5f63f7c74e4d81c57323f6f5a3c1f42e6127f784f2e2"
+  },
+  "final_benchmark_binary_note": "Selected garment/tryon tests already synchronize warmup; later binary metadata additionally names precision_mode and warmup_output_synchronized. The final decoder rerun uses that final binary.",
+  "validation": {
+    "pytest_passed": 27,
+    "ruff": "passed",
+    "black": "passed on each file",
+    "python_compile": "passed"
+  },
+  "agents_md_sha256": "4bca3eda27f9dde0a3b4a336f1c75cefb92cfb5bfdfa597fc6732485e1a0e258"
+}

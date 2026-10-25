@@ -1,0 +1,35 @@
+{
+  "verified_utc": "2026-10-23T15:25:17Z",
+  "container_image": "vllm/vllm-openai@sha256:04563c302537a91aa49ebdfbceda96111c5712275999b7e8804fa598f0b5641d",
+  "runtime": "PyTorch in existing CUDA/vLLM image, no vLLM server",
+  "gpu": "NVIDIA GeForce RTX 3080 Laptop GPU",
+  "gpu_total_bytes": 16723148800,
+  "packages": {
+    "torch": "2.7.1",
+    "torchvision": "0.22.1",
+    "diffusers": "0.34.0",
+    "transformers": "4.53.0",
+    "accelerate": "1.11.0",
+    "safetensors": "0.5.3",
+    "numpy": "1.26.4",
+    "pillow": "11.2.1",
+    "torchao": "0.10.0"
+  },
+  "source_revision": "57410f20ac0e1703af795702e10473565feaa711",
+  "shared_gpu": true,
+  "variant_jobs_sequential": true,
+  "phone_inference_tested": false,
+  "notes": [
+    "Scripts recorded below are the final implementation. The loader option was added after the first three variants; those variants use the default existing loader.",
+    "All phases includes initial model loading, one-step warmup and two full generations. It is CUDA allocated memory, not Android total RAM.",
+    "Replay verifies identical stored latent inputs; FP32 and FP16 PNGs each reproduce their pipeline outputs."
+  ],
+  "final_scripts_sha256": {
+    "scripts/run_mobile_vton.py": "19d01b93703178c6181b3772ec1418cf1eb333b6162eaa488fab3d76f7ab716f",
+    "scripts/mobile_vton_decoder.py": "9892019b0d73d20f07a5798cce6fb147f7da2eb6d3c9c16948f699febb86253a",
+    "scripts/replay_mobile_vton_decoder.py": "6a8de287eac7d35dd9b097ac82ad30e4986feb248ff0af97587638b82d51a9fd",
+    "scripts/compare_mobile_vton_memory.py": "bb01b1a978d6d399001e2f13a6fc3fe9c3a320296fce3dcdd65b0c62b4ec281f",
+    "scripts/mobile_vton_vae.py": "9b3ebcce69a37916a4e733c50fee9695d622392f983bbb8e308fd9ccb525c9b4",
+    "scripts/mobile_vton_quantization.py": "91a72bd3daac523506c8f7d8fe2024d4e5e0224bd3ed666a762ea5497535288f"
+  }
+}

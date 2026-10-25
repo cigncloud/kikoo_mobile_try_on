@@ -1,0 +1,58 @@
+{
+  "status": "completed",
+  "scope": "First test_pairs entries in source order; visual control only; no FID/LPIPS",
+  "dataset_count": 416,
+  "pairs": [
+    {
+      "index": 0,
+      "person": "000038_0.jpg",
+      "garment": "015095_1.jpg",
+      "seconds": 0.9215254118898883
+    },
+    {
+      "index": 1,
+      "person": "000057_0.jpg",
+      "garment": "019243_1.jpg",
+      "seconds": 0.016202398925088346
+    },
+    {
+      "index": 2,
+      "person": "000097_0.jpg",
+      "garment": "003086_1.jpg",
+      "seconds": 0.018679869011975825
+    },
+    {
+      "index": 3,
+      "person": "000284_0.jpg",
+      "garment": "013734_1.jpg",
+      "seconds": 0.019565472030080855
+    },
+    {
+      "index": 4,
+      "person": "000293_0.jpg",
+      "garment": "010527_1.jpg",
+      "seconds": 0.016362340073101223
+    },
+    {
+      "index": 5,
+      "person": "000303_0.jpg",
+      "garment": "000668_1.jpg",
+      "seconds": 0.01982285501435399
+    },
+    {
+      "index": 6,
+      "person": "000370_0.jpg",
+      "garment": "004727_1.jpg",
+      "seconds": 0.01678556005936116
+    },
+    {
+      "index": 7,
+      "person": "000426_0.jpg",
+      "garment": "002147_1.jpg",
+      "seconds": 0.01749577804002911
+    }
+  ],
+  "device": "NVIDIA GeForce RTX 3080 Laptop GPU",
+  "torch": "2.11.0+cu130",
+  "peak_cuda_allocated_bytes": 168492544
+}

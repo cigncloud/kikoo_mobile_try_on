@@ -1,0 +1,11 @@
+*.onnx
+*.mnn
+*.f32
+*.npy
+*.png
+*.cache
+mnn_dm_vton_bench
+mnn_dm_vton_bench_cached
+host_chain/*.f32
+pixel4_*/*.f32
+cuda_fixtures/*.f32

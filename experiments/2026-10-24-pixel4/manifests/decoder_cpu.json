@@ -1,0 +1,18 @@
+{
+  "model": "/data/local/tmp/mobile_tryon_20261024/decoder_fp16.mnn",
+  "backend": 0,
+  "runs": 3,
+  "inputs": [
+    {
+      "name": "latent",
+      "file": "/data/local/tmp/mobile_tryon_20261024/decoder_input.f32"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "image",
+      "file": "/data/local/tmp/mobile_tryon_20261024/decoder_cpu_output.f32"
+    }
+  ],
+  "metrics": "/data/local/tmp/mobile_tryon_20261024/decoder_cpu_metrics.json"
+}

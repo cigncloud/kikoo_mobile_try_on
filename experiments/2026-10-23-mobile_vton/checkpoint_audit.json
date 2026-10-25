@@ -1,0 +1,222 @@
+{
+  "model_id": "FlashStight/Mobile-VTON",
+  "revision": "0063147c171518b391fff5e44d04555c12370c35",
+  "status": "verified",
+  "checkpoint_total_bytes": 3755403203,
+  "checkpoint_weight_bytes": 3752217232,
+  "files": [
+    {
+      "path": "checkpoint/denoiser/config.json",
+      "expected_bytes": 4095,
+      "exists": true,
+      "actual_bytes": 4095,
+      "size_matches": true
+    },
+    {
+      "path": "checkpoint/denoiser/diffusion_pytorch_model.safetensors",
+      "expected_bytes": 840173776,
+      "exists": true,
+      "actual_bytes": 840173776,
+      "size_matches": true,
+      "sha256": "34ee9331e414a8d89ebd8c4c485094947f1fa710ef34d40a7726a623a7f3eca2",
+      "sha256_matches": true,
+      "tensor_parameters": 420007440,
+      "dtypes": [
+        "BF16"
+      ]
+    },
+    {
+      "path": "checkpoint/denoiser_garment/config.json",
+      "expected_bytes": 3970,
+      "exists": true,
+      "actual_bytes": 3970,
+      "size_matches": true
+    },
+    {
+      "path": "checkpoint/denoiser_garment/diffusion_pytorch_model.safetensors",
+      "expected_bytes": 759200976,
+      "exists": true,
+      "actual_bytes": 759200976,
+      "size_matches": true,
+      "sha256": "902e5f6d47e9aef909497d5d7d400dd51cb39764fac63aca1e5b730927e53184",
+      "sha256_matches": true,
+      "tensor_parameters": 379523856,
+      "dtypes": [
+        "BF16"
+      ]
+    },
+    {
+      "path": "checkpoint/image_encoder/config.json",
+      "expected_bytes": 917,
+      "exists": true,
+      "actual_bytes": 917,
+      "size_matches": true
+    },
+    {
+      "path": "checkpoint/image_encoder/model.safetensors",
+      "expected_bytes": 173185040,
+      "exists": true,
+      "actual_bytes": 173185040,
+      "size_matches": true,
+      "sha256": "a39e985dd10fd1ae72faa49c35ad211a17dc0457ebe7dcbe7b32b92da4007506",
+      "sha256_matches": true,
+      "tensor_parameters": 86580480,
+      "dtypes": [
+        "BF16"
+      ]
+    },
+    {
+      "path": "checkpoint/image_encoder/preprocessor_config.json",
+      "expected_bytes": 436,
+      "exists": true,
+      "actual_bytes": 436,
+      "size_matches": true
+    },
+    {
+      "path": "checkpoint/model_index.json",
+      "expected_bytes": 890,
+      "exists": true,
+      "actual_bytes": 890,
+      "size_matches": true
+    },
+    {
+      "path": "checkpoint/scheduler/scheduler_config.json",
+      "expected_bytes": 414,
+      "exists": true,
+      "actual_bytes": 414,
+      "size_matches": true
+    },
+    {
+      "path": "checkpoint/text_encoder/config.json",
+      "expected_bytes": 650,
+      "exists": true,
+      "actual_bytes": 650,
+      "size_matches": true
+    },
+    {
+      "path": "checkpoint/text_encoder/model.safetensors",
+      "expected_bytes": 247324096,
+      "exists": true,
+      "actual_bytes": 247324096,
+      "size_matches": true,
+      "sha256": "b4ddf499861727e83713b525ba1e087202f248a7ebb2268b04d1de09de5b67c2",
+      "sha256_matches": true,
+      "tensor_parameters": 123650304,
+      "dtypes": [
+        "BF16"
+      ]
+    },
+    {
+      "path": "checkpoint/text_encoder_2/config.json",
+      "expected_bytes": 648,
+      "exists": true,
+      "actual_bytes": 648,
+      "size_matches": true
+    },
+    {
+      "path": "checkpoint/text_encoder_2/model.safetensors",
+      "expected_bytes": 1389382688,
+      "exists": true,
+      "actual_bytes": 1389382688,
+      "size_matches": true,
+      "sha256": "c4ba596d8c78b5509aafd523f619e13aa129ae1a886a1e92766d7cddd9706f3c",
+      "sha256_matches": true,
+      "tensor_parameters": 694659840,
+      "dtypes": [
+        "BF16"
+      ]
+    },
+    {
+      "path": "checkpoint/tokenizer/merges.txt",
+      "expected_bytes": 524619,
+      "exists": true,
+      "actual_bytes": 524619,
+      "size_matches": true
+    },
+    {
+      "path": "checkpoint/tokenizer/special_tokens_map.json",
+      "expected_bytes": 588,
+      "exists": true,
+      "actual_bytes": 588,
+      "size_matches": true
+    },
+    {
+      "path": "checkpoint/tokenizer/tokenizer_config.json",
+      "expected_bytes": 705,
+      "exists": true,
+      "actual_bytes": 705,
+      "size_matches": true
+    },
+    {
+      "path": "checkpoint/tokenizer/vocab.json",
+      "expected_bytes": 1059962,
+      "exists": true,
+      "actual_bytes": 1059962,
+      "size_matches": true
+    },
+    {
+      "path": "checkpoint/tokenizer_2/merges.txt",
+      "expected_bytes": 524619,
+      "exists": true,
+      "actual_bytes": 524619,
+      "size_matches": true
+    },
+    {
+      "path": "checkpoint/tokenizer_2/special_tokens_map.json",
+      "expected_bytes": 576,
+      "exists": true,
+      "actual_bytes": 576,
+      "size_matches": true
+    },
+    {
+      "path": "checkpoint/tokenizer_2/tokenizer_config.json",
+      "expected_bytes": 856,
+      "exists": true,
+      "actual_bytes": 856,
+      "size_matches": true
+    },
+    {
+      "path": "checkpoint/tokenizer_2/vocab.json",
+      "expected_bytes": 1059962,
+      "exists": true,
+      "actual_bytes": 1059962,
+      "size_matches": true
+    },
+    {
+      "path": "checkpoint/vae/config.json",
+      "expected_bytes": 864,
+      "exists": true,
+      "actual_bytes": 864,
+      "size_matches": true
+    },
+    {
+      "path": "checkpoint/vae/diffusion_pytorch_model.safetensors",
+      "expected_bytes": 335306212,
+      "exists": true,
+      "actual_bytes": 335306212,
+      "size_matches": true,
+      "sha256": "965f71f229a5981c0a025db771d8868998f5e4e8412dc5585c687f638fa59679",
+      "sha256_matches": true,
+      "tensor_parameters": 83819683,
+      "dtypes": [
+        "F32"
+      ]
+    },
+    {
+      "path": "checkpoint/vae_decoder/decoder.json",
+      "expected_bytes": 1200,
+      "exists": true,
+      "actual_bytes": 1200,
+      "size_matches": true
+    },
+    {
+      "path": "checkpoint/vae_decoder/decoder.pt",
+      "expected_bytes": 7644444,
+      "exists": true,
+      "actual_bytes": 7644444,
+      "size_matches": true,
+      "sha256": "13ab9dec8e181b6d0e2efa3ecf466018b009bf5251c798f7aafc0b258106eb17",
+      "sha256_matches": true
+    }
+  ]
+}

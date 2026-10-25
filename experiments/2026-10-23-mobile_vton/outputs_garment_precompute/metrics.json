@@ -1,0 +1,276 @@
+{
+  "status": "prepared",
+  "config": {
+    "upstream": "models/mobile_vton/upstream",
+    "upstream_revision": "57410f20ac0e1703af795702e10473565feaa711",
+    "model_id": "FlashStight/Mobile-VTON",
+    "model_revision": "0063147c171518b391fff5e44d04555c12370c35",
+    "checkpoint": "/tmp/mobile_tryon/weights/mobile_vton/checkpoint",
+    "person": "experiments/2026-10-23-mobile_vton/inputs/person.jpg",
+    "garment": "experiments/2026-10-23-mobile_vton/inputs/garment.jpg",
+    "garment_description": "a grey long sleeved knitted cardigan with mint green V-neck trim, front buttons, and a Snoopy graphic",
+    "output_dir": "experiments/2026-10-23-mobile_vton/outputs_garment_precompute",
+    "device": "cuda",
+    "dtype": "bf16",
+    "width": 768,
+    "height": 1024,
+    "steps": 28,
+    "guidance_scale": 2.5,
+    "scheduler_shift": 3.0,
+    "seed": 42,
+    "warmup_steps": 1,
+    "runs": 3,
+    "threads": 4,
+    "embedding_cache": "experiments/2026-10-23-mobile_vton/outputs_bf16_cached/embeddings.pt",
+    "quantization": "int4",
+    "group_size": 128,
+    "save_quantized_states": false,
+    "memory_mode": "sequential_cfg",
+    "quantized_state_dir": "experiments/2026-10-23-mobile_vton/outputs_vllm_int4_native",
+    "vae_encoder_only": true,
+    "vae_tile_size": 512,
+    "decoder_dtype": "fp16",
+    "defer_quantized_transfer": true,
+    "release_working_tensors": true,
+    "spatial_conv_rows": 32,
+    "spatial_decoder_only": true,
+    "gpu_resident": true,
+    "audit_decoder_latents": false,
+    "build_garment_cache": true,
+    "garment_cache": "experiments/2026-10-23-mobile_vton/outputs_garment_precompute/garment_cache.pt"
+  },
+  "python": "3.12.2 | packaged by Anaconda, Inc. | (main, Feb 27 2024, 17:35:02) [GCC 11.2.0]",
+  "platform": "Linux-6.17.9-76061709-generic-x86_64-with-glibc2.35",
+  "started_utc": "2026-10-24T00:20:49Z",
+  "upstream_revision_check": "git_head_files",
+  "upstream_revision_actual": "57410f20ac0e1703af795702e10473565feaa711",
+  "cuda_allocator_config": "expandable_segments:True",
+  "gpu": "NVIDIA GeForce RTX 3080 Laptop GPU",
+  "gpu_total_bytes": 16723148800,
+  "packages": {
+    "torch": "2.7.1",
+    "torchvision": "0.22.1",
+    "diffusers": "0.34.0",
+    "transformers": "4.53.0",
+    "accelerate": "1.11.0",
+    "safetensors": "0.5.3",
+    "numpy": "1.26.4",
+    "pillow": "11.2.1",
+    "torchao": "0.10.0"
+  },
+  "checkpoint_file_bytes": 3755403203,
+  "inputs": {
+    "person": {
+      "path": "experiments/2026-10-23-mobile_vton/inputs/person.jpg",
+      "sha256": "1f0cd62f675f27b290cbe518a1531b23246bc065bd11f9858f9c4e7d4f7b1717",
+      "size": [
+        768,
+        1024
+      ]
+    },
+    "garment": {
+      "path": "experiments/2026-10-23-mobile_vton/inputs/garment.jpg",
+      "sha256": "fd74b6db0fea913db3a18e4a154d4035c0149c9250f7e1335dbd6077c0318064",
+      "size": [
+        1000,
+        1334
+      ]
+    }
+  },
+  "module_memory_profile": {
+    "enabled": false,
+    "events": []
+  },
+  "compute_optimization": {
+    "ffn_chunk_size": 0,
+    "native_gqa": false,
+    "spatial_conv_rows": 32,
+    "spatial_decoder_only": true,
+    "modules": {
+      "vae_decoder_spatial": [
+        "conv_in",
+        "up_blocks.0.resnets.0.conv1.dw_conv",
+        "up_blocks.0.resnets.0.conv1.pw_conv",
+        "up_blocks.0.resnets.0.conv2.dw_conv",
+        "up_blocks.0.resnets.0.conv2.pw_conv",
+        "up_blocks.0.resnets.1.conv1.dw_conv",
+        "up_blocks.0.resnets.1.conv1.pw_conv",
+        "up_blocks.0.resnets.1.conv2.dw_conv",
+        "up_blocks.0.resnets.1.conv2.pw_conv",
+        "up_blocks.0.resnets.2.conv1.dw_conv",
+        "up_blocks.0.resnets.2.conv1.pw_conv",
+        "up_blocks.0.resnets.2.conv2.dw_conv",
+        "up_blocks.0.resnets.2.conv2.pw_conv",
+        "up_blocks.0.upsamplers.0.conv",
+        "up_blocks.1.resnets.0.conv1.dw_conv",
+        "up_blocks.1.resnets.0.conv1.pw_conv",
+        "up_blocks.1.resnets.0.conv2.dw_conv",
+        "up_blocks.1.resnets.0.conv2.pw_conv",
+        "up_blocks.1.resnets.1.conv1.dw_conv",
+        "up_blocks.1.resnets.1.conv1.pw_conv",
+        "up_blocks.1.resnets.1.conv2.dw_conv",
+        "up_blocks.1.resnets.1.conv2.pw_conv",
+        "up_blocks.1.resnets.2.conv1.dw_conv",
+        "up_blocks.1.resnets.2.conv1.pw_conv",
+        "up_blocks.1.resnets.2.conv2.dw_conv",
+        "up_blocks.1.resnets.2.conv2.pw_conv",
+        "up_blocks.1.upsamplers.0.conv",
+        "up_blocks.2.resnets.0.conv1.dw_conv",
+        "up_blocks.2.resnets.0.conv1.pw_conv",
+        "up_blocks.2.resnets.0.conv2.dw_conv",
+        "up_blocks.2.resnets.0.conv2.pw_conv",
+        "up_blocks.2.resnets.1.conv1.dw_conv",
+        "up_blocks.2.resnets.1.conv1.pw_conv",
+        "up_blocks.2.resnets.1.conv2.dw_conv",
+        "up_blocks.2.resnets.1.conv2.pw_conv",
+        "up_blocks.2.upsamplers.0.conv",
+        "up_blocks.3.resnets.0.conv1.dw_conv",
+        "up_blocks.3.resnets.0.conv1.pw_conv",
+        "up_blocks.3.resnets.0.conv2.dw_conv",
+        "up_blocks.3.resnets.0.conv2.pw_conv",
+        "conv_out"
+      ],
+      "denoiser": {},
+      "denoiser_garment": {}
+    }
+  },
+  "memory_optimization": {
+    "mode": "sequential_cfg",
+    "events": [],
+    "phase_release": false,
+    "sequential_cfg": true,
+    "defer_quantized_transfer": true
+  },
+  "vae_optimization": {
+    "encoder_only": true,
+    "tile_size": 512,
+    "tile_overlap_factor": 0.25,
+    "events": [
+      {
+        "input_shape": [
+          1,
+          3,
+          1024,
+          768
+        ],
+        "tile_shapes": [
+          [
+            1,
+            3,
+            512,
+            512
+          ],
+          [
+            1,
+            3,
+            512,
+            384
+          ],
+          [
+            1,
+            3,
+            512,
+            512
+          ],
+          [
+            1,
+            3,
+            512,
+            384
+          ],
+          [
+            1,
+            3,
+            256,
+            512
+          ],
+          [
+            1,
+            3,
+            256,
+            384
+          ]
+        ],
+        "encoder_forward_count": 6,
+        "latent_mean_shape": [
+          1,
+          16,
+          128,
+          96
+        ],
+        "cuda_peak_allocated_so_far_bytes": 1295691776
+      }
+    ]
+  },
+  "decoder_optimization": {
+    "dtype": "fp16",
+    "events": [],
+    "latent_artifact": "experiments/2026-10-23-mobile_vton/outputs_garment_precompute/decoder_latents.pt"
+  },
+  "working_tensor_release": {
+    "enabled": true,
+    "events": []
+  },
+  "components": {
+    "image_encoder": {
+      "parameters": 86580480,
+      "parameter_bytes_in_memory": 173160960
+    },
+    "vae": {
+      "parameters": 34274208,
+      "parameter_bytes_in_memory": 68548416
+    },
+    "denoiser": {
+      "parameters": 415878672,
+      "parameter_bytes_in_memory": 831757344
+    },
+    "denoiser_garment": {
+      "parameters": 377459472,
+      "parameter_bytes_in_memory": 754918944
+    },
+    "vae_decoder": {
+      "parameters": 1902595,
+      "parameter_bytes_in_memory": 3805190
+    }
+  },
+  "total_parameters": 916095427,
+  "quantization": {
+    "denoiser": {
+      "loaded_checkpoint": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-23-mobile_vton/outputs_vllm_int4_native/denoiser_int4.pt",
+      "linear_layers_quantized": 378,
+      "linear_weight_parameters_quantized": 377618432,
+      "storage_bytes_before": 840014880,
+      "storage_bytes_after": 327515168,
+      "original_bf16_weights_transferred_to_cuda": false
+    },
+    "denoiser_garment": {
+      "loaded_checkpoint": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-23-mobile_vton/outputs_vllm_int4_native/denoiser_garment_int4.pt",
+      "linear_layers_quantized": 356,
+      "linear_weight_parameters_quantized": 339279872,
+      "storage_bytes_before": 759047712,
+      "storage_bytes_after": 297182752,
+      "original_bf16_weights_transferred_to_cuda": false
+    }
+  },
+  "resolution_adapter": {},
+  "model_tensor_storage_bytes": 870212486,
+  "model_load_seconds": 3.281260363990441,
+  "embedding_cache": {
+    "path": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-23-mobile_vton/outputs_bf16_cached/embeddings.pt",
+    "bytes": 8199289,
+    "sha256": "7ff8ec1f7f1da682d8cffa4fe034b15b7b6cd3ae70c51b480aa47c3efc76f4a1",
+    "loaded": true
+  },
+  "runtime_model_tensor_storage_bytes": 870212486,
+  "preprocess_and_text_encode_seconds": 0.2009936609538272,
+  "garment_cache_identity_check_seconds": 0.6636490729870275,
+  "garment_cache": {
+    "path": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-23-mobile_vton/outputs_garment_precompute/garment_cache.pt",
+    "bytes": 1051669,
+    "sha256": "0b9099bdd66664234b32e996577785f1bfce8d73814033a78c194e59c7aeeacd",
+    "tensor_bytes": 1048576,
+    "build_encode_and_save_seconds": 0.5503242150880396,
+    "precompute_cuda_peak_allocated_bytes": 1295691776
+  },
+  "host_peak_rss_bytes": 1692594176
+}

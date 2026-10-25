@@ -1,0 +1,151 @@
+pid=15118
+timestamp=1792809784 mem_available_kb=924324
+VmHWM:	    8068 kB
+VmRSS:	    8068 kB
+VmSwap:	       0 kB
+timestamp=1792809785 mem_available_kb=797340
+VmHWM:	  493380 kB
+VmRSS:	  493380 kB
+VmSwap:	       0 kB
+timestamp=1792809786 mem_available_kb=872896
+VmHWM:	  546692 kB
+VmRSS:	  497100 kB
+VmSwap:	       0 kB
+timestamp=1792809787 mem_available_kb=867656
+VmHWM:	  546692 kB
+VmRSS:	  539608 kB
+VmSwap:	       0 kB
+timestamp=1792809788 mem_available_kb=861784
+VmHWM:	  619280 kB
+VmRSS:	  619072 kB
+VmSwap:	       0 kB
+timestamp=1792809790 mem_available_kb=859780
+VmHWM:	  622176 kB
+VmRSS:	  621732 kB
+VmSwap:	       0 kB
+timestamp=1792809791 mem_available_kb=848764
+VmHWM:	  647056 kB
+VmRSS:	  647024 kB
+VmSwap:	       0 kB
+timestamp=1792809792 mem_available_kb=828584
+VmHWM:	  647416 kB
+VmRSS:	  645016 kB
+VmSwap:	       0 kB
+timestamp=1792809793 mem_available_kb=827064
+VmHWM:	  671048 kB
+VmRSS:	  671016 kB
+VmSwap:	       0 kB
+timestamp=1792809794 mem_available_kb=754352
+VmHWM:	  743320 kB
+VmRSS:	  742908 kB
+VmSwap:	       0 kB
+timestamp=1792809795 mem_available_kb=690500
+VmHWM:	  810384 kB
+VmRSS:	  806468 kB
+VmSwap:	       0 kB
+timestamp=1792809796 mem_available_kb=545944
+VmHWM:	  810384 kB
+VmRSS:	  805932 kB
+VmSwap:	       0 kB
+timestamp=1792809797 mem_available_kb=546720
+VmHWM:	  953756 kB
+VmRSS:	  952772 kB
+VmSwap:	       0 kB
+timestamp=1792809798 mem_available_kb=547020
+VmHWM:	  953756 kB
+VmRSS:	  953072 kB
+VmSwap:	       0 kB
+timestamp=1792809799 mem_available_kb=545868
+VmHWM:	  953756 kB
+VmRSS:	  953072 kB
+VmSwap:	       0 kB
+timestamp=1792809800 mem_available_kb=545844
+VmHWM:	  953756 kB
+VmRSS:	  953072 kB
+VmSwap:	       0 kB
+timestamp=1792809801 mem_available_kb=546044
+VmHWM:	  953756 kB
+VmRSS:	  953072 kB
+VmSwap:	       0 kB
+timestamp=1792809802 mem_available_kb=544892
+VmHWM:	  953756 kB
+VmRSS:	  953332 kB
+VmSwap:	       0 kB
+timestamp=1792809803 mem_available_kb=538764
+VmHWM:	  962460 kB
+VmRSS:	  961552 kB
+VmSwap:	       0 kB
+timestamp=1792809804 mem_available_kb=296612
+VmHWM:	  962460 kB
+VmRSS:	  961100 kB
+VmSwap:	       0 kB
+timestamp=1792809805 mem_available_kb=293464
+VmHWM:	  962460 kB
+VmRSS:	  961100 kB
+VmSwap:	       0 kB
+timestamp=1792809806 mem_available_kb=294992
+VmHWM:	  962460 kB
+VmRSS:	  961100 kB
+VmSwap:	       0 kB
+timestamp=1792809807 mem_available_kb=295116
+VmHWM:	  962460 kB
+VmRSS:	  961100 kB
+VmSwap:	       0 kB
+timestamp=1792809808 mem_available_kb=273132
+VmHWM:	  962460 kB
+VmRSS:	  961100 kB
+VmSwap:	       0 kB
+timestamp=1792809809 mem_available_kb=137748
+VmHWM:	  962460 kB
+VmRSS:	  944248 kB
+VmSwap:	       0 kB
+timestamp=1792809810 mem_available_kb=134860
+VmHWM:	  962460 kB
+VmRSS:	  944248 kB
+VmSwap:	       0 kB
+timestamp=1792809811 mem_available_kb=138156
+VmHWM:	  962460 kB
+VmRSS:	  944112 kB
+VmSwap:	       0 kB
+timestamp=1792809812 mem_available_kb=138136
+VmHWM:	  962460 kB
+VmRSS:	  944112 kB
+VmSwap:	       0 kB
+timestamp=1792809813 mem_available_kb=137004
+VmHWM:	  962460 kB
+VmRSS:	  944112 kB
+VmSwap:	       0 kB
+timestamp=1792809814 mem_available_kb=139040
+VmHWM:	  962460 kB
+VmRSS:	  944112 kB
+VmSwap:	       0 kB
+timestamp=1792809816 mem_available_kb=138540
+VmHWM:	  962460 kB
+VmRSS:	  944112 kB
+VmSwap:	       0 kB
+timestamp=1792809817 mem_available_kb=140328
+VmHWM:	  962460 kB
+VmRSS:	  944096 kB
+VmSwap:	       0 kB
+timestamp=1792809818 mem_available_kb=140100
+VmHWM:	  962460 kB
+VmRSS:	  944096 kB
+VmSwap:	       0 kB
+timestamp=1792809819 mem_available_kb=139228
+VmHWM:	  962460 kB
+VmRSS:	  944096 kB
+VmSwap:	       0 kB
+timestamp=1792809820 mem_available_kb=139360
+VmHWM:	  962460 kB
+VmRSS:	  944096 kB
+VmSwap:	       0 kB
+timestamp=1792809821 mem_available_kb=133224
+VmHWM:	  962460 kB
+VmRSS:	  942672 kB
+VmSwap:	       0 kB
+timestamp=1792809822 mem_available_kb=89624
+VmHWM:	 1527572 kB
+VmRSS:	 1525972 kB
+VmSwap:	       0 kB
+terminated_for_memory_pressure
+exit_code=143

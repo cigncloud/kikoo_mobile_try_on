@@ -1,0 +1,1188 @@
+[
+  {
+    "name": "/encoder/conv_in/Conv_output_0",
+    "shape": [
+      1,
+      128,
+      64,
+      64
+    ],
+    "mae": 1.026938090120666e-08,
+    "relative_rmse": 1.369792654895161e-07
+  },
+  {
+    "name": "/encoder/down_blocks.0/resnets.0/norm1/Mul_output_0",
+    "shape": [
+      1,
+      128,
+      64,
+      64
+    ],
+    "mae": 1.5331345082358894e-07,
+    "relative_rmse": 2.1633700085509584e-07
+  },
+  {
+    "name": "/encoder/down_blocks.0/resnets.0/norm1/Add_output_0",
+    "shape": [
+      1,
+      128,
+      64,
+      64
+    ],
+    "mae": 1.5331008285102143e-07,
+    "relative_rmse": 2.1660782569791002e-07
+  },
+  {
+    "name": "/encoder/down_blocks.0/resnets.0/nonlinearity/Mul_output_0",
+    "shape": [
+      1,
+      128,
+      64,
+      64
+    ],
+    "mae": 8.216083102752236e-08,
+    "relative_rmse": 2.3682072997281374e-07
+  },
+  {
+    "name": "/encoder/down_blocks.0/resnets.0/conv1/Conv_output_0",
+    "shape": [
+      1,
+      128,
+      64,
+      64
+    ],
+    "mae": 3.4933609072140825e-07,
+    "relative_rmse": 5.327240538394057e-07
+  },
+  {
+    "name": "/encoder/down_blocks.0/resnets.0/norm2/Mul_output_0",
+    "shape": [
+      1,
+      128,
+      64,
+      64
+    ],
+    "mae": 4.010787222341605e-07,
+    "relative_rmse": 5.957218134790093e-07
+  },
+  {
+    "name": "/encoder/down_blocks.0/resnets.0/norm2/Add_output_0",
+    "shape": [
+      1,
+      128,
+      64,
+      64
+    ],
+    "mae": 4.0107670429279096e-07,
+    "relative_rmse": 5.976589098226145e-07
+  },
+  {
+    "name": "/encoder/down_blocks.0/resnets.0/nonlinearity_1/Mul_output_0",
+    "shape": [
+      1,
+      128,
+      64,
+      64
+    ],
+    "mae": 1.692735622782493e-07,
+    "relative_rmse": 5.346931800580936e-07
+  },
+  {
+    "name": "/encoder/down_blocks.0/resnets.0/conv2/Conv_output_0",
+    "shape": [
+      1,
+      128,
+      64,
+      64
+    ],
+    "mae": 2.3701429086031567e-07,
+    "relative_rmse": 6.458089078376094e-07
+  },
+  {
+    "name": "/encoder/down_blocks.0/resnets.0/Add_output_0",
+    "shape": [
+      1,
+      128,
+      64,
+      64
+    ],
+    "mae": 2.3752974698254548e-07,
+    "relative_rmse": 6.14349154119344e-07
+  },
+  {
+    "name": "/encoder/down_blocks.0/resnets.1/norm1/Mul_output_0",
+    "shape": [
+      1,
+      128,
+      64,
+      64
+    ],
+    "mae": 6.622378805332119e-07,
+    "relative_rmse": 9.282009096717906e-07
+  },
+  {
+    "name": "/encoder/down_blocks.0/resnets.1/norm1/Add_output_0",
+    "shape": [
+      1,
+      128,
+      64,
+      64
+    ],
+    "mae": 6.622351520491065e-07,
+    "relative_rmse": 9.291351853812706e-07
+  },
+  {
+    "name": "/encoder/down_blocks.0/resnets.1/nonlinearity/Mul_output_0",
+    "shape": [
+      1,
+      128,
+      64,
+      64
+    ],
+    "mae": 3.215481285678834e-07,
+    "relative_rmse": 9.525998513138368e-07
+  },
+  {
+    "name": "/encoder/down_blocks.0/resnets.1/conv1/Conv_output_0",
+    "shape": [
+      1,
+      128,
+      64,
+      64
+    ],
+    "mae": 3.456539729995711e-07,
+    "relative_rmse": 7.924623397396383e-07
+  },
+  {
+    "name": "/encoder/down_blocks.0/resnets.1/norm2/Mul_output_0",
+    "shape": [
+      1,
+      128,
+      64,
+      64
+    ],
+    "mae": 7.914144362075604e-07,
+    "relative_rmse": 1.0613353193327353e-06
+  },
+  {
+    "name": "/encoder/down_blocks.0/resnets.1/norm2/Add_output_0",
+    "shape": [
+      1,
+      128,
+      64,
+      64
+    ],
+    "mae": 7.914128445918323e-07,
+    "relative_rmse": 1.0663721471088608e-06
+  },
+  {
+    "name": "/encoder/down_blocks.0/resnets.1/nonlinearity_1/Mul_output_0",
+    "shape": [
+      1,
+      128,
+      64,
+      64
+    ],
+    "mae": 3.8353852005457156e-07,
+    "relative_rmse": 1.1918969074822145e-06
+  },
+  {
+    "name": "/encoder/down_blocks.0/resnets.1/conv2/Conv_output_0",
+    "shape": [
+      1,
+      128,
+      64,
+      64
+    ],
+    "mae": 3.321240171771933e-07,
+    "relative_rmse": 1.1913637924771882e-06
+  },
+  {
+    "name": "/encoder/down_blocks.0/resnets.1/Add_output_0",
+    "shape": [
+      1,
+      128,
+      64,
+      64
+    ],
+    "mae": 4.1462027411398594e-07,
+    "relative_rmse": 8.78197460820572e-07
+  },
+  {
+    "name": "/encoder/down_blocks.0/downsamplers.0/conv/Conv_output_0",
+    "shape": [
+      1,
+      128,
+      32,
+      32
+    ],
+    "mae": 3.647244568583119e-07,
+    "relative_rmse": 7.380556857991673e-07
+  },
+  {
+    "name": "/encoder/down_blocks.1/resnets.0/conv_shortcut/Conv_output_0",
+    "shape": [
+      1,
+      256,
+      32,
+      32
+    ],
+    "mae": 2.3105269519874128e-07,
+    "relative_rmse": 8.167924642795971e-07
+  },
+  {
+    "name": "/encoder/down_blocks.1/resnets.0/norm1/Mul_output_0",
+    "shape": [
+      1,
+      128,
+      32,
+      32
+    ],
+    "mae": 7.119049882930994e-07,
+    "relative_rmse": 9.86756798930439e-07
+  },
+  {
+    "name": "/encoder/down_blocks.1/resnets.0/norm1/Add_output_0",
+    "shape": [
+      1,
+      128,
+      32,
+      32
+    ],
+    "mae": 7.118981670828362e-07,
+    "relative_rmse": 9.896597793786296e-07
+  },
+  {
+    "name": "/encoder/down_blocks.1/resnets.0/nonlinearity/Mul_output_0",
+    "shape": [
+      1,
+      128,
+      32,
+      32
+    ],
+    "mae": 3.6725162999573513e-07,
+    "relative_rmse": 1.1299034555276108e-06
+  },
+  {
+    "name": "/encoder/down_blocks.1/resnets.0/conv1/Conv_output_0",
+    "shape": [
+      1,
+      256,
+      32,
+      32
+    ],
+    "mae": 3.6679136883321917e-07,
+    "relative_rmse": 8.202581918542581e-07
+  },
+  {
+    "name": "/encoder/down_blocks.1/resnets.0/norm2/Mul_output_0",
+    "shape": [
+      1,
+      256,
+      32,
+      32
+    ],
+    "mae": 7.065273166517727e-07,
+    "relative_rmse": 9.530332766764004e-07
+  },
+  {
+    "name": "/encoder/down_blocks.1/resnets.0/norm2/Add_output_0",
+    "shape": [
+      1,
+      256,
+      32,
+      32
+    ],
+    "mae": 7.065295903885271e-07,
+    "relative_rmse": 9.550601171201265e-07
+  },
+  {
+    "name": "/encoder/down_blocks.1/resnets.0/nonlinearity_1/Mul_output_0",
+    "shape": [
+      1,
+      256,
+      32,
+      32
+    ],
+    "mae": 3.6492053823167225e-07,
+    "relative_rmse": 1.356406772460228e-06
+  },
+  {
+    "name": "/encoder/down_blocks.1/resnets.0/conv2/Conv_output_0",
+    "shape": [
+      1,
+      256,
+      32,
+      32
+    ],
+    "mae": 3.352211876972433e-07,
+    "relative_rmse": 1.10532958106507e-06
+  },
+  {
+    "name": "/encoder/down_blocks.1/resnets.0/Add_output_0",
+    "shape": [
+      1,
+      256,
+      32,
+      32
+    ],
+    "mae": 4.1442686438131204e-07,
+    "relative_rmse": 9.716068024341447e-07
+  },
+  {
+    "name": "/encoder/down_blocks.1/resnets.1/norm1/Mul_output_0",
+    "shape": [
+      1,
+      256,
+      32,
+      32
+    ],
+    "mae": 9.312365705227421e-07,
+    "relative_rmse": 1.3012716141375913e-06
+  },
+  {
+    "name": "/encoder/down_blocks.1/resnets.1/norm1/Add_output_0",
+    "shape": [
+      1,
+      256,
+      32,
+      32
+    ],
+    "mae": 9.312408337791567e-07,
+    "relative_rmse": 1.3027819481261319e-06
+  },
+  {
+    "name": "/encoder/down_blocks.1/resnets.1/nonlinearity/Mul_output_0",
+    "shape": [
+      1,
+      256,
+      32,
+      32
+    ],
+    "mae": 4.866941480941023e-07,
+    "relative_rmse": 1.5987260953538719e-06
+  },
+  {
+    "name": "/encoder/down_blocks.1/resnets.1/conv1/Conv_output_0",
+    "shape": [
+      1,
+      256,
+      32,
+      32
+    ],
+    "mae": 4.821733909921022e-07,
+    "relative_rmse": 1.2999458039850746e-06
+  },
+  {
+    "name": "/encoder/down_blocks.1/resnets.1/norm2/Mul_output_0",
+    "shape": [
+      1,
+      256,
+      32,
+      32
+    ],
+    "mae": 1.273814291380404e-06,
+    "relative_rmse": 1.6806308096007207e-06
+  },
+  {
+    "name": "/encoder/down_blocks.1/resnets.1/norm2/Add_output_0",
+    "shape": [
+      1,
+      256,
+      32,
+      32
+    ],
+    "mae": 1.2738154282487812e-06,
+    "relative_rmse": 1.6825049788750118e-06
+  },
+  {
+    "name": "/encoder/down_blocks.1/resnets.1/nonlinearity_1/Mul_output_0",
+    "shape": [
+      1,
+      256,
+      32,
+      32
+    ],
+    "mae": 5.830517579852312e-07,
+    "relative_rmse": 1.5667209409065172e-06
+  },
+  {
+    "name": "/encoder/down_blocks.1/resnets.1/conv2/Conv_output_0",
+    "shape": [
+      1,
+      256,
+      32,
+      32
+    ],
+    "mae": 4.773983164341189e-07,
+    "relative_rmse": 1.6244683296420483e-06
+  },
+  {
+    "name": "/encoder/down_blocks.1/resnets.1/Add_output_0",
+    "shape": [
+      1,
+      256,
+      32,
+      32
+    ],
+    "mae": 6.387536473084765e-07,
+    "relative_rmse": 1.4194265818290738e-06
+  },
+  {
+    "name": "/encoder/down_blocks.1/downsamplers.0/conv/Conv_output_0",
+    "shape": [
+      1,
+      256,
+      16,
+      16
+    ],
+    "mae": 6.049430112398113e-07,
+    "relative_rmse": 1.0281563620162589e-06
+  },
+  {
+    "name": "/encoder/down_blocks.2/resnets.0/conv_shortcut/Conv_output_0",
+    "shape": [
+      1,
+      512,
+      16,
+      16
+    ],
+    "mae": 3.8827926118756295e-07,
+    "relative_rmse": 1.0788257129067838e-06
+  },
+  {
+    "name": "/encoder/down_blocks.2/resnets.0/norm1/Mul_output_0",
+    "shape": [
+      1,
+      256,
+      16,
+      16
+    ],
+    "mae": 8.620258995506447e-07,
+    "relative_rmse": 1.1782892434776652e-06
+  },
+  {
+    "name": "/encoder/down_blocks.2/resnets.0/norm1/Add_output_0",
+    "shape": [
+      1,
+      256,
+      16,
+      16
+    ],
+    "mae": 8.620473295195552e-07,
+    "relative_rmse": 1.179048597489491e-06
+  },
+  {
+    "name": "/encoder/down_blocks.2/resnets.0/nonlinearity/Mul_output_0",
+    "shape": [
+      1,
+      256,
+      16,
+      16
+    ],
+    "mae": 4.4978469304624014e-07,
+    "relative_rmse": 1.4980219011366334e-06
+  },
+  {
+    "name": "/encoder/down_blocks.2/resnets.0/conv1/Conv_output_0",
+    "shape": [
+      1,
+      512,
+      16,
+      16
+    ],
+    "mae": 4.3303990082677046e-07,
+    "relative_rmse": 1.142223016291224e-06
+  },
+  {
+    "name": "/encoder/down_blocks.2/resnets.0/norm2/Mul_output_0",
+    "shape": [
+      1,
+      512,
+      16,
+      16
+    ],
+    "mae": 9.655850590206683e-07,
+    "relative_rmse": 1.312173774737034e-06
+  },
+  {
+    "name": "/encoder/down_blocks.2/resnets.0/norm2/Add_output_0",
+    "shape": [
+      1,
+      512,
+      16,
+      16
+    ],
+    "mae": 9.655832400312647e-07,
+    "relative_rmse": 1.312187293229696e-06
+  },
+  {
+    "name": "/encoder/down_blocks.2/resnets.0/nonlinearity_1/Mul_output_0",
+    "shape": [
+      1,
+      512,
+      16,
+      16
+    ],
+    "mae": 4.934180992677284e-07,
+    "relative_rmse": 2.0714638634969448e-06
+  },
+  {
+    "name": "/encoder/down_blocks.2/resnets.0/conv2/Conv_output_0",
+    "shape": [
+      1,
+      512,
+      16,
+      16
+    ],
+    "mae": 5.07446998199157e-07,
+    "relative_rmse": 1.3036723509385199e-06
+  },
+  {
+    "name": "/encoder/down_blocks.2/resnets.0/Add_output_0",
+    "shape": [
+      1,
+      512,
+      16,
+      16
+    ],
+    "mae": 6.679408102172602e-07,
+    "relative_rmse": 1.1541713176721951e-06
+  },
+  {
+    "name": "/encoder/down_blocks.2/resnets.1/norm1/Mul_output_0",
+    "shape": [
+      1,
+      512,
+      16,
+      16
+    ],
+    "mae": 1.0061274906547624e-06,
+    "relative_rmse": 1.4165108736106062e-06
+  },
+  {
+    "name": "/encoder/down_blocks.2/resnets.1/norm1/Add_output_0",
+    "shape": [
+      1,
+      512,
+      16,
+      16
+    ],
+    "mae": 1.0061245347969816e-06,
+    "relative_rmse": 1.4158690149020095e-06
+  },
+  {
+    "name": "/encoder/down_blocks.2/resnets.1/nonlinearity/Mul_output_0",
+    "shape": [
+      1,
+      512,
+      16,
+      16
+    ],
+    "mae": 5.31417754245922e-07,
+    "relative_rmse": 2.215604726744951e-06
+  },
+  {
+    "name": "/encoder/down_blocks.2/resnets.1/conv1/Conv_output_0",
+    "shape": [
+      1,
+      512,
+      16,
+      16
+    ],
+    "mae": 5.246005230219453e-07,
+    "relative_rmse": 1.7651452231786146e-06
+  },
+  {
+    "name": "/encoder/down_blocks.2/resnets.1/norm2/Mul_output_0",
+    "shape": [
+      1,
+      512,
+      16,
+      16
+    ],
+    "mae": 1.7677680261840578e-06,
+    "relative_rmse": 2.385352488149991e-06
+  },
+  {
+    "name": "/encoder/down_blocks.2/resnets.1/norm2/Add_output_0",
+    "shape": [
+      1,
+      512,
+      16,
+      16
+    ],
+    "mae": 1.7677715504760272e-06,
+    "relative_rmse": 2.3865853181101245e-06
+  },
+  {
+    "name": "/encoder/down_blocks.2/resnets.1/nonlinearity_1/Mul_output_0",
+    "shape": [
+      1,
+      512,
+      16,
+      16
+    ],
+    "mae": 7.888402251410298e-07,
+    "relative_rmse": 2.03444729056606e-06
+  },
+  {
+    "name": "/encoder/down_blocks.2/resnets.1/conv2/Conv_output_0",
+    "shape": [
+      1,
+      512,
+      16,
+      16
+    ],
+    "mae": 6.502201586044976e-07,
+    "relative_rmse": 2.284600787867759e-06
+  },
+  {
+    "name": "/encoder/down_blocks.2/resnets.1/Add_output_0",
+    "shape": [
+      1,
+      512,
+      16,
+      16
+    ],
+    "mae": 9.471386874793097e-07,
+    "relative_rmse": 1.617004999139187e-06
+  },
+  {
+    "name": "/encoder/down_blocks.2/downsamplers.0/conv/Conv_output_0",
+    "shape": [
+      1,
+      512,
+      8,
+      8
+    ],
+    "mae": 1.2956872978975298e-06,
+    "relative_rmse": 1.1325753079788589e-06
+  },
+  {
+    "name": "/encoder/down_blocks.3/resnets.0/norm1/Mul_output_0",
+    "shape": [
+      1,
+      512,
+      8,
+      8
+    ],
+    "mae": 8.695602673469693e-07,
+    "relative_rmse": 1.3850534315230937e-06
+  },
+  {
+    "name": "/encoder/down_blocks.3/resnets.0/norm1/Add_output_0",
+    "shape": [
+      1,
+      512,
+      8,
+      8
+    ],
+    "mae": 8.695586188878224e-07,
+    "relative_rmse": 1.3840515100070518e-06
+  },
+  {
+    "name": "/encoder/down_blocks.3/resnets.0/nonlinearity/Mul_output_0",
+    "shape": [
+      1,
+      512,
+      8,
+      8
+    ],
+    "mae": 4.0466500195179833e-07,
+    "relative_rmse": 1.8502154667228796e-06
+  },
+  {
+    "name": "/encoder/down_blocks.3/resnets.0/conv1/Conv_output_0",
+    "shape": [
+      1,
+      512,
+      8,
+      8
+    ],
+    "mae": 3.954186809096427e-07,
+    "relative_rmse": 1.3992868519512563e-06
+  },
+  {
+    "name": "/encoder/down_blocks.3/resnets.0/norm2/Mul_output_0",
+    "shape": [
+      1,
+      512,
+      8,
+      8
+    ],
+    "mae": 1.1720543398041627e-06,
+    "relative_rmse": 1.640714358112345e-06
+  },
+  {
+    "name": "/encoder/down_blocks.3/resnets.0/norm2/Add_output_0",
+    "shape": [
+      1,
+      512,
+      8,
+      8
+    ],
+    "mae": 1.172090605905396e-06,
+    "relative_rmse": 1.640424792852559e-06
+  },
+  {
+    "name": "/encoder/down_blocks.3/resnets.0/nonlinearity_1/Mul_output_0",
+    "shape": [
+      1,
+      512,
+      8,
+      8
+    ],
+    "mae": 5.871959274372784e-07,
+    "relative_rmse": 2.5578303078325608e-06
+  },
+  {
+    "name": "/encoder/down_blocks.3/resnets.0/conv2/Conv_output_0",
+    "shape": [
+      1,
+      512,
+      8,
+      8
+    ],
+    "mae": 5.138915639690822e-07,
+    "relative_rmse": 1.2674079854090807e-06
+  },
+  {
+    "name": "/encoder/down_blocks.3/resnets.0/Add_output_0",
+    "shape": [
+      1,
+      512,
+      8,
+      8
+    ],
+    "mae": 1.421971774107078e-06,
+    "relative_rmse": 9.553501819795352e-07
+  },
+  {
+    "name": "/encoder/down_blocks.3/resnets.1/norm1/Mul_output_0",
+    "shape": [
+      1,
+      512,
+      8,
+      8
+    ],
+    "mae": 7.879039003455546e-07,
+    "relative_rmse": 1.2452308205374523e-06
+  },
+  {
+    "name": "/encoder/down_blocks.3/resnets.1/norm1/Add_output_0",
+    "shape": [
+      1,
+      512,
+      8,
+      8
+    ],
+    "mae": 7.878954306761443e-07,
+    "relative_rmse": 1.2436863963574975e-06
+  },
+  {
+    "name": "/encoder/down_blocks.3/resnets.1/nonlinearity/Mul_output_0",
+    "shape": [
+      1,
+      512,
+      8,
+      8
+    ],
+    "mae": 3.740649958672293e-07,
+    "relative_rmse": 1.8493599529660187e-06
+  },
+  {
+    "name": "/encoder/down_blocks.3/resnets.1/conv1/Conv_output_0",
+    "shape": [
+      1,
+      512,
+      8,
+      8
+    ],
+    "mae": 3.543695470398234e-07,
+    "relative_rmse": 1.5335259990648164e-06
+  },
+  {
+    "name": "/encoder/down_blocks.3/resnets.1/norm2/Mul_output_0",
+    "shape": [
+      1,
+      512,
+      8,
+      8
+    ],
+    "mae": 1.3393791959970258e-06,
+    "relative_rmse": 1.830109032428272e-06
+  },
+  {
+    "name": "/encoder/down_blocks.3/resnets.1/norm2/Add_output_0",
+    "shape": [
+      1,
+      512,
+      8,
+      8
+    ],
+    "mae": 1.3393797644312144e-06,
+    "relative_rmse": 1.8300474320768703e-06
+  },
+  {
+    "name": "/encoder/down_blocks.3/resnets.1/nonlinearity_1/Mul_output_0",
+    "shape": [
+      1,
+      512,
+      8,
+      8
+    ],
+    "mae": 6.742885716448654e-07,
+    "relative_rmse": 2.8331491583733855e-06
+  },
+  {
+    "name": "/encoder/down_blocks.3/resnets.1/conv2/Conv_output_0",
+    "shape": [
+      1,
+      512,
+      8,
+      8
+    ],
+    "mae": 5.114959549246123e-07,
+    "relative_rmse": 1.6679364189036551e-06
+  },
+  {
+    "name": "/encoder/down_blocks.3/resnets.1/Add_output_0",
+    "shape": [
+      1,
+      512,
+      8,
+      8
+    ],
+    "mae": 1.5449733155037393e-06,
+    "relative_rmse": 9.132719604566044e-07
+  },
+  {
+    "name": "/encoder/mid_block/resnets.0/norm1/Mul_output_0",
+    "shape": [
+      1,
+      512,
+      8,
+      8
+    ],
+    "mae": 7.810671149854898e-07,
+    "relative_rmse": 1.201309787798351e-06
+  },
+  {
+    "name": "/encoder/mid_block/resnets.0/norm1/Add_output_0",
+    "shape": [
+      1,
+      512,
+      8,
+      8
+    ],
+    "mae": 7.810526767570991e-07,
+    "relative_rmse": 1.2004995243241715e-06
+  },
+  {
+    "name": "/encoder/mid_block/resnets.0/nonlinearity/Mul_output_0",
+    "shape": [
+      1,
+      512,
+      8,
+      8
+    ],
+    "mae": 3.739303622296575e-07,
+    "relative_rmse": 1.8003232038889623e-06
+  },
+  {
+    "name": "/encoder/mid_block/resnets.0/conv1/Conv_output_0",
+    "shape": [
+      1,
+      512,
+      8,
+      8
+    ],
+    "mae": 3.326239266243647e-07,
+    "relative_rmse": 1.5558811256492768e-06
+  },
+  {
+    "name": "/encoder/mid_block/resnets.0/norm2/Mul_output_0",
+    "shape": [
+      1,
+      512,
+      8,
+      8
+    ],
+    "mae": 1.3472299542627297e-06,
+    "relative_rmse": 1.8270387519433896e-06
+  },
+  {
+    "name": "/encoder/mid_block/resnets.0/norm2/Add_output_0",
+    "shape": [
+      1,
+      512,
+      8,
+      8
+    ],
+    "mae": 1.3471919828589307e-06,
+    "relative_rmse": 1.8267092520701677e-06
+  },
+  {
+    "name": "/encoder/mid_block/resnets.0/nonlinearity_1/Mul_output_0",
+    "shape": [
+      1,
+      512,
+      8,
+      8
+    ],
+    "mae": 6.779483783247997e-07,
+    "relative_rmse": 2.6390234067560303e-06
+  },
+  {
+    "name": "/encoder/mid_block/resnets.0/conv2/Conv_output_0",
+    "shape": [
+      1,
+      512,
+      8,
+      8
+    ],
+    "mae": 5.519021897271159e-07,
+    "relative_rmse": 1.6385449710132366e-06
+  },
+  {
+    "name": "/encoder/mid_block/resnets.0/Add_output_0",
+    "shape": [
+      1,
+      512,
+      8,
+      8
+    ],
+    "mae": 1.6935875919443788e-06,
+    "relative_rmse": 9.053329454150953e-07
+  },
+  {
+    "name": "/encoder/mid_block/attentions.0/group_norm/Mul_output_0",
+    "shape": [
+      1,
+      512,
+      64
+    ],
+    "mae": 7.741862759758078e-07,
+    "relative_rmse": 1.1517614981542591e-06
+  },
+  {
+    "name": "/encoder/mid_block/attentions.0/group_norm/Add_output_0",
+    "shape": [
+      1,
+      512,
+      64
+    ],
+    "mae": 7.741875833744416e-07,
+    "relative_rmse": 1.152170806974286e-06
+  },
+  {
+    "name": "/encoder/mid_block/attentions.0/Mul_1_output_0",
+    "shape": [
+      1,
+      1,
+      64,
+      512
+    ],
+    "mae": 1.2191821952001192e-07,
+    "relative_rmse": 1.0945944250014606e-06
+  },
+  {
+    "name": "/encoder/mid_block/attentions.0/Mul_2_output_0",
+    "shape": [
+      1,
+      1,
+      512,
+      64
+    ],
+    "mae": 1.1929452625736303e-07,
+    "relative_rmse": 1.2134791078475092e-06
+  },
+  {
+    "name": "/encoder/mid_block/attentions.0/MatMul_output_0",
+    "shape": [
+      1,
+      1,
+      64,
+      64
+    ],
+    "mae": 6.40695304809924e-07,
+    "relative_rmse": 7.615055405977696e-07
+  },
+  {
+    "name": "/encoder/mid_block/attentions.0/Softmax_output_0",
+    "shape": [
+      1,
+      1,
+      64,
+      64
+    ],
+    "mae": 9.461814443056937e-09,
+    "relative_rmse": 8.165195968563789e-07
+  },
+  {
+    "name": "/encoder/mid_block/attentions.0/MatMul_1_output_0",
+    "shape": [
+      1,
+      1,
+      64,
+      512
+    ],
+    "mae": 1.289044462282618e-07,
+    "relative_rmse": 3.4671945130625063e-07
+  },
+  {
+    "name": "/encoder/mid_block/attentions.0/Add_output_0",
+    "shape": [
+      1,
+      512,
+      8,
+      8
+    ],
+    "mae": 1.7032806454153615e-06,
+    "relative_rmse": 8.665770412673204e-07
+  },
+  {
+    "name": "/encoder/mid_block/resnets.1/norm1/Mul_output_0",
+    "shape": [
+      1,
+      512,
+      8,
+      8
+    ],
+    "mae": 7.213396884253598e-07,
+    "relative_rmse": 1.0591467250867988e-06
+  },
+  {
+    "name": "/encoder/mid_block/resnets.1/norm1/Add_output_0",
+    "shape": [
+      1,
+      512,
+      8,
+      8
+    ],
+    "mae": 7.213427579699783e-07,
+    "relative_rmse": 1.0588025428786136e-06
+  },
+  {
+    "name": "/encoder/mid_block/resnets.1/nonlinearity/Mul_output_0",
+    "shape": [
+      1,
+      512,
+      8,
+      8
+    ],
+    "mae": 3.4450644648131856e-07,
+    "relative_rmse": 1.446211988058347e-06
+  },
+  {
+    "name": "/encoder/mid_block/resnets.1/conv1/Conv_output_0",
+    "shape": [
+      1,
+      512,
+      8,
+      8
+    ],
+    "mae": 3.081650561398419e-07,
+    "relative_rmse": 1.403878831530692e-06
+  },
+  {
+    "name": "/encoder/mid_block/resnets.1/norm2/Mul_output_0",
+    "shape": [
+      1,
+      512,
+      8,
+      8
+    ],
+    "mae": 1.1093336524936603e-06,
+    "relative_rmse": 1.5487413040442842e-06
+  },
+  {
+    "name": "/encoder/mid_block/resnets.1/norm2/Add_output_0",
+    "shape": [
+      1,
+      512,
+      8,
+      8
+    ],
+    "mae": 1.1093592320321477e-06,
+    "relative_rmse": 1.5479042646138455e-06
+  },
+  {
+    "name": "/encoder/mid_block/resnets.1/nonlinearity_1/Mul_output_0",
+    "shape": [
+      1,
+      512,
+      8,
+      8
+    ],
+    "mae": 5.577280717261601e-07,
+    "relative_rmse": 2.1488360610327627e-06
+  },
+  {
+    "name": "/encoder/mid_block/resnets.1/conv2/Conv_output_0",
+    "shape": [
+      1,
+      512,
+      8,
+      8
+    ],
+    "mae": 5.82710868002323e-07,
+    "relative_rmse": 1.123375823112273e-06
+  },
+  {
+    "name": "/encoder/mid_block/resnets.1/Add_output_0",
+    "shape": [
+      1,
+      512,
+      8,
+      8
+    ],
+    "mae": 1.874864778983465e-06,
+    "relative_rmse": 8.145805248107223e-07
+  },
+  {
+    "name": "/encoder/conv_norm_out/Mul_output_0",
+    "shape": [
+      1,
+      512,
+      8,
+      8
+    ],
+    "mae": 6.58466831282567e-07,
+    "relative_rmse": 9.480264723601218e-07
+  },
+  {
+    "name": "/encoder/conv_norm_out/Add_output_0",
+    "shape": [
+      1,
+      512,
+      8,
+      8
+    ],
+    "mae": 6.585066785191884e-07,
+    "relative_rmse": 9.475726190927333e-07
+  },
+  {
+    "name": "/encoder/conv_act/Mul_output_0",
+    "shape": [
+      1,
+      512,
+      8,
+      8
+    ],
+    "mae": 3.142025377655955e-07,
+    "relative_rmse": 1.206265039954503e-06
+  },
+  {
+    "name": "output_0",
+    "shape": [
+      1,
+      32,
+      8,
+      8
+    ],
+    "mae": 7.519384780607652e-06,
+    "relative_rmse": 1.0129145784508862e-06
+  }
+]

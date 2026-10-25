@@ -1,0 +1,302 @@
+{
+    "status": "completed",
+    "phase": "denoise",
+    "pid": 25150,
+    "wall_seconds": 1747.775753642,
+    "process_peak_rss_bytes": 1721602048,
+    "release_model_buffer_after_first_forward": true,
+    "inputs_refreshed_each_forward": true,
+    "models": [
+        {
+            "path": "../tryon_structural_int4_fp16_block32.mnn",
+            "precision": 2,
+            "setup_seconds": 54.0402633,
+            "first_forward_output_backend_counts": {
+                "3": 3507
+            }
+        }
+    ],
+    "runs": [
+        {
+            "label": "step_1_unconditional",
+            "forward_download_seconds": 24.639003444,
+            "post_forward_rss_bytes": 1414676480
+        },
+        {
+            "label": "step_1_conditional",
+            "forward_download_seconds": 26.86233528,
+            "post_forward_rss_bytes": 1415946240
+        },
+        {
+            "label": "step_2_unconditional",
+            "forward_download_seconds": 26.578919106,
+            "post_forward_rss_bytes": 1414488064
+        },
+        {
+            "label": "step_2_conditional",
+            "forward_download_seconds": 27.045568736,
+            "post_forward_rss_bytes": 1416241152
+        },
+        {
+            "label": "step_3_unconditional",
+            "forward_download_seconds": 27.359476215,
+            "post_forward_rss_bytes": 1414406144
+        },
+        {
+            "label": "step_3_conditional",
+            "forward_download_seconds": 27.384301269,
+            "post_forward_rss_bytes": 1416089600
+        },
+        {
+            "label": "step_4_unconditional",
+            "forward_download_seconds": 27.059786498,
+            "post_forward_rss_bytes": 1415483392
+        },
+        {
+            "label": "step_4_conditional",
+            "forward_download_seconds": 27.078334468,
+            "post_forward_rss_bytes": 1417453568
+        },
+        {
+            "label": "step_5_unconditional",
+            "forward_download_seconds": 27.37940929,
+            "post_forward_rss_bytes": 1415708672
+        },
+        {
+            "label": "step_5_conditional",
+            "forward_download_seconds": 27.086224574,
+            "post_forward_rss_bytes": 1417162752
+        },
+        {
+            "label": "step_6_unconditional",
+            "forward_download_seconds": 26.942986955,
+            "post_forward_rss_bytes": 1415872512
+        },
+        {
+            "label": "step_6_conditional",
+            "forward_download_seconds": 27.299127719,
+            "post_forward_rss_bytes": 1416323072
+        },
+        {
+            "label": "step_7_unconditional",
+            "forward_download_seconds": 26.849651477,
+            "post_forward_rss_bytes": 1414639616
+        },
+        {
+            "label": "step_7_conditional",
+            "forward_download_seconds": 27.027152119,
+            "post_forward_rss_bytes": 1416368128
+        },
+        {
+            "label": "step_8_unconditional",
+            "forward_download_seconds": 27.446525807,
+            "post_forward_rss_bytes": 1414602752
+        },
+        {
+            "label": "step_8_conditional",
+            "forward_download_seconds": 27.105315513,
+            "post_forward_rss_bytes": 1415901184
+        },
+        {
+            "label": "step_9_unconditional",
+            "forward_download_seconds": 30.451913502,
+            "post_forward_rss_bytes": 1414557696
+        },
+        {
+            "label": "step_9_conditional",
+            "forward_download_seconds": 31.377245522,
+            "post_forward_rss_bytes": 1416081408
+        },
+        {
+            "label": "step_10_unconditional",
+            "forward_download_seconds": 26.734161725,
+            "post_forward_rss_bytes": 1414651904
+        },
+        {
+            "label": "step_10_conditional",
+            "forward_download_seconds": 27.241642401,
+            "post_forward_rss_bytes": 1415942144
+        },
+        {
+            "label": "step_11_unconditional",
+            "forward_download_seconds": 27.69259354,
+            "post_forward_rss_bytes": 1414406144
+        },
+        {
+            "label": "step_11_conditional",
+            "forward_download_seconds": 28.421161008,
+            "post_forward_rss_bytes": 1415983104
+        },
+        {
+            "label": "step_12_unconditional",
+            "forward_download_seconds": 32.996371933,
+            "post_forward_rss_bytes": 1414610944
+        },
+        {
+            "label": "step_12_conditional",
+            "forward_download_seconds": 30.024612678,
+            "post_forward_rss_bytes": 1416110080
+        },
+        {
+            "label": "step_13_unconditional",
+            "forward_download_seconds": 27.749264587,
+            "post_forward_rss_bytes": 1414324224
+        },
+        {
+            "label": "step_13_conditional",
+            "forward_download_seconds": 27.971194193,
+            "post_forward_rss_bytes": 1416056832
+        },
+        {
+            "label": "step_14_unconditional",
+            "forward_download_seconds": 31.308263848,
+            "post_forward_rss_bytes": 1414324224
+        },
+        {
+            "label": "step_14_conditional",
+            "forward_download_seconds": 32.960836461,
+            "post_forward_rss_bytes": 1415880704
+        },
+        {
+            "label": "step_15_unconditional",
+            "forward_download_seconds": 32.99633511,
+            "post_forward_rss_bytes": 1414488064
+        },
+        {
+            "label": "step_15_conditional",
+            "forward_download_seconds": 27.381887103,
+            "post_forward_rss_bytes": 1415954432
+        },
+        {
+            "label": "step_16_unconditional",
+            "forward_download_seconds": 26.851582415,
+            "post_forward_rss_bytes": 1414320128
+        },
+        {
+            "label": "step_16_conditional",
+            "forward_download_seconds": 28.161829316,
+            "post_forward_rss_bytes": 1416163328
+        },
+        {
+            "label": "step_17_unconditional",
+            "forward_download_seconds": 31.596837731,
+            "post_forward_rss_bytes": 1414311936
+        },
+        {
+            "label": "step_17_conditional",
+            "forward_download_seconds": 33.012110581,
+            "post_forward_rss_bytes": 1416118272
+        },
+        {
+            "label": "step_18_unconditional",
+            "forward_download_seconds": 27.981186172,
+            "post_forward_rss_bytes": 1414615040
+        },
+        {
+            "label": "step_18_conditional",
+            "forward_download_seconds": 27.708092292,
+            "post_forward_rss_bytes": 1415970816
+        },
+        {
+            "label": "step_19_unconditional",
+            "forward_download_seconds": 29.064994666,
+            "post_forward_rss_bytes": 1414610944
+        },
+        {
+            "label": "step_19_conditional",
+            "forward_download_seconds": 33.002060527,
+            "post_forward_rss_bytes": 1415933952
+        },
+        {
+            "label": "step_20_unconditional",
+            "forward_download_seconds": 29.17337249,
+            "post_forward_rss_bytes": 1414393856
+        },
+        {
+            "label": "step_20_conditional",
+            "forward_download_seconds": 27.403314136,
+            "post_forward_rss_bytes": 1415974912
+        },
+        {
+            "label": "step_21_unconditional",
+            "forward_download_seconds": 29.496473043,
+            "post_forward_rss_bytes": 1414582272
+        },
+        {
+            "label": "step_21_conditional",
+            "forward_download_seconds": 33.040227302,
+            "post_forward_rss_bytes": 1416085504
+        },
+        {
+            "label": "step_22_unconditional",
+            "forward_download_seconds": 32.42233422,
+            "post_forward_rss_bytes": 1414299648
+        },
+        {
+            "label": "step_22_conditional",
+            "forward_download_seconds": 27.439805494,
+            "post_forward_rss_bytes": 1415995392
+        },
+        {
+            "label": "step_23_unconditional",
+            "forward_download_seconds": 32.041936161,
+            "post_forward_rss_bytes": 1414492160
+        },
+        {
+            "label": "step_23_conditional",
+            "forward_download_seconds": 32.936960104,
+            "post_forward_rss_bytes": 1415917568
+        },
+        {
+            "label": "step_24_unconditional",
+            "forward_download_seconds": 32.951015835,
+            "post_forward_rss_bytes": 1414574080
+        },
+        {
+            "label": "step_24_conditional",
+            "forward_download_seconds": 32.941907813,
+            "post_forward_rss_bytes": 1415888896
+        },
+        {
+            "label": "step_25_unconditional",
+            "forward_download_seconds": 32.8945226,
+            "post_forward_rss_bytes": 1414463488
+        },
+        {
+            "label": "step_25_conditional",
+            "forward_download_seconds": 32.957096721,
+            "post_forward_rss_bytes": 1416097792
+        },
+        {
+            "label": "step_26_unconditional",
+            "forward_download_seconds": 32.93691599,
+            "post_forward_rss_bytes": 1414307840
+        },
+        {
+            "label": "step_26_conditional",
+            "forward_download_seconds": 28.754171146,
+            "post_forward_rss_bytes": 1415892992
+        },
+        {
+            "label": "step_27_unconditional",
+            "forward_download_seconds": 27.441723983,
+            "post_forward_rss_bytes": 1414344704
+        },
+        {
+            "label": "step_27_conditional",
+            "forward_download_seconds": 32.943383907,
+            "post_forward_rss_bytes": 1415917568
+        },
+        {
+            "label": "step_28_unconditional",
+            "forward_download_seconds": 32.940788802,
+            "post_forward_rss_bytes": 1414549504
+        },
+        {
+            "label": "step_28_conditional",
+            "forward_download_seconds": 32.921449998,
+            "post_forward_rss_bytes": 1416114176
+        }
+    ],
+    "scope": "On-phone neural component stages; CFG, Euler scheduler, tile blending and posterior arithmetic use CPU float32. Tensor placement audit is not kernel-level proof of GPU-only execution. Offline garment precomputation excluded."
+}

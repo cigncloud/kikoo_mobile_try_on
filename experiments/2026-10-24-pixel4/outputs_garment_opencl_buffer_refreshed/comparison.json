@@ -1,0 +1,343 @@
+{
+  "status": "completed",
+  "pid": 14821,
+  "backend_requested": 3,
+  "backend_selected": 3,
+  "gpu_mode": 80,
+  "precision_mode": 2,
+  "warmup_output_synchronized": true,
+  "inputs_refreshed_each_run": true,
+  "model_load_seconds": 0.763018826,
+  "session_create_seconds": 15.611111972,
+  "input_upload_seconds": 0.059219173,
+  "warmup_seconds": 5.57665842,
+  "inference_and_output_download_seconds": [
+    5.525841749,
+    5.531257791,
+    5.524897634
+  ],
+  "input_refresh_seconds": [
+    0.011465938,
+    0.011798231,
+    0.011968699
+  ],
+  "mnn_session_memory_mb": 5.041759490966797,
+  "process_peak_rss_bytes": 781119488,
+  "output_nonfinite_elements": 0,
+  "memory_note": "RSS includes GPU mappings visible in /proc/self/status, but not all possible driver allocations. MNN allocator size can omit OpenCL pool/driver allocations. This is one component, not full generation.",
+  "operator_output_backend_counts": {
+    "3": 2426
+  },
+  "mean_seconds": 5.527332391333334,
+  "numerical_comparison": {
+    "output_0": {
+      "shape": [
+        1,
+        768,
+        896
+      ],
+      "mae": 0.05898584797978401,
+      "rmse": 0.0744730606675148,
+      "max_absolute_error": 0.441420316696167,
+      "relative_rmse": 0.20996737016777636
+    },
+    "output_1": {
+      "shape": [
+        1,
+        768,
+        896
+      ],
+      "mae": 0.07073161751031876,
+      "rmse": 0.08991432189941406,
+      "max_absolute_error": 0.48638424277305603,
+      "relative_rmse": 0.2259694589388972
+    },
+    "output_2": {
+      "shape": [
+        1,
+        768,
+        896
+      ],
+      "mae": 0.0803990513086319,
+      "rmse": 0.10424453020095825,
+      "max_absolute_error": 0.8382487893104553,
+      "relative_rmse": 0.21864150913675862
+    },
+    "output_3": {
+      "shape": [
+        1,
+        768,
+        896
+      ],
+      "mae": 0.08007245510816574,
+      "rmse": 0.10231652855873108,
+      "max_absolute_error": 0.7854857444763184,
+      "relative_rmse": 0.2019796776206734
+    },
+    "output_4": {
+      "shape": [
+        1,
+        768,
+        896
+      ],
+      "mae": 0.042561858892440796,
+      "rmse": 0.05449029430747032,
+      "max_absolute_error": 0.4409463405609131,
+      "relative_rmse": 0.16325287303364977
+    },
+    "output_5": {
+      "shape": [
+        1,
+        768,
+        896
+      ],
+      "mae": 0.07915102690458298,
+      "rmse": 0.10059474408626556,
+      "max_absolute_error": 0.5014243125915527,
+      "relative_rmse": 0.24604791760943498
+    },
+    "output_6": {
+      "shape": [
+        1,
+        768,
+        896
+      ],
+      "mae": 0.08968617022037506,
+      "rmse": 0.11430452764034271,
+      "max_absolute_error": 0.6359683275222778,
+      "relative_rmse": 0.26860976494233335
+    },
+    "output_7": {
+      "shape": [
+        1,
+        768,
+        896
+      ],
+      "mae": 0.09639959037303925,
+      "rmse": 0.1221369206905365,
+      "max_absolute_error": 0.7129369378089905,
+      "relative_rmse": 0.2463736367190372
+    },
+    "output_8": {
+      "shape": [
+        1,
+        768,
+        896
+      ],
+      "mae": 0.0344214029610157,
+      "rmse": 0.0436968095600605,
+      "max_absolute_error": 0.3385758399963379,
+      "relative_rmse": 0.16001290659343417
+    },
+    "output_9": {
+      "shape": [
+        1,
+        768,
+        896
+      ],
+      "mae": 0.06960534304380417,
+      "rmse": 0.08842387795448303,
+      "max_absolute_error": 0.43848395347595215,
+      "relative_rmse": 0.2257286640748433
+    },
+    "output_10": {
+      "shape": [
+        1,
+        768,
+        896
+      ],
+      "mae": 0.09126851707696915,
+      "rmse": 0.11518710851669312,
+      "max_absolute_error": 0.5586029887199402,
+      "relative_rmse": 0.2632076863243534
+    },
+    "output_11": {
+      "shape": [
+        1,
+        768,
+        896
+      ],
+      "mae": 0.15650023519992828,
+      "rmse": 0.19715160131454468,
+      "max_absolute_error": 0.8817925453186035,
+      "relative_rmse": 0.3922927311889477
+    },
+    "output_12": {
+      "shape": [
+        1,
+        768,
+        896
+      ],
+      "mae": 0.0344214029610157,
+      "rmse": 0.0436968095600605,
+      "max_absolute_error": 0.3385758399963379,
+      "relative_rmse": 0.16001290659343417
+    },
+    "output_13": {
+      "shape": [
+        1,
+        768,
+        896
+      ],
+      "mae": 0.06960534304380417,
+      "rmse": 0.08842387795448303,
+      "max_absolute_error": 0.43848395347595215,
+      "relative_rmse": 0.2257286640748433
+    },
+    "output_14": {
+      "shape": [
+        1,
+        768,
+        896
+      ],
+      "mae": 0.09126851707696915,
+      "rmse": 0.11518710851669312,
+      "max_absolute_error": 0.5586029887199402,
+      "relative_rmse": 0.2632076863243534
+    },
+    "output_15": {
+      "shape": [
+        1,
+        768,
+        896
+      ],
+      "mae": 0.15650023519992828,
+      "rmse": 0.19715160131454468,
+      "max_absolute_error": 0.8817925453186035,
+      "relative_rmse": 0.3922927311889477
+    },
+    "output_16": {
+      "shape": [
+        1,
+        768,
+        896
+      ],
+      "mae": 0.03897969424724579,
+      "rmse": 0.04989668354392052,
+      "max_absolute_error": 0.2687516212463379,
+      "relative_rmse": 0.1945421994121165
+    },
+    "output_17": {
+      "shape": [
+        1,
+        768,
+        896
+      ],
+      "mae": 0.07569647580385208,
+      "rmse": 0.09542325139045715,
+      "max_absolute_error": 0.4130716323852539,
+      "relative_rmse": 0.26214183614797665
+    },
+    "output_18": {
+      "shape": [
+        1,
+        768,
+        896
+      ],
+      "mae": 0.0999663695693016,
+      "rmse": 0.124791719019413,
+      "max_absolute_error": 0.5047136545181274,
+      "relative_rmse": 0.28928565432877135
+    },
+    "output_19": {
+      "shape": [
+        1,
+        768,
+        896
+      ],
+      "mae": 0.12086746841669083,
+      "rmse": 0.15258817374706268,
+      "max_absolute_error": 0.7065634727478027,
+      "relative_rmse": 0.2985860054398537
+    },
+    "output_20": {
+      "shape": [
+        1,
+        768,
+        896
+      ],
+      "mae": 0.03414599969983101,
+      "rmse": 0.04445290192961693,
+      "max_absolute_error": 0.2827651798725128,
+      "relative_rmse": 0.15834839841761147
+    },
+    "output_21": {
+      "shape": [
+        1,
+        768,
+        896
+      ],
+      "mae": 0.07788265496492386,
+      "rmse": 0.09801872819662094,
+      "max_absolute_error": 0.4529472589492798,
+      "relative_rmse": 0.21403257093317565
+    },
+    "output_22": {
+      "shape": [
+        1,
+        768,
+        896
+      ],
+      "mae": 0.05836210399866104,
+      "rmse": 0.07283330708742142,
+      "max_absolute_error": 0.2803846597671509,
+      "relative_rmse": 0.13172806857353286
+    },
+    "output_23": {
+      "shape": [
+        1,
+        768,
+        896
+      ],
+      "mae": 0.05548294261097908,
+      "rmse": 0.06979908049106598,
+      "max_absolute_error": 0.249059796333313,
+      "relative_rmse": 0.10543513002985591
+    },
+    "output_24": {
+      "shape": [
+        1,
+        768,
+        896
+      ],
+      "mae": 0.05934188887476921,
+      "rmse": 0.07451112568378448,
+      "max_absolute_error": 0.31582701206207275,
+      "relative_rmse": 0.18666890205383102
+    },
+    "output_25": {
+      "shape": [
+        1,
+        768,
+        896
+      ],
+      "mae": 0.10039974749088287,
+      "rmse": 0.1250242441892624,
+      "max_absolute_error": 0.6492104530334473,
+      "relative_rmse": 0.21726131936022244
+    },
+    "output_26": {
+      "shape": [
+        1,
+        768,
+        896
+      ],
+      "mae": 0.10862628370523453,
+      "rmse": 0.13771574199199677,
+      "max_absolute_error": 0.5909833908081055,
+      "relative_rmse": 0.21743878975915304
+    },
+    "output_27": {
+      "shape": [
+        1,
+        768,
+        896
+      ],
+      "mae": 0.12971679866313934,
+      "rmse": 0.1637006551027298,
+      "max_absolute_error": 0.9079976081848145,
+      "relative_rmse": 0.23038851809324656
+    }
+  },
+  "scope": "Component test only. Export fixtures are not a full generation on the phone. Output backend reports tensor placement, not a guarantee that all neural operations ran on GPU."
+}

@@ -1,0 +1,11 @@
+.gradle/
+build/
+app/build/
+local.properties
+local-build.env
+debug.keystore
+app/src/main/jniLibs/
+app/src/main/assets/models/
+app/src/main/assets/models.json
+artifacts/
+app/src/main/assets/preprocess/*.task

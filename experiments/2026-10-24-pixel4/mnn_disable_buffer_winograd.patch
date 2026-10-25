@@ -1,0 +1,11 @@
+--- a/source/backend/opencl/execution/buffer/ConvBufExecution.cpp
++++ b/source/backend/opencl/execution/buffer/ConvBufExecution.cpp
+@@ -947,7 +947,7 @@
+         }
+ #endif
+ 
+-        if (ConvBufWinograd::valid(conv2D->common(), inputs[0], outputs[0], static_cast<OpenCLBackend *>(backend)->getOpenCLRuntime()->getGpuType() == INTEL)) {
++        if (backend->getRuntime()->hint().winogradMemoryUsed > 0 && ConvBufWinograd::valid(conv2D->common(), inputs[0], outputs[0], static_cast<OpenCLBackend *>(backend)->getOpenCLRuntime()->getGpuType() == INTEL)) {
+ #ifdef MNN_SUPPORT_INTEL_SUBGROUP
+             if(static_cast<OpenCLBackend *>(backend)->getOpenCLRuntime()->isSupportedIntelSubgroup()){
+                 std::vector<int> inputShape = tensorShapeFormat(input);

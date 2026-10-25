@@ -1,0 +1,707 @@
+{
+  "status": "completed",
+  "full_generation_completed_on_phone": true,
+  "steps": 28,
+  "cfg_forwards": 56,
+  "resolution": [
+    768,
+    1024
+  ],
+  "online_cold_wall_seconds": 2081,
+  "process_peak_rss_bytes": 1721602048,
+  "mem_available_min_kib": 804336,
+  "phases": {
+    "vae": {
+      "status": "completed",
+      "phase": "vae",
+      "pid": 23469,
+      "wall_seconds": 292.353386832,
+      "process_peak_rss_bytes": 1046396928,
+      "release_model_buffer_after_first_forward": true,
+      "inputs_refreshed_each_forward": true,
+      "models": [
+        {
+          "path": "../vae_encoder_fp32.mnn",
+          "precision": 1,
+          "setup_seconds": 50.012111181,
+          "first_forward_output_backend_counts": {
+            "3": 209
+          }
+        },
+        {
+          "path": "models/vae_512_384.mnn",
+          "precision": 1,
+          "setup_seconds": 63.196369838,
+          "first_forward_output_backend_counts": {
+            "3": 209
+          }
+        },
+        {
+          "path": "models/vae_256_512.mnn",
+          "precision": 1,
+          "setup_seconds": 43.166308311,
+          "first_forward_output_backend_counts": {
+            "3": 209
+          }
+        },
+        {
+          "path": "models/vae_256_384.mnn",
+          "precision": 1,
+          "setup_seconds": 59.144849381,
+          "first_forward_output_backend_counts": {
+            "3": 209
+          }
+        }
+      ],
+      "runs": [
+        {
+          "label": "vae_tile_0_0",
+          "forward_download_seconds": 16.979780233,
+          "post_forward_rss_bytes": 908206080
+        },
+        {
+          "label": "vae_tile_1_0",
+          "forward_download_seconds": 16.914952466,
+          "post_forward_rss_bytes": 908419072
+        },
+        {
+          "label": "vae_tile_0_1",
+          "forward_download_seconds": 13.21495741,
+          "post_forward_rss_bytes": 737218560
+        },
+        {
+          "label": "vae_tile_1_1",
+          "forward_download_seconds": 13.118545525,
+          "post_forward_rss_bytes": 737452032
+        },
+        {
+          "label": "vae_tile_2_0",
+          "forward_download_seconds": 8.513652619,
+          "post_forward_rss_bytes": 565841920
+        },
+        {
+          "label": "vae_tile_2_1",
+          "forward_download_seconds": 6.599472845,
+          "post_forward_rss_bytes": 479772672
+        }
+      ],
+      "scope": "On-phone neural component stages; CFG, Euler scheduler, tile blending and posterior arithmetic use CPU float32. Tensor placement audit is not kernel-level proof of GPU-only execution. Offline garment precomputation excluded."
+    },
+    "denoise": {
+      "status": "completed",
+      "phase": "denoise",
+      "pid": 25150,
+      "wall_seconds": 1747.775753642,
+      "process_peak_rss_bytes": 1721602048,
+      "release_model_buffer_after_first_forward": true,
+      "inputs_refreshed_each_forward": true,
+      "models": [
+        {
+          "path": "../tryon_structural_int4_fp16_block32.mnn",
+          "precision": 2,
+          "setup_seconds": 54.0402633,
+          "first_forward_output_backend_counts": {
+            "3": 3507
+          }
+        }
+      ],
+      "runs": [
+        {
+          "label": "step_1_unconditional",
+          "forward_download_seconds": 24.639003444,
+          "post_forward_rss_bytes": 1414676480
+        },
+        {
+          "label": "step_1_conditional",
+          "forward_download_seconds": 26.86233528,
+          "post_forward_rss_bytes": 1415946240
+        },
+        {
+          "label": "step_2_unconditional",
+          "forward_download_seconds": 26.578919106,
+          "post_forward_rss_bytes": 1414488064
+        },
+        {
+          "label": "step_2_conditional",
+          "forward_download_seconds": 27.045568736,
+          "post_forward_rss_bytes": 1416241152
+        },
+        {
+          "label": "step_3_unconditional",
+          "forward_download_seconds": 27.359476215,
+          "post_forward_rss_bytes": 1414406144
+        },
+        {
+          "label": "step_3_conditional",
+          "forward_download_seconds": 27.384301269,
+          "post_forward_rss_bytes": 1416089600
+        },
+        {
+          "label": "step_4_unconditional",
+          "forward_download_seconds": 27.059786498,
+          "post_forward_rss_bytes": 1415483392
+        },
+        {
+          "label": "step_4_conditional",
+          "forward_download_seconds": 27.078334468,
+          "post_forward_rss_bytes": 1417453568
+        },
+        {
+          "label": "step_5_unconditional",
+          "forward_download_seconds": 27.37940929,
+          "post_forward_rss_bytes": 1415708672
+        },
+        {
+          "label": "step_5_conditional",
+          "forward_download_seconds": 27.086224574,
+          "post_forward_rss_bytes": 1417162752
+        },
+        {
+          "label": "step_6_unconditional",
+          "forward_download_seconds": 26.942986955,
+          "post_forward_rss_bytes": 1415872512
+        },
+        {
+          "label": "step_6_conditional",
+          "forward_download_seconds": 27.299127719,
+          "post_forward_rss_bytes": 1416323072
+        },
+        {
+          "label": "step_7_unconditional",
+          "forward_download_seconds": 26.849651477,
+          "post_forward_rss_bytes": 1414639616
+        },
+        {
+          "label": "step_7_conditional",
+          "forward_download_seconds": 27.027152119,
+          "post_forward_rss_bytes": 1416368128
+        },
+        {
+          "label": "step_8_unconditional",
+          "forward_download_seconds": 27.446525807,
+          "post_forward_rss_bytes": 1414602752
+        },
+        {
+          "label": "step_8_conditional",
+          "forward_download_seconds": 27.105315513,
+          "post_forward_rss_bytes": 1415901184
+        },
+        {
+          "label": "step_9_unconditional",
+          "forward_download_seconds": 30.451913502,
+          "post_forward_rss_bytes": 1414557696
+        },
+        {
+          "label": "step_9_conditional",
+          "forward_download_seconds": 31.377245522,
+          "post_forward_rss_bytes": 1416081408
+        },
+        {
+          "label": "step_10_unconditional",
+          "forward_download_seconds": 26.734161725,
+          "post_forward_rss_bytes": 1414651904
+        },
+        {
+          "label": "step_10_conditional",
+          "forward_download_seconds": 27.241642401,
+          "post_forward_rss_bytes": 1415942144
+        },
+        {
+          "label": "step_11_unconditional",
+          "forward_download_seconds": 27.69259354,
+          "post_forward_rss_bytes": 1414406144
+        },
+        {
+          "label": "step_11_conditional",
+          "forward_download_seconds": 28.421161008,
+          "post_forward_rss_bytes": 1415983104
+        },
+        {
+          "label": "step_12_unconditional",
+          "forward_download_seconds": 32.996371933,
+          "post_forward_rss_bytes": 1414610944
+        },
+        {
+          "label": "step_12_conditional",
+          "forward_download_seconds": 30.024612678,
+          "post_forward_rss_bytes": 1416110080
+        },
+        {
+          "label": "step_13_unconditional",
+          "forward_download_seconds": 27.749264587,
+          "post_forward_rss_bytes": 1414324224
+        },
+        {
+          "label": "step_13_conditional",
+          "forward_download_seconds": 27.971194193,
+          "post_forward_rss_bytes": 1416056832
+        },
+        {
+          "label": "step_14_unconditional",
+          "forward_download_seconds": 31.308263848,
+          "post_forward_rss_bytes": 1414324224
+        },
+        {
+          "label": "step_14_conditional",
+          "forward_download_seconds": 32.960836461,
+          "post_forward_rss_bytes": 1415880704
+        },
+        {
+          "label": "step_15_unconditional",
+          "forward_download_seconds": 32.99633511,
+          "post_forward_rss_bytes": 1414488064
+        },
+        {
+          "label": "step_15_conditional",
+          "forward_download_seconds": 27.381887103,
+          "post_forward_rss_bytes": 1415954432
+        },
+        {
+          "label": "step_16_unconditional",
+          "forward_download_seconds": 26.851582415,
+          "post_forward_rss_bytes": 1414320128
+        },
+        {
+          "label": "step_16_conditional",
+          "forward_download_seconds": 28.161829316,
+          "post_forward_rss_bytes": 1416163328
+        },
+        {
+          "label": "step_17_unconditional",
+          "forward_download_seconds": 31.596837731,
+          "post_forward_rss_bytes": 1414311936
+        },
+        {
+          "label": "step_17_conditional",
+          "forward_download_seconds": 33.012110581,
+          "post_forward_rss_bytes": 1416118272
+        },
+        {
+          "label": "step_18_unconditional",
+          "forward_download_seconds": 27.981186172,
+          "post_forward_rss_bytes": 1414615040
+        },
+        {
+          "label": "step_18_conditional",
+          "forward_download_seconds": 27.708092292,
+          "post_forward_rss_bytes": 1415970816
+        },
+        {
+          "label": "step_19_unconditional",
+          "forward_download_seconds": 29.064994666,
+          "post_forward_rss_bytes": 1414610944
+        },
+        {
+          "label": "step_19_conditional",
+          "forward_download_seconds": 33.002060527,
+          "post_forward_rss_bytes": 1415933952
+        },
+        {
+          "label": "step_20_unconditional",
+          "forward_download_seconds": 29.17337249,
+          "post_forward_rss_bytes": 1414393856
+        },
+        {
+          "label": "step_20_conditional",
+          "forward_download_seconds": 27.403314136,
+          "post_forward_rss_bytes": 1415974912
+        },
+        {
+          "label": "step_21_unconditional",
+          "forward_download_seconds": 29.496473043,
+          "post_forward_rss_bytes": 1414582272
+        },
+        {
+          "label": "step_21_conditional",
+          "forward_download_seconds": 33.040227302,
+          "post_forward_rss_bytes": 1416085504
+        },
+        {
+          "label": "step_22_unconditional",
+          "forward_download_seconds": 32.42233422,
+          "post_forward_rss_bytes": 1414299648
+        },
+        {
+          "label": "step_22_conditional",
+          "forward_download_seconds": 27.439805494,
+          "post_forward_rss_bytes": 1415995392
+        },
+        {
+          "label": "step_23_unconditional",
+          "forward_download_seconds": 32.041936161,
+          "post_forward_rss_bytes": 1414492160
+        },
+        {
+          "label": "step_23_conditional",
+          "forward_download_seconds": 32.936960104,
+          "post_forward_rss_bytes": 1415917568
+        },
+        {
+          "label": "step_24_unconditional",
+          "forward_download_seconds": 32.951015835,
+          "post_forward_rss_bytes": 1414574080
+        },
+        {
+          "label": "step_24_conditional",
+          "forward_download_seconds": 32.941907813,
+          "post_forward_rss_bytes": 1415888896
+        },
+        {
+          "label": "step_25_unconditional",
+          "forward_download_seconds": 32.8945226,
+          "post_forward_rss_bytes": 1414463488
+        },
+        {
+          "label": "step_25_conditional",
+          "forward_download_seconds": 32.957096721,
+          "post_forward_rss_bytes": 1416097792
+        },
+        {
+          "label": "step_26_unconditional",
+          "forward_download_seconds": 32.93691599,
+          "post_forward_rss_bytes": 1414307840
+        },
+        {
+          "label": "step_26_conditional",
+          "forward_download_seconds": 28.754171146,
+          "post_forward_rss_bytes": 1415892992
+        },
+        {
+          "label": "step_27_unconditional",
+          "forward_download_seconds": 27.441723983,
+          "post_forward_rss_bytes": 1414344704
+        },
+        {
+          "label": "step_27_conditional",
+          "forward_download_seconds": 32.943383907,
+          "post_forward_rss_bytes": 1415917568
+        },
+        {
+          "label": "step_28_unconditional",
+          "forward_download_seconds": 32.940788802,
+          "post_forward_rss_bytes": 1414549504
+        },
+        {
+          "label": "step_28_conditional",
+          "forward_download_seconds": 32.921449998,
+          "post_forward_rss_bytes": 1416114176
+        }
+      ],
+      "scope": "On-phone neural component stages; CFG, Euler scheduler, tile blending and posterior arithmetic use CPU float32. Tensor placement audit is not kernel-level proof of GPU-only execution. Offline garment precomputation excluded."
+    },
+    "decode": {
+      "status": "completed",
+      "phase": "decode",
+      "pid": 5565,
+      "wall_seconds": 37.501763944,
+      "process_peak_rss_bytes": 962752512,
+      "release_model_buffer_after_first_forward": true,
+      "inputs_refreshed_each_forward": true,
+      "models": [
+        {
+          "path": "../decoder_fp16.mnn",
+          "precision": 2,
+          "setup_seconds": 31.631324713,
+          "first_forward_output_backend_counts": {
+            "3": 125
+          }
+        }
+      ],
+      "runs": [
+        {
+          "label": "decoder",
+          "forward_download_seconds": 5.395110694,
+          "post_forward_rss_bytes": 959143936
+        }
+      ],
+      "scope": "On-phone neural component stages; CFG, Euler scheduler, tile blending and posterior arithmetic use CPU float32. Tensor placement audit is not kernel-level proof of GPU-only execution. Offline garment precomputation excluded."
+    }
+  },
+  "comparisons": {
+    "person_moments": {
+      "mae": 9.176433348259683e-06,
+      "rmse": 1.5868465066815124e-05,
+      "relative_rmse": 1.055059699878322e-06,
+      "max_absolute_error": 0.0001049041748046875
+    },
+    "person_latent": {
+      "mae": 9.70291754117993e-07,
+      "rmse": 1.3381984666222813e-06,
+      "relative_rmse": 1.2023331139659721e-06,
+      "max_absolute_error": 1.0967254638671875e-05
+    },
+    "first_unconditional": {
+      "mae": 0.06103814528475245,
+      "rmse": 0.08173240458707172,
+      "relative_rmse": 0.05520408956949318,
+      "max_absolute_error": 0.8428366184234619
+    },
+    "first_conditional": {
+      "mae": 0.057565429733093275,
+      "rmse": 0.07800267095708427,
+      "relative_rmse": 0.05297175143610393,
+      "max_absolute_error": 1.2196292877197266
+    },
+    "decoder_latents": {
+      "mae": 0.03885863666774488,
+      "rmse": 0.06174715672080068,
+      "relative_rmse": 0.09123419228468192,
+      "max_absolute_error": 1.2440826892852783
+    },
+    "image": {
+      "mae": 0.027602290802032716,
+      "rmse": 0.054221569572579446,
+      "relative_rmse": 0.16192323205546152,
+      "max_absolute_error": 1.6657919883728027
+    }
+  },
+  "native_math_checks": {
+    "first_cfg_euler_step": {
+      "mae": 0.0,
+      "rmse": 0.0,
+      "relative_rmse": 0.0,
+      "max_absolute_error": 0.0
+    },
+    "vae_tile_blending": {
+      "mae": 0.0,
+      "rmse": 0.0,
+      "relative_rmse": 0.0,
+      "max_absolute_error": 0.0
+    }
+  },
+  "per_step_comparisons": [
+    {
+      "step": 1,
+      "mae": 0.0008398561902687914,
+      "rmse": 0.0013120963693788147,
+      "relative_rmse": 0.0013237908765947911,
+      "max_absolute_error": 0.03697621822357178
+    },
+    {
+      "step": 2,
+      "mae": 0.001615319258168213,
+      "rmse": 0.0023817799145657496,
+      "relative_rmse": 0.0024350517966782496,
+      "max_absolute_error": 0.040802836418151855
+    },
+    {
+      "step": 3,
+      "mae": 0.002476092309309119,
+      "rmse": 0.0036120080298279933,
+      "relative_rmse": 0.003744436273724471,
+      "max_absolute_error": 0.04854702949523926
+    },
+    {
+      "step": 4,
+      "mae": 0.0033696071640746394,
+      "rmse": 0.004887596546681347,
+      "relative_rmse": 0.005141040103609673,
+      "max_absolute_error": 0.06505364179611206
+    },
+    {
+      "step": 5,
+      "mae": 0.004282943301593696,
+      "rmse": 0.0061530239337555396,
+      "relative_rmse": 0.006571529234289247,
+      "max_absolute_error": 0.0801692008972168
+    },
+    {
+      "step": 6,
+      "mae": 0.0052305204563264,
+      "rmse": 0.007438397262262948,
+      "relative_rmse": 0.008072171131754518,
+      "max_absolute_error": 0.09540188312530518
+    },
+    {
+      "step": 7,
+      "mae": 0.0062009505941258425,
+      "rmse": 0.00872337842565873,
+      "relative_rmse": 0.009625917256931288,
+      "max_absolute_error": 0.10820627212524414
+    },
+    {
+      "step": 8,
+      "mae": 0.007227662400213368,
+      "rmse": 0.010102644639155388,
+      "relative_rmse": 0.011343886776521376,
+      "max_absolute_error": 0.12201946973800659
+    },
+    {
+      "step": 9,
+      "mae": 0.008305155012131582,
+      "rmse": 0.011570791317572897,
+      "relative_rmse": 0.013230084919535473,
+      "max_absolute_error": 0.13975059986114502
+    },
+    {
+      "step": 10,
+      "mae": 0.009453079337570816,
+      "rmse": 0.013167668280554158,
+      "relative_rmse": 0.015341695802302734,
+      "max_absolute_error": 0.16896533966064453
+    },
+    {
+      "step": 11,
+      "mae": 0.010667349159697989,
+      "rmse": 0.01486188684869017,
+      "relative_rmse": 0.017654614739454018,
+      "max_absolute_error": 0.20419228076934814
+    },
+    {
+      "step": 12,
+      "mae": 0.011956826986240046,
+      "rmse": 0.016670326823908163,
+      "relative_rmse": 0.02019931842346601,
+      "max_absolute_error": 0.23726797103881836
+    },
+    {
+      "step": 13,
+      "mae": 0.013328909751031995,
+      "rmse": 0.018603492601067376,
+      "relative_rmse": 0.022997544435881305,
+      "max_absolute_error": 0.262099027633667
+    },
+    {
+      "step": 14,
+      "mae": 0.014801115488385586,
+      "rmse": 0.020684749839375748,
+      "relative_rmse": 0.026083313083155583,
+      "max_absolute_error": 0.3016422986984253
+    },
+    {
+      "step": 15,
+      "mae": 0.01639442733210657,
+      "rmse": 0.02295813636980664,
+      "relative_rmse": 0.029512176317886777,
+      "max_absolute_error": 0.34588903188705444
+    },
+    {
+      "step": 16,
+      "mae": 0.01813274130110661,
+      "rmse": 0.025458612714673607,
+      "relative_rmse": 0.03331796779609453,
+      "max_absolute_error": 0.39252620935440063
+    },
+    {
+      "step": 17,
+      "mae": 0.020030735051738875,
+      "rmse": 0.02821608465062654,
+      "relative_rmse": 0.03750635726804396,
+      "max_absolute_error": 0.4431389570236206
+    },
+    {
+      "step": 18,
+      "mae": 0.022119414680328815,
+      "rmse": 0.031290593027602134,
+      "relative_rmse": 0.042095057147763286,
+      "max_absolute_error": 0.49992185831069946
+    },
+    {
+      "step": 19,
+      "mae": 0.024449577611011335,
+      "rmse": 0.0347163869164269,
+      "relative_rmse": 0.04701900771850806,
+      "max_absolute_error": 0.5776128768920898
+    },
+    {
+      "step": 20,
+      "mae": 0.027040293075265048,
+      "rmse": 0.03856929304392717,
+      "relative_rmse": 0.05220516966290075,
+      "max_absolute_error": 0.6980368494987488
+    },
+    {
+      "step": 21,
+      "mae": 0.029980810180507245,
+      "rmse": 0.04296934390818169,
+      "relative_rmse": 0.05756603320726409,
+      "max_absolute_error": 0.827320396900177
+    },
+    {
+      "step": 22,
+      "mae": 0.03337785521011142,
+      "rmse": 0.04807809997306171,
+      "relative_rmse": 0.06298243240969888,
+      "max_absolute_error": 0.9659009575843811
+    },
+    {
+      "step": 23,
+      "mae": 0.03730600828970824,
+      "rmse": 0.05398083341797576,
+      "relative_rmse": 0.06816161973649036,
+      "max_absolute_error": 1.1154059767723083
+    },
+    {
+      "step": 24,
+      "mae": 0.04208293205885797,
+      "rmse": 0.06095968765170532,
+      "relative_rmse": 0.0730128595343661,
+      "max_absolute_error": 1.2721518278121948
+    },
+    {
+      "step": 25,
+      "mae": 0.047976259070224105,
+      "rmse": 0.06926180979315259,
+      "relative_rmse": 0.0773477779972589,
+      "max_absolute_error": 1.4541860818862915
+    },
+    {
+      "step": 26,
+      "mae": 0.055607321731695136,
+      "rmse": 0.07940390424276128,
+      "relative_rmse": 0.0813153776790177,
+      "max_absolute_error": 1.665873646736145
+    },
+    {
+      "step": 27,
+      "mae": 0.06484753594379485,
+      "rmse": 0.09106192896356471,
+      "relative_rmse": 0.08440651922679737,
+      "max_absolute_error": 1.8899755477905273
+    },
+    {
+      "step": 28,
+      "mae": 0.06547840656190716,
+      "rmse": 0.09182629916015951,
+      "relative_rmse": 0.08440181648854189,
+      "max_absolute_error": 1.9040685892105103
+    }
+  ],
+  "image": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-24-pixel4/generation_hybrid_low/pixel4_result.png",
+  "comparison_image": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-24-pixel4/generation_hybrid_low/comparison.png",
+  "scope": "One fixed person/garment pair and seed; cached garment features and image/text conditioning are precomputed. Neural models request OpenCL, while CPU handles CFG, Euler integration, tile stitching and posterior arithmetic. RSS is not exclusive GPU memory and may omit driver allocations. FP32 control shares FP16 garment feature cache.",
+  "host_mnn_control": {
+    "status": "completed_host_cpu_control",
+    "scope": "Same mixed MNN model and phone person latent; host CPU denoise/decode only, not phone performance or a full CPU pipeline.",
+    "versus_fp32": {
+      "decoder_latents": {
+        "mae": 0.0379091673841477,
+        "rmse": 0.05865530575553459,
+        "relative_rmse": 0.08666584387058172,
+        "max_absolute_error": 1.3261557221412659
+      },
+      "image": {
+        "mae": 0.024667607331705768,
+        "rmse": 0.05571524454524169,
+        "relative_rmse": 0.16638383105914908,
+        "max_absolute_error": 1.6773975491523743
+      }
+    },
+    "pixel4_versus_host": {
+      "decoder_latents": {
+        "mae": 0.016744297421524834,
+        "rmse": 0.031564158871318325,
+        "relative_rmse": 0.04761620026552488,
+        "max_absolute_error": 1.357254981994629
+      },
+      "image": {
+        "mae": 0.010864208973986014,
+        "rmse": 0.027199636095897834,
+        "relative_rmse": 0.07782702414707088,
+        "max_absolute_error": 1.588839828968048
+      }
+    }
+  },
+  "selection": "rejected_for_practical_pixel4_latency",
+  "validation_scope": "One person/garment/seed. Successful inference is not a general image-quality pass."
+}

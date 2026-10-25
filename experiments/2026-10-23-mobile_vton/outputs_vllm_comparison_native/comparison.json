@@ -1,0 +1,64 @@
+{
+  "baseline_metrics": "experiments/2026-10-23-mobile_vton/outputs_vllm_bf16_native/metrics.json",
+  "int4_metrics": "experiments/2026-10-23-mobile_vton/outputs_vllm_int4_native/metrics.json",
+  "matched_settings": {
+    "model_revision": "0063147c171518b391fff5e44d04555c12370c35",
+    "upstream_revision": "57410f20ac0e1703af795702e10473565feaa711",
+    "width": 768,
+    "height": 1024,
+    "steps": 28,
+    "seed": 42,
+    "guidance_scale": 2.5,
+    "scheduler_shift": 3.0,
+    "dtype": "bf16",
+    "device": "cuda"
+  },
+  "same_input_hashes": true,
+  "same_embedding_cache_sha256": "7ff8ec1f7f1da682d8cffa4fe034b15b7b6cd3ae70c51b480aa47c3efc76f4a1",
+  "output_difference": {
+    "mae_0_to_1": 0.012792332097887993,
+    "rmse_0_to_1": 0.024564115026209282,
+    "psnr_db": 32.193977552347626,
+    "meaning": "Difference from BF16 output; this is not accuracy against a reference try-on image."
+  },
+  "models": {
+    "bf16": {
+      "mean_pipeline_seconds": 14.98071459546918,
+      "pipeline_seconds_each_run": [
+        15.055918324971572,
+        14.90551086596679
+      ],
+      "warmup_steps": 1,
+      "model_tensor_storage_bytes": 1947473298,
+      "host_peak_rss_bytes": 2042138624,
+      "runtime": "NVIDIA GeForce RTX 3080 Laptop GPU",
+      "cuda_peak_allocated_bytes": 3376178688,
+      "cuda_peak_reserved_bytes": 4215275520,
+      "cuda_peak_allocated_bytes_before_benchmark": 3375384064
+    },
+    "int4": {
+      "mean_pipeline_seconds": 39.11303563899128,
+      "pipeline_seconds_each_run": [
+        36.89648001897149,
+        41.32959125901107
+      ],
+      "warmup_steps": 1,
+      "model_tensor_storage_bytes": 973108626,
+      "host_peak_rss_bytes": 2040418304,
+      "runtime": "NVIDIA GeForce RTX 3080 Laptop GPU",
+      "cuda_peak_allocated_bytes": 2410055168,
+      "cuda_peak_reserved_bytes": 3510632448,
+      "cuda_peak_allocated_bytes_before_benchmark": 2409973248
+    }
+  },
+  "tensor_storage_reduction_percent": 50.03224809298514,
+  "limits": [
+    "One person/garment pair with fixed seed; repeated timings do not establish dataset quality or phone performance.",
+    "Weight-only INT4 for both denoisers' Linear layers; other layers and activations keep their original dtype.",
+    "Host peak RSS includes model loading and quantization when performed in-process.",
+    "Desktop torchao checkpoint layouts are not Android/iOS deployment packages or phone memory measurements.",
+    "Shared desktop hardware may experience external contention; timing samples and warmup settings are reported explicitly.",
+    "CUDA allocated/reserved bytes describe PyTorch's GPU allocator, excluding driver/context and other processes. Host RSS is reported separately."
+  ],
+  "cuda_peak_allocated_reduction_percent": 28.615888235830244
+}

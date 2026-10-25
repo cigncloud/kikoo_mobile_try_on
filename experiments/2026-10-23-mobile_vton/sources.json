@@ -1,0 +1,10 @@
+{
+  "purpose": "Noncommercial local research smoke test; samples are excluded from Git.",
+  "model": "https://huggingface.co/FlashStight/Mobile-VTON/tree/0063147c171518b391fff5e44d04555c12370c35",
+  "code": "https://github.com/tmllab/2026_CVPR_Mobile-VTON/tree/57410f20ac0e1703af795702e10473565feaa711",
+  "sample_repository": "https://github.com/Zheng-Chong/CatVTON",
+  "sample_revision": "7818397f25613beedb3d861a34769f607cfcf3b1",
+  "person": "https://raw.githubusercontent.com/Zheng-Chong/CatVTON/7818397f25613beedb3d861a34769f607cfcf3b1/resource/demo/example/person/women/049713_0.jpg",
+  "garment": "https://raw.githubusercontent.com/Zheng-Chong/CatVTON/7818397f25613beedb3d861a34769f607cfcf3b1/resource/demo/example/condition/upper/21514384_52353349_1000.jpg",
+  "sample_license_note": "Upstream CatVTON repository states CC BY-NC-SA 4.0; product/person images may have separate rights. Do not redistribute or assume commercial clearance."
+}

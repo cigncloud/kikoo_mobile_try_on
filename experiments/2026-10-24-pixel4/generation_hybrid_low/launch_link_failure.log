@@ -1,0 +1,1 @@
+CANNOT LINK EXECUTABLE "../mnn_generation": library "libc++_shared.so" not found: needed by main executable

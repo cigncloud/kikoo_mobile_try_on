@@ -1,0 +1,128 @@
+{
+  "model": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-24-pixel4/exports/tryon_structural_int4_fp16_block32.mnn",
+  "backend": 0,
+  "gpu_mode": 80,
+  "runs": 1,
+  "inputs": [
+    {
+      "name": "sample",
+      "file": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-24-pixel4/exports/tryon_input_sample.f32"
+    },
+    {
+      "name": "timestep",
+      "file": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-24-pixel4/exports/tryon_input_timestep.f32"
+    },
+    {
+      "name": "text",
+      "file": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-24-pixel4/exports/tryon_input_text.f32"
+    },
+    {
+      "name": "image_embeds",
+      "file": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-24-pixel4/exports/tryon_input_image_embeds.f32"
+    },
+    {
+      "name": "feature_0",
+      "file": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-24-pixel4/exports/tryon_input_feature_0.f32"
+    },
+    {
+      "name": "feature_1",
+      "file": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-24-pixel4/exports/tryon_input_feature_1.f32"
+    },
+    {
+      "name": "feature_2",
+      "file": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-24-pixel4/exports/tryon_input_feature_2.f32"
+    },
+    {
+      "name": "feature_3",
+      "file": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-24-pixel4/exports/tryon_input_feature_3.f32"
+    },
+    {
+      "name": "feature_4",
+      "file": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-24-pixel4/exports/tryon_input_feature_4.f32"
+    },
+    {
+      "name": "feature_5",
+      "file": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-24-pixel4/exports/tryon_input_feature_5.f32"
+    },
+    {
+      "name": "feature_6",
+      "file": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-24-pixel4/exports/tryon_input_feature_6.f32"
+    },
+    {
+      "name": "feature_7",
+      "file": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-24-pixel4/exports/tryon_input_feature_7.f32"
+    },
+    {
+      "name": "feature_8",
+      "file": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-24-pixel4/exports/tryon_input_feature_8.f32"
+    },
+    {
+      "name": "feature_9",
+      "file": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-24-pixel4/exports/tryon_input_feature_9.f32"
+    },
+    {
+      "name": "feature_10",
+      "file": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-24-pixel4/exports/tryon_input_feature_10.f32"
+    },
+    {
+      "name": "feature_11",
+      "file": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-24-pixel4/exports/tryon_input_feature_11.f32"
+    },
+    {
+      "name": "feature_12",
+      "file": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-24-pixel4/exports/tryon_input_feature_12.f32"
+    },
+    {
+      "name": "feature_13",
+      "file": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-24-pixel4/exports/tryon_input_feature_13.f32"
+    },
+    {
+      "name": "feature_14",
+      "file": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-24-pixel4/exports/tryon_input_feature_14.f32"
+    },
+    {
+      "name": "feature_15",
+      "file": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-24-pixel4/exports/tryon_input_feature_15.f32"
+    },
+    {
+      "name": "feature_16",
+      "file": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-24-pixel4/exports/tryon_input_feature_16.f32"
+    },
+    {
+      "name": "feature_17",
+      "file": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-24-pixel4/exports/tryon_input_feature_17.f32"
+    },
+    {
+      "name": "feature_18",
+      "file": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-24-pixel4/exports/tryon_input_feature_18.f32"
+    },
+    {
+      "name": "feature_19",
+      "file": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-24-pixel4/exports/tryon_input_feature_19.f32"
+    },
+    {
+      "name": "feature_20",
+      "file": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-24-pixel4/exports/tryon_input_feature_20.f32"
+    },
+    {
+      "name": "feature_21",
+      "file": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-24-pixel4/exports/tryon_input_feature_21.f32"
+    },
+    {
+      "name": "feature_22",
+      "file": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-24-pixel4/exports/tryon_input_feature_22.f32"
+    },
+    {
+      "name": "feature_23",
+      "file": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-24-pixel4/exports/tryon_input_feature_23.f32"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output_0",
+      "file": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-24-pixel4/outputs_tryon_structural_int4_fp16_block32_host/tryon_structural_int4_fp16_block32_host_output_0.f32"
+    }
+  ],
+  "metrics": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-24-pixel4/outputs_tryon_structural_int4_fp16_block32_host/tryon_structural_int4_fp16_block32_host_metrics.json",
+  "precision": 2
+}

@@ -1,0 +1,1 @@
+{"source":"experiments/2026-10-23-mobile_vton/inputs/person.jpg","crop_xyxy":[144,0,624,640],"resize_wh":[192,256],"note":"Manual upper-body crop; not a learned preprocessing pipeline."}

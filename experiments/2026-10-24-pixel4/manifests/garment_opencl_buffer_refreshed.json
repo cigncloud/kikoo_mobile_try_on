@@ -1,0 +1,135 @@
+{
+  "model": "/data/local/tmp/mobile_tryon_20261024/garment_int4.mnn",
+  "backend": 3,
+  "gpu_mode": 80,
+  "runs": 3,
+  "inputs": [
+    {
+      "name": "cloth",
+      "file": "/data/local/tmp/mobile_tryon_20261024/garment_input_cloth.f32"
+    },
+    {
+      "name": "timestep",
+      "file": "/data/local/tmp/mobile_tryon_20261024/garment_input_timestep.f32"
+    },
+    {
+      "name": "text",
+      "file": "/data/local/tmp/mobile_tryon_20261024/garment_input_text.f32"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output_0",
+      "file": "/data/local/tmp/mobile_tryon_20261024/garment_opencl_buffer_refreshed_output_0.f32"
+    },
+    {
+      "name": "output_1",
+      "file": "/data/local/tmp/mobile_tryon_20261024/garment_opencl_buffer_refreshed_output_1.f32"
+    },
+    {
+      "name": "output_2",
+      "file": "/data/local/tmp/mobile_tryon_20261024/garment_opencl_buffer_refreshed_output_2.f32"
+    },
+    {
+      "name": "output_3",
+      "file": "/data/local/tmp/mobile_tryon_20261024/garment_opencl_buffer_refreshed_output_3.f32"
+    },
+    {
+      "name": "output_4",
+      "file": "/data/local/tmp/mobile_tryon_20261024/garment_opencl_buffer_refreshed_output_4.f32"
+    },
+    {
+      "name": "output_5",
+      "file": "/data/local/tmp/mobile_tryon_20261024/garment_opencl_buffer_refreshed_output_5.f32"
+    },
+    {
+      "name": "output_6",
+      "file": "/data/local/tmp/mobile_tryon_20261024/garment_opencl_buffer_refreshed_output_6.f32"
+    },
+    {
+      "name": "output_7",
+      "file": "/data/local/tmp/mobile_tryon_20261024/garment_opencl_buffer_refreshed_output_7.f32"
+    },
+    {
+      "name": "output_8",
+      "file": "/data/local/tmp/mobile_tryon_20261024/garment_opencl_buffer_refreshed_output_8.f32"
+    },
+    {
+      "name": "output_9",
+      "file": "/data/local/tmp/mobile_tryon_20261024/garment_opencl_buffer_refreshed_output_9.f32"
+    },
+    {
+      "name": "output_10",
+      "file": "/data/local/tmp/mobile_tryon_20261024/garment_opencl_buffer_refreshed_output_10.f32"
+    },
+    {
+      "name": "output_11",
+      "file": "/data/local/tmp/mobile_tryon_20261024/garment_opencl_buffer_refreshed_output_11.f32"
+    },
+    {
+      "name": "output_12",
+      "file": "/data/local/tmp/mobile_tryon_20261024/garment_opencl_buffer_refreshed_output_12.f32"
+    },
+    {
+      "name": "output_13",
+      "file": "/data/local/tmp/mobile_tryon_20261024/garment_opencl_buffer_refreshed_output_13.f32"
+    },
+    {
+      "name": "output_14",
+      "file": "/data/local/tmp/mobile_tryon_20261024/garment_opencl_buffer_refreshed_output_14.f32"
+    },
+    {
+      "name": "output_15",
+      "file": "/data/local/tmp/mobile_tryon_20261024/garment_opencl_buffer_refreshed_output_15.f32"
+    },
+    {
+      "name": "output_16",
+      "file": "/data/local/tmp/mobile_tryon_20261024/garment_opencl_buffer_refreshed_output_16.f32"
+    },
+    {
+      "name": "output_17",
+      "file": "/data/local/tmp/mobile_tryon_20261024/garment_opencl_buffer_refreshed_output_17.f32"
+    },
+    {
+      "name": "output_18",
+      "file": "/data/local/tmp/mobile_tryon_20261024/garment_opencl_buffer_refreshed_output_18.f32"
+    },
+    {
+      "name": "output_19",
+      "file": "/data/local/tmp/mobile_tryon_20261024/garment_opencl_buffer_refreshed_output_19.f32"
+    },
+    {
+      "name": "output_20",
+      "file": "/data/local/tmp/mobile_tryon_20261024/garment_opencl_buffer_refreshed_output_20.f32"
+    },
+    {
+      "name": "output_21",
+      "file": "/data/local/tmp/mobile_tryon_20261024/garment_opencl_buffer_refreshed_output_21.f32"
+    },
+    {
+      "name": "output_22",
+      "file": "/data/local/tmp/mobile_tryon_20261024/garment_opencl_buffer_refreshed_output_22.f32"
+    },
+    {
+      "name": "output_23",
+      "file": "/data/local/tmp/mobile_tryon_20261024/garment_opencl_buffer_refreshed_output_23.f32"
+    },
+    {
+      "name": "output_24",
+      "file": "/data/local/tmp/mobile_tryon_20261024/garment_opencl_buffer_refreshed_output_24.f32"
+    },
+    {
+      "name": "output_25",
+      "file": "/data/local/tmp/mobile_tryon_20261024/garment_opencl_buffer_refreshed_output_25.f32"
+    },
+    {
+      "name": "output_26",
+      "file": "/data/local/tmp/mobile_tryon_20261024/garment_opencl_buffer_refreshed_output_26.f32"
+    },
+    {
+      "name": "output_27",
+      "file": "/data/local/tmp/mobile_tryon_20261024/garment_opencl_buffer_refreshed_output_27.f32"
+    }
+  ],
+  "metrics": "/data/local/tmp/mobile_tryon_20261024/garment_opencl_buffer_refreshed_metrics.json"
+}

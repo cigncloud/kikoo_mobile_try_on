@@ -1,0 +1,35 @@
+{
+  "verified_utc": "2026-10-23T13:09:45Z",
+  "container_image": "vllm/vllm-openai@sha256:04563c302537a91aa49ebdfbceda96111c5712275999b7e8804fa598f0b5641d",
+  "container_image_id": "sha256:7f435fa6e65079f5b15bcefbee8d02220741c6857031f11292711e2ec07ca56a",
+  "runtime": "Pinned vLLM CUDA image running mounted PyTorch Python environment; no vLLM server",
+  "gpu": "NVIDIA GeForce RTX 3080 Laptop GPU",
+  "driver_version": "580.119.02",
+  "gpu_total_bytes_pytorch": 16723148800,
+  "python_environment": "/home/michaelk/miniconda3/envs/comfyui (read-only) plus repository .venv",
+  "packages": {
+    "torch": "2.7.1",
+    "torchvision": "0.22.1",
+    "diffusers": "0.34.0",
+    "transformers": "4.53.0",
+    "accelerate": "1.11.0",
+    "safetensors": "0.5.3",
+    "numpy": "1.26.4",
+    "pillow": "11.2.1",
+    "torchao": "0.10.0"
+  },
+  "source_revision_verified_on_host_with_git": "57410f20ac0e1703af795702e10473565feaa711",
+  "native_reload_source_revision_check": "git_head_files",
+  "initial_runs_source_check_note": "Initial image lacked git and runner recorded the configured revision. Actual checkout verified independently with host git and during native INT4 reload.",
+  "generation_jobs_sequential": true,
+  "hardware_exclusivity": "Shared desktop GPU; unrelated jobs were not stopped",
+  "resolution_width_height": [
+    768,
+    1024
+  ],
+  "resolution_adapter_applied": false,
+  "repeat_hashes_match_per_precision": true,
+  "int4_cuda_checkpoint_reload_hash_matches": true,
+  "int4_reloaded_metrics": "experiments/2026-10-23-mobile_vton/outputs_vllm_int4_native_reloaded/metrics.json",
+  "phone_inference_tested": false
+}

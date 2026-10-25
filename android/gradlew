@@ -1,0 +1,10 @@
+#!/bin/sh
+set -eu
+tryon_project_dir=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+if [ -f "$tryon_project_dir/local-build.env" ]; then
+    . "$tryon_project_dir/local-build.env"
+fi
+if [ -n "${TRYON_GRADLE_BIN:-}" ]; then
+    exec "$TRYON_GRADLE_BIN" "$@"
+fi
+exec java -classpath "$tryon_project_dir/gradle/wrapper/gradle-wrapper.jar" org.gradle.wrapper.GradleWrapperMain "$@"

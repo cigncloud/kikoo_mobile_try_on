@@ -1,0 +1,20 @@
+{
+  "model": "/data/local/tmp/mobile_tryon_20261024/vae_encoder_fp32.mnn",
+  "backend": 0,
+  "gpu_mode": 80,
+  "runs": 1,
+  "inputs": [
+    {
+      "name": "image",
+      "file": "/data/local/tmp/mobile_tryon_20261024/vae_encoder_input_image.f32"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output_0",
+      "file": "/data/local/tmp/mobile_tryon_20261024/vae_encoder_cpu_fp32_output_0.f32"
+    }
+  ],
+  "metrics": "/data/local/tmp/mobile_tryon_20261024/vae_encoder_cpu_fp32_metrics.json",
+  "precision": 1
+}

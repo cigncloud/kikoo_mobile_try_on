@@ -1,0 +1,402 @@
+[
+  {
+    "utc": "2026-10-24T06:17:38.503Z",
+    "completed_steps": 3,
+    "total_steps": 28,
+    "peak_rss_gib": 1.6033668518066406,
+    "mem_available_gib": 0.9942550659179688,
+    "temperature_c": 33.3,
+    "phone_tail": "step_3_unconditional seconds=27.3595 rss_bytes=1414406144\nstep_3_conditional seconds=27.3843 rss_bytes=1416089600\nstep_complete 3/28 wall_seconds=56.3129\nstep_4_unconditional seconds=27.0598 rss_bytes=1415483392\nVmRSS:\t 1386540 kB\nVmSwap:\t       0 kB\nphase=denoise timestamp=1792822657 mem_available_kb=1042552\nVmHWM:\t 1681252 kB\nVmRSS:\t 1381728 kB\nVmSwap:\t       0 kB\n  temperature: 333\n",
+    "host_tail": "step_complete 3/28 wall_seconds=34.4746\nstep_4_unconditional seconds=17.0602 rss_bytes=1784479744\n"
+  },
+  {
+    "utc": "2026-10-24T06:18:18.668Z",
+    "completed_steps": 4,
+    "total_steps": 28,
+    "peak_rss_gib": 1.6033668518066406,
+    "mem_available_gib": 0.9833145141601562,
+    "temperature_c": 33.8,
+    "phone_tail": "step_complete 3/28 wall_seconds=56.3129\nstep_4_unconditional seconds=27.0598 rss_bytes=1415483392\nstep_4_conditional seconds=27.0783 rss_bytes=1417453568\nstep_complete 4/28 wall_seconds=55.9051\nVmRSS:\t 1380172 kB\nVmSwap:\t       0 kB\nphase=denoise timestamp=1792822698 mem_available_kb=1031080\nVmHWM:\t 1681252 kB\nVmRSS:\t 1380164 kB\nVmSwap:\t       0 kB\n  temperature: 338\n",
+    "host_tail": "step_5_conditional seconds=17.7555 rss_bytes=1787232256\nstep_complete 5/28 wall_seconds=35.4441\n"
+  },
+  {
+    "utc": "2026-10-24T06:18:58.842Z",
+    "completed_steps": 4,
+    "total_steps": 28,
+    "peak_rss_gib": 1.6033668518066406,
+    "mem_available_gib": 0.9717292785644531,
+    "temperature_c": 34.4,
+    "phone_tail": "step_4_unconditional seconds=27.0598 rss_bytes=1415483392\nstep_4_conditional seconds=27.0783 rss_bytes=1417453568\nstep_complete 4/28 wall_seconds=55.9051\nstep_5_unconditional seconds=27.3794 rss_bytes=1415708672\nVmRSS:\t 1381456 kB\nVmSwap:\t       0 kB\nphase=denoise timestamp=1792822738 mem_available_kb=1018932\nVmHWM:\t 1681252 kB\nVmRSS:\t 1381160 kB\nVmSwap:\t       0 kB\n  temperature: 344\n",
+    "host_tail": "step_6_conditional seconds=17.0587 rss_bytes=1787232256\nstep_complete 6/28 wall_seconds=34.1464\n"
+  },
+  {
+    "utc": "2026-10-24T06:19:39.006Z",
+    "completed_steps": 5,
+    "total_steps": 28,
+    "peak_rss_gib": 1.6033668518066406,
+    "mem_available_gib": 0.9600410461425781,
+    "temperature_c": 34.4,
+    "phone_tail": "step_5_unconditional seconds=27.3794 rss_bytes=1415708672\nstep_5_conditional seconds=27.0862 rss_bytes=1417162752\nstep_complete 5/28 wall_seconds=56.11\nstep_6_unconditional seconds=26.943 rss_bytes=1415872512\nVmRSS:\t 1381048 kB\nVmSwap:\t       0 kB\nphase=denoise timestamp=1792822778 mem_available_kb=1006676\nVmHWM:\t 1681252 kB\nVmRSS:\t 1381048 kB\nVmSwap:\t       0 kB\n  temperature: 344\n",
+    "host_tail": "step_7_conditional seconds=16.9917 rss_bytes=1787232256\nstep_complete 7/28 wall_seconds=33.9244\n"
+  },
+  {
+    "utc": "2026-10-24T06:20:19.167Z",
+    "completed_steps": 6,
+    "total_steps": 28,
+    "peak_rss_gib": 1.6033668518066406,
+    "mem_available_gib": 0.9514350891113281,
+    "temperature_c": 35.3,
+    "phone_tail": "step_complete 5/28 wall_seconds=56.11\nstep_6_unconditional seconds=26.943 rss_bytes=1415872512\nstep_6_conditional seconds=27.2991 rss_bytes=1416323072\nstep_complete 6/28 wall_seconds=55.8155\nVmRSS:\t 1379280 kB\nVmSwap:\t       0 kB\nphase=denoise timestamp=1792822818 mem_available_kb=997652\nVmHWM:\t 1681252 kB\nVmRSS:\t 1379084 kB\nVmSwap:\t       0 kB\n  temperature: 353\n",
+    "host_tail": "step_complete 8/28 wall_seconds=34.2202\nstep_9_unconditional seconds=16.8095 rss_bytes=1784479744\n"
+  },
+  {
+    "utc": "2026-10-24T06:20:59.374Z",
+    "completed_steps": 7,
+    "total_steps": 28,
+    "peak_rss_gib": 1.6033668518066406,
+    "mem_available_gib": 1.0393905639648438,
+    "temperature_c": 35.6,
+    "phone_tail": "step_complete 6/28 wall_seconds=55.8155\nstep_7_unconditional seconds=26.8497 rss_bytes=1414639616\nstep_7_conditional seconds=27.0272 rss_bytes=1416368128\nstep_complete 7/28 wall_seconds=55.4232\nVmRSS:\t 1379160 kB\nVmSwap:\t       0 kB\nphase=denoise timestamp=1792822858 mem_available_kb=1089880\nVmHWM:\t 1681252 kB\nVmRSS:\t 1379112 kB\nVmSwap:\t       0 kB\n  temperature: 356\n",
+    "host_tail": "step_complete 9/28 wall_seconds=33.8314\nstep_10_unconditional seconds=16.7798 rss_bytes=1784479744\n"
+  },
+  {
+    "utc": "2026-10-24T06:21:39.568Z",
+    "completed_steps": 7,
+    "total_steps": 28,
+    "peak_rss_gib": 1.6033668518066406,
+    "mem_available_gib": 1.060821533203125,
+    "temperature_c": 35.6,
+    "phone_tail": "step_7_unconditional seconds=26.8497 rss_bytes=1414639616\nstep_7_conditional seconds=27.0272 rss_bytes=1416368128\nstep_complete 7/28 wall_seconds=55.4232\nstep_8_unconditional seconds=27.4465 rss_bytes=1414602752\nVmRSS:\t 1380784 kB\nVmSwap:\t       0 kB\nphase=denoise timestamp=1792822899 mem_available_kb=1112352\nVmHWM:\t 1681252 kB\nVmRSS:\t 1380768 kB\nVmSwap:\t       0 kB\n  temperature: 356\n",
+    "host_tail": "step_11_conditional seconds=16.8946 rss_bytes=1787232256\nstep_complete 11/28 wall_seconds=33.8244\n"
+  },
+  {
+    "utc": "2026-10-24T06:22:19.736Z",
+    "completed_steps": 8,
+    "total_steps": 28,
+    "peak_rss_gib": 1.6033668518066406,
+    "mem_available_gib": 1.0039520263671875,
+    "temperature_c": 36.1,
+    "phone_tail": "step_8_unconditional seconds=27.4465 rss_bytes=1414602752\nstep_8_conditional seconds=27.1053 rss_bytes=1415901184\nstep_complete 8/28 wall_seconds=56.0272\nstep_9_unconditional seconds=30.4519 rss_bytes=1414557696\nVmRSS:\t 1378652 kB\nVmSwap:\t       0 kB\nphase=denoise timestamp=1792822938 mem_available_kb=1052720\nVmHWM:\t 1681252 kB\nVmRSS:\t 1378500 kB\nVmSwap:\t       0 kB\n  temperature: 361\n",
+    "host_tail": "step_12_conditional seconds=17.2207 rss_bytes=1787232256\nstep_complete 12/28 wall_seconds=34.3686\n"
+  },
+  {
+    "utc": "2026-10-24T06:22:59.914Z",
+    "completed_steps": 9,
+    "total_steps": 28,
+    "peak_rss_gib": 1.6033668518066406,
+    "mem_available_gib": 0.9992904663085938,
+    "temperature_c": 36.6,
+    "phone_tail": "step_complete 8/28 wall_seconds=56.0272\nstep_9_unconditional seconds=30.4519 rss_bytes=1414557696\nstep_9_conditional seconds=31.3772 rss_bytes=1416081408\nstep_complete 9/28 wall_seconds=63.3738\nVmRSS:\t 1379028 kB\nVmSwap:\t       0 kB\nphase=denoise timestamp=1792822979 mem_available_kb=1047832\nVmHWM:\t 1681252 kB\nVmRSS:\t 1379028 kB\nVmSwap:\t       0 kB\n  temperature: 366\n",
+    "host_tail": "step_13_conditional seconds=16.8755 rss_bytes=1787232256\nstep_complete 13/28 wall_seconds=33.862\n"
+  },
+  {
+    "utc": "2026-10-24T06:23:40.086Z",
+    "completed_steps": 9,
+    "total_steps": 28,
+    "peak_rss_gib": 1.6033668518066406,
+    "mem_available_gib": 1.0045127868652344,
+    "temperature_c": 36.6,
+    "phone_tail": "step_9_unconditional seconds=30.4519 rss_bytes=1414557696\nstep_9_conditional seconds=31.3772 rss_bytes=1416081408\nstep_complete 9/28 wall_seconds=63.3738\nstep_10_unconditional seconds=26.7342 rss_bytes=1414651904\nVmRSS:\t 1380540 kB\nVmSwap:\t       0 kB\nphase=denoise timestamp=1792823019 mem_available_kb=1053308\nVmHWM:\t 1681252 kB\nVmRSS:\t 1380536 kB\nVmSwap:\t       0 kB\n  temperature: 366\n",
+    "host_tail": "step_complete 14/28 wall_seconds=34.0261\nstep_15_unconditional seconds=16.9229 rss_bytes=1784479744\n"
+  },
+  {
+    "utc": "2026-10-24T06:24:20.251Z",
+    "completed_steps": 10,
+    "total_steps": 28,
+    "peak_rss_gib": 1.6033668518066406,
+    "mem_available_gib": 0.9883079528808594,
+    "temperature_c": 36.9,
+    "phone_tail": "step_10_unconditional seconds=26.7342 rss_bytes=1414651904\nstep_10_conditional seconds=27.2416 rss_bytes=1415942144\nstep_complete 10/28 wall_seconds=55.3982\nstep_11_unconditional seconds=27.6926 rss_bytes=1414406144\nVmRSS:\t 1380640 kB\nVmSwap:\t       0 kB\nphase=denoise timestamp=1792823059 mem_available_kb=1036316\nVmHWM:\t 1681252 kB\nVmRSS:\t 1380640 kB\nVmSwap:\t       0 kB\n  temperature: 369\n",
+    "host_tail": "step_complete 15/28 wall_seconds=34.1894\nstep_16_unconditional seconds=16.8218 rss_bytes=1784479744\n"
+  },
+  {
+    "utc": "2026-10-24T06:25:00.416Z",
+    "completed_steps": 11,
+    "total_steps": 28,
+    "peak_rss_gib": 1.6033668518066406,
+    "mem_available_gib": 0.9775466918945312,
+    "temperature_c": 37.2,
+    "phone_tail": "step_complete 10/28 wall_seconds=55.3982\nstep_11_unconditional seconds=27.6926 rss_bytes=1414406144\nstep_11_conditional seconds=28.4212 rss_bytes=1415983104\nstep_complete 11/28 wall_seconds=57.6606\nVmRSS:\t 1379076 kB\nVmSwap:\t       0 kB\nphase=denoise timestamp=1792823099 mem_available_kb=1025032\nVmHWM:\t 1681252 kB\nVmRSS:\t 1379068 kB\nVmSwap:\t       0 kB\n  temperature: 372\n",
+    "host_tail": "step_complete 16/28 wall_seconds=33.9136\nstep_17_unconditional seconds=16.7108 rss_bytes=1784479744\n"
+  },
+  {
+    "utc": "2026-10-24T06:25:40.593Z",
+    "completed_steps": 11,
+    "total_steps": 28,
+    "peak_rss_gib": 1.6033668518066406,
+    "mem_available_gib": 0.9686851501464844,
+    "temperature_c": 37.2,
+    "phone_tail": "step_11_unconditional seconds=27.6926 rss_bytes=1414406144\nstep_11_conditional seconds=28.4212 rss_bytes=1415983104\nstep_complete 11/28 wall_seconds=57.6606\nstep_12_unconditional seconds=32.9964 rss_bytes=1414610944\nVmRSS:\t 1380508 kB\nVmSwap:\t       0 kB\nphase=denoise timestamp=1792823139 mem_available_kb=1015740\nVmHWM:\t 1681252 kB\nVmRSS:\t 1380508 kB\nVmSwap:\t       0 kB\n  temperature: 372\n",
+    "host_tail": "step_18_conditional seconds=16.9355 rss_bytes=1787232256\nstep_complete 18/28 wall_seconds=33.8719\n"
+  },
+  {
+    "utc": "2026-10-24T06:26:20.753Z",
+    "completed_steps": 12,
+    "total_steps": 28,
+    "peak_rss_gib": 1.6033668518066406,
+    "mem_available_gib": 0.9827194213867188,
+    "temperature_c": 37.5,
+    "phone_tail": "step_12_unconditional seconds=32.9964 rss_bytes=1414610944\nstep_12_conditional seconds=30.0246 rss_bytes=1416110080\nstep_complete 12/28 wall_seconds=64.756\nstep_13_unconditional seconds=27.7493 rss_bytes=1414324224\nVmRSS:\t 1380564 kB\nVmSwap:\t       0 kB\nphase=denoise timestamp=1792823180 mem_available_kb=1030456\nVmHWM:\t 1681252 kB\nVmRSS:\t 1380560 kB\nVmSwap:\t       0 kB\n  temperature: 375\n",
+    "host_tail": "step_19_conditional seconds=16.7697 rss_bytes=1787232256\nstep_complete 19/28 wall_seconds=33.9619\n"
+  },
+  {
+    "utc": "2026-10-24T06:27:00.912Z",
+    "completed_steps": 13,
+    "total_steps": 28,
+    "peak_rss_gib": 1.6033668518066406,
+    "mem_available_gib": 0.9766082763671875,
+    "temperature_c": 37.6,
+    "phone_tail": "step_complete 12/28 wall_seconds=64.756\nstep_13_unconditional seconds=27.7493 rss_bytes=1414324224\nstep_13_conditional seconds=27.9712 rss_bytes=1416056832\nstep_complete 13/28 wall_seconds=57.3416\nVmRSS:\t 1379000 kB\nVmSwap:\t       0 kB\nphase=denoise timestamp=1792823220 mem_available_kb=1024048\nVmHWM:\t 1681252 kB\nVmRSS:\t 1378992 kB\nVmSwap:\t       0 kB\n  temperature: 376\n",
+    "host_tail": "step_complete 20/28 wall_seconds=33.7045\nstep_21_unconditional seconds=16.6693 rss_bytes=1784479744\n"
+  },
+  {
+    "utc": "2026-10-24T06:27:41.089Z",
+    "completed_steps": 13,
+    "total_steps": 28,
+    "peak_rss_gib": 1.6033668518066406,
+    "mem_available_gib": 0.9933853149414062,
+    "temperature_c": 37.6,
+    "phone_tail": "step_13_unconditional seconds=27.7493 rss_bytes=1414324224\nstep_13_conditional seconds=27.9712 rss_bytes=1416056832\nstep_complete 13/28 wall_seconds=57.3416\nstep_14_unconditional seconds=31.3083 rss_bytes=1414324224\nVmRSS:\t 1380712 kB\nVmSwap:\t       0 kB\nphase=denoise timestamp=1792823259 mem_available_kb=1041640\nVmHWM:\t 1681252 kB\nVmRSS:\t 1380712 kB\nVmSwap:\t       0 kB\n  temperature: 376\n",
+    "host_tail": "step_complete 21/28 wall_seconds=33.6415\nstep_22_unconditional seconds=16.7909 rss_bytes=1784479744\n"
+  },
+  {
+    "utc": "2026-10-24T06:28:21.260Z",
+    "completed_steps": 14,
+    "total_steps": 28,
+    "peak_rss_gib": 1.6033668518066406,
+    "mem_available_gib": 0.9425201416015625,
+    "temperature_c": 37.8,
+    "phone_tail": "step_complete 13/28 wall_seconds=57.3416\nstep_14_unconditional seconds=31.3083 rss_bytes=1414324224\nstep_14_conditional seconds=32.9608 rss_bytes=1415880704\nstep_complete 14/28 wall_seconds=65.9722\nVmRSS:\t 1379144 kB\nVmSwap:\t       0 kB\nphase=denoise timestamp=1792823300 mem_available_kb=988304\nVmHWM:\t 1681252 kB\nVmRSS:\t 1379112 kB\nVmSwap:\t       0 kB\n  temperature: 378\n",
+    "host_tail": "step_complete 22/28 wall_seconds=34.1236\nstep_23_unconditional seconds=16.8571 rss_bytes=1784479744\n"
+  },
+  {
+    "utc": "2026-10-24T06:29:01.426Z",
+    "completed_steps": 15,
+    "total_steps": 28,
+    "peak_rss_gib": 1.6033668518066406,
+    "mem_available_gib": 0.9455337524414062,
+    "temperature_c": 37.9,
+    "phone_tail": "step_complete 14/28 wall_seconds=65.9722\nstep_15_unconditional seconds=32.9963 rss_bytes=1414488064\nstep_15_conditional seconds=27.3819 rss_bytes=1415954432\nstep_complete 15/28 wall_seconds=61.9497\nVmRSS:\t 1379080 kB\nVmSwap:\t       0 kB\nphase=denoise timestamp=1792823340 mem_available_kb=991464\nVmHWM:\t 1681252 kB\nVmRSS:\t 1379076 kB\nVmSwap:\t       0 kB\n  temperature: 379\n",
+    "host_tail": "step_24_conditional seconds=16.9391 rss_bytes=1787232256\nstep_complete 24/28 wall_seconds=33.9055\n"
+  },
+  {
+    "utc": "2026-10-24T06:29:41.589Z",
+    "completed_steps": 15,
+    "total_steps": 28,
+    "peak_rss_gib": 1.6033668518066406,
+    "mem_available_gib": 0.9789047241210938,
+    "temperature_c": 37.9,
+    "phone_tail": "step_15_unconditional seconds=32.9963 rss_bytes=1414488064\nstep_15_conditional seconds=27.3819 rss_bytes=1415954432\nstep_complete 15/28 wall_seconds=61.9497\nstep_16_unconditional seconds=26.8516 rss_bytes=1414320128\nVmRSS:\t 1380544 kB\nVmSwap:\t       0 kB\nphase=denoise timestamp=1792823381 mem_available_kb=1026456\nVmHWM:\t 1681252 kB\nVmRSS:\t 1380544 kB\nVmSwap:\t       0 kB\n  temperature: 379\n",
+    "host_tail": "step_25_conditional seconds=17.0083 rss_bytes=1787232256\nstep_complete 25/28 wall_seconds=34.0542\n"
+  },
+  {
+    "utc": "2026-10-24T06:30:21.753Z",
+    "completed_steps": 16,
+    "total_steps": 28,
+    "peak_rss_gib": 1.6033668518066406,
+    "mem_available_gib": 1.0625190734863281,
+    "temperature_c": 37.9,
+    "phone_tail": "step_complete 15/28 wall_seconds=61.9497\nstep_16_unconditional seconds=26.8516 rss_bytes=1414320128\nstep_16_conditional seconds=28.1618 rss_bytes=1416163328\nstep_complete 16/28 wall_seconds=56.6607\nVmRSS:\t 1378972 kB\nVmSwap:\t       0 kB\nphase=denoise timestamp=1792823421 mem_available_kb=1114132\nVmHWM:\t 1681252 kB\nVmRSS:\t 1378776 kB\nVmSwap:\t       0 kB\n  temperature: 379\n",
+    "host_tail": "step_26_conditional seconds=17.0676 rss_bytes=1787232256\nstep_complete 26/28 wall_seconds=34.2907\n"
+  },
+  {
+    "utc": "2026-10-24T06:31:01.913Z",
+    "completed_steps": 17,
+    "total_steps": 28,
+    "peak_rss_gib": 1.6033668518066406,
+    "mem_available_gib": 1.32086181640625,
+    "temperature_c": 38.1,
+    "phone_tail": "step_complete 16/28 wall_seconds=56.6607\nstep_17_unconditional seconds=31.5968 rss_bytes=1414311936\nstep_17_conditional seconds=33.0121 rss_bytes=1416118272\nstep_complete 17/28 wall_seconds=66.2347\nVmRSS:\t 1379056 kB\nVmSwap:\t       0 kB\nphase=denoise timestamp=1792823460 mem_available_kb=1385024\nVmHWM:\t 1681252 kB\nVmRSS:\t 1379040 kB\nVmSwap:\t       0 kB\n  temperature: 381\n",
+    "host_tail": "step_complete 27/28 wall_seconds=33.8555\nstep_28_unconditional seconds=16.7596 rss_bytes=1784479744\n"
+  },
+  {
+    "utc": "2026-10-24T06:31:42.053Z",
+    "completed_steps": 17,
+    "total_steps": 28,
+    "peak_rss_gib": 1.6033668518066406,
+    "mem_available_gib": 1.3284492492675781,
+    "temperature_c": 38.1,
+    "phone_tail": "step_17_unconditional seconds=31.5968 rss_bytes=1414311936\nstep_17_conditional seconds=33.0121 rss_bytes=1416118272\nstep_complete 17/28 wall_seconds=66.2347\nstep_18_unconditional seconds=27.9812 rss_bytes=1414615040\nVmRSS:\t 1380552 kB\nVmSwap:\t       0 kB\nphase=denoise timestamp=1792823501 mem_available_kb=1392980\nVmHWM:\t 1681252 kB\nVmRSS:\t 1380552 kB\nVmSwap:\t       0 kB\n  temperature: 381\n",
+    "host_tail": "step_28_conditional seconds=17.0163 rss_bytes=1787232256\nstep_complete 28/28 wall_seconds=33.9021\n"
+  },
+  {
+    "utc": "2026-10-24T06:32:22.190Z",
+    "completed_steps": 18,
+    "total_steps": 28,
+    "peak_rss_gib": 1.6033668518066406,
+    "mem_available_gib": 1.3192481994628906,
+    "temperature_c": 38.1,
+    "phone_tail": "step_complete 17/28 wall_seconds=66.2347\nstep_18_unconditional seconds=27.9812 rss_bytes=1414615040\nstep_18_conditional seconds=27.7081 rss_bytes=1415970816\nstep_complete 18/28 wall_seconds=57.3774\nVmRSS:\t 1378840 kB\nVmSwap:\t       0 kB\nphase=denoise timestamp=1792823541 mem_available_kb=1383332\nVmHWM:\t 1681252 kB\nVmRSS:\t 1378680 kB\nVmSwap:\t       0 kB\n  temperature: 381\n",
+    "host_tail": "step_28_conditional seconds=17.0163 rss_bytes=1787232256\nstep_complete 28/28 wall_seconds=33.9021\n"
+  },
+  {
+    "utc": "2026-10-24T06:33:02.336Z",
+    "completed_steps": 19,
+    "total_steps": 28,
+    "peak_rss_gib": 1.6033668518066406,
+    "mem_available_gib": 1.3113327026367188,
+    "temperature_c": 38.1,
+    "phone_tail": "step_complete 18/28 wall_seconds=57.3774\nstep_19_unconditional seconds=29.065 rss_bytes=1414610944\nstep_19_conditional seconds=33.0021 rss_bytes=1415933952\nstep_complete 19/28 wall_seconds=63.6673\nVmRSS:\t 1379088 kB\nVmSwap:\t       0 kB\nphase=denoise timestamp=1792823581 mem_available_kb=1375032\nVmHWM:\t 1681252 kB\nVmRSS:\t 1379084 kB\nVmSwap:\t       0 kB\n  temperature: 381\n",
+    "host_tail": "step_28_conditional seconds=17.0163 rss_bytes=1787232256\nstep_complete 28/28 wall_seconds=33.9021\n"
+  },
+  {
+    "utc": "2026-10-24T06:33:42.463Z",
+    "completed_steps": 19,
+    "total_steps": 28,
+    "peak_rss_gib": 1.6033668518066406,
+    "mem_available_gib": 1.3219718933105469,
+    "temperature_c": 38.1,
+    "phone_tail": "step_19_unconditional seconds=29.065 rss_bytes=1414610944\nstep_19_conditional seconds=33.0021 rss_bytes=1415933952\nstep_complete 19/28 wall_seconds=63.6673\nstep_20_unconditional seconds=29.1734 rss_bytes=1414393856\nVmRSS:\t 1380564 kB\nVmSwap:\t       0 kB\nphase=denoise timestamp=1792823621 mem_available_kb=1386188\nVmHWM:\t 1681252 kB\nVmRSS:\t 1380564 kB\nVmSwap:\t       0 kB\n  temperature: 381\n",
+    "host_tail": "step_28_conditional seconds=17.0163 rss_bytes=1787232256\nstep_complete 28/28 wall_seconds=33.9021\n"
+  },
+  {
+    "utc": "2026-10-24T06:34:22.603Z",
+    "completed_steps": 20,
+    "total_steps": 28,
+    "peak_rss_gib": 1.6033668518066406,
+    "mem_available_gib": 1.3143997192382812,
+    "temperature_c": 38.2,
+    "phone_tail": "step_complete 19/28 wall_seconds=63.6673\nstep_20_unconditional seconds=29.1734 rss_bytes=1414393856\nstep_20_conditional seconds=27.4033 rss_bytes=1415974912\nstep_complete 20/28 wall_seconds=58.3596\nVmRSS:\t 1378972 kB\nVmSwap:\t       0 kB\nphase=denoise timestamp=1792823661 mem_available_kb=1378248\nVmHWM:\t 1681252 kB\nVmRSS:\t 1378896 kB\nVmSwap:\t       0 kB\n  temperature: 382\n",
+    "host_tail": "step_28_conditional seconds=17.0163 rss_bytes=1787232256\nstep_complete 28/28 wall_seconds=33.9021\n"
+  },
+  {
+    "utc": "2026-10-24T06:35:02.745Z",
+    "completed_steps": 21,
+    "total_steps": 28,
+    "peak_rss_gib": 1.6033668518066406,
+    "mem_available_gib": 1.319366455078125,
+    "temperature_c": 38.2,
+    "phone_tail": "step_complete 20/28 wall_seconds=58.3596\nstep_21_unconditional seconds=29.4965 rss_bytes=1414582272\nstep_21_conditional seconds=33.0402 rss_bytes=1416085504\nstep_complete 21/28 wall_seconds=64.1644\nVmRSS:\t 1379060 kB\nVmSwap:\t       0 kB\nphase=denoise timestamp=1792823702 mem_available_kb=1383456\nVmHWM:\t 1681252 kB\nVmRSS:\t 1379060 kB\nVmSwap:\t       0 kB\n  temperature: 382\n",
+    "host_tail": "step_28_conditional seconds=17.0163 rss_bytes=1787232256\nstep_complete 28/28 wall_seconds=33.9021\n"
+  },
+  {
+    "utc": "2026-10-24T06:35:42.874Z",
+    "completed_steps": 21,
+    "total_steps": 28,
+    "peak_rss_gib": 1.6033668518066406,
+    "mem_available_gib": 1.3104782104492188,
+    "temperature_c": 38.2,
+    "phone_tail": "step_21_unconditional seconds=29.4965 rss_bytes=1414582272\nstep_21_conditional seconds=33.0402 rss_bytes=1416085504\nstep_complete 21/28 wall_seconds=64.1644\nstep_22_unconditional seconds=32.4223 rss_bytes=1414299648\nVmRSS:\t 1380620 kB\nVmSwap:\t       0 kB\nphase=denoise timestamp=1792823742 mem_available_kb=1374136\nVmHWM:\t 1681252 kB\nVmRSS:\t 1380596 kB\nVmSwap:\t       0 kB\n  temperature: 382\n",
+    "host_tail": "step_28_conditional seconds=17.0163 rss_bytes=1787232256\nstep_complete 28/28 wall_seconds=33.9021\n"
+  },
+  {
+    "utc": "2026-10-24T06:36:23.012Z",
+    "completed_steps": 22,
+    "total_steps": 28,
+    "peak_rss_gib": 1.6033668518066406,
+    "mem_available_gib": 1.2836761474609375,
+    "temperature_c": 38.2,
+    "phone_tail": "step_complete 21/28 wall_seconds=64.1644\nstep_22_unconditional seconds=32.4223 rss_bytes=1414299648\nstep_22_conditional seconds=27.4398 rss_bytes=1415995392\nstep_complete 22/28 wall_seconds=61.5945\nVmRSS:\t 1379208 kB\nVmSwap:\t       0 kB\nphase=denoise timestamp=1792823782 mem_available_kb=1346032\nVmHWM:\t 1681252 kB\nVmRSS:\t 1379200 kB\nVmSwap:\t       0 kB\n  temperature: 382\n",
+    "host_tail": "step_28_conditional seconds=17.0163 rss_bytes=1787232256\nstep_complete 28/28 wall_seconds=33.9021\n"
+  },
+  {
+    "utc": "2026-10-24T06:37:03.147Z",
+    "completed_steps": 22,
+    "total_steps": 28,
+    "peak_rss_gib": 1.6033668518066406,
+    "mem_available_gib": 1.3051033020019531,
+    "temperature_c": 38.3,
+    "phone_tail": "step_22_unconditional seconds=32.4223 rss_bytes=1414299648\nstep_22_conditional seconds=27.4398 rss_bytes=1415995392\nstep_complete 22/28 wall_seconds=61.5945\nstep_23_unconditional seconds=32.0419 rss_bytes=1414492160\nVmRSS:\t 1380488 kB\nVmSwap:\t       0 kB\nphase=denoise timestamp=1792823822 mem_available_kb=1368500\nVmHWM:\t 1681252 kB\nVmRSS:\t 1380480 kB\nVmSwap:\t       0 kB\n  temperature: 383\n",
+    "host_tail": "step_28_conditional seconds=17.0163 rss_bytes=1787232256\nstep_complete 28/28 wall_seconds=33.9021\n"
+  },
+  {
+    "utc": "2026-10-24T06:37:43.286Z",
+    "completed_steps": 23,
+    "total_steps": 28,
+    "peak_rss_gib": 1.6033668518066406,
+    "mem_available_gib": 1.3388328552246094,
+    "temperature_c": 38.3,
+    "phone_tail": "step_23_unconditional seconds=32.0419 rss_bytes=1414492160\nstep_23_conditional seconds=32.937 rss_bytes=1415917568\nstep_complete 23/28 wall_seconds=66.7628\nstep_24_unconditional seconds=32.951 rss_bytes=1414574080\nVmRSS:\t 1378252 kB\nVmSwap:\t       0 kB\nphase=denoise timestamp=1792823863 mem_available_kb=1403868\nVmHWM:\t 1681252 kB\nVmRSS:\t 1385420 kB\nVmSwap:\t       0 kB\n  temperature: 383\n",
+    "host_tail": "step_28_conditional seconds=17.0163 rss_bytes=1787232256\nstep_complete 28/28 wall_seconds=33.9021\n"
+  },
+  {
+    "utc": "2026-10-24T06:38:23.418Z",
+    "completed_steps": 24,
+    "total_steps": 28,
+    "peak_rss_gib": 1.6033668518066406,
+    "mem_available_gib": 1.3286018371582031,
+    "temperature_c": 38.3,
+    "phone_tail": "step_complete 23/28 wall_seconds=66.7628\nstep_24_unconditional seconds=32.951 rss_bytes=1414574080\nstep_24_conditional seconds=32.9419 rss_bytes=1415888896\nstep_complete 24/28 wall_seconds=67.4487\nVmRSS:\t 1379036 kB\nVmSwap:\t       0 kB\nphase=denoise timestamp=1792823903 mem_available_kb=1393140\nVmHWM:\t 1681252 kB\nVmRSS:\t 1379036 kB\nVmSwap:\t       0 kB\n  temperature: 383\n",
+    "host_tail": "step_28_conditional seconds=17.0163 rss_bytes=1787232256\nstep_complete 28/28 wall_seconds=33.9021\n"
+  },
+  {
+    "utc": "2026-10-24T06:39:03.553Z",
+    "completed_steps": 24,
+    "total_steps": 28,
+    "peak_rss_gib": 1.6033668518066406,
+    "mem_available_gib": 1.3656692504882812,
+    "temperature_c": 38.3,
+    "phone_tail": "step_24_unconditional seconds=32.951 rss_bytes=1414574080\nstep_24_conditional seconds=32.9419 rss_bytes=1415888896\nstep_complete 24/28 wall_seconds=67.4487\nstep_25_unconditional seconds=32.8945 rss_bytes=1414463488\nVmRSS:\t 1380540 kB\nVmSwap:\t       0 kB\nphase=denoise timestamp=1792823942 mem_available_kb=1432008\nVmHWM:\t 1681252 kB\nVmRSS:\t 1380540 kB\nVmSwap:\t       0 kB\n  temperature: 383\n",
+    "host_tail": "step_28_conditional seconds=17.0163 rss_bytes=1787232256\nstep_complete 28/28 wall_seconds=33.9021\n"
+  },
+  {
+    "utc": "2026-10-24T06:39:43.684Z",
+    "completed_steps": 25,
+    "total_steps": 28,
+    "peak_rss_gib": 1.6033668518066406,
+    "mem_available_gib": 1.3607101440429688,
+    "temperature_c": 38.3,
+    "phone_tail": "step_complete 24/28 wall_seconds=67.4487\nstep_25_unconditional seconds=32.8945 rss_bytes=1414463488\nstep_25_conditional seconds=32.9571 rss_bytes=1416097792\nstep_complete 25/28 wall_seconds=67.3868\nVmRSS:\t 1378948 kB\nVmSwap:\t       0 kB\nphase=denoise timestamp=1792823982 mem_available_kb=1426808\nVmHWM:\t 1681252 kB\nVmRSS:\t 1378940 kB\nVmSwap:\t       0 kB\n  temperature: 383\n",
+    "host_tail": "step_28_conditional seconds=17.0163 rss_bytes=1787232256\nstep_complete 28/28 wall_seconds=33.9021\n"
+  },
+  {
+    "utc": "2026-10-24T06:40:23.830Z",
+    "completed_steps": 25,
+    "total_steps": 28,
+    "peak_rss_gib": 1.6033668518066406,
+    "mem_available_gib": 1.3464126586914062,
+    "temperature_c": 38.2,
+    "phone_tail": "step_25_unconditional seconds=32.8945 rss_bytes=1414463488\nstep_25_conditional seconds=32.9571 rss_bytes=1416097792\nstep_complete 25/28 wall_seconds=67.3868\nstep_26_unconditional seconds=32.9369 rss_bytes=1414307840\nVmRSS:\t 1380732 kB\nVmSwap:\t       0 kB\nphase=denoise timestamp=1792824022 mem_available_kb=1411816\nVmHWM:\t 1681252 kB\nVmRSS:\t 1380616 kB\nVmSwap:\t       0 kB\n  temperature: 382\n",
+    "host_tail": "step_28_conditional seconds=17.0163 rss_bytes=1787232256\nstep_complete 28/28 wall_seconds=33.9021\n"
+  },
+  {
+    "utc": "2026-10-24T06:41:03.962Z",
+    "completed_steps": 26,
+    "total_steps": 28,
+    "peak_rss_gib": 1.6033668518066406,
+    "mem_available_gib": 1.3391799926757812,
+    "temperature_c": 38.1,
+    "phone_tail": "step_26_unconditional seconds=32.9369 rss_bytes=1414307840\nstep_26_conditional seconds=28.7542 rss_bytes=1415892992\nstep_complete 26/28 wall_seconds=63.3006\nstep_27_unconditional seconds=27.4417 rss_bytes=1414344704\nVmRSS:\t 1380584 kB\nVmSwap:\t       0 kB\nphase=denoise timestamp=1792824063 mem_available_kb=1404232\nVmHWM:\t 1681252 kB\nVmRSS:\t 1380580 kB\nVmSwap:\t       0 kB\n  temperature: 381\n",
+    "host_tail": "step_28_conditional seconds=17.0163 rss_bytes=1787232256\nstep_complete 28/28 wall_seconds=33.9021\n"
+  },
+  {
+    "utc": "2026-10-24T06:41:44.094Z",
+    "completed_steps": 27,
+    "total_steps": 28,
+    "peak_rss_gib": 1.6033668518066406,
+    "mem_available_gib": 1.3354530334472656,
+    "temperature_c": 38.1,
+    "phone_tail": "step_complete 26/28 wall_seconds=63.3006\nstep_27_unconditional seconds=27.4417 rss_bytes=1414344704\nstep_27_conditional seconds=32.9434 rss_bytes=1415917568\nstep_complete 27/28 wall_seconds=62.0094\nVmRSS:\t 1378992 kB\nVmSwap:\t       0 kB\nphase=denoise timestamp=1792824103 mem_available_kb=1400324\nVmHWM:\t 1681252 kB\nVmRSS:\t 1378992 kB\nVmSwap:\t       0 kB\n  temperature: 381\n",
+    "host_tail": "step_28_conditional seconds=17.0163 rss_bytes=1787232256\nstep_complete 28/28 wall_seconds=33.9021\n"
+  },
+  {
+    "utc": "2026-10-24T06:42:24.238Z",
+    "completed_steps": 27,
+    "total_steps": 28,
+    "peak_rss_gib": 1.6033668518066406,
+    "mem_available_gib": 1.3522682189941406,
+    "temperature_c": 38.1,
+    "phone_tail": "step_27_unconditional seconds=27.4417 rss_bytes=1414344704\nstep_27_conditional seconds=32.9434 rss_bytes=1415917568\nstep_complete 27/28 wall_seconds=62.0094\nstep_28_unconditional seconds=32.9408 rss_bytes=1414549504\nVmRSS:\t 1380464 kB\nVmSwap:\t       0 kB\nphase=denoise timestamp=1792824143 mem_available_kb=1417956\nVmHWM:\t 1681252 kB\nVmRSS:\t 1380460 kB\nVmSwap:\t       0 kB\n  temperature: 381\n",
+    "host_tail": "step_28_conditional seconds=17.0163 rss_bytes=1787232256\nstep_complete 28/28 wall_seconds=33.9021\n"
+  },
+  {
+    "utc": "2026-10-24T06:43:04.374Z",
+    "completed_steps": 28,
+    "total_steps": 28,
+    "peak_rss_gib": 0.4942359924316406,
+    "mem_available_gib": 1.3575057983398438,
+    "temperature_c": 38.1,
+    "phone_tail": "step_complete 27/28 wall_seconds=62.0094\nstep_28_unconditional seconds=32.9408 rss_bytes=1414549504\nstep_28_conditional seconds=32.9214 rss_bytes=1416114176\nstep_complete 28/28 wall_seconds=67.5523\nVmRSS:\t  517344 kB\nVmSwap:\t       0 kB\nphase=decode timestamp=1792824184 mem_available_kb=1423448\nVmHWM:\t  518244 kB\nVmRSS:\t  517344 kB\nVmSwap:\t       0 kB\n  temperature: 381\n",
+    "host_tail": "step_28_conditional seconds=17.0163 rss_bytes=1787232256\nstep_complete 28/28 wall_seconds=33.9021\n"
+  },
+  {
+    "utc": "2026-10-24T06:43:44.501Z",
+    "completed_steps": 28,
+    "total_steps": 28,
+    "peak_rss_gib": 0.8966331481933594,
+    "mem_available_gib": 1.3662338256835938,
+    "temperature_c": 38.1,
+    "phone_tail": "step_complete 27/28 wall_seconds=62.0094\nstep_28_unconditional seconds=32.9408 rss_bytes=1414549504\nstep_28_conditional seconds=32.9214 rss_bytes=1416114176\nstep_complete 28/28 wall_seconds=67.5523\nphase=decode timestamp=1792824196 mem_available_kb=1432600\nVmHWM:\t  940188 kB\nVmRSS:\t  561008 kB\nVmSwap:\t       0 kB\nphase=decode exit_code=0\nend_epoch_seconds=1792824197 online_wall_seconds=2081 exit_code=0\n  temperature: 381\n",
+    "host_tail": "step_28_conditional seconds=17.0163 rss_bytes=1787232256\nstep_complete 28/28 wall_seconds=33.9021\n"
+  }
+]

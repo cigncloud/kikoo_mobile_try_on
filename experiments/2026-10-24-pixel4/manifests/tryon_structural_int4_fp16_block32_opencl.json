@@ -1,0 +1,128 @@
+{
+  "model": "/data/local/tmp/mobile_tryon_20261024/tryon_structural_int4_fp16_block32.mnn",
+  "backend": 3,
+  "gpu_mode": 80,
+  "runs": 3,
+  "inputs": [
+    {
+      "name": "sample",
+      "file": "/data/local/tmp/mobile_tryon_20261024/tryon_input_sample.f32"
+    },
+    {
+      "name": "timestep",
+      "file": "/data/local/tmp/mobile_tryon_20261024/tryon_input_timestep.f32"
+    },
+    {
+      "name": "text",
+      "file": "/data/local/tmp/mobile_tryon_20261024/tryon_input_text.f32"
+    },
+    {
+      "name": "image_embeds",
+      "file": "/data/local/tmp/mobile_tryon_20261024/tryon_input_image_embeds.f32"
+    },
+    {
+      "name": "feature_0",
+      "file": "/data/local/tmp/mobile_tryon_20261024/tryon_input_feature_0.f32"
+    },
+    {
+      "name": "feature_1",
+      "file": "/data/local/tmp/mobile_tryon_20261024/tryon_input_feature_1.f32"
+    },
+    {
+      "name": "feature_2",
+      "file": "/data/local/tmp/mobile_tryon_20261024/tryon_input_feature_2.f32"
+    },
+    {
+      "name": "feature_3",
+      "file": "/data/local/tmp/mobile_tryon_20261024/tryon_input_feature_3.f32"
+    },
+    {
+      "name": "feature_4",
+      "file": "/data/local/tmp/mobile_tryon_20261024/tryon_input_feature_4.f32"
+    },
+    {
+      "name": "feature_5",
+      "file": "/data/local/tmp/mobile_tryon_20261024/tryon_input_feature_5.f32"
+    },
+    {
+      "name": "feature_6",
+      "file": "/data/local/tmp/mobile_tryon_20261024/tryon_input_feature_6.f32"
+    },
+    {
+      "name": "feature_7",
+      "file": "/data/local/tmp/mobile_tryon_20261024/tryon_input_feature_7.f32"
+    },
+    {
+      "name": "feature_8",
+      "file": "/data/local/tmp/mobile_tryon_20261024/tryon_input_feature_8.f32"
+    },
+    {
+      "name": "feature_9",
+      "file": "/data/local/tmp/mobile_tryon_20261024/tryon_input_feature_9.f32"
+    },
+    {
+      "name": "feature_10",
+      "file": "/data/local/tmp/mobile_tryon_20261024/tryon_input_feature_10.f32"
+    },
+    {
+      "name": "feature_11",
+      "file": "/data/local/tmp/mobile_tryon_20261024/tryon_input_feature_11.f32"
+    },
+    {
+      "name": "feature_12",
+      "file": "/data/local/tmp/mobile_tryon_20261024/tryon_input_feature_12.f32"
+    },
+    {
+      "name": "feature_13",
+      "file": "/data/local/tmp/mobile_tryon_20261024/tryon_input_feature_13.f32"
+    },
+    {
+      "name": "feature_14",
+      "file": "/data/local/tmp/mobile_tryon_20261024/tryon_input_feature_14.f32"
+    },
+    {
+      "name": "feature_15",
+      "file": "/data/local/tmp/mobile_tryon_20261024/tryon_input_feature_15.f32"
+    },
+    {
+      "name": "feature_16",
+      "file": "/data/local/tmp/mobile_tryon_20261024/tryon_input_feature_16.f32"
+    },
+    {
+      "name": "feature_17",
+      "file": "/data/local/tmp/mobile_tryon_20261024/tryon_input_feature_17.f32"
+    },
+    {
+      "name": "feature_18",
+      "file": "/data/local/tmp/mobile_tryon_20261024/tryon_input_feature_18.f32"
+    },
+    {
+      "name": "feature_19",
+      "file": "/data/local/tmp/mobile_tryon_20261024/tryon_input_feature_19.f32"
+    },
+    {
+      "name": "feature_20",
+      "file": "/data/local/tmp/mobile_tryon_20261024/tryon_input_feature_20.f32"
+    },
+    {
+      "name": "feature_21",
+      "file": "/data/local/tmp/mobile_tryon_20261024/tryon_input_feature_21.f32"
+    },
+    {
+      "name": "feature_22",
+      "file": "/data/local/tmp/mobile_tryon_20261024/tryon_input_feature_22.f32"
+    },
+    {
+      "name": "feature_23",
+      "file": "/data/local/tmp/mobile_tryon_20261024/tryon_input_feature_23.f32"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output_0",
+      "file": "/data/local/tmp/mobile_tryon_20261024/tryon_structural_int4_fp16_block32_opencl_output_0.f32"
+    }
+  ],
+  "metrics": "/data/local/tmp/mobile_tryon_20261024/tryon_structural_int4_fp16_block32_opencl_metrics.json",
+  "precision": 2
+}

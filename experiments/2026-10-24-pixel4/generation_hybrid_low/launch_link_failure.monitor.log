@@ -1,0 +1,4 @@
+start_epoch_seconds=1792821976
+phase=vae pid=23131
+phase=vae timestamp=1792821976 mem_available_kb=2368764
+phase=vae exit_code=1

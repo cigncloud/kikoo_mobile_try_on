@@ -1,0 +1,76 @@
+{
+  "input": "Screenshot 2026-10-19 at 00.17.54.png",
+  "input_resolution": [
+    357,
+    428
+  ],
+  "fallback_crop_pixels": [
+    63,
+    94,
+    294,
+    403
+  ],
+  "runs": [
+    {
+      "status": "completed",
+      "model": "DM-VTON PF student",
+      "upstream_revision": "5dcd04ee3f5b1fb392df1184c887c1a7e910c72e",
+      "device_requested": "cuda",
+      "device_selected": "cuda",
+      "hardware": "NVIDIA GeForce RTX 3080 Laptop GPU",
+      "torch_cuda_peak_allocated_bytes": 168295936,
+      "torch_cuda_peak_reserved_bytes": 201326592,
+      "resolution": [
+        256,
+        192
+      ],
+      "warmup": 1,
+      "runs": [
+        0.01870391599368304,
+        0.01669353898614645
+      ],
+      "mean_seconds": 0.017698727489914745,
+      "fps": 56.50123719741034,
+      "parameters": 9350124,
+      "model_storage_bytes": 37570848,
+      "weights": {
+        "warp_bytes": 86485495,
+        "generator_bytes": 26406925
+      },
+      "input_note": "Garment foreground mask derived from near-white background for this sample; this is not the official VITON edge annotation.",
+      "fixture_directory": null,
+      "scope": "Single person/garment pair; functional speed and output smoke test, not FID/LPIPS evaluation."
+    },
+    {
+      "status": "completed",
+      "model": "DM-VTON PF student",
+      "upstream_revision": "5dcd04ee3f5b1fb392df1184c887c1a7e910c72e",
+      "device_requested": "cuda",
+      "device_selected": "cuda",
+      "hardware": "NVIDIA GeForce RTX 3080 Laptop GPU",
+      "torch_cuda_peak_allocated_bytes": 168295936,
+      "torch_cuda_peak_reserved_bytes": 201326592,
+      "resolution": [
+        256,
+        192
+      ],
+      "warmup": 1,
+      "runs": [
+        0.016806696075946093,
+        0.01757312403060496
+      ],
+      "mean_seconds": 0.017189910053275526,
+      "fps": 58.17366099652457,
+      "parameters": 9350124,
+      "model_storage_bytes": 37570848,
+      "weights": {
+        "warp_bytes": 86485495,
+        "generator_bytes": 26406925
+      },
+      "input_note": "Garment foreground mask derived from near-white background for this sample; this is not the official VITON edge annotation.",
+      "fixture_directory": null,
+      "scope": "Single person/garment pair; functional speed and output smoke test, not FID/LPIPS evaluation."
+    }
+  ],
+  "scope": "PC CUDA functional smoke test; no FID/LPIPS"
+}

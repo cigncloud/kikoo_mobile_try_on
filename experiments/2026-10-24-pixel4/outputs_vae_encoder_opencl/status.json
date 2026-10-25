@@ -1,0 +1,9 @@
+{
+  "status": "terminated_for_memory_pressure",
+  "pid": 28838,
+  "last_observed_process_vmhwm_bytes": 3566530560,
+  "last_observed_process_rss_bytes": 3322023936,
+  "last_observed_process_swap_bytes": 605679616,
+  "last_observed_mem_available_bytes": 66592768,
+  "completed_generation": false
+}

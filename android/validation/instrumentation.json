@@ -1,0 +1,28 @@
+{
+  "full_size_camera_uri_round_trip": true,
+  "capture_path_traversal_rejected": true,
+  "camera_cancel_cleanup": true,
+  "initialization_seconds": 53.070510078,
+  "reference_relative_rmse": 0.000021982921373534428,
+  "repeat_relative_rmse": 0,
+  "invalid_shape_rejected": true,
+  "garments": [
+    {
+      "id": "cardigan",
+      "inference_seconds": 1.713875744,
+      "process_peak_rss_bytes": 603267072
+    },
+    {
+      "id": "colorblock",
+      "inference_seconds": 1.732251318,
+      "process_peak_rss_bytes": 603267072
+    },
+    {
+      "id": "blouse",
+      "inference_seconds": 1.728486735,
+      "process_peak_rss_bytes": 603267072
+    }
+  ],
+  "status": "passed",
+  "backend": "OpenCL FP32 required; no CPU fallback"
+}

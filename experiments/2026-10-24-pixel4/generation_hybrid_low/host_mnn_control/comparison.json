@@ -1,0 +1,32 @@
+{
+  "status": "completed_host_cpu_control",
+  "scope": "Same mixed MNN model and phone person latent; host CPU denoise/decode only, not phone performance or a full CPU pipeline.",
+  "versus_fp32": {
+    "decoder_latents": {
+      "mae": 0.0379091673841477,
+      "rmse": 0.05865530575553459,
+      "relative_rmse": 0.08666584387058172,
+      "max_absolute_error": 1.3261557221412659
+    },
+    "image": {
+      "mae": 0.024667607331705768,
+      "rmse": 0.05571524454524169,
+      "relative_rmse": 0.16638383105914908,
+      "max_absolute_error": 1.6773975491523743
+    }
+  },
+  "pixel4_versus_host": {
+    "decoder_latents": {
+      "mae": 0.016744297421524834,
+      "rmse": 0.031564158871318325,
+      "relative_rmse": 0.04761620026552488,
+      "max_absolute_error": 1.357254981994629
+    },
+    "image": {
+      "mae": 0.010864208973986014,
+      "rmse": 0.027199636095897834,
+      "relative_rmse": 0.07782702414707088,
+      "max_absolute_error": 1.588839828968048
+    }
+  }
+}

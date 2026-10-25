@@ -1,0 +1,152 @@
+{
+  "model": "DM-VTON PF student",
+  "upstream_revision": "5dcd04ee3f5b1fb392df1184c887c1a7e910c72e",
+  "resolution_hw": [
+    256,
+    192
+  ],
+  "weights": "Unquantized FP32 MNN files; runtime precision differs by run",
+  "mnn_model_bytes": 37720932,
+  "kernel_cache_bytes": 1510232,
+  "cuda_vs_export_reference": {
+    "rmse": 0.002064420532514029,
+    "relative_rmse": 0.006018294576820419,
+    "max_absolute_difference": 0.11954876780509949
+  },
+  "runs": {
+    "host_chain": {
+      "mean_seconds": 0.45126602433333335,
+      "mean_warp_seconds": 0.44413945033333335,
+      "mean_generator_seconds": 0.007126327333333334,
+      "measured_runs": 3,
+      "cold_to_first_output_seconds": 0.519204001,
+      "process_peak_rss_bytes": 157347840,
+      "process_peak_rss_mib": 150.05859375,
+      "backend_requested": 0,
+      "precision": 1,
+      "output_error": {
+        "rmse": 8.002054292740924e-06,
+        "relative_rmse": 2.3327960168453706e-05,
+        "max_absolute_difference": 0.0003234744071960449
+      },
+      "reference": "FP32 PyTorch CPU with ATen correlation",
+      "first_vs_last_max_absolute_difference": 0.0,
+      "first_forward_output_backend_counts": [
+        {
+          "0": 17,
+          "13": 1274
+        },
+        {
+          "0": 1,
+          "13": 53
+        }
+      ]
+    },
+    "pixel4_opencl_low": {
+      "mean_seconds": 1.3559986940000002,
+      "mean_warp_seconds": 1.317467753,
+      "mean_generator_seconds": 0.03853019466666666,
+      "measured_runs": 3,
+      "cold_to_first_output_seconds": 41.171273893,
+      "process_peak_rss_bytes": 250605568,
+      "process_peak_rss_mib": 238.99609375,
+      "backend_requested": 3,
+      "precision": 2,
+      "output_error": {
+        "rmse": 0.059749111412176176,
+        "relative_rmse": 0.1741833834329466,
+        "max_absolute_difference": 1.3797006011009216
+      },
+      "reference": "FP32 PyTorch CPU with ATen correlation",
+      "first_vs_last_max_absolute_difference": 0.0,
+      "first_forward_output_backend_counts": [
+        {
+          "3": 1291
+        },
+        {
+          "3": 54
+        }
+      ]
+    },
+    "pixel4_opencl_high": {
+      "mean_seconds": 1.6897773386666666,
+      "mean_warp_seconds": 1.6565738803333334,
+      "mean_generator_seconds": 0.033202954666666666,
+      "measured_runs": 3,
+      "cold_to_first_output_seconds": 48.682151777,
+      "process_peak_rss_bytes": 358019072,
+      "process_peak_rss_mib": 341.43359375,
+      "backend_requested": 3,
+      "precision": 1,
+      "output_error": {
+        "rmse": 7.540673469683173e-06,
+        "relative_rmse": 2.1982921373535336e-05,
+        "max_absolute_difference": 0.00024646520614624023
+      },
+      "reference": "FP32 PyTorch CPU with ATen correlation",
+      "first_vs_last_max_absolute_difference": 0.0,
+      "first_forward_output_backend_counts": [
+        {
+          "3": 1291
+        },
+        {
+          "3": 54
+        }
+      ]
+    },
+    "pixel4_upper_body_high": {
+      "mean_seconds": 1.7086144756666666,
+      "mean_warp_seconds": 1.6728114683333333,
+      "mean_generator_seconds": 0.03580241633333334,
+      "measured_runs": 3,
+      "cold_to_first_output_seconds": 48.458524463,
+      "process_peak_rss_bytes": 356352000,
+      "process_peak_rss_mib": 339.84375,
+      "backend_requested": 3,
+      "precision": 1,
+      "output_error": {
+        "rmse": 0.0013289225730374996,
+        "relative_rmse": 0.0032133341506670647,
+        "max_absolute_difference": 0.0437309592962265
+      },
+      "reference": "Original CUDA/CuPy",
+      "first_vs_last_max_absolute_difference": 0.0,
+      "first_forward_output_backend_counts": [
+        {
+          "3": 1291
+        },
+        {
+          "3": 54
+        }
+      ]
+    },
+    "pixel4_upper_body_cached": {
+      "mean_seconds": 1.6954473213333332,
+      "mean_warp_seconds": 1.6630373703333337,
+      "mean_generator_seconds": 0.0324095,
+      "measured_runs": 3,
+      "cold_to_first_output_seconds": 1.897274043,
+      "process_peak_rss_bytes": 363839488,
+      "process_peak_rss_mib": 346.984375,
+      "backend_requested": 3,
+      "precision": 1,
+      "output_error": {
+        "rmse": 0.0013289225730374996,
+        "relative_rmse": 0.0032133341506670647,
+        "max_absolute_difference": 0.0437309592962265
+      },
+      "reference": "Original CUDA/CuPy",
+      "first_vs_last_max_absolute_difference": 0.0,
+      "first_forward_output_backend_counts": [
+        {
+          "3": 1291
+        },
+        {
+          "3": 54
+        }
+      ]
+    }
+  },
+  "scope": "One person/garment, full-body resize and manual upper-body crop. Not a dataset quality evaluation. Latency includes both stages, uploads, downloads and host bridge; excludes JPEG/PNG and ADB. Process RSS is not dedicated GPU VRAM.",
+  "quality_verdict": "Not passed: garment misalignment, shoulder/neck artifacts and original-shirt remnants occur in the original CUDA model as well as the phone output."
+}

@@ -1,0 +1,14 @@
+# Actual tested Python 3.12.2 / CUDA 12.6 environment, 2026-10-23.
+# Initial inference used these preinstalled packages. INT4 adds torchao in .venv.
+torch==2.7.1
+torchvision==0.22.1
+diffusers==0.34.0
+transformers==4.53.0
+accelerate==1.11.0
+safetensors==0.5.3
+huggingface-hub==0.33.1
+numpy==1.26.4
+pillow==11.2.1
+einops==0.8.0
+# Optional INT4 experiments; installed only inside .venv.
+torchao==0.10.0

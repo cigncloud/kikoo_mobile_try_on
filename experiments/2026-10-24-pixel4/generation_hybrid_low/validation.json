@@ -1,0 +1,32 @@
+{
+  "recorded_utc": "2026-10-24T06:14:00.415736+00:00",
+  "pytest": "33 passed; one host NVML warning",
+  "ruff": "passed on generation scripts and test",
+  "native_half_reader": "all 65536 IEEE binary16 bit patterns verified against NumPy (NaNs checked by mask)",
+  "android_build": {
+    "ndk": "27.1.12297006",
+    "api": 26,
+    "flags": [
+      "-O2",
+      "-std=c++17",
+      "-ffp-contract=off",
+      "-static-libstdc++"
+    ],
+    "needed_libraries": [
+      "libMNN.so",
+      "libm.so",
+      "libdl.so",
+      "libc.so"
+    ]
+  },
+  "sha256": {
+    "scripts/prepare_pixel4_generation.py": "075af77e98fa225544703e93acc3be64231d3b37c64e259d9bcd8d49c1a7ca8b",
+    "scripts/compare_pixel4_generation.py": "86967f3625f6ddb606506c9ee60e87254d0d3b1fac08825ae9ebe64370788615",
+    "tests/test_pixel4_generation.py": "aafba97b7b27d78a9ab4d176700bca7d4db3f340b889a75b581cf833a8b42379",
+    "experiments/2026-10-24-pixel4/mnn_generation.cpp": "8df6b6dea26f54aa39fbdbf85efa23c2455b1c9747ff0e3801072561599d3dd7",
+    "experiments/2026-10-24-pixel4/mnn_generation": "e516d0400689ea46fc3a86147c8e6426c34d4b807a8fc5ca0c656d2e8985f588",
+    "experiments/2026-10-24-pixel4/run_generation.sh": "8546ed8fb9323ecdacdb44be1f9142cf811f012a5b49b1a2ae9b3b3018e58c65",
+    "experiments/2026-10-24-pixel4/generation_hybrid_low/generation.json": "67ef7fd981ed8e51aa998c88c771a43b13d35dad2aa0c2f53231c4d2df0d34bf",
+    "experiments/2026-10-24-pixel4/generation_hybrid_low/input_inventory.json": "c053a8871cbe75cda54dec21d5072b006786c28aa66b5652518b082ade94c6e4"
+  }
+}

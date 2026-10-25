@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DM-VTON Pixel 4 검증</title>
+  <style>
+    body { margin: 0; font: 16px/1.6 system-ui, sans-serif; color: #172225; background: #f4f5f3; }
+    main { max-width: 1100px; margin: auto; padding: 24px; }
+    h1 { font-size: 26px; } h2 { font-size: 20px; }
+    a { color: #185c48; }
+    .metrics { display: flex; flex-wrap: wrap; gap: 12px; }
+    .metrics p { background: white; padding: 16px; border: 1px solid #dce2df; border-radius: 8px; }
+    strong { display: block; font-size: 24px; }
+    img { display: block; width: 100%; height: auto; background: white; }
+    .note { color: #596569; font-size: 14px; }
+    .verdict { background: #fff1de; padding: 16px; border-radius: 8px; }
+    figure { margin: 20px 0; } figcaption { margin-bottom: 8px; }
+  </style>
+</head>
+<body><main>
+  <h1>DM-VTON · Pixel 4 실측</h1>
+  <p>192 × 256 · 양자화 없는 FP32 · OpenCL · warp + generator 연속 실행</p>
+  <div class="metrics">
+    <p>반복 평균 / 3회<strong>1.70초</strong></p>
+    <p>커널 캐시 재사용 첫 결과<strong>1.90초</strong></p>
+    <p>프로세스 최대 RSS<strong>347MiB</strong></p>
+    <p>두 모델 파일 합계<strong>37.72MB</strong></p>
+  </div>
+  <p class="note">캐시 없는 최초 준비는 약 49초. 입력 업로드·두 모델 추론·출력 다운로드를 포함하며 JPEG 전처리·PNG 인코딩·ADB 전송은 제외합니다. RSS는 전용 GPU 메모리 전체 수치가 아닙니다.</p>
+  <p class="verdict">화질 미합격: 상반신 입력에서도 목·어깨·팔 경계가 부자연스럽고 원래 티셔츠가 남습니다. 원본 CUDA에서도 재현됩니다. 약 0.59fps로 실시간 카메라 합성에는 부족합니다.</p>
+  <h2>상반신 입력</h2>
+  <figure>
+    <figcaption>왼쪽부터: 수동 상반신 crop · 선택 의상 · 원본 CUDA · Pixel 4 FP32</figcaption>
+    <a href="../experiments/2026-10-25-dm_vton/comparison_upper_body.png"><img src="../experiments/2026-10-25-dm_vton/comparison_upper_body.png" alt="원본 CUDA와 Pixel 4 모두에서 목과 어깨의 합성 문제가 나타나는 상반신 비교"></a>
+  </figure>
+  <h2>전신 리사이즈 입력</h2>
+  <figure>
+    <figcaption>왼쪽부터: 인물 · 의상 · 원본 CUDA · Pixel 4 FP16 · Pixel 4 FP32</figcaption>
+    <a href="../experiments/2026-10-25-dm_vton/comparison.png"><img src="../experiments/2026-10-25-dm_vton/comparison.png" alt="의상이 크게 늘어나고 원래 티셔츠가 남는 전신 입력 결과" loading="lazy"></a>
+  </figure>
+  <p class="note">한 사람·한 카디건 테스트입니다. 흰 배경 기반 의상 마스크와 수동 crop을 사용했습니다. FP16은 수치 오차가 커서 기본 후보에서 제외했습니다.</p>
+  <p><a href="../reports/dm_vton_pixel4.md">검증 보고서</a> · <a href="../experiments/2026-10-25-dm_vton/summary.json">측정 JSON</a> · <a href="index.html">이전 Mobile-VTON CUDA 결과</a></p>
+</main></body>
+</html>

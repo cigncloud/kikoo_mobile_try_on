@@ -1,0 +1,105 @@
+{
+  "status": "failed_numerical_validation",
+  "full_generation_completed_on_phone": false,
+  "end_to_end_seconds": null,
+  "end_to_end_peak_memory_bytes": null,
+  "component_tests": {
+    "decoder": {
+      "comparison": "experiments/2026-10-24-pixel4/outputs_decoder_opencl_buffer/comparison.json",
+      "seconds": 12.157921645,
+      "process_peak_rss_bytes": 956387328,
+      "process_peak_rss_gib": 0.8907051086425781,
+      "runs": 3,
+      "relative_rmse_range": [
+        0.0063269098082269545,
+        0.0063269098082269545
+      ],
+      "output_tensor_backends": {
+        "3": 125
+      }
+    },
+    "vae_encoder_fp32": {
+      "comparison": "experiments/2026-10-24-pixel4/outputs_vae_encoder_opencl_buffer_fp32/comparison.json",
+      "seconds": 17.069314774,
+      "process_peak_rss_bytes": 1032613888,
+      "process_peak_rss_gib": 0.9616966247558594,
+      "runs": 1,
+      "relative_rmse_range": [
+        0.6596716748245008,
+        0.6596716748245008
+      ],
+      "output_tensor_backends": {
+        "3": 209
+      }
+    },
+    "garment_int4": {
+      "comparison": "experiments/2026-10-24-pixel4/outputs_garment_opencl_buffer/comparison.json",
+      "seconds": 5.645187854,
+      "process_peak_rss_bytes": 778338304,
+      "process_peak_rss_gib": 0.724884033203125,
+      "runs": 1,
+      "relative_rmse_range": [
+        0.4006583425470078,
+        0.9647259671623378
+      ],
+      "output_tensor_backends": {
+        "3": 2426
+      }
+    },
+    "tryon_int4": {
+      "comparison": "experiments/2026-10-24-pixel4/outputs_tryon_opencl_buffer/comparison.json",
+      "seconds": 27.073273062,
+      "process_peak_rss_bytes": 1594122240,
+      "process_peak_rss_gib": 1.4846420288085938,
+      "runs": 1,
+      "relative_rmse_range": [
+        1.5943539834558904,
+        1.5943539834558904
+      ],
+      "output_tensor_backends": {
+        "3": 3507
+      }
+    },
+    "vae_cpu_control": {
+      "comparison": "experiments/2026-10-24-pixel4/outputs_vae_encoder_cpu_fp32/comparison.json",
+      "seconds": 29.843149848,
+      "process_peak_rss_bytes": 873103360,
+      "process_peak_rss_gib": 0.813140869140625,
+      "runs": 1,
+      "relative_rmse_range": [
+        0.6538821827589383,
+        0.6538821827589383
+      ],
+      "output_tensor_backends": {
+        "0": 209
+      }
+    },
+    "vae_portable_norm": {
+      "comparison": "experiments/2026-10-24-pixel4/outputs_vae_encoder_portable_opencl_buffer_fp32/comparison.json",
+      "seconds": 17.984725334,
+      "process_peak_rss_bytes": 1140187136,
+      "process_peak_rss_gib": 1.0618820190429688,
+      "runs": 1,
+      "relative_rmse_range": [
+        0.6596716748245008,
+        0.6596716748245008
+      ],
+      "output_tensor_backends": {
+        "3": 341
+      }
+    }
+  },
+  "notes": [
+    "Native Android arm64 CLI benchmark, not an APK or complete app.",
+    "Each component uses identical fixed inputs for PyTorch reference and phone runtime. Tryon uses a synthetic seeded sample and exported garment features; garment export uses posterior mean.",
+    "Decoder uses full 768x1024 output; VAE encoder is one 512x512 person tile; denoisers use native latent sizes.",
+    "Selected runs synchronize warmup/output download. Only the decoder has three selected measured repeats; other selected controls have one measured repeat.",
+    "Component latency includes inference and output download; excludes model loading, session/kernel creation, input upload, warmup and file saving.",
+    "RSS includes GPU mappings visible in the process. MNN allocator accounting omits much OpenCL/driver memory. Component peaks must not be added or treated as an end-to-end peak.",
+    "MNN INT4 quantizes Conv/MatMul weights, including more convolutions than the desktop torchao Linear-only INT4 setting. This is a separate quantization candidate.",
+    "All selected OpenCL operator output tensors report backend 3; tensor placement does not provide a kernel-level guarantee of exclusive GPU execution.",
+    "VAE ONNX Runtime CPU control closely matches PyTorch; MNN FP16/FP32, CPU and portable GroupNorm controls diverge. The responsible conversion/operator is not yet isolated.",
+    "The image-memory OpenCL VAE run was terminated under memory pressure. The initial unpatched buffer decoder crashed in ConvBufWinograd.",
+    "No full 28-step inference or full pipeline memory was measured on the phone."
+  ]
+}

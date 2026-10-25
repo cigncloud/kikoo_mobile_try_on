@@ -1,0 +1,5 @@
+{
+  "max_absolute_difference": 7.62939453125e-06,
+  "mae": 6.863511998744798e-07,
+  "meaning": "Portable GroupNorm changes preserve the original PyTorch output; the MNN result still diverges."
+}

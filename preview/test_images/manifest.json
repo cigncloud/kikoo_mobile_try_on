@@ -1,0 +1,52 @@
+[
+  {
+    "image": "00_original_person.jpg",
+    "label": "Original person",
+    "original": "experiments/2026-10-23-mobile_vton/inputs/person.jpg"
+  },
+  {
+    "image": "01_original_garment.jpg",
+    "label": "Original garment",
+    "original": "experiments/2026-10-23-mobile_vton/inputs/garment.jpg"
+  },
+  {
+    "image": "02_mobile_vton_cuda_bf16.png",
+    "label": "Mobile-VTON / CUDA BF16",
+    "original": "experiments/2026-10-23-mobile_vton/outputs_vllm_bf16_native/result_01.png"
+  },
+  {
+    "image": "03_mobile_vton_cuda_int4.png",
+    "label": "Mobile-VTON / CUDA INT4",
+    "original": "experiments/2026-10-23-mobile_vton/outputs_vllm_int4_native/result_01.png"
+  },
+  {
+    "image": "04_mobile_vton_pixel4.png",
+    "label": "Mobile-VTON / Pixel 4",
+    "original": "experiments/2026-10-24-pixel4/generation_hybrid_low/pixel4_result.png"
+  },
+  {
+    "image": "05_mobile_vton_cached.png",
+    "label": "Mobile-VTON / CUDA cached",
+    "original": "experiments/2026-10-23-mobile_vton/outputs_garment_resident_cached/result_01.png"
+  },
+  {
+    "image": "06_dm_vton_cuda_full.png",
+    "label": "DM-VTON / CUDA full-body",
+    "original": "experiments/2026-10-25-dm_vton/cuda_fixtures/result.png"
+  },
+  {
+    "image": "07_dm_vton_pixel4_full.png",
+    "label": "DM-VTON / Pixel 4 full-body",
+    "original": "experiments/2026-10-25-dm_vton/pixel4_opencl_high/result.png"
+  },
+  {
+    "image": "08_dm_vton_cuda_crop.png",
+    "label": "DM-VTON / CUDA upper-body",
+    "original": "experiments/2026-10-25-dm_vton/cuda_upper_body/result.png"
+  },
+  {
+    "image": "09_dm_vton_pixel4_crop.png",
+    "label": "DM-VTON / Pixel 4 upper-body",
+    "original": "experiments/2026-10-25-dm_vton/pixel4_upper_body_cached/result.png"
+  }
+]

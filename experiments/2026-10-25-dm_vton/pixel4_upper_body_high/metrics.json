@@ -1,0 +1,59 @@
+{
+    "status": "completed",
+    "resolution": [
+        256,
+        192
+    ],
+    "backend_requested": 3,
+    "precision": 1,
+    "kernel_cache_directory": "kernel_cache",
+    "cold_to_first_output_seconds": 48.458524463,
+    "process_peak_rss_bytes": 356352000,
+    "input_refresh_each_forward": true,
+    "release_model_after_first_forward": true,
+    "models": [
+        {
+            "backend_selected": 3,
+            "setup_seconds": 42.045877365,
+            "mnn_session_memory_mb": 28.426876068115236,
+            "first_forward_output_backend_counts": {
+                "3": 1291
+            }
+        },
+        {
+            "backend_selected": 3,
+            "setup_seconds": 4.689657655,
+            "mnn_session_memory_mb": 8.277809143066407,
+            "first_forward_output_backend_counts": {
+                "3": 54
+            }
+        }
+    ],
+    "runs": [
+        {
+            "warmup": true,
+            "warp_seconds": 1.681641574,
+            "generator_seconds": 0.040375629,
+            "total_seconds": 1.722017932
+        },
+        {
+            "warmup": false,
+            "warp_seconds": 1.676669802,
+            "generator_seconds": 0.031405055,
+            "total_seconds": 1.708075378
+        },
+        {
+            "warmup": false,
+            "warp_seconds": 1.648595945,
+            "generator_seconds": 0.035440732,
+            "total_seconds": 1.684037303
+        },
+        {
+            "warmup": false,
+            "warp_seconds": 1.693168658,
+            "generator_seconds": 0.040561462,
+            "total_seconds": 1.733730746
+        }
+    ],
+    "scope": "Resident warp+generator inference, input uploads, synchronized stage downloads and host bridge included. JPEG preprocessing, PNG encoding and file/ADB transfer excluded. RSS is not dedicated GPU VRAM. Tensor backend audit does not prove kernel-only GPU execution."
+}

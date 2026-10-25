@@ -1,0 +1,136 @@
+{
+  "model": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-24-pixel4/exports/garment_int4.mnn",
+  "backend": 0,
+  "gpu_mode": 80,
+  "runs": 1,
+  "inputs": [
+    {
+      "name": "cloth",
+      "file": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-24-pixel4/exports/garment_input_cloth.f32"
+    },
+    {
+      "name": "timestep",
+      "file": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-24-pixel4/exports/garment_input_timestep.f32"
+    },
+    {
+      "name": "text",
+      "file": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-24-pixel4/exports/garment_input_text.f32"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output_0",
+      "file": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-24-pixel4/outputs_garment_host_int4_control/garment_host_int4_control_output_0.f32"
+    },
+    {
+      "name": "output_1",
+      "file": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-24-pixel4/outputs_garment_host_int4_control/garment_host_int4_control_output_1.f32"
+    },
+    {
+      "name": "output_2",
+      "file": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-24-pixel4/outputs_garment_host_int4_control/garment_host_int4_control_output_2.f32"
+    },
+    {
+      "name": "output_3",
+      "file": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-24-pixel4/outputs_garment_host_int4_control/garment_host_int4_control_output_3.f32"
+    },
+    {
+      "name": "output_4",
+      "file": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-24-pixel4/outputs_garment_host_int4_control/garment_host_int4_control_output_4.f32"
+    },
+    {
+      "name": "output_5",
+      "file": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-24-pixel4/outputs_garment_host_int4_control/garment_host_int4_control_output_5.f32"
+    },
+    {
+      "name": "output_6",
+      "file": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-24-pixel4/outputs_garment_host_int4_control/garment_host_int4_control_output_6.f32"
+    },
+    {
+      "name": "output_7",
+      "file": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-24-pixel4/outputs_garment_host_int4_control/garment_host_int4_control_output_7.f32"
+    },
+    {
+      "name": "output_8",
+      "file": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-24-pixel4/outputs_garment_host_int4_control/garment_host_int4_control_output_8.f32"
+    },
+    {
+      "name": "output_9",
+      "file": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-24-pixel4/outputs_garment_host_int4_control/garment_host_int4_control_output_9.f32"
+    },
+    {
+      "name": "output_10",
+      "file": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-24-pixel4/outputs_garment_host_int4_control/garment_host_int4_control_output_10.f32"
+    },
+    {
+      "name": "output_11",
+      "file": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-24-pixel4/outputs_garment_host_int4_control/garment_host_int4_control_output_11.f32"
+    },
+    {
+      "name": "output_12",
+      "file": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-24-pixel4/outputs_garment_host_int4_control/garment_host_int4_control_output_12.f32"
+    },
+    {
+      "name": "output_13",
+      "file": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-24-pixel4/outputs_garment_host_int4_control/garment_host_int4_control_output_13.f32"
+    },
+    {
+      "name": "output_14",
+      "file": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-24-pixel4/outputs_garment_host_int4_control/garment_host_int4_control_output_14.f32"
+    },
+    {
+      "name": "output_15",
+      "file": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-24-pixel4/outputs_garment_host_int4_control/garment_host_int4_control_output_15.f32"
+    },
+    {
+      "name": "output_16",
+      "file": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-24-pixel4/outputs_garment_host_int4_control/garment_host_int4_control_output_16.f32"
+    },
+    {
+      "name": "output_17",
+      "file": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-24-pixel4/outputs_garment_host_int4_control/garment_host_int4_control_output_17.f32"
+    },
+    {
+      "name": "output_18",
+      "file": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-24-pixel4/outputs_garment_host_int4_control/garment_host_int4_control_output_18.f32"
+    },
+    {
+      "name": "output_19",
+      "file": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-24-pixel4/outputs_garment_host_int4_control/garment_host_int4_control_output_19.f32"
+    },
+    {
+      "name": "output_20",
+      "file": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-24-pixel4/outputs_garment_host_int4_control/garment_host_int4_control_output_20.f32"
+    },
+    {
+      "name": "output_21",
+      "file": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-24-pixel4/outputs_garment_host_int4_control/garment_host_int4_control_output_21.f32"
+    },
+    {
+      "name": "output_22",
+      "file": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-24-pixel4/outputs_garment_host_int4_control/garment_host_int4_control_output_22.f32"
+    },
+    {
+      "name": "output_23",
+      "file": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-24-pixel4/outputs_garment_host_int4_control/garment_host_int4_control_output_23.f32"
+    },
+    {
+      "name": "output_24",
+      "file": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-24-pixel4/outputs_garment_host_int4_control/garment_host_int4_control_output_24.f32"
+    },
+    {
+      "name": "output_25",
+      "file": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-24-pixel4/outputs_garment_host_int4_control/garment_host_int4_control_output_25.f32"
+    },
+    {
+      "name": "output_26",
+      "file": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-24-pixel4/outputs_garment_host_int4_control/garment_host_int4_control_output_26.f32"
+    },
+    {
+      "name": "output_27",
+      "file": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-24-pixel4/outputs_garment_host_int4_control/garment_host_int4_control_output_27.f32"
+    }
+  ],
+  "metrics": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-24-pixel4/outputs_garment_host_int4_control/garment_host_int4_control_metrics.json",
+  "precision": 1
+}

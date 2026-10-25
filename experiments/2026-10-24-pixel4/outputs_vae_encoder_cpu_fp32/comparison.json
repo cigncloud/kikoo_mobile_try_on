@@ -1,0 +1,39 @@
+{
+  "status": "completed",
+  "pid": 6045,
+  "backend_requested": 0,
+  "backend_selected": 0,
+  "gpu_mode": 4,
+  "precision_mode": 1,
+  "warmup_output_synchronized": true,
+  "model_load_seconds": 0.448446451,
+  "session_create_seconds": 0.107722824,
+  "input_upload_seconds": 0.015219949,
+  "warmup_seconds": 19.111862165,
+  "inference_and_output_download_seconds": [
+    29.843149848
+  ],
+  "mnn_session_memory_mb": 525.9676513671875,
+  "process_peak_rss_bytes": 873103360,
+  "output_nonfinite_elements": 0,
+  "memory_note": "RSS includes GPU mappings visible in /proc/self/status, but not all possible driver allocations. MNN allocator size can omit OpenCL pool/driver allocations. This is one component, not full generation.",
+  "operator_output_backend_counts": {
+    "0": 209
+  },
+  "mean_seconds": 29.843149848,
+  "numerical_comparison": {
+    "output_0": {
+      "shape": [
+        1,
+        32,
+        64,
+        64
+      ],
+      "mae": 6.855865478515625,
+      "rmse": 9.838301658630371,
+      "max_absolute_error": 19.192428588867188,
+      "relative_rmse": 0.6538821827589383
+    }
+  },
+  "scope": "Component test only. Export fixtures are not a full generation on the phone. Output backend reports tensor placement, not a guarantee that all neural operations ran on GPU."
+}

@@ -1,0 +1,50 @@
+{
+  "status": "exported",
+  "correlation": "pure ATen 7x7 mean cost volume replacing upstream CuPy kernel for ONNX export",
+  "resolution": [
+    256,
+    192
+  ],
+  "inputs": {
+    "person": [
+      1,
+      3,
+      256,
+      192
+    ],
+    "clothes": [
+      1,
+      3,
+      256,
+      192
+    ],
+    "edge": [
+      1,
+      1,
+      256,
+      192
+    ]
+  },
+  "outputs": {
+    "warped_cloth": [
+      1,
+      3,
+      256,
+      192
+    ],
+    "warped_edge": [
+      1,
+      1,
+      256,
+      192
+    ],
+    "tryon": [
+      1,
+      3,
+      256,
+      192
+    ]
+  },
+  "model": "DM-VTON PF student",
+  "upstream_revision": "5dcd04ee3f5b1fb392df1184c887c1a7e910c72e"
+}

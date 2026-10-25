@@ -1,0 +1,67 @@
+CPU Group: [ 11  6  2  14  9  10  7  5  3  15  1  13 ], 800000 - 4800000
+CPU Group: [ 8  4  0  12 ], 800000 - 4900000
+The device supports: i8sdot:0, fp16:0, i8mm: 0, sve2: 0, sme2: 0
+run=0 total_seconds=0.467876
+run=1 total_seconds=0.463244
+run=2 total_seconds=0.444127
+run=3 total_seconds=0.446427
+{
+    "status": "completed",
+    "resolution": [
+        256,
+        192
+    ],
+    "backend_requested": 0,
+    "precision": 1,
+    "cold_to_first_output_seconds": 0.519204001,
+    "process_peak_rss_bytes": 157347840,
+    "input_refresh_each_forward": true,
+    "release_model_after_first_forward": true,
+    "models": [
+        {
+            "backend_selected": 13,
+            "setup_seconds": 0.040339198,
+            "mnn_session_memory_mb": 93.11058044433594,
+            "first_forward_output_backend_counts": {
+                "0": 17,
+                "13": 1274
+            }
+        },
+        {
+            "backend_selected": 13,
+            "setup_seconds": 0.010380931,
+            "mnn_session_memory_mb": 28.581417083740236,
+            "first_forward_output_backend_counts": {
+                "0": 1,
+                "13": 53
+            }
+        }
+    ],
+    "runs": [
+        {
+            "warmup": true,
+            "warp_seconds": 0.456613887,
+            "generator_seconds": 0.011261567,
+            "total_seconds": 0.467875769
+        },
+        {
+            "warmup": false,
+            "warp_seconds": 0.455459888,
+            "generator_seconds": 0.0077842,
+            "total_seconds": 0.463244336
+        },
+        {
+            "warmup": false,
+            "warp_seconds": 0.43785023,
+            "generator_seconds": 0.006276392,
+            "total_seconds": 0.444126861
+        },
+        {
+            "warmup": false,
+            "warp_seconds": 0.439108233,
+            "generator_seconds": 0.00731839,
+            "total_seconds": 0.446426876
+        }
+    ],
+    "scope": "Resident warp+generator inference, input uploads, synchronized stage downloads and host bridge included. JPEG preprocessing, PNG encoding and file/ADB transfer excluded. RSS is not dedicated GPU VRAM. Tensor backend audit does not prove kernel-only GPU execution."
+}

@@ -1,0 +1,30 @@
+{
+  "recorded_utc": "2026-10-23T14:59:00Z",
+  "container_image": "vllm/vllm-openai@sha256:04563c302537a91aa49ebdfbceda96111c5712275999b7e8804fa598f0b5641d",
+  "runtime": "PyTorch runner in existing vLLM CUDA image; no vLLM inference server",
+  "gpu": "NVIDIA GeForce RTX 3080 Laptop GPU",
+  "packages": {
+    "torch": "2.7.1",
+    "torchvision": "0.22.1",
+    "diffusers": "0.34.0",
+    "transformers": "4.53.0",
+    "accelerate": "1.11.0",
+    "safetensors": "0.5.3",
+    "numpy": "1.26.4",
+    "pillow": "11.2.1",
+    "torchao": "0.10.0"
+  },
+  "source_revision": "57410f20ac0e1703af795702e10473565feaa711",
+  "phone_inference_tested": false,
+  "note": "All three variants run sequentially on a shared desktop GPU. Unrelated jobs were not stopped.",
+  "scripts_sha256": {
+    "scripts/run_mobile_vton.py": "3f8e41642e1e0fce1896e4c3c83d9859526e430226113945bc014c5bd9282f96",
+    "scripts/mobile_vton_vae.py": "9b3ebcce69a37916a4e733c50fee9695d622392f983bbb8e308fd9ccb525c9b4",
+    "scripts/mobile_vton_memory.py": "8c1a59eb2d1789cefdbd1d05b2f20d6733aaff47e855edc5ea2d636a99fdb3f2",
+    "scripts/compare_mobile_vton_memory.py": "002595691d9f1c44977efe08c5a6be971d3c4d147e3e0cf829d3b742b7935640"
+  },
+  "native_resolution_adapter_applied": false,
+  "one_warmup_step_and_two_28_step_runs_per_variant": true,
+  "exact_encoder_extraction_output_matches_baseline": true,
+  "actual_six_tiles_per_input_verified": true
+}

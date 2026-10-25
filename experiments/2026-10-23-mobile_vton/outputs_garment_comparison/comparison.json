@@ -1,0 +1,233 @@
+{
+  "gpu": "NVIDIA GeForce RTX 3080 Laptop GPU",
+  "config": {
+    "upstream": "models/mobile_vton/upstream",
+    "upstream_revision": "57410f20ac0e1703af795702e10473565feaa711",
+    "model_id": "FlashStight/Mobile-VTON",
+    "model_revision": "0063147c171518b391fff5e44d04555c12370c35",
+    "checkpoint": "/tmp/mobile_tryon/weights/mobile_vton/checkpoint",
+    "person": "experiments/2026-10-23-mobile_vton/inputs/person.jpg",
+    "garment": "experiments/2026-10-23-mobile_vton/inputs/garment.jpg",
+    "garment_description": "a grey long sleeved knitted cardigan with mint green V-neck trim, front buttons, and a Snoopy graphic",
+    "output_dir": "experiments/2026-10-23-mobile_vton/outputs_garment_resident_uncached",
+    "device": "cuda",
+    "dtype": "bf16",
+    "width": 768,
+    "height": 1024,
+    "steps": 28,
+    "guidance_scale": 2.5,
+    "scheduler_shift": 3.0,
+    "seed": 42,
+    "warmup_steps": 1,
+    "runs": 3,
+    "threads": 4,
+    "embedding_cache": "experiments/2026-10-23-mobile_vton/outputs_bf16_cached/embeddings.pt",
+    "quantization": "int4",
+    "group_size": 128,
+    "save_quantized_states": false,
+    "memory_mode": "sequential_cfg",
+    "quantized_state_dir": "experiments/2026-10-23-mobile_vton/outputs_vllm_int4_native",
+    "vae_encoder_only": true,
+    "vae_tile_size": 512,
+    "decoder_dtype": "fp16",
+    "defer_quantized_transfer": true,
+    "release_working_tensors": true,
+    "spatial_conv_rows": 32,
+    "spatial_decoder_only": true,
+    "gpu_resident": true,
+    "audit_decoder_latents": false
+  },
+  "variants": {
+    "resident_uncached": {
+      "metrics": "experiments/2026-10-23-mobile_vton/outputs_garment_resident_uncached/metrics.json",
+      "pipeline_seconds": [
+        34.98040588700678,
+        37.48611384094693,
+        38.76122446299996
+      ],
+      "mean_pipeline_seconds": 37.07591473031789,
+      "median_pipeline_seconds": 37.48611384094693,
+      "cuda_peak_allocated_bytes_all_phases": 1326336000,
+      "cuda_peak_reserved_bytes_all_phases": 1459617792,
+      "cuda_peak_allocated_bytes_generation": 1326336000,
+      "cuda_peak_reserved_bytes_generation": 1459617792,
+      "host_peak_rss_bytes": 2160267264,
+      "host_current_rss_bytes_after_runs": [
+        2113257472,
+        2132754432,
+        2142191616
+      ],
+      "model_load_seconds": 3.1598494040081277,
+      "preprocess_and_text_cache_seconds": 0.20593778300099075,
+      "warmup_seconds": 2.384435962070711,
+      "resident_models": {
+        "image_encoder": {
+          "devices": [
+            "cuda:0"
+          ],
+          "tensor_storage_bytes": 173160960,
+          "phase_loaded": false
+        },
+        "vae": {
+          "devices": [
+            "cuda:0"
+          ],
+          "tensor_storage_bytes": 68548416,
+          "phase_loaded": false
+        },
+        "denoiser": {
+          "devices": [
+            "cuda:0"
+          ],
+          "tensor_storage_bytes": 327515168,
+          "phase_loaded": false
+        },
+        "denoiser_garment": {
+          "devices": [
+            "cuda:0"
+          ],
+          "tensor_storage_bytes": 297182752,
+          "phase_loaded": false
+        },
+        "vae_decoder": {
+          "devices": [
+            "cuda:0"
+          ],
+          "tensor_storage_bytes": 3805190,
+          "phase_loaded": false
+        }
+      },
+      "gpu_model_storage_bytes": 870212486,
+      "output_sha256": "1f421d9d90b576db84dd19a7033dc403a650ba682d69a553c28f6763ad6b9b99",
+      "output_identical": true
+    },
+    "resident_cached": {
+      "metrics": "experiments/2026-10-23-mobile_vton/outputs_garment_resident_cached/metrics.json",
+      "pipeline_seconds": [
+        40.60579912306275,
+        43.579027442028746,
+        42.983509636018425
+      ],
+      "mean_pipeline_seconds": 42.38944540036997,
+      "median_pipeline_seconds": 42.983509636018425,
+      "cuda_peak_allocated_bytes_all_phases": 1150121472,
+      "cuda_peak_reserved_bytes_all_phases": 1287651328,
+      "cuda_peak_allocated_bytes_generation": 1150121472,
+      "cuda_peak_reserved_bytes_generation": 1287651328,
+      "host_peak_rss_bytes": 2070364160,
+      "host_current_rss_bytes_after_runs": [
+        2033291264,
+        2052796416,
+        2071674880
+      ],
+      "model_load_seconds": 2.94611661194358,
+      "preprocess_and_text_cache_seconds": 0.19937090191524476,
+      "warmup_seconds": 2.06835213303566,
+      "resident_models": {
+        "vae": {
+          "devices": [
+            "cuda:0"
+          ],
+          "tensor_storage_bytes": 68548416,
+          "phase_loaded": false
+        },
+        "denoiser": {
+          "devices": [
+            "cuda:0"
+          ],
+          "tensor_storage_bytes": 327515168,
+          "phase_loaded": false
+        },
+        "denoiser_garment": {
+          "devices": [
+            "cuda:0"
+          ],
+          "tensor_storage_bytes": 297182752,
+          "phase_loaded": false
+        },
+        "vae_decoder": {
+          "devices": [
+            "cuda:0"
+          ],
+          "tensor_storage_bytes": 3805190,
+          "phase_loaded": false
+        }
+      },
+      "gpu_model_storage_bytes": 697051526,
+      "output_sha256": "1f421d9d90b576db84dd19a7033dc403a650ba682d69a553c28f6763ad6b9b99",
+      "output_identical": true
+    }
+  },
+  "precompute": {
+    "path": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-23-mobile_vton/outputs_garment_precompute/garment_cache.pt",
+    "bytes": 1051669,
+    "sha256": "0b9099bdd66664234b32e996577785f1bfce8d73814033a78c194e59c7aeeacd",
+    "tensor_bytes": 1048576,
+    "build_encode_and_save_seconds": 0.5503242150880396,
+    "precompute_cuda_peak_allocated_bytes": 1295691776
+  },
+  "cache_loading": {
+    "path": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-23-mobile_vton/outputs_garment_precompute/garment_cache.pt",
+    "bytes": 1051669,
+    "sha256": "0b9099bdd66664234b32e996577785f1bfce8d73814033a78c194e59c7aeeacd",
+    "loaded": true,
+    "gpu_tensors": {
+      "posterior_parameters": {
+        "shape": [
+          1,
+          32,
+          128,
+          96
+        ],
+        "dtype": "torch.bfloat16",
+        "device": "cuda:0",
+        "logical_bytes": 786432
+      },
+      "posterior_mean": {
+        "shape": [
+          1,
+          16,
+          128,
+          96
+        ],
+        "dtype": "torch.bfloat16",
+        "device": "cuda:0",
+        "logical_bytes": 393216
+      },
+      "posterior_std": {
+        "shape": [
+          1,
+          16,
+          128,
+          96
+        ],
+        "dtype": "torch.bfloat16",
+        "device": "cuda:0",
+        "logical_bytes": 393216
+      },
+      "projected_image_embeds": {
+        "shape": [
+          2,
+          16,
+          4096
+        ],
+        "dtype": "torch.bfloat16",
+        "device": "cuda:0",
+        "logical_bytes": 262144
+      }
+    },
+    "load_and_install_seconds": 0.047535271034576
+  },
+  "same_output_as_previous_phase_release": true,
+  "allocated_reduction_vs_resident_uncached_percent": 13.285813549507818,
+  "observed_mean_time_reduction_percent": -14.331489077751813,
+  "limitations": [
+    "Desktop CUDA measurements, not Android/iOS runtime results.",
+    "All online neural network operations run on CUDA and needed models remain resident; no CPU model offload. Host file IO, image preparation and final image transfer still use CPU.",
+    "Pipeline time includes person VAE, denoising, decoding and output transfer; excludes cold model load, initial input preprocessing/cache verification, warmup and saving PNGs.",
+    "Shared GPU and three repeats; time differences are observations, not isolated performance guarantees.",
+    "CUDA allocated/reserved exclude driver/context. CPU RSS is separate and its peak need not coincide with the GPU peak.",
+    "One pair and one cached garment; prior INT4 and VAE tiling quality limitations remain.",
+    "VAE encoder remains necessary for person images, and GarmentNet remains necessary at each timestep. Its per-step features are not cached."
+  ]
+}

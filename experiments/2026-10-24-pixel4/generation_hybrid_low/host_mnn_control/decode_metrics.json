@@ -1,0 +1,28 @@
+{
+    "status": "completed",
+    "phase": "decode",
+    "pid": 2,
+    "wall_seconds": 2.286334852,
+    "process_peak_rss_bytes": 845406208,
+    "release_model_buffer_after_first_forward": true,
+    "inputs_refreshed_each_forward": true,
+    "models": [
+        {
+            "path": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-24-pixel4/exports/decoder_fp16.mnn",
+            "precision": 2,
+            "setup_seconds": 0.012760328,
+            "first_forward_output_backend_counts": {
+                "0": 3,
+                "13": 122
+            }
+        }
+    ],
+    "runs": [
+        {
+            "label": "decoder",
+            "forward_download_seconds": 2.207529043,
+            "post_forward_rss_bytes": 842457088
+        }
+    ],
+    "scope": "On-phone neural component stages; CFG, Euler scheduler, tile blending and posterior arithmetic use CPU float32. Tensor placement audit is not kernel-level proof of GPU-only execution. Offline garment precomputation excluded."
+}

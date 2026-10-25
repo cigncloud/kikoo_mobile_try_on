@@ -1,0 +1,163 @@
+{
+  "recorded_utc": "2026-10-24T03:03:46.887562+00:00",
+  "device_serial": "98211FFAZ004ME",
+  "device": "Pixel 4",
+  "android": "13",
+  "abi": "arm64-v8a",
+  "soc": "SM8150",
+  "gpu": "Adreno 640",
+  "mnn_version": "3.6.1",
+  "mnn_revision": "d407447ed56c4121a11ccbd266dc184ca1ead0c2",
+  "mnn_source_archive_sha256": "4b6065c4e2674318f5bf1dc75836ce4d30c17bfe598c4a1b11b7d0b2092b06e6",
+  "mnn_source_url": "https://github.com/alibaba/MNN/tree/3.6.1",
+  "mnn_local_modification": "mnn_disable_buffer_winograd.patch; WINOGRAD_MEMORY_LEVEL=0 skips buffer Winograd selection",
+  "ndk": "27.1.12297006",
+  "android_api_level_binary": 26,
+  "build_flags": {
+    "MNN_OPENCL": true,
+    "MNN_ARM82": true,
+    "MNN_LOW_MEMORY": true,
+    "MNN_SUPPORT_TRANSFORMER_FUSE": true,
+    "MNN_SEP_BUILD": false,
+    "ANDROID_STL": "c++_static"
+  },
+  "upstream_revision": "57410f20ac0e1703af795702e10473565feaa711",
+  "model_revision": "0063147c171518b391fff5e44d04555c12370c35",
+  "models": {
+    "decoder_fp16.mnn": {
+      "bytes": 3859244,
+      "sha256": "f45c6ba44193fb43ae7cab4ac398a6d6551979bf196d7865b9aff400fe70184a"
+    },
+    "garment_int4.mnn": {
+      "bytes": 179572000,
+      "sha256": "b4bd1c12b17bb56489a6064c13a12bdf1a07f9050279289ece359367f1af62c8"
+    },
+    "tryon_int4.mnn": {
+      "bytes": 221451476,
+      "sha256": "8f1301ee7b87c522cf9bb79e7a4ce40dcab02743c60d9f7e5d7bb7b7c1432ee0"
+    },
+    "vae_encoder_fp16.mnn": {
+      "bytes": 68653144,
+      "sha256": "88afd3cbbbbf108fe07588faec996f9e37d2948c0f383967a5c76d120504d4a1"
+    },
+    "vae_encoder_fp32.mnn": {
+      "bytes": 137177052,
+      "sha256": "233bf8611ae7b270db03abdc35ec4a1e319e98ea6af166d93e70466e7357acb2"
+    },
+    "vae_encoder_portable_fp32.mnn": {
+      "bytes": 137286368,
+      "sha256": "a383017d846e73faa4e1e1e17cf415baea93a9fd1cbea17679e371159b7777eb"
+    },
+    "tryon_fp16.mnn": {
+      "bytes": 766482756,
+      "sha256": "cf96ece339bd909afc485cba6b24b98f05c95392a11fcb7827ca9382a67496f8"
+    },
+    "tryon_int8.mnn": {
+      "bytes": 410017716,
+      "sha256": "540c24c8580ab2e11090f9210dcdd729aeb0b20394b0227665a466911d33ae51"
+    },
+    "tryon_hybrid_top8_skip_q.mnn": {
+      "bytes": 400099232,
+      "sha256": "843612aff8afe5e6876cef4fa6e9c50389f178fff809b8cc60ffa1b7a763ecbc"
+    },
+    "tryon_structural_int4_fp16_block32.mnn": {
+      "bytes": 301700316,
+      "sha256": "a717c51d9d10b8db60f28820eda94a9a95ee3b586caeafcb69f8a17293df8da1"
+    }
+  },
+  "scripts_and_manifests_sha256": {
+    "scripts/export_mobile_vton_android.py": "89294a9ce00886b7ddf22329c2adc7753edcda6e98e31b94392b56deaf8acde9",
+    "scripts/analyze_pixel4_component.py": "c40f5aa95a4ad4de2061b1f3962cdb01bc9eef37186b4495f6ce7b268d385094",
+    "experiments/2026-10-24-pixel4/mnn_component_bench_refreshed.cpp": "3213af2d94d50020c0e619a7e61a8fc7308aa3287606baeec31fbc0e515bff24",
+    "experiments/2026-10-24-pixel4/mnn_component_bench.cpp": "9f0ff0f9a6fb977beddd1a97f56edb24a97837250e2770e96883f1148143aa25",
+    "experiments/2026-10-24-pixel4/mnn_component_bench_refreshed": "149b2930f05e4463e142fd21bc72f032efc8c3bfb8306827bf5cc0ced040dc90",
+    "experiments/2026-10-24-pixel4/mnn_component_bench": "fe635254c21b7b339e762441d43b4a13e673535d2f3576940edde1f374fb898f",
+    "experiments/2026-10-24-pixel4/mnn_component_bench_streamed": "3281cb15804e29cb880a3e62f6dead570eee93d1e13b614a52fb604d052aa4d2",
+    "experiments/2026-10-24-pixel4/run_component_refreshed.sh": "a0153e58c223080df74b8f4428be4936558f85dcb4ccf0ecd1b4ad03d1cd7483",
+    "experiments/2026-10-24-pixel4/run_component.sh": "a1043aa7ff335c733029e46a4dff902d215ce6bdf08f6422480a083110d6415c",
+    "experiments/2026-10-24-pixel4/run_component_streamed.sh": "9d5cd634c3681e472f815ae62c7d95dcb6c6429d1407fa6b5d0bc93eee6a2039",
+    "experiments/2026-10-24-pixel4/mnn_disable_buffer_winograd.patch": "1ff2a67cf27ab404671d31d3a1db107219c82fce3f376747c8414e44d3657f7c",
+    "experiments/2026-10-24-pixel4/manifests/vae_encoder_opencl_buffer.json": "ed3bc3a763cfd0d2a45fa7e65a28474968a0e39cf03cf2b610a23a09a976bb00",
+    "experiments/2026-10-24-pixel4/manifests/vae_encoder_opencl_buffer_fp32.json": "cad48cd03362d88c8b818773a211a680cd60da7b225cd196686338fde068994a",
+    "experiments/2026-10-24-pixel4/manifests/garment_opencl_buffer.json": "d1b2c206c4adee0a4bb1589edc4cbd012a35ab0393986290471f93e99621932c",
+    "experiments/2026-10-24-pixel4/manifests/garment_opencl_buffer_refreshed.json": "e74e76a2c8fc654102b983bc4a713038fb301ef9f0ab06c766685edeb8c2197a",
+    "experiments/2026-10-24-pixel4/manifests/vae_encoder_cpu.json": "05de31009168460e8809957891ebb3d7f6e4f44b6248be4eb197487d06d77cdc",
+    "experiments/2026-10-24-pixel4/manifests/vae_encoder_cpu_fp32.json": "90179b253aec95171cfb0c68b2a48ee5daf94ac70f2331b1432d83ff3c56e44b",
+    "experiments/2026-10-24-pixel4/manifests/decoder_opencl_buffer.json": "2b8c931b6788159908013b9e4b45deb1f0df2ff1d46239eb48e5d4d9c3442406",
+    "experiments/2026-10-24-pixel4/manifests/tryon_opencl_buffer_refreshed.json": "048d83d2824ac23ce7ef78320e5ab0b429f747d7440ad1b0c9cc18c969883dec",
+    "experiments/2026-10-24-pixel4/manifests/decoder_opencl_buffer_refreshed.json": "6c5f32e1a09195b452e934eade344c9f51db4b30825fc8669d505caa7bc19de0",
+    "experiments/2026-10-24-pixel4/manifests/garment_host_int4_control.json": "23f2c9aab08965dc3c3efaa306a5f597c671890e0005a34f9ce188818d17d73c",
+    "experiments/2026-10-24-pixel4/manifests/decoder_cpu.json": "f15837b763d80a4c7ee0ec2a3a75b488cddadf3f97e187ae009845d8b6668c4c",
+    "experiments/2026-10-24-pixel4/manifests/tryon_opencl_buffer.json": "a05d19396e81f3fd6b1164c1537123a3fb380ea01cc20aa65c87dbc4fee55398",
+    "experiments/2026-10-24-pixel4/manifests/vae_encoder_portable_opencl_buffer_fp32.json": "1c4305867fe025e83f2e5f63f7c74e4d81c57323f6f5a3c1f42e6127f784f2e2",
+    "experiments/2026-10-24-pixel4/manifests/vae_encoder_opencl_buffer_fp32_refreshed.json": "508c506ed0a780e7e2f4ea87ae91b38474897373adb8d8389efbca6b1686c61c",
+    "experiments/2026-10-24-pixel4/manifests/garment_host_fp32_control.json": "2a0bf4219fca66c0f9bd73692878ccd751c08c2806cbb3817abf15bb5a0bae82",
+    "experiments/2026-10-24-pixel4/manifests/vae_encoder_opencl.json": "78b4a6599e488a985222e5b43c0ac81ecd094589881f3f3751a348abf116de3b",
+    "experiments/2026-10-24-pixel4/manifests/decoder_opencl.json": "02b82989592202da1cbb8ae88c5a9daf67ba69bcc090b68483c7045c05c3dd25",
+    "experiments/2026-10-24-pixel4/manifests/tryon_opencl_buffer_streamed.json": "461ac9ef268998bf91f272be61ed19ab3f72e145b15b083e7d66786ee9227222",
+    "experiments/2026-10-24-pixel4/run_component_fp16.sh": "9d5cd634c3681e472f815ae62c7d95dcb6c6429d1407fa6b5d0bc93eee6a2039",
+    "experiments/2026-10-24-pixel4/run_component_int8.sh": "9d5cd634c3681e472f815ae62c7d95dcb6c6429d1407fa6b5d0bc93eee6a2039",
+    "experiments/2026-10-24-pixel4/manifests/tryon_fp16_opencl_streamed.json": "eeb2346ab84de3fad25a566bebd83e98e12941c94b0c4cdba6d4ae3a915ada85",
+    "experiments/2026-10-24-pixel4/manifests/tryon_int8_opencl_streamed.json": "ee0a2c709fb2bdb8d83688ccbdc1a1b145c3e32c6e498d628294f2b724ab2305",
+    "experiments/2026-10-24-pixel4/manifests/tryon_host_int8_control.json": "ffa70b7690363c1afbf27e4f10db1d9737fbdc5e59a1c6edb40950bb609dac50",
+    "experiments/2026-10-24-pixel4/manifests/tryon_int8_opencl_streamed_3.json": "f6bbd00c7c8c15550ca7e11f76e0e17b570de23530b10bf7252d2c6edc7b1dcc",
+    "scripts/build_mnn_hybrid_policy.py": "d34a39f7901c677972e94f1283078de394f97795ebcd5d0a227748fd9c3ac601",
+    "tests/test_mnn_hybrid_policy.py": "47f00a9cf8152f94bc4fc6034013c20923e10d109f9b8a4f9074b91a81e59692",
+    "experiments/2026-10-24-pixel4/mnn_weight_inventory.cpp": "94439198ac305e77d7a0233ba64b4d4418d076fad2a0e3a48b9070233fdccf8f",
+    "experiments/2026-10-24-pixel4/tryon_float_weights.tsv": "30a5f053c088e0fc3173786ec843b0dfb166eabdcfa416dd9e9b9fefbae4be1f",
+    "experiments/2026-10-24-pixel4/tryon_structural_int4_fp16_block32_weights.tsv": "a96abe6ff7e748ea201341cc7334d8e32e1d69b7f506ac4d618bb61f4771630f",
+    "experiments/2026-10-24-pixel4/policies/tryon_structural_int4_fp16_block32.json": "6f0f877b83974ca03a41f9f57071dca390e174dac8105dcaa5ef4f79e1ba375e",
+    "experiments/2026-10-24-pixel4/policies/tryon_structural_int4_fp16_block32_summary.json": "6af69f14ffc713138ece73049faed8373e57799b9477f03ae1c130ada4a15dd6",
+    "experiments/2026-10-24-pixel4/manifests/tryon_structural_int4_fp16_block32_host.json": "b28b4f4f46b714f0325370981df29e1200cc3488d25d1a97d11a9982f9e6ab20",
+    "experiments/2026-10-24-pixel4/manifests/tryon_structural_int4_fp16_block32_opencl.json": "2e9214355512af3898923c27252f2248a6a56bf55069e813f7a00ca2a2f3b748",
+    "experiments/2026-10-24-pixel4/manifests/tryon_structural_int4_fp16_block32_opencl_normal.json": "2d12f88bada482866c6c77c8def6f40c88f81864c33c8cf24f346324bd449dc3",
+    "experiments/2026-10-24-pixel4/manifests/tryon_hybrid_top8_skip_q_host.json": "a1287bbe5fbf930a82d6bac06d021ba4a5aedfe9465645695657c37841e68f81",
+    "experiments/2026-10-24-pixel4/manifests/tryon_hybrid_top8_skip_q_opencl.json": "f635390c89b8990a2723f185552f8f8db392bcb5a6963d275763d7eb6fdabba7",
+    "scripts/prepare_pixel4_generation.py": "075af77e98fa225544703e93acc3be64231d3b37c64e259d9bcd8d49c1a7ca8b",
+    "scripts/compare_pixel4_generation.py": "86967f3625f6ddb606506c9ee60e87254d0d3b1fac08825ae9ebe64370788615",
+    "tests/test_pixel4_generation.py": "aafba97b7b27d78a9ab4d176700bca7d4db3f340b889a75b581cf833a8b42379",
+    "experiments/2026-10-24-pixel4/mnn_generation.cpp": "8df6b6dea26f54aa39fbdbf85efa23c2455b1c9747ff0e3801072561599d3dd7",
+    "experiments/2026-10-24-pixel4/mnn_generation": "e516d0400689ea46fc3a86147c8e6426c34d4b807a8fc5ca0c656d2e8985f588",
+    "experiments/2026-10-24-pixel4/run_generation.sh": "8546ed8fb9323ecdacdb44be1f9142cf811f012a5b49b1a2ae9b3b3018e58c65",
+    "experiments/2026-10-24-pixel4/generation_hybrid_low/generation.json": "67ef7fd981ed8e51aa998c88c771a43b13d35dad2aa0c2f53231c4d2df0d34bf",
+    "experiments/2026-10-24-pixel4/generation_hybrid_low/input_inventory.json": "c053a8871cbe75cda54dec21d5072b006786c28aa66b5652518b082ade94c6e4"
+  },
+  "final_benchmark_binary_note": "Pixel phone corrected-input Tryon measurement used mnn_component_bench_streamed and run_component_streamed.sh; three forwards completed. The current mnn_component_bench.cpp is the same streamed-input strategy and was Android-compiled/host-tested.",
+  "validation": {
+    "pytest_passed": 33,
+    "pytest_command": "./.venv/bin/pytest -q tests",
+    "pytest_warning": "PyTorch NVML initialization warning on host; all 29 tests passed.",
+    "ruff": "passed on touched policy, policy tests, analyzer and Android exporter",
+    "format": "Ruff format applied to new policy script and tests",
+    "python_compile": "passed on scripts/build_mnn_hybrid_policy.py",
+    "generation_validation": "experiments/2026-10-24-pixel4/generation_hybrid_low/validation.json"
+  },
+  "agents_md_sha256": "4bca3eda27f9dde0a3b4a336f1c75cefb92cfb5bfdfa597fc6732485e1a0e258",
+  "numerical_validation_correction": "Initial VAE conversion-error diagnosis withdrawn. First-forward intermediate tensors agree with ONNX Runtime; refreshing inputs on each forward restores VAE agreement on the host and phone. Internal buffer-lifetime mechanism is not yet isolated.",
+  "historical_environment": "experiments/2026-10-24-pixel4/environment_initial_unrefreshed.json",
+  "latest_tryon_streamed": "experiments/2026-10-24-pixel4/outputs_tryon_opencl_buffer_streamed/comparison.json",
+  "latest_tryon_int8_host_control": "experiments/2026-10-24-pixel4/outputs_tryon_host_int8_control/comparison.json",
+  "latest_tryon_int8_phone_status": "completed_opencl_low_accuracy_rejected",
+  "fp16_phone_memory_pressure_log": "experiments/2026-10-24-pixel4/tryon_fp16_opencl_streamed.monitor.log (device-only; not pulled)",
+  "latest_tryon_int8_phone": "experiments/2026-10-24-pixel4/outputs_tryon_int8_opencl_streamed/comparison.json",
+  "updated_utc": "2026-10-24T06:52:11.600259+00:00",
+  "latest_tryon_structural_mixed_phone": "experiments/2026-10-24-pixel4/outputs_tryon_structural_int4_fp16_block32_opencl/comparison.json",
+  "opencl_runtime_precision": {
+    "source_relative_to_mnn": "source/backend/opencl/core/runtime/OpenCLRuntime.cpp",
+    "source_sha256": "261f4d543c8772451fc60cef9d8fe75f89d64682a930ed8619713803742df3a3",
+    "low_2": "FLOAT=half, COMPUTE_FLOAT=half",
+    "normal_0": "FLOAT=half, COMPUTE_FLOAT=float",
+    "high_1": "FLOAT=float, COMPUTE_FLOAT=float",
+    "note": "Kernel build options, not a guarantee of arithmetic precision in every optimized operator."
+  },
+  "latest_tryon_structural_mixed_normal_phone": "experiments/2026-10-24-pixel4/outputs_tryon_structural_int4_fp16_block32_opencl_normal/comparison.json",
+  "structural_mixed_candidate_status": "completed_low_and_normal_three_phone_forwards_each; low_selected_for_component_followup",
+  "full_generation_trial": {
+    "comparison": "experiments/2026-10-24-pixel4/generation_hybrid_low/comparison.json",
+    "status": "completed_latency_rejected",
+    "steps": 28,
+    "cfg_forwards": 56,
+    "online_cold_wall_seconds": 2081,
+    "process_peak_rss_bytes": 1721602048
+  }
+}

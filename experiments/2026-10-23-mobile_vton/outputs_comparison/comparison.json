@@ -1,0 +1,46 @@
+{
+  "baseline_metrics": "experiments/2026-10-23-mobile_vton/outputs_bf16_cpu_384/metrics.json",
+  "int4_metrics": "experiments/2026-10-23-mobile_vton/outputs_int4_cpu_384/metrics.json",
+  "matched_settings": {
+    "model_revision": "0063147c171518b391fff5e44d04555c12370c35",
+    "upstream_revision": "57410f20ac0e1703af795702e10473565feaa711",
+    "width": 384,
+    "height": 512,
+    "steps": 28,
+    "seed": 42,
+    "guidance_scale": 2.5,
+    "scheduler_shift": 3.0,
+    "dtype": "bf16",
+    "device": "cpu"
+  },
+  "same_input_hashes": true,
+  "same_embedding_cache_sha256": "7ff8ec1f7f1da682d8cffa4fe034b15b7b6cd3ae70c51b480aa47c3efc76f4a1",
+  "output_difference": {
+    "mae_0_to_1": 0.023622458800673485,
+    "rmse_0_to_1": 0.03987603025278874,
+    "psnr_db": 27.98576166373799,
+    "meaning": "Difference from BF16 output; this is not accuracy against a reference try-on image."
+  },
+  "models": {
+    "bf16": {
+      "mean_pipeline_seconds": 484.8766169929877,
+      "model_tensor_storage_bytes": 1938183570,
+      "host_peak_rss_bytes": 4283719680,
+      "runtime": "PyTorch CPU"
+    },
+    "int4": {
+      "mean_pipeline_seconds": 323.0106636659475,
+      "model_tensor_storage_bytes": 885239186,
+      "host_peak_rss_bytes": 2836054016,
+      "runtime": "PyTorch CPU"
+    }
+  },
+  "tensor_storage_reduction_percent": 54.32634969658731,
+  "limits": [
+    "One pair and one generation per precision; no quality benchmark or timing distribution.",
+    "Weight-only INT4 for both denoisers' Linear layers; other layers and activations keep their original dtype.",
+    "Host peak RSS includes model loading and quantization when performed in-process.",
+    "Desktop CPU checkpoint layout is not an Android/iOS deployment package or phone memory measurement.",
+    "The two CPU generation jobs overlap on a shared host; elapsed times are diagnostic, not an isolated speed comparison."
+  ]
+}

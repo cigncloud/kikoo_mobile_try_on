@@ -1,0 +1,26 @@
+{
+  "gpu": "NVIDIA GeForce RTX 3080 Laptop GPU",
+  "comparisons": {
+    "fp16": {
+      "latent_sha256_fp32": "3b58a8be6224daf9eea00afbe369309e60c678f0a6440fbda7b5f1e3194680e3",
+      "fp32_replay_matches_pipeline": true,
+      "fp16_replay_matches_pipeline": true,
+      "raw_decoder_mae": 0.0001819593016989529,
+      "raw_decoder_max_absolute_difference": 0.0074272602796554565,
+      "image_mae_0_to_1": 9.18820223887451e-05,
+      "image_psnr_db": 64.43310361989992,
+      "image_max_absolute_difference_0_to_1": 0.003921568859368563
+    },
+    "fp16_vae_tiled512": {
+      "latent_sha256_fp32": "dce79c212efd676ddf38675d9eae41672096adaff94bd0c0336560a8909f9378",
+      "fp32_replay_matches_pipeline": true,
+      "fp16_replay_matches_pipeline": true,
+      "raw_decoder_mae": 0.00017945670697372407,
+      "raw_decoder_max_absolute_difference": 0.008977055549621582,
+      "image_mae_0_to_1": 9.454477549297735e-05,
+      "image_psnr_db": 64.30887910574118,
+      "image_max_absolute_difference_0_to_1": 0.007843137718737125
+    }
+  },
+  "meaning": "Identical latent tensors and decoder weights; only FP32/FP16 arithmetic differs. Not a ground-truth accuracy measure."
+}

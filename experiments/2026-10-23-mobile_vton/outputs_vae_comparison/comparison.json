@@ -1,0 +1,832 @@
+{
+  "suite": "vae",
+  "matched_settings": {
+    "model_revision": "0063147c171518b391fff5e44d04555c12370c35",
+    "upstream_revision": "57410f20ac0e1703af795702e10473565feaa711",
+    "width": 768,
+    "height": 1024,
+    "steps": 28,
+    "seed": 42,
+    "guidance_scale": 2.5,
+    "scheduler_shift": 3.0,
+    "dtype": "bf16",
+    "device": "cuda",
+    "quantization": "int4",
+    "group_size": 128,
+    "runs": 2,
+    "warmup_steps": 1,
+    "threads": 4,
+    "quantized_state_dir": "experiments/2026-10-23-mobile_vton/outputs_vllm_int4_native"
+  },
+  "gpu": "NVIDIA GeForce RTX 3080 Laptop GPU",
+  "embedding_sha256": "7ff8ec1f7f1da682d8cffa4fe034b15b7b6cd3ae70c51b480aa47c3efc76f4a1",
+  "variants": {
+    "baseline": {
+      "metrics": "experiments/2026-10-23-mobile_vton/outputs_vae_baseline/metrics.json",
+      "pipeline_seconds": [
+        40.43284478399437,
+        50.533432927913964
+      ],
+      "mean_pipeline_seconds": 45.48313885595417,
+      "cuda_peak_allocated_bytes": 2046664192,
+      "cuda_peak_reserved_bytes": 2950692864,
+      "cuda_peak_before_benchmark_bytes": 2042994176,
+      "resident_model_tensor_storage_bytes": 624697920,
+      "host_peak_rss_bytes": 2562686976,
+      "repeat_identical": true,
+      "identical_to_baseline": true,
+      "difference_from_int4_baseline": {
+        "mae_0_to_1": 0.0,
+        "psnr_db": null,
+        "max_absolute_pixel_difference_0_to_1": 0.0
+      },
+      "phase_loads_and_releases_verified": true,
+      "vae": {
+        "deferred_load": true,
+        "parameters": 83819683,
+        "model_tensor_storage_bytes": 167639366,
+        "encoder_forward_counts": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "last_person_encode": {
+          "input_shape": [
+            1,
+            3,
+            1024,
+            768
+          ],
+          "tile_shapes": [
+            [
+              1,
+              3,
+              1024,
+              768
+            ]
+          ],
+          "encoder_forward_count": 1,
+          "latent_mean_shape": [
+            1,
+            16,
+            128,
+            96
+          ],
+          "cuda_peak_allocated_so_far_bytes": 2046664192
+        },
+        "last_garment_encode": {
+          "input_shape": [
+            1,
+            3,
+            1024,
+            768
+          ],
+          "tile_shapes": [
+            [
+              1,
+              3,
+              1024,
+              768
+            ]
+          ],
+          "encoder_forward_count": 1,
+          "latent_mean_shape": [
+            1,
+            16,
+            128,
+            96
+          ],
+          "cuda_peak_allocated_so_far_bytes": 2046664192
+        },
+        "first_measured_encodes": [
+          {
+            "input_shape": [
+              1,
+              3,
+              1024,
+              768
+            ],
+            "tile_shapes": [
+              [
+                1,
+                3,
+                1024,
+                768
+              ]
+            ],
+            "encoder_forward_count": 1,
+            "latent_mean_shape": [
+              1,
+              16,
+              128,
+              96
+            ],
+            "cuda_peak_allocated_so_far_bytes": 2046664192
+          },
+          {
+            "input_shape": [
+              1,
+              3,
+              1024,
+              768
+            ],
+            "tile_shapes": [
+              [
+                1,
+                3,
+                1024,
+                768
+              ]
+            ],
+            "encoder_forward_count": 1,
+            "latent_mean_shape": [
+              1,
+              16,
+              128,
+              96
+            ],
+            "cuda_peak_allocated_so_far_bytes": 2046664192
+          }
+        ]
+      },
+      "first_generation_phase_events": [
+        {
+          "component": "vae",
+          "action": "load",
+          "seconds": 0.10706534795463085,
+          "parameters": 83819683,
+          "model_tensor_storage_bytes": 167639366,
+          "cuda_allocated_bytes": 838409216,
+          "cuda_reserved_bytes": 926941184,
+          "cuda_peak_allocated_so_far_bytes": 838409216
+        },
+        {
+          "component": "vae",
+          "action": "call",
+          "call": 1,
+          "cuda_allocated_bytes": 840375296,
+          "cuda_reserved_bytes": 2342518784,
+          "cuda_peak_allocated_so_far_bytes": 2046664192
+        },
+        {
+          "component": "vae",
+          "action": "call",
+          "call": 2,
+          "cuda_allocated_bytes": 836049920,
+          "cuda_reserved_bytes": 2598371328,
+          "cuda_peak_allocated_so_far_bytes": 2046664192
+        },
+        {
+          "component": "vae",
+          "action": "release",
+          "cuda_allocated_bytes": 663411200,
+          "cuda_reserved_bytes": 752877568,
+          "cuda_peak_allocated_so_far_bytes": 2046664192
+        },
+        {
+          "component": "image_encoder",
+          "action": "load",
+          "seconds": 0.13817261706572026,
+          "parameters": 86580480,
+          "model_tensor_storage_bytes": 173160960,
+          "cuda_allocated_bytes": 842864640,
+          "cuda_reserved_bytes": 857735168,
+          "cuda_peak_allocated_so_far_bytes": 2046664192
+        },
+        {
+          "component": "image_encoder",
+          "action": "call",
+          "call": 1,
+          "cuda_allocated_bytes": 848391168,
+          "cuda_reserved_bytes": 859832320,
+          "cuda_peak_allocated_so_far_bytes": 2046664192
+        },
+        {
+          "component": "image_encoder",
+          "action": "call",
+          "call": 2,
+          "cuda_allocated_bytes": 849086976,
+          "cuda_reserved_bytes": 859832320,
+          "cuda_peak_allocated_so_far_bytes": 2046664192
+        },
+        {
+          "component": "image_encoder",
+          "action": "release",
+          "cuda_allocated_bytes": 669240320,
+          "cuda_reserved_bytes": 752877568,
+          "cuda_peak_allocated_so_far_bytes": 2046664192
+        },
+        {
+          "component": "vae_decoder",
+          "action": "load",
+          "seconds": 0.4564881779951975,
+          "parameters": 1902595,
+          "model_tensor_storage_bytes": 7610380,
+          "cuda_allocated_bytes": 831227904,
+          "cuda_reserved_bytes": 1637875712,
+          "cuda_peak_allocated_so_far_bytes": 2046664192
+        },
+        {
+          "component": "vae_decoder",
+          "action": "call",
+          "call": 1,
+          "cuda_allocated_bytes": 840665088,
+          "cuda_reserved_bytes": 2950692864,
+          "cuda_peak_allocated_so_far_bytes": 2046664192
+        },
+        {
+          "component": "vae_decoder",
+          "action": "release",
+          "cuda_allocated_bytes": 833018368,
+          "cuda_reserved_bytes": 924844032,
+          "cuda_peak_allocated_so_far_bytes": 2046664192
+        }
+      ],
+      "cuda_peak_reduction_percent": 0.0
+    },
+    "encoder_only": {
+      "metrics": "experiments/2026-10-23-mobile_vton/outputs_vae_encoder_only/metrics.json",
+      "pipeline_seconds": [
+        44.95929599599913,
+        45.7934984191088
+      ],
+      "mean_pipeline_seconds": 45.376397207553964,
+      "cuda_peak_allocated_bytes": 2039482880,
+      "cuda_peak_reserved_bytes": 2950692864,
+      "cuda_peak_before_benchmark_bytes": 2039589376,
+      "resident_model_tensor_storage_bytes": 624697920,
+      "host_peak_rss_bytes": 2229903360,
+      "repeat_identical": true,
+      "identical_to_baseline": true,
+      "difference_from_int4_baseline": {
+        "mae_0_to_1": 0.0,
+        "psnr_db": null,
+        "max_absolute_pixel_difference_0_to_1": 0.0
+      },
+      "phase_loads_and_releases_verified": true,
+      "vae": {
+        "deferred_load": true,
+        "parameters": 34274208,
+        "model_tensor_storage_bytes": 68548416,
+        "encoder_forward_counts": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "last_person_encode": {
+          "input_shape": [
+            1,
+            3,
+            1024,
+            768
+          ],
+          "tile_shapes": [
+            [
+              1,
+              3,
+              1024,
+              768
+            ]
+          ],
+          "encoder_forward_count": 1,
+          "latent_mean_shape": [
+            1,
+            16,
+            128,
+            96
+          ],
+          "cuda_peak_allocated_so_far_bytes": 2039482880
+        },
+        "last_garment_encode": {
+          "input_shape": [
+            1,
+            3,
+            1024,
+            768
+          ],
+          "tile_shapes": [
+            [
+              1,
+              3,
+              1024,
+              768
+            ]
+          ],
+          "encoder_forward_count": 1,
+          "latent_mean_shape": [
+            1,
+            16,
+            128,
+            96
+          ],
+          "cuda_peak_allocated_so_far_bytes": 2039482880
+        },
+        "first_measured_encodes": [
+          {
+            "input_shape": [
+              1,
+              3,
+              1024,
+              768
+            ],
+            "tile_shapes": [
+              [
+                1,
+                3,
+                1024,
+                768
+              ]
+            ],
+            "encoder_forward_count": 1,
+            "latent_mean_shape": [
+              1,
+              16,
+              128,
+              96
+            ],
+            "cuda_peak_allocated_so_far_bytes": 1944061440
+          },
+          {
+            "input_shape": [
+              1,
+              3,
+              1024,
+              768
+            ],
+            "tile_shapes": [
+              [
+                1,
+                3,
+                1024,
+                768
+              ]
+            ],
+            "encoder_forward_count": 1,
+            "latent_mean_shape": [
+              1,
+              16,
+              128,
+              96
+            ],
+            "cuda_peak_allocated_so_far_bytes": 1944061440
+          }
+        ]
+      },
+      "first_generation_phase_events": [
+        {
+          "component": "vae",
+          "action": "load",
+          "seconds": 0.22875894606113434,
+          "parameters": 34274208,
+          "model_tensor_storage_bytes": 68548416,
+          "cuda_allocated_bytes": 735806464,
+          "cuda_reserved_bytes": 922746880,
+          "cuda_peak_allocated_so_far_bytes": 735806464
+        },
+        {
+          "component": "vae",
+          "action": "call",
+          "call": 1,
+          "cuda_allocated_bytes": 737772544,
+          "cuda_reserved_bytes": 2338324480,
+          "cuda_peak_allocated_so_far_bytes": 1944061440
+        },
+        {
+          "component": "vae",
+          "action": "call",
+          "call": 2,
+          "cuda_allocated_bytes": 733447168,
+          "cuda_reserved_bytes": 2592079872,
+          "cuda_peak_allocated_so_far_bytes": 1944061440
+        },
+        {
+          "component": "vae",
+          "action": "release",
+          "cuda_allocated_bytes": 663411200,
+          "cuda_reserved_bytes": 750780416,
+          "cuda_peak_allocated_so_far_bytes": 1944061440
+        },
+        {
+          "component": "image_encoder",
+          "action": "load",
+          "seconds": 0.1448721350170672,
+          "parameters": 86580480,
+          "model_tensor_storage_bytes": 173160960,
+          "cuda_allocated_bytes": 842864640,
+          "cuda_reserved_bytes": 855638016,
+          "cuda_peak_allocated_so_far_bytes": 1944061440
+        },
+        {
+          "component": "image_encoder",
+          "action": "call",
+          "call": 1,
+          "cuda_allocated_bytes": 848391168,
+          "cuda_reserved_bytes": 857735168,
+          "cuda_peak_allocated_so_far_bytes": 1944061440
+        },
+        {
+          "component": "image_encoder",
+          "action": "call",
+          "call": 2,
+          "cuda_allocated_bytes": 849086976,
+          "cuda_reserved_bytes": 859832320,
+          "cuda_peak_allocated_so_far_bytes": 1944061440
+        },
+        {
+          "component": "image_encoder",
+          "action": "release",
+          "cuda_allocated_bytes": 669240320,
+          "cuda_reserved_bytes": 752877568,
+          "cuda_peak_allocated_so_far_bytes": 1944061440
+        },
+        {
+          "component": "vae_decoder",
+          "action": "load",
+          "seconds": 0.4373811240075156,
+          "parameters": 1902595,
+          "model_tensor_storage_bytes": 7610380,
+          "cuda_allocated_bytes": 831227904,
+          "cuda_reserved_bytes": 1637875712,
+          "cuda_peak_allocated_so_far_bytes": 1944061440
+        },
+        {
+          "component": "vae_decoder",
+          "action": "call",
+          "call": 1,
+          "cuda_allocated_bytes": 840665088,
+          "cuda_reserved_bytes": 2950692864,
+          "cuda_peak_allocated_so_far_bytes": 2039482880
+        },
+        {
+          "component": "vae_decoder",
+          "action": "release",
+          "cuda_allocated_bytes": 833018368,
+          "cuda_reserved_bytes": 922746880,
+          "cuda_peak_allocated_so_far_bytes": 2039482880
+        }
+      ],
+      "cuda_peak_reduction_percent": 0.350878860736914
+    },
+    "encoder_tiled512": {
+      "metrics": "experiments/2026-10-23-mobile_vton/outputs_vae_encoder_tiled512/metrics.json",
+      "pipeline_seconds": [
+        42.922069096937776,
+        45.88632152101491
+      ],
+      "mean_pipeline_seconds": 44.40419530897634,
+      "cuda_peak_allocated_bytes": 2038802944,
+      "cuda_peak_reserved_bytes": 2954887168,
+      "cuda_peak_before_benchmark_bytes": 2039540224,
+      "resident_model_tensor_storage_bytes": 624697920,
+      "host_peak_rss_bytes": 2272612352,
+      "repeat_identical": true,
+      "identical_to_baseline": false,
+      "difference_from_int4_baseline": {
+        "mae_0_to_1": 0.005523039493709803,
+        "psnr_db": 42.495249780070566,
+        "max_absolute_pixel_difference_0_to_1": 0.25882354378700256
+      },
+      "phase_loads_and_releases_verified": true,
+      "vae": {
+        "deferred_load": true,
+        "parameters": 34274208,
+        "model_tensor_storage_bytes": 68548416,
+        "encoder_forward_counts": [
+          6,
+          6,
+          6,
+          6,
+          6,
+          6
+        ],
+        "last_person_encode": {
+          "input_shape": [
+            1,
+            3,
+            1024,
+            768
+          ],
+          "tile_shapes": [
+            [
+              1,
+              3,
+              512,
+              512
+            ],
+            [
+              1,
+              3,
+              512,
+              384
+            ],
+            [
+              1,
+              3,
+              512,
+              512
+            ],
+            [
+              1,
+              3,
+              512,
+              384
+            ],
+            [
+              1,
+              3,
+              256,
+              512
+            ],
+            [
+              1,
+              3,
+              256,
+              384
+            ]
+          ],
+          "encoder_forward_count": 6,
+          "latent_mean_shape": [
+            1,
+            16,
+            128,
+            96
+          ],
+          "cuda_peak_allocated_so_far_bytes": 2038802944
+        },
+        "last_garment_encode": {
+          "input_shape": [
+            1,
+            3,
+            1024,
+            768
+          ],
+          "tile_shapes": [
+            [
+              1,
+              3,
+              512,
+              512
+            ],
+            [
+              1,
+              3,
+              512,
+              384
+            ],
+            [
+              1,
+              3,
+              512,
+              512
+            ],
+            [
+              1,
+              3,
+              512,
+              384
+            ],
+            [
+              1,
+              3,
+              256,
+              512
+            ],
+            [
+              1,
+              3,
+              256,
+              384
+            ]
+          ],
+          "encoder_forward_count": 6,
+          "latent_mean_shape": [
+            1,
+            16,
+            128,
+            96
+          ],
+          "cuda_peak_allocated_so_far_bytes": 2038802944
+        },
+        "first_measured_encodes": [
+          {
+            "input_shape": [
+              1,
+              3,
+              1024,
+              768
+            ],
+            "tile_shapes": [
+              [
+                1,
+                3,
+                512,
+                512
+              ],
+              [
+                1,
+                3,
+                512,
+                384
+              ],
+              [
+                1,
+                3,
+                512,
+                512
+              ],
+              [
+                1,
+                3,
+                512,
+                384
+              ],
+              [
+                1,
+                3,
+                256,
+                512
+              ],
+              [
+                1,
+                3,
+                256,
+                384
+              ]
+            ],
+            "encoder_forward_count": 6,
+            "latent_mean_shape": [
+              1,
+              16,
+              128,
+              96
+            ],
+            "cuda_peak_allocated_so_far_bytes": 1140114944
+          },
+          {
+            "input_shape": [
+              1,
+              3,
+              1024,
+              768
+            ],
+            "tile_shapes": [
+              [
+                1,
+                3,
+                512,
+                512
+              ],
+              [
+                1,
+                3,
+                512,
+                384
+              ],
+              [
+                1,
+                3,
+                512,
+                512
+              ],
+              [
+                1,
+                3,
+                512,
+                384
+              ],
+              [
+                1,
+                3,
+                256,
+                512
+              ],
+              [
+                1,
+                3,
+                256,
+                384
+              ]
+            ],
+            "encoder_forward_count": 6,
+            "latent_mean_shape": [
+              1,
+              16,
+              128,
+              96
+            ],
+            "cuda_peak_allocated_so_far_bytes": 1140114944
+          }
+        ]
+      },
+      "first_generation_phase_events": [
+        {
+          "component": "vae",
+          "action": "load",
+          "seconds": 0.23126189201138914,
+          "parameters": 34274208,
+          "model_tensor_storage_bytes": 68548416,
+          "cuda_allocated_bytes": 736707584,
+          "cuda_reserved_bytes": 897581056,
+          "cuda_peak_allocated_so_far_bytes": 736707584
+        },
+        {
+          "component": "vae",
+          "action": "call",
+          "call": 1,
+          "cuda_allocated_bytes": 738673664,
+          "cuda_reserved_bytes": 1373634560,
+          "cuda_peak_allocated_so_far_bytes": 1140114944
+        },
+        {
+          "component": "vae",
+          "action": "call",
+          "call": 2,
+          "cuda_allocated_bytes": 734348288,
+          "cuda_reserved_bytes": 1461714944,
+          "cuda_peak_allocated_so_far_bytes": 1140114944
+        },
+        {
+          "component": "vae",
+          "action": "release",
+          "cuda_allocated_bytes": 662706688,
+          "cuda_reserved_bytes": 803209216,
+          "cuda_peak_allocated_so_far_bytes": 1140114944
+        },
+        {
+          "component": "image_encoder",
+          "action": "load",
+          "seconds": 0.13449942297302186,
+          "parameters": 86580480,
+          "model_tensor_storage_bytes": 173160960,
+          "cuda_allocated_bytes": 840636416,
+          "cuda_reserved_bytes": 866123776,
+          "cuda_peak_allocated_so_far_bytes": 1140114944
+        },
+        {
+          "component": "image_encoder",
+          "action": "call",
+          "call": 1,
+          "cuda_allocated_bytes": 846162944,
+          "cuda_reserved_bytes": 868220928,
+          "cuda_peak_allocated_so_far_bytes": 1140114944
+        },
+        {
+          "component": "image_encoder",
+          "action": "call",
+          "call": 2,
+          "cuda_allocated_bytes": 846858752,
+          "cuda_reserved_bytes": 870318080,
+          "cuda_peak_allocated_so_far_bytes": 1140114944
+        },
+        {
+          "component": "image_encoder",
+          "action": "release",
+          "cuda_allocated_bytes": 668535808,
+          "cuda_reserved_bytes": 805306368,
+          "cuda_peak_allocated_so_far_bytes": 1140114944
+        },
+        {
+          "component": "vae_decoder",
+          "action": "load",
+          "seconds": 0.46835567406378686,
+          "parameters": 1902595,
+          "model_tensor_storage_bytes": 7610380,
+          "cuda_allocated_bytes": 830547968,
+          "cuda_reserved_bytes": 1642070016,
+          "cuda_peak_allocated_so_far_bytes": 1359980032
+        },
+        {
+          "component": "vae_decoder",
+          "action": "call",
+          "call": 1,
+          "cuda_allocated_bytes": 840771584,
+          "cuda_reserved_bytes": 2954887168,
+          "cuda_peak_allocated_so_far_bytes": 2038802944
+        },
+        {
+          "component": "vae_decoder",
+          "action": "release",
+          "cuda_allocated_bytes": 832838144,
+          "cuda_reserved_bytes": 962592768,
+          "cuda_peak_allocated_so_far_bytes": 2038802944
+        }
+      ],
+      "cuda_peak_reduction_percent": 0.3841005295704081
+    }
+  },
+  "limitations": [
+    "Desktop CUDA experiment, not Android memory or speed measurement.",
+    "All variants use the same existing weight-only INT4 checkpoints; quality defects from INT4 remain.",
+    "One image pair and shared GPU; timing is diagnostic, not a device performance guarantee.",
+    "Tiled VAE encoding changes the latent representation; matching shape alone does not establish image quality.",
+    "Phase release reloads models each generation; reloads and releases are included in pipeline timing.",
+    "CUDA allocated/reserved excludes driver/context; host RSS is separate and includes startup.",
+    "Difference metrics compare against INT4 baseline, not a target try-on image or BF16."
+  ]
+}

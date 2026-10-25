@@ -1,0 +1,40 @@
+{
+  "status": "completed",
+  "pid": 3414,
+  "backend_requested": 3,
+  "backend_selected": 3,
+  "gpu_mode": 80,
+  "precision": "MNN Precision_Low (FP16 where supported)",
+  "model_load_seconds": 0.223286168,
+  "session_create_seconds": 39.031851701,
+  "input_upload_seconds": 0.037097817,
+  "warmup_seconds": 0.01420521,
+  "inference_and_output_download_seconds": [
+    26.084878328,
+    13.279084292,
+    13.082263126
+  ],
+  "mnn_session_memory_mb": 65.37734985351562,
+  "process_peak_rss_bytes": 561324032,
+  "output_nonfinite_elements": 0,
+  "memory_note": "RSS excludes GPU allocations not mapped into process RSS; MNN allocator size is separate. This is one component, not full generation.",
+  "operator_output_backend_counts": {
+    "3": 209
+  },
+  "mean_seconds": 17.482075248666664,
+  "numerical_comparison": {
+    "output_0": {
+      "shape": [
+        1,
+        32,
+        64,
+        64
+      ],
+      "mae": 6.045155048370361,
+      "rmse": 8.453529357910156,
+      "max_absolute_error": 17.379674911499023,
+      "relative_rmse": 0.5618461824372012
+    }
+  },
+  "scope": "Component test only. Export fixtures are not a full generation on the phone. Output backend reports tensor placement, not a guarantee that all neural operations ran on GPU."
+}

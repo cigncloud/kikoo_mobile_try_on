@@ -1,0 +1,27 @@
+{
+  "status": "completed",
+  "model": "DM-VTON PF student",
+  "upstream_revision": "5dcd04ee3f5b1fb392df1184c887c1a7e910c72e",
+  "device_requested": "cuda",
+  "device_selected": "cuda",
+  "resolution": [
+    256,
+    192
+  ],
+  "warmup": 1,
+  "runs": [
+    0.015612359042279422,
+    0.01570675999391824,
+    0.01841982000041753
+  ],
+  "mean_seconds": 0.016579646345538396,
+  "fps": 60.31491740890488,
+  "parameters": 9350124,
+  "model_storage_bytes": 37570848,
+  "weights": {
+    "warp_bytes": 86485495,
+    "generator_bytes": 26406925
+  },
+  "input_note": "Garment foreground mask derived from near-white background for this sample; this is not the official VITON edge annotation.",
+  "scope": "Single person/garment pair; functional speed and output smoke test, not FID/LPIPS evaluation."
+}

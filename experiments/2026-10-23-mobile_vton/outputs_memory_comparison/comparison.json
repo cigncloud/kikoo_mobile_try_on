@@ -1,0 +1,119 @@
+{
+  "matched_settings": {
+    "model_revision": "0063147c171518b391fff5e44d04555c12370c35",
+    "upstream_revision": "57410f20ac0e1703af795702e10473565feaa711",
+    "width": 768,
+    "height": 1024,
+    "steps": 28,
+    "seed": 42,
+    "guidance_scale": 2.5,
+    "scheduler_shift": 3.0,
+    "dtype": "bf16",
+    "device": "cuda",
+    "quantization": "int4",
+    "group_size": 128,
+    "runs": 2,
+    "warmup_steps": 1,
+    "threads": 4,
+    "quantized_state_dir": "experiments/2026-10-23-mobile_vton/outputs_vllm_int4_native"
+  },
+  "gpu": "NVIDIA GeForce RTX 3080 Laptop GPU",
+  "embedding_sha256": "7ff8ec1f7f1da682d8cffa4fe034b15b7b6cd3ae70c51b480aa47c3efc76f4a1",
+  "variants": {
+    "baseline": {
+      "metrics": "experiments/2026-10-23-mobile_vton/outputs_memory_baseline/metrics.json",
+      "pipeline_seconds": [
+        32.874570655985735,
+        35.33270369807724
+      ],
+      "mean_pipeline_seconds": 34.10363717703149,
+      "cuda_peak_allocated_bytes": 2393466368,
+      "cuda_peak_reserved_bytes": 3240099840,
+      "cuda_peak_before_benchmark_bytes": 2393662976,
+      "resident_model_tensor_storage_bytes": 973108626,
+      "host_peak_rss_bytes": 2043764736,
+      "repeat_identical": true,
+      "identical_to_baseline": true,
+      "difference_from_int4_baseline": {
+        "mae_0_to_1": 0.0,
+        "psnr_db": null,
+        "max_absolute_pixel_difference_0_to_1": 0.0
+      },
+      "cuda_peak_reduction_percent": 0.0
+    },
+    "sequential_cfg": {
+      "metrics": "experiments/2026-10-23-mobile_vton/outputs_memory_sequential_cfg/metrics.json",
+      "pipeline_seconds": [
+        32.51590119197499,
+        35.577191662974656
+      ],
+      "mean_pipeline_seconds": 34.04654642747482,
+      "cuda_peak_allocated_bytes": 2395710976,
+      "cuda_peak_reserved_bytes": 3303014400,
+      "cuda_peak_before_benchmark_bytes": 2395842048,
+      "resident_model_tensor_storage_bytes": 973108626,
+      "host_peak_rss_bytes": 2035695616,
+      "repeat_identical": true,
+      "identical_to_baseline": false,
+      "difference_from_int4_baseline": {
+        "mae_0_to_1": 0.0007234811200760305,
+        "psnr_db": 52.828254601948224,
+        "max_absolute_pixel_difference_0_to_1": 0.14901959896087646
+      },
+      "cuda_peak_reduction_percent": -0.09378063673715076
+    },
+    "phase_release": {
+      "metrics": "experiments/2026-10-23-mobile_vton/outputs_memory_phase_release/metrics.json",
+      "pipeline_seconds": [
+        34.69874786795117,
+        37.46390364004765
+      ],
+      "mean_pipeline_seconds": 36.08132575399941,
+      "cuda_peak_allocated_bytes": 2046664192,
+      "cuda_peak_reserved_bytes": 2950692864,
+      "cuda_peak_before_benchmark_bytes": 2042994176,
+      "resident_model_tensor_storage_bytes": 624697920,
+      "host_peak_rss_bytes": 2513031168,
+      "repeat_identical": true,
+      "identical_to_baseline": true,
+      "difference_from_int4_baseline": {
+        "mae_0_to_1": 0.0,
+        "psnr_db": null,
+        "max_absolute_pixel_difference_0_to_1": 0.0
+      },
+      "phase_loads_and_releases_verified": true,
+      "cuda_peak_reduction_percent": 14.489536207262056
+    },
+    "combined": {
+      "metrics": "experiments/2026-10-23-mobile_vton/outputs_memory_combined/metrics.json",
+      "pipeline_seconds": [
+        36.70217419997789,
+        49.27051592199132
+      ],
+      "mean_pipeline_seconds": 42.986345060984604,
+      "cuda_peak_allocated_bytes": 2046664192,
+      "cuda_peak_reserved_bytes": 2782920704,
+      "cuda_peak_before_benchmark_bytes": 2042994176,
+      "resident_model_tensor_storage_bytes": 624697920,
+      "host_peak_rss_bytes": 2490011648,
+      "repeat_identical": true,
+      "identical_to_baseline": false,
+      "difference_from_int4_baseline": {
+        "mae_0_to_1": 0.0007234811200760305,
+        "psnr_db": 52.828254601948224,
+        "max_absolute_pixel_difference_0_to_1": 0.14901959896087646
+      },
+      "phase_loads_and_releases_verified": true,
+      "cuda_peak_reduction_percent": 14.489536207262056
+    }
+  },
+  "limitations": [
+    "Desktop CUDA experiment, not Android memory or speed measurement.",
+    "All variants use the same existing weight-only INT4 checkpoints; quality defects from INT4 remain.",
+    "One image pair and shared GPU; timing is diagnostic, not a device performance guarantee.",
+    "Sequential CFG retains upstream batched conditioning and garment features; it only splits denoiser forwards.",
+    "Phase release reloads models each generation; reloads and releases are included in pipeline timing.",
+    "CUDA allocated/reserved excludes driver/context; host RSS is separate and includes startup.",
+    "Difference metrics compare against INT4 baseline, not a target try-on image or BF16."
+  ]
+}

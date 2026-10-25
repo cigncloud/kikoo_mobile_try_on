@@ -1,0 +1,49 @@
+{
+  "status": "exported",
+  "component": "vae_encoder",
+  "weights": "/tmp/mobile_tryon/weights/mobile_vton/checkpoint/vae/diffusion_pytorch_model.safetensors",
+  "input_source": "/home/michaelk/work_space/mobile_tryon/experiments/2026-10-23-mobile_vton/inputs/person.jpg",
+  "inputs": {
+    "image": [
+      1,
+      3,
+      64,
+      64
+    ]
+  },
+  "outputs": {
+    "output_0": [
+      1,
+      32,
+      8,
+      8
+    ]
+  },
+  "export_reference_precision": "fp32",
+  "export_seconds": 1.2592545339139178,
+  "onnx_bytes": 137199454,
+  "onnx_sha256": "680936cc6bda86978953cbc82a636166cc9a5907939b3d369b64dc37215f191d",
+  "ops": [
+    "Add",
+    "Cast",
+    "Concat",
+    "Constant",
+    "ConstantOfShape",
+    "Conv",
+    "Div",
+    "Gather",
+    "InstanceNormalization",
+    "MatMul",
+    "Mul",
+    "Pad",
+    "Reshape",
+    "Shape",
+    "Sigmoid",
+    "Slice",
+    "Softmax",
+    "Sqrt",
+    "Transpose",
+    "Unsqueeze"
+  ],
+  "note": "Component validation with original FP32 weights; not full phone generation. Garment fixture uses posterior mean for export only."
+}
